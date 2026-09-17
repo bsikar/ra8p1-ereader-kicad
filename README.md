@@ -61,3 +61,18 @@ run the repository checks required by `../CLAUDE.md`.
 The Gaggia controller is a separate future board. Shared components belong in
 the functional libraries under `libs/`; board-specific sheets belong in their
 own project directory.
+
+## Related repositories
+
+This board is a separate product that uses the same Renesas RA8 part as the
+firmware monorepo, so the electronics live here and the software stays there.
+Both are wired in as submodules for context:
+
+- `firmware/` -- [bsikar/ra8-firmware](https://github.com/bsikar/ra8-firmware),
+  the RA8 firmware monorepo this project was split out of.
+- `emulator/` -- [bsikar/ra8-emulator](https://github.com/bsikar/ra8-emulator),
+  the host-side RA8 emulator used for EIL runs.
+
+Clone with `git clone --recurse-submodules`, or run
+`git submodule update --init --depth 1` in an existing clone. Both submodules
+are registered shallow; nothing in this repository builds against them.
