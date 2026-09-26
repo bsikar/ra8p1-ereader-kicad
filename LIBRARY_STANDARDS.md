@@ -109,20 +109,77 @@ retain unverified names and passive/unspecified electrical types, including
 unusual ESP32 ground sub-pad numbering. The selected 289-ball RA8P1 core,
 DCDC, I/O-supply, and analog units have explicit power-pin names and types
 checked against its pin list; this does not qualify the remaining units or
-their footprints. Resolve the shared VLO output model before final ERC
-acceptance. Check each remaining symbol against its exact ordering-code
+their footprints. The four DCDC VLO contacts are one shared output group and
+must connect to the same inductor-input net. Keep A7 as the group's
+`Power output` pin and model A8, B7, and B8 as `Passive`; this preserves every
+visible package contact while avoiding three false power-output-to-power-output
+ERC conflicts. This is a symbol-modeling choice only: it does not imply that
+the four contacts may use separate nets. Check each remaining symbol against
+its exact ordering-code
 datasheet before wiring, and qualify footprints before PCB work. Do not infer
 safety from an ERC result on all-passive imported symbols.
 
 The 289-ball USB/MIPI unit now uses normalized manufacturer pin names,
 power-input types for its nine supply/ground pins, and bidirectional types
 for the four USB data pins. USBHS_RREF remains passive for its external
-reference resistor. The six unused MIPI lanes still retain passive types;
+reference resistor. The six unused MIPI lanes currently have bidirectional types;
 their explicit no-connect treatment is not qualification for active MIPI use.
 CMS-013 now connects VCC18_MIPI R2 to +1V8_MIPI with local C111 bypass;
 camera-lane types and connections still require active-interface review.
 Authority: RA8P1 Datasheet Rev.1.30 Table 1.17; RA8x2 Quick Design Guide
 Rev.1.10 Tables 1-2; RA8P1 HUM Rev.1.30 section 21.4 for unused MIPI.
+
+The BGA289 unit H GPIOs PD01 (B16), PD02 (B17), PD03 (C15),
+PD04 (C14), PD05 (C16), PD06 (C17), and PD07 (E15) use
+`Bidirectional` electrical types rather than the imported `Passive` types.
+Authority: `firmware/docs/reference/ra8p1-datasheet.pdf`, Rev.1.30,
+Table 1.16 (Pmn general-purpose I/O; P200 is the input-only exception)
+and Table 1.17 (BGA289 ball assignments). Pin numbers, names, geometry,
+and alternate functions were not edited. U1 schematic instances were
+updated through KiCad; native ERC remains 113 errors and 11 warnings.
+This qualifies these seven base GPIO types, not the remaining imported
+pins or all peripheral alternate functions.
+
+The same datasheet checks establish `Bidirectional` base GPIO types for
+unit G PB00 (E16), PB01 (D17), PB02 (E13), PB03 (D16), PB04 (D13),
+PB05 (D15), PB06 (E14), PB07 (D14), and PA07 (G4). These nine imported
+`Passive` types were corrected through the KiCad pin table and propagated
+to U1 schematic instances. Native ERC remains 113 errors and 11 warnings.
+Other unit G pins with peripheral-specific output types remain subject to
+review against their intended use and selected alternate functions.
+
+Units E and F have 42 further base GPIO types corrected from `Passive`
+to `Bidirectional`, using the same Rev.1.30 Tables 1.16 and 1.17:
+
+- Unit E: P600-P606 and P700-P715 (23 pins).
+- Unit F: P805-P807, P809-P812, P902, P904-P908, and P910-P915 (19 pins).
+
+Each ball assignment was checked against the BGA289 column before editing
+the native KiCad pin table. The symbol retains 289 pins without duplicates.
+U1 schematic instances were updated with alternate-function reset disabled;
+ERC remains 113 errors and 11 warnings. Existing peripheral-specific input
+and output types were not included in this pass and stilFinal GPIO pass and handoff (2026-09-25): all 13 units A-M were inspected
+for this pin-type pass. Additional corrections, using the same datasheet:
+
+- Unit B: P000-P015 and P106-P111, Passive to Bidirectional (22).
+- Unit C: P206, P207, P304-P306, P308, P312 to Bidirectional (7);
+  P200/C5 to Input, per the manufacturer input-only exception (1).
+- Unit D: P400-P405, P407-P415, P500-P502, P511-P515 to
+  Bidirectional (23).
+
+Total GPIO changes against the starting revision: 110 Passive to
+Bidirectional and one Passive to Input. P808/U5 was restored to its
+existing Output type during final diff review. No pin names, numbers,
+geometry, or alternate definitions changed in the library diff.
+Final native ERC: 114 errors and 11 warnings; see ereader/ERC-final.rpt.
+Typing P200 as Input exposes its unfinished undriven connection in
+addition to its existing unconnected-pin finding. This is not suppressed.
+The pass does not qualify every peripheral alternate, active MIPI use,
+unused-pin treatment, or unfinished circuits. Existing CEU integration,
+USB wiring, power-source and other schematic issues remain open.
+Work stops here at the owner request; no PCB design was performed.
+
+l require review.
 
 New design net labels use `COPI`, `CIPO` and `CS` instead of legacy SPI terms.
 Review imported pin-name aliases against manufacturer documentation before

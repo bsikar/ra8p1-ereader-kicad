@@ -224,7 +224,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 0 0)
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -274,7 +274,7 @@
 						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -1383,7 +1383,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -25.4 180)
 					(length 3.81)
 					(name "P110"
@@ -1401,7 +1401,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -22.86 180)
 					(length 3.81)
 					(name "P109"
@@ -1419,7 +1419,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -20.32 180)
 					(length 3.81)
 					(name "P108"
@@ -1437,7 +1437,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -27.94 180)
 					(length 3.81)
 					(name "P111"
@@ -1473,7 +1473,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -17.78 180)
 					(length 3.81)
 					(name "P107"
@@ -1491,7 +1491,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -15.24 180)
 					(length 3.81)
 					(name "P106"
@@ -1527,7 +1527,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -33.02 0)
 					(length 3.81)
 					(name "P013"
@@ -1545,7 +1545,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -27.94 0)
 					(length 3.81)
 					(name "P011"
@@ -1581,7 +1581,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -30.48 0)
 					(length 3.81)
 					(name "P012"
@@ -1599,7 +1599,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -25.4 0)
 					(length 3.81)
 					(name "P010"
@@ -1617,7 +1617,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -22.86 0)
 					(length 3.81)
 					(name "P009"
@@ -1671,7 +1671,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -12.7 0)
 					(length 3.81)
 					(name "P005"
@@ -1689,7 +1689,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -7.62 0)
 					(length 3.81)
 					(name "P003"
@@ -1707,7 +1707,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -35.56 0)
 					(length 3.81)
 					(name "P014"
@@ -1725,7 +1725,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -10.16 0)
 					(length 3.81)
 					(name "P004"
@@ -1743,7 +1743,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -17.78 0)
 					(length 3.81)
 					(name "P007"
@@ -1761,7 +1761,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -2.54 0)
 					(length 3.81)
 					(name "P001"
@@ -1797,7 +1797,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -38.1 0)
 					(length 3.81)
 					(name "P015"
@@ -1815,7 +1815,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -20.32 0)
 					(length 3.81)
 					(name "P008"
@@ -1833,7 +1833,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -15.24 0)
 					(length 3.81)
 					(name "P006"
@@ -1851,7 +1851,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 0 0)
 					(length 3.81)
 					(name "P000"
@@ -1869,7 +1869,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -5.08 0)
 					(length 3.81)
 					(name "P002"
@@ -1945,7 +1945,7 @@
 					)
 					(alternate "P309_IN" input line)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -5.08 0)
 					(length 3.81)
 					(name "P207"
@@ -2019,7 +2019,7 @@
 					)
 					(alternate "P311_IN" input line)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -2.54 0)
 					(length 3.81)
 					(name "P206"
@@ -2055,7 +2055,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin input line
 					(at -15.24 0 0)
 					(length 3.81)
 					(name "P200"
@@ -2073,7 +2073,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -20.32 180)
 					(length 3.81)
 					(name "P308"
@@ -2091,7 +2091,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -12.7 180)
 					(length 3.81)
 					(name "P305"
@@ -2128,7 +2128,7 @@
 					)
 					(alternate "P307_IN" input line)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -30.48 180)
 					(length 3.81)
 					(name "P312"
@@ -2146,7 +2146,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -10.16 180)
 					(length 3.81)
 					(name "P304"
@@ -2164,7 +2164,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -15.24 180)
 					(length 3.81)
 					(name "P306"
@@ -2240,7 +2240,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -12.7 0)
 					(length 3.81)
 					(name "P405"
@@ -2312,7 +2312,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -7.62 0)
 					(length 3.81)
 					(name "P403"
@@ -2402,7 +2402,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -10.16 0)
 					(length 3.81)
 					(name "P404"
@@ -2438,7 +2438,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -25.4 0)
 					(length 3.81)
 					(name "P410"
@@ -2456,7 +2456,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -35.56 0)
 					(length 3.81)
 					(name "P414"
@@ -2474,7 +2474,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -5.08 0)
 					(length 3.81)
 					(name "P402"
@@ -2492,7 +2492,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -30.48 0)
 					(length 3.81)
 					(name "P412"
@@ -2510,7 +2510,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -27.94 0)
 					(length 3.81)
 					(name "P411"
@@ -2528,7 +2528,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -20.32 0)
 					(length 3.81)
 					(name "P408"
@@ -2546,7 +2546,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -2.54 0)
 					(length 3.81)
 					(name "P401"
@@ -2564,7 +2564,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -30.48 180)
 					(length 3.81)
 					(name "P512"
@@ -2582,7 +2582,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -33.02 0)
 					(length 3.81)
 					(name "P413"
@@ -2600,7 +2600,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -38.1 180)
 					(length 3.81)
 					(name "P515"
@@ -2618,7 +2618,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 0 0)
 					(length 3.81)
 					(name "P400"
@@ -2636,7 +2636,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -2.54 180)
 					(length 3.81)
 					(name "P501"
@@ -2654,7 +2654,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -33.02 180)
 					(length 3.81)
 					(name "P513"
@@ -2672,7 +2672,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -35.56 180)
 					(length 3.81)
 					(name "P514"
@@ -2690,7 +2690,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -38.1 0)
 					(length 3.81)
 					(name "P415"
@@ -2708,7 +2708,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -22.86 0)
 					(length 3.81)
 					(name "P409"
@@ -2726,7 +2726,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -17.78 0)
 					(length 3.81)
 					(name "P407"
@@ -2744,7 +2744,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -5.08 180)
 					(length 3.81)
 					(name "P502"
@@ -2762,7 +2762,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 0 180)
 					(length 3.81)
 					(name "P500"
@@ -2780,7 +2780,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -27.94 180)
 					(length 3.81)
 					(name "P511"
@@ -2945,7 +2945,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -15.24 180)
 					(length 3.81)
 					(name "P706"
@@ -2963,7 +2963,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 0 180)
 					(length 3.81)
 					(name "P700"
@@ -2981,7 +2981,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -5.08 180)
 					(length 3.81)
 					(name "P702"
@@ -2999,7 +2999,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -2.54 180)
 					(length 3.81)
 					(name "P701"
@@ -3017,7 +3017,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -17.78 180)
 					(length 3.81)
 					(name "P707"
@@ -3035,7 +3035,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -12.7 180)
 					(length 3.81)
 					(name "P705"
@@ -3053,7 +3053,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -10.16 180)
 					(length 3.81)
 					(name "P704"
@@ -3071,7 +3071,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -7.62 180)
 					(length 3.81)
 					(name "P703"
@@ -3125,7 +3125,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -25.4 180)
 					(length 3.81)
 					(name "P710"
@@ -3143,7 +3143,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -12.7 0)
 					(length 3.81)
 					(name "P605"
@@ -3161,7 +3161,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -10.16 0)
 					(length 3.81)
 					(name "P604"
@@ -3179,7 +3179,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -15.24 0)
 					(length 3.81)
 					(name "P606"
@@ -3197,7 +3197,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -20.32 180)
 					(length 3.81)
 					(name "P708"
@@ -3215,7 +3215,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -30.48 180)
 					(length 3.81)
 					(name "P712"
@@ -3233,7 +3233,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -35.56 180)
 					(length 3.81)
 					(name "P714"
@@ -3251,7 +3251,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -27.94 180)
 					(length 3.81)
 					(name "P711"
@@ -3269,7 +3269,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -33.02 180)
 					(length 3.81)
 					(name "P713"
@@ -3287,7 +3287,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -7.62 0)
 					(length 3.81)
 					(name "P603"
@@ -3305,7 +3305,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -5.08 0)
 					(length 3.81)
 					(name "P602"
@@ -3323,7 +3323,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 0 0)
 					(length 3.81)
 					(name "P600"
@@ -3341,7 +3341,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -2.54 0)
 					(length 3.81)
 					(name "P601"
@@ -3359,7 +3359,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -22.86 180)
 					(length 3.81)
 					(name "P709"
@@ -3377,7 +3377,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -38.1 180)
 					(length 3.81)
 					(name "P715"
@@ -3416,7 +3416,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -33.02 180)
 					(length 3.81)
 					(name "P915"
@@ -3434,7 +3434,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -10.16 180)
 					(length 3.81)
 					(name "P906"
@@ -3452,7 +3452,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -7.62 180)
 					(length 3.81)
 					(name "P905"
@@ -3470,7 +3470,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -12.7 180)
 					(length 3.81)
 					(name "P907"
@@ -3488,7 +3488,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -5.08 180)
 					(length 3.81)
 					(name "P904"
@@ -3524,7 +3524,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -15.24 180)
 					(length 3.81)
 					(name "P908"
@@ -3561,7 +3561,7 @@
 					)
 					(alternate "P909_IN" input line)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -22.86 180)
 					(length 3.81)
 					(name "P911"
@@ -3598,7 +3598,7 @@
 					)
 					(alternate "P903_OD" open_collector line)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -25.4 180)
 					(length 3.81)
 					(name "P912"
@@ -3616,7 +3616,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -30.48 180)
 					(length 3.81)
 					(name "P914"
@@ -3634,7 +3634,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 0 180)
 					(length 3.81)
 					(name "P902"
@@ -3652,7 +3652,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -20.32 180)
 					(length 3.81)
 					(name "P910"
@@ -3670,7 +3670,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -27.94 180)
 					(length 3.81)
 					(name "P913"
@@ -3688,7 +3688,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -25.4 0)
 					(length 3.81)
 					(name "P810"
@@ -3706,7 +3706,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -27.94 0)
 					(length 3.81)
 					(name "P811"
@@ -3724,7 +3724,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -17.78 0)
 					(length 3.81)
 					(name "P807"
@@ -3778,7 +3778,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -30.48 0)
 					(length 3.81)
 					(name "P812"
@@ -3796,7 +3796,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -12.7 0)
 					(length 3.81)
 					(name "P805"
@@ -3850,7 +3850,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -22.86 0)
 					(length 3.81)
 					(name "P809"
@@ -3886,7 +3886,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -15.24 0)
 					(length 3.81)
 					(name "P806"
@@ -4051,7 +4051,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -10.16 180)
 					(length 3.81)
 					(name "PB04"
@@ -4069,7 +4069,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -17.78 180)
 					(length 3.81)
 					(name "PB07"
@@ -4087,7 +4087,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -12.7 180)
 					(length 3.81)
 					(name "PB05"
@@ -4105,7 +4105,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -7.62 180)
 					(length 3.81)
 					(name "PB03"
@@ -4123,7 +4123,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -2.54 180)
 					(length 3.81)
 					(name "PB01"
@@ -4159,7 +4159,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -5.08 180)
 					(length 3.81)
 					(name "PB02"
@@ -4177,7 +4177,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -15.24 180)
 					(length 3.81)
 					(name "PB06"
@@ -4195,7 +4195,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 0 180)
 					(length 3.81)
 					(name "PB00"
@@ -4339,7 +4339,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at -15.24 -17.78 0)
 					(length 3.81)
 					(name "PA07"
@@ -4396,7 +4396,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -2.54 180)
 					(length 3.81)
 					(name "PD01"
@@ -4414,7 +4414,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -5.08 180)
 					(length 3.81)
 					(name "PD02"
@@ -4432,7 +4432,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -10.16 180)
 					(length 3.81)
 					(name "PD04"
@@ -4450,7 +4450,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -7.62 180)
 					(length 3.81)
 					(name "PD03"
@@ -4468,7 +4468,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -12.7 180)
 					(length 3.81)
 					(name "PD05"
@@ -4486,7 +4486,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -15.24 180)
 					(length 3.81)
 					(name "PD06"
@@ -4504,7 +4504,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin bidirectional line
 					(at 15.24 -17.78 180)
 					(length 3.81)
 					(name "PD07"
@@ -5899,7 +5899,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin passive line
 					(at 17.78 -2.54 180)
 					(length 3.81)
 					(name "VLO"
@@ -5971,7 +5971,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin passive line
 					(at 17.78 -5.08 180)
 					(length 3.81)
 					(name "VLO"
@@ -5989,7 +5989,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin passive line
 					(at 17.78 -7.62 180)
 					(length 3.81)
 					(name "VLO"
@@ -13705,7 +13705,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "b5c587b9-14c7-481d-b836-63cf00dd691b")
+			(uuid "b5c587b9-14c7-481d-b836-63cf00dd691c")
 		)
 		(instances
 			(project "ereader_rev1"
