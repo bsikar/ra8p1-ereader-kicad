@@ -3446,6 +3446,12 @@
 		(uuid "690f818d-a186-4b2c-9670-c75a9a835876")
 	)
 	(junction
+		(at 124.46 306.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b59a439-4bf7-4d70-9d94-6cbeff23600a")
+	)
+	(junction
 		(at 88.9 20.32)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3552,6 +3558,16 @@
 			(type default)
 		)
 		(uuid "00c409fb-a0ef-4e65-aca1-db3854dca36c")
+	)
+	(wire
+		(pts
+			(xy 195.58 320.04) (xy 195.58 328.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "016732f0-0bbc-494c-9614-9f068ed73575")
 	)
 	(wire
 		(pts
@@ -3685,7 +3701,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 328.93) (xy 177.8 328.93)
+			(xy 160.02 328.93) (xy 195.58 328.93)
 		)
 		(stroke
 			(width 0)
@@ -3885,6 +3901,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 312.42) (xy 195.58 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "381a6297-37a1-4843-b42c-1bf450b82228")
+	)
+	(wire
+		(pts
 			(xy 180.34 68.58) (xy 180.34 69.85)
 		)
 		(stroke
@@ -3912,6 +3938,16 @@
 			(type default)
 		)
 		(uuid "40ac755f-929c-465f-a20a-7c815321c310")
+	)
+	(wire
+		(pts
+			(xy 81.28 306.07) (xy 124.46 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41321660-7dd5-4726-8226-85390d2354eb")
 	)
 	(wire
 		(pts
@@ -4125,6 +4161,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 306.07) (xy 195.58 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "611ae4eb-b441-4f68-b392-f9d6ed6adb21")
+	)
+	(wire
+		(pts
 			(xy 180.34 69.85) (xy 180.34 77.47)
 		)
 		(stroke
@@ -4282,6 +4328,16 @@
 			(type default)
 		)
 		(uuid "77780af2-5cfc-42f2-8438-87b13b5560ff")
+	)
+	(wire
+		(pts
+			(xy 81.28 334.01) (xy 134.62 334.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7937ad1e-240a-4b9a-b009-7104e69a3ee4")
 	)
 	(wire
 		(pts
@@ -4855,6 +4911,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 320.04) (xy 81.28 334.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e18e28f7-4a58-418b-bb0e-bd9818b712e0")
+	)
+	(wire
+		(pts
 			(xy 139.7 74.93) (xy 142.24 74.93)
 		)
 		(stroke
@@ -4962,6 +5028,16 @@
 			(type default)
 		)
 		(uuid "f56705cb-e069-4db3-909f-03e8291f7e4b")
+	)
+	(wire
+		(pts
+			(xy 81.28 312.42) (xy 81.28 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5fc5944-c5b1-4b76-8211-c79f9c710e7e")
 	)
 	(wire
 		(pts
@@ -5162,6 +5238,16 @@
 			(justify right bottom)
 		)
 		(uuid "7ba75cca-b724-44f9-8e32-97fe6cd420dd")
+	)
+	(label "SERVICE_RX"
+		(at 83.82 334.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81100e18-7d80-473b-bf5e-12dd75a575fe")
 	)
 	(label "C6_CIPO"
 		(at 66.04 91.44 0)
@@ -13932,6 +14018,154 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 81.28 316.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdae4015-a35c-4562-8587-eeb4c6b582c7")
+		(property "Reference" "R105"
+			(at 83.82 314.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 83.82 317.4999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 79.502 316.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL"
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "YAGEO RC0603FR-0747KL; 47k, 1%, 100 ppm/C; U27 UART output idle-high pull-up to its local supply. SERVICE-004/005 conditional screen; leakage and sequencing qualification pending."
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0603FR-0747KL"
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "YAGEO"
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "311-47.0KHRCT-ND"
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0747KL/727253"
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-12: DigiKey Active; 1985054 in stock; USD 1:0.10, 10:0.025, 100:0.0122. Unreserved snapshot; see microsd_power_interface.md."
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "Selected for U27 UART output idle-high pull-up to its local supply; installed leakage and sequencing qualification pending; footprint deferred."
+			(at 81.28 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ac23dc59-7032-435c-86f3-8d88f3c6ef6e")
+		)
+		(pin "2"
+			(uuid "1c9d0dfa-7cd2-43c0-b1f8-30f69fa8f20f")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "R105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 299.72 67.31 0)
 		(unit 1)
 		(body_style 1)
@@ -14682,6 +14916,154 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
 					(reference "#PWR0245")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 195.58 316.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e340ccb0-f054-4d3f-bf9f-cb93737fe764")
+		(property "Reference" "R106"
+			(at 198.12 314.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 198.12 317.4999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 193.802 316.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL"
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "YAGEO RC0603FR-0747KL; 47k, 1%, 100 ppm/C; U27 UART output idle-high pull-up to its local supply. SERVICE-004/005 conditional screen; leakage and sequencing qualification pending."
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0603FR-0747KL"
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "YAGEO"
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "311-47.0KHRCT-ND"
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0747KL/727253"
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-12: DigiKey Active; 1985054 in stock; USD 1:0.10, 10:0.025, 100:0.0122. Unreserved snapshot; see microsd_power_interface.md."
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "Selected for U27 UART output idle-high pull-up to its local supply; installed leakage and sequencing qualification pending; footprint deferred."
+			(at 195.58 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bfb66c5b-b309-4d62-941d-2d94039d9a06")
+		)
+		(pin "2"
+			(uuid "e1f1565a-a83a-4b27-a02a-f88ee19fed4b")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "R106")
 					(unit 1)
 				)
 			)

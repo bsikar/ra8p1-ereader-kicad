@@ -400,3 +400,31 @@ text was moved clear of the new signal wire. Clock arithmetic and the
 SERVICE-005 conditional DC/32-state checks pass. KiCad's native save also
 updated the designator inventory and regenerated only the orientation
 sheet document UUID. This remains an incremental WIP checkpoint.
+
+## SERVICE-013: UART output idle-bias checkpoint
+
+R105 and R106 now implement the two 47 kohm output pull-ups from
+SERVICE-004. R105.1 joins SERVICE_VIO / U27.3, and R105.2 joins
+U27.4 (A2Y), now named SERVICE_RX. R106.1 joins +3V3_RADIO / U27.7,
+and R106.2 joins C6_UART_RX / U27.8 (B1Y) / U3.24. The supplies
+remain separate; SERVICE_RX crosses SERVICE_UART_OE without a junction.
+
+Both resistors use YAGEO RC0603FR-0747KL, 1%, 100 ppm/C. Their
+metadata identifies the output pull-up role and retains the dated,
+unreserved 2026-09-12 sourcing snapshot. Footprints remain deferred.
+The SERVICE-005 conditional resistance/leakage screen applies; this
+checkpoint does not establish installed leakage or sequencing performance.
+
+The 283-component native netlist verifies every new resistor terminal
+and preserves all previous pin memberships after excluding R105/R106.
+Native ERC is 102 errors and 11 warnings: U27.4 is no longer unconnected,
+with no added findings. No ERC exclusions, power flags or no-connect
+markers were added. The two 10 kohm input pull-ups, fixture TX/contact
+integration, fixture supply source and SERVICE-003 arbitration remain
+unfinished; the recovery interface is not yet operational or qualified.
+
+The full 14-page PDF was regenerated and rendered. Page 6 was visually
+reviewed, and the other 13 pages are pixel-identical to SERVICE-012.
+Clock arithmetic and SERVICE-005 conditional DC/32-state checks pass.
+KiCad's save updated the resistor designator inventory and regenerated
+only the orientation sheet document UUID outside the radio drawing.
