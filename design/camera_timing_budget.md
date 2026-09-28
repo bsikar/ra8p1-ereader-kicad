@@ -145,3 +145,45 @@ rather than repeating the already rejected direct-1.8V connection.
 
 Independent review reproduced CMS-018 arithmetic and checked TI's source
 conditions. No schematic or BOM changes were made for this research checkpoint.
+
+### Connector identity checkpoint (2026-09-27)
+
+The A05 schematic's CN1 is the bare-camera connector, FPC05024-03200;
+CN2 is the different 40-contact daughterboard interface. The following CN1
+inventory is transcribed from the manufacturer text, pending visual trace
+review. These are camera contact names, not assigned RA8 nets.
+
+| Contact | Signal | Contact | Signal |
+| --- | --- | --- | --- |
+| 1 | STROB | 2 | DGND |
+| 3 | SDA | 4 | AVDD |
+| 5 | SCL | 6 | RESET |
+| 7 | VSYNC | 8 | PWDN |
+| 9 | HREF | 10 | DVDD |
+| 11 | DOVDD | 12 | D9 |
+| 13 | XCLK1 | 14 | D8 |
+| 15 | DGND | 16 | D7 |
+| 17 | PCLK | 18 | D6 |
+| 19 | D2 | 20 | D5 |
+| 21 | D3 | 22 | D4 |
+| 23 | NC | 24 | AF-VCC |
+| 25 | Shield | 26 | Shield |
+
+The eight exposed sensor data contacts are D2..D9. Do not connect host
+D0..D7 by matching identical suffixes; establish byte significance from
+the selected sensor format and trace the daughterboard's PAR_D0..7 first.
+Contact-side orientation, mating flex and shield treatment remain open.
+
+[ST UM2779 Rev.1, sections 3.3 and 4.2](https://www.st.com/resource/en/user_manual/um2779-camera-module-bundle-for-stm32-boards-stmicroelectronics.pdf)
+clarifies a separate adapter configuration: MB1683 JP1 selects 2.8/3.3V
+only for its Waveshare CN4. It does not select MB1379 DOVDD. The adapter's
+MB1379 CN2 table has 1.8V at contacts 1/2 and 2.8V at 39/40; those are
+not the bare-flex numbering above. Its pins 23..30 carry host D0..D7.
+Thus neither the bundle's advertised 3.3V input nor JP1 proves the bare
+sensor's I/O voltage. Preserve the distinction when selecting a module.
+
+Local retrieval of A05 failed with connection reset/timeout on both ST
+domains; web text was available, but no visually reviewed local A05 drawing
+was obtained. No native connector or supply circuit is accepted by this
+inventory. Next action is visual A05 tracing or an exact module drawing,
+not another assumption based on adapter supply labels.
