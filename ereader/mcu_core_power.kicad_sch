@@ -1559,6 +1559,7 @@
 							)
 						)
 					)
+					(alternate "IRQ28-DS" input line)
 				)
 				(pin bidirectional line
 					(at 15.24 -25.4 180)
@@ -1833,6 +1834,7 @@
 							)
 						)
 					)
+					(alternate "SCL0_A" bidirectional line)
 				)
 				(pin bidirectional line
 					(at -15.24 -35.56 0)
@@ -2103,6 +2105,7 @@
 							)
 						)
 					)
+					(alternate "SDA0_A" bidirectional line)
 				)
 				(pin bidirectional line
 					(at -15.24 -17.78 0)
@@ -10208,7 +10211,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Snapshot" "2026-09-05 live Mouser search: GRM32ER70J476KE20L stock7034, End of Life; DigiKey indexed stock0 Active (conflict)"
+		(property "Sourcing_Snapshot" "2026-09-27 DigiKey page: candidate GRM32ER71A476KE15K Active, 1595 unreserved, USD0.98 qty1 / 0.43690 qty100, 17wk. Earlier GRM32ER70J476KE20L lifecycle conflict retained in design/core_bulk_c9.md; not purchase approval."
 			(at 254 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -10230,7 +10233,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "Do not approve GRM32ER70J476KE20L solely from Renesas example: Mouser EOL flag; replacement and bias qualification required"
+		(property "Selection_Basis" "Candidate: Murata GRM32ER71A476KE15K, 47uF +/-10%, 10V X7R 1210. Murata GRM32ER71A476KE15-04CA (2025-01-10). HOLD pending DC-bias/aging and RA8P1 core-loop qualification; see design/core_bulk_c9.md."
 			(at 254 177.8 0)
 			(hide yes)
 			(show_name no)

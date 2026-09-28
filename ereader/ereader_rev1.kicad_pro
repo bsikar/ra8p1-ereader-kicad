@@ -487,6 +487,12 @@
           "label": "MANUFACTURER",
           "name": "MANUFACTURER",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -537,7 +543,7 @@
         "uuid": "0586cc51-9c57-495b-a0c9-c29ba0d48166"
       }
     ],
-    "used_designators": "TP4,FB1,Q1-3,Y1-2,U1-25,C1-114,SW1-5,D1-12,#PWR1-235,R1-101,#FLG1-2,L1-2,J1-3",
+    "used_designators": "TP4,FB1,Q1-3,Y1-2,U1-26,C1-118,SW1-5,D1-12,#PWR1-240,R1-103,#FLG1-2,L1-2,J1-3",
     "variants": []
   },
   "sheets": [
@@ -592,6 +598,10 @@
     [
       "7d952ccb-a30d-45e8-8e9c-d5f216640cd3",
       "Pcam 5C camera"
+    ],
+    [
+      "d59ec418-2c7b-439f-857e-b8ddd452e261",
+      "Orientation sensor"
     ]
   ],
   "text_variables": {},

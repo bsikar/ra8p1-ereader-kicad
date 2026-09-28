@@ -463,7 +463,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 -10.16 0)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -513,7 +513,7 @@
 						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -2513,7 +2513,7 @@
 		)
 		(uuid "7a202d46-44e4-4f45-ab78-e76c406a4359")
 	)
-	(text "SYS-007 / PWR-004: HELD SUPPLY / U10, R31, C62-C66\nC63-C66: 4 x 100uF/10V; Cmin=400uF*0.9^3=291.6uF.\nVIN=raw SYS; VOUT->R31->reservoir; CE senses reservoir.\nIcontrol<=1.125mA incl 500uA bank leakage allocation.\nPre-trip reverse: 80mV/98.01ohm<0.817mA. Itotal=1.942mA.\nVinitial=3.263705831-max(0.250,0.001125*102.24)\n        =3.013705831V (threshold OR resistive-drop limit).\nt_hold=[291.6uF*(3.013705831-2.7)V-1uC]/1.942mA\n      =46.589403ms >38.997458ms shutdown at 1mF.\nKey-return-aware hold margin=7.591945ms at 1mF.\n1uC covers initial undershoot + reverse/gate transitions.\nQualify VIN=0..4.6V, slow/floating-source collapse and load.\nR31 short: 4.6^2/98.01<0.216W; 1W nominal rating.\nControl only: no MCU/audio/display loads on AON_HOLD.\nSeparate unadopted eFuse extra load is not included.\nSources/Python: ../design/system_power_design.md SYS-007;\n../design/main_regulator_ltc3119.md PWR-004."
+	(text "SYS-007 / SENS-010: HELD SUPPLY / U10, R31, C62-C66\nC63-C66: 4 x 220uF/10V; Cmin=880uF*0.9^3=641.52uF.\nVIN=raw SYS; VOUT->R31->reservoir; CE senses reservoir.\nIcontrol<=1.825mA incl 1.100mA bank leakage screen.\nReverse allowance=0.817mA; Itotal<=2.642mA.\nVinitial=3.263705831-max(0.250,1.825mA*102.24ohm)\n        =3.013705831V; shared transition reserve=1uC.\nthold=[641.52uF*(Vinitial-2.7V)-1uC]/2.642mA\n     =75.794309ms, conditional allocation.\nMain C<=1mF, Rdis<=11.4211ohm, return/injection<=2.5mA:\n10ms response +46.398757ms to90mV +10ms low hold\n=66.398757ms total; hold margin=9.395552ms.\nRecovery: raw>=3.70V, held>=3.25V; 1s settling PLUS\nfull source qualification; recharge model=0.657961s.\nQualify startup leakage, raw VIN=0, backfeed and cycling.\nSee ../design/sensor_alternative.md SENS-010;\n../design/system_power_design.md SYS-007 for topology."
 		(exclude_from_sim no)
 		(at 228.6 127 0)
 		(effects
@@ -2521,11 +2521,11 @@
 				(size 1.27 1.27)
 			)
 			(justify left top)
-			(href "https://github.com/bsikar/ra8-firmware/blob/design/ereader-circuit/ra8p1_kicad/design/main_regulator_ltc3119.md")
+			(href "https://github.com/bsikar/ra8p1-ereader-kicad/blob/main/design/sensor_alternative.md")
 		)
 		(uuid "807d8433-1b44-4fce-9ef1-4800bfe8bc6b")
 	)
-	(text "SYS-007 / PWR-004: SHUTDOWN / U12, Q1-Q3, R35-R40, R70-R71\nPOWER_OFF_H=NOT(MAIN_PWR_EN); held-domain VCC=2.7..4.6V.\nEach gate branch: 1k series / 1M pulldown; 1% + 100ppm/C, 100C.\n4-gate peak<=4*4.6/(1000*0.99^2)=18.773595mA <50mA.\nIncludes future USB-clear; static<=22.773595uA <100uA.\nVGSmin=(2.6-1020.1*1uA)/(1+1020.1/980100)=2.596278V.\n1uA per gate/board leakage is a qualification allocation.\nRUN/KILL/discharge/USB-clear FET drains remain separate.\nR39||R40 + Q2: Rmax=22*1.01^2/2+0.2=11.4211ohm.\nKey-filter return allocation Ir=1.5mA; R=Rmax.\nTotal=10ms+R*C*ln((3.6-Ir*R)/(0.3-Ir*R)).\nAt 850uF: 34.647839ms; at 1mF: 38.997458ms <46.589403ms.\nEach 22R: P<=3.6^2/(22*0.99^2)=0.601052W; 1W at 70C.\nQualify 0.2ohm FET, 10ms TOTAL response, derating and backfeed.\nGate/transient charge shares the existing 1uC reserve.\nVBATT firmware/option invariant remains unimplemented; #846 unresolved.\nSources/Python: ../design/system_power_design.md SYS-007;\n../design/main_regulator_ltc3119.md PWR-004."
+	(text "SYS-007 / SENS-010: SHUTDOWN / U12, Q1-Q3, R35-R40, R70-R71\nPOWER_OFF_H=NOT(MAIN_PWR_EN); held-domain VCC=2.7..4.6V.\nEach gate branch: 1k series / 1M pulldown; 1% +100ppm/C, 100C.\n4-gate peak<=4*4.6/(1000*0.99^2)=18.773595mA <50mA.\nIncludes future USB-clear; static<=22.773595uA <100uA.\nVGSmin=(2.6-1020.1*1uA)/(1+1020.1/980100)=2.596278V.\n1uA per gate/board leakage is a qualification allocation.\nRUN/KILL/discharge/USB-clear FET drains remain separate.\nR39||R40 + Q2: Rmax=22*1.01^2/2+0.2=11.4211ohm.\nIr<=2.5mA: 1.5mA key-filter return +1mA other injection.\nVinf=Ir*Rmax=28.552750mV; Cmain<=1mF.\nTotal=10ms+Rmax*Cmain*ln((3.6-Vinf)/(0.09-Vinf))+10ms\n     =66.398757ms <75.794309ms hold; margin9.395552ms.\nEach 22R: P<=3.6^2/(22*0.99^2)=0.601052W; 1W at70C.\nQualify FET resistance, response, derating, backfeed and cycling.\nGate/transient charge shares 1uC reserve; allocations need validation.\nVBATT firmware/option invariant remains unimplemented.\nSources/Python: ../design/sensor_alternative.md SENS-010;\n../design/system_power_design.md SYS-007 for topology."
 		(exclude_from_sim no)
 		(at 50.546 241.3 0)
 		(effects
@@ -2533,7 +2533,7 @@
 				(size 1.27 1.27)
 			)
 			(justify left top)
-			(href "https://github.com/bsikar/ra8-firmware/blob/design/ereader-circuit/ra8p1_kicad/design/main_regulator_ltc3119.md")
+			(href "https://github.com/bsikar/ra8p1-ereader-kicad/blob/main/design/sensor_alternative.md")
 		)
 		(uuid "8e71e7e1-2c72-4bc7-a91e-b14475a13c76")
 	)
@@ -4175,7 +4175,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100u"
+		(property "Value" "220u"
 			(at 313.69 109.9438 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4208,7 +4208,7 @@
 				)
 			)
 		)
-		(property "Description" "SYS-007: KEMET 100uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD."
+		(property "Description" "SENS-010: KEMET 220uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD. Conditional shutdown budget, qualification pending."
 			(at 311.15 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4230,7 +4230,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "T491D107K010AT"
+		(property "Manufacturer_Part_Number" "T491D227K010AT"
 			(at 311.15 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4241,7 +4241,7 @@
 				)
 			)
 		)
-		(property "DigiKey_Part_Number" "399-3769-1-ND"
+		(property "DigiKey_Part_Number" "399-8379-1-ND"
 			(at 311.15 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4252,7 +4252,7 @@
 				)
 			)
 		)
-		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D107K010AT/818629"
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D227K010AT/2336333"
 			(at 311.15 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4274,7 +4274,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Snapshot" "2026-09-07: DigiKey Active, stock 11863; USD 1.64/1.09/0.8033 at 1/10/100; 20wk lead; recheck before ordering."
+		(property "Sourcing_Snapshot" "2026-09-27: DigiKey Active; stock 3958 unreserved; USD2.24/1.521/1.14770 at 1/10/100; 20-week lead; recheck before purchase."
 			(at 311.15 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4285,7 +4285,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 revised: four parallel 100uF/10V tantalum capacitors after R31. Cmin=400uF*0.9^3=291.6uF. Icontrol<=1.125mA plus 0.817mA pre-trip reverse allowance; initial Vhold=Vtrip_min-max(0.250V,Icontrol*102.24ohm)=3.013705831V. With combined <=1uC transition/initial-undershoot reserve, hold to 2.7V=46.589403ms. Qualification allocations, not measured guarantees; include raw VIN=0 and slow/floating-source collapse. Full math: ../design/system_power_design.md SYS-007."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: four parallel 220uF/10V. Cmin=880uF*0.9^3=641.52uF; control<=1.825mA plus 0.817mA reverse allocation; Vinitial=3.013705831V; 1uC transition reserve gives 75.794309ms to 2.7V. At Cmain<=1mF and return/injection<=2.5mA: 10ms response +46.398757ms discharge to90mV +10ms low hold =66.398757ms TOTAL. Conditional margin9.395552ms. See ../design/sensor_alternative.md; startup/leakage/backfeed qualification pending."
 			(at 311.15 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4869,7 +4869,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 revised: VIN1=raw SYS_AON, VOUT6 via R31=100R to AON_HOLD, CE3=AON_HOLD downstream of R31. GND2 and unused ST5 to GND; NC4 internally unconnected. Do not move R31 before VIN or sense immediate VOUT: limited reverse current can fail to trip. Budget 0.817mA pre-trip reverse plus 1.125mA control and combined 1uC transition/initial-undershoot reserve. Qualify VIN=0..4.6V leakage and slow/floating-source collapse. Full math: ../design/system_power_design.md SYS-007."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: VIN1=raw SYS_AON, VOUT6 via R31=100R to AON_HOLD, CE3=AON_HOLD downstream of R31. GND2 and unused ST5 to GND; NC4 internally unconnected. Do not move R31 before VIN or sense immediate VOUT: limited reverse current can fail to trip. Budget0.817mA pre-trip reverse plus1.825mA control and combined1uC transition/initial-undershoot reserve. Qualify VIN=0..4.6V leakage and slow/floating-source collapse. Topology: ../design/system_power_design.md SYS-007; revised reservoir budget: ../design/sensor_alternative.md SENS-010."
 			(at 254 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -7504,7 +7504,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100u"
+		(property "Value" "220u"
 			(at 351.79 109.9438 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7537,7 +7537,7 @@
 				)
 			)
 		)
-		(property "Description" "SYS-007: KEMET 100uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD."
+		(property "Description" "SENS-010: KEMET 220uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD. Conditional shutdown budget, qualification pending."
 			(at 349.25 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -7559,7 +7559,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "T491D107K010AT"
+		(property "Manufacturer_Part_Number" "T491D227K010AT"
 			(at 349.25 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -7570,7 +7570,7 @@
 				)
 			)
 		)
-		(property "DigiKey_Part_Number" "399-3769-1-ND"
+		(property "DigiKey_Part_Number" "399-8379-1-ND"
 			(at 349.25 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -7581,7 +7581,7 @@
 				)
 			)
 		)
-		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D107K010AT/818629"
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D227K010AT/2336333"
 			(at 349.25 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -7603,7 +7603,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Snapshot" "2026-09-07: DigiKey Active, stock 11863; USD 1.64/1.09/0.8033 at 1/10/100; 20wk lead; recheck before ordering."
+		(property "Sourcing_Snapshot" "2026-09-27: DigiKey Active; stock 3958 unreserved; USD2.24/1.521/1.14770 at 1/10/100; 20-week lead; recheck before purchase."
 			(at 349.25 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -7614,7 +7614,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 revised: four parallel 100uF/10V tantalum capacitors after R31. Cmin=400uF*0.9^3=291.6uF. Icontrol<=1.125mA plus 0.817mA pre-trip reverse allowance; initial Vhold=Vtrip_min-max(0.250V,Icontrol*102.24ohm)=3.013705831V. With combined <=1uC transition/initial-undershoot reserve, hold to 2.7V=46.589403ms. Qualification allocations, not measured guarantees; include raw VIN=0 and slow/floating-source collapse. Full math: ../design/system_power_design.md SYS-007."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: four parallel 220uF/10V. Cmin=880uF*0.9^3=641.52uF; control<=1.825mA plus 0.817mA reverse allocation; Vinitial=3.013705831V; 1uC transition reserve gives 75.794309ms to 2.7V. At Cmain<=1mF and return/injection<=2.5mA: 10ms response +46.398757ms discharge to90mV +10ms low hold =66.398757ms TOTAL. Conditional margin9.395552ms. See ../design/sensor_alternative.md; startup/leakage/backfeed qualification pending."
 			(at 349.25 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9250,7 +9250,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100u"
+		(property "Value" "220u"
 			(at 294.64 109.9438 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9283,7 +9283,7 @@
 				)
 			)
 		)
-		(property "Description" "SYS-007: KEMET 100uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD."
+		(property "Description" "SENS-010: KEMET 220uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD. Conditional shutdown budget, qualification pending."
 			(at 292.1 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9305,7 +9305,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "T491D107K010AT"
+		(property "Manufacturer_Part_Number" "T491D227K010AT"
 			(at 292.1 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9316,7 +9316,7 @@
 				)
 			)
 		)
-		(property "DigiKey_Part_Number" "399-3769-1-ND"
+		(property "DigiKey_Part_Number" "399-8379-1-ND"
 			(at 292.1 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9327,7 +9327,7 @@
 				)
 			)
 		)
-		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D107K010AT/818629"
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D227K010AT/2336333"
 			(at 292.1 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9349,7 +9349,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Snapshot" "2026-09-07: DigiKey Active, stock 11863; USD 1.64/1.09/0.8033 at 1/10/100; 20wk lead; recheck before ordering."
+		(property "Sourcing_Snapshot" "2026-09-27: DigiKey Active; stock 3958 unreserved; USD2.24/1.521/1.14770 at 1/10/100; 20-week lead; recheck before purchase."
 			(at 292.1 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9360,7 +9360,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 revised: four parallel 100uF/10V tantalum capacitors after R31. Cmin=400uF*0.9^3=291.6uF. Icontrol<=1.125mA plus 0.817mA pre-trip reverse allowance; initial Vhold=Vtrip_min-max(0.250V,Icontrol*102.24ohm)=3.013705831V. With combined <=1uC transition/initial-undershoot reserve, hold to 2.7V=46.589403ms. Qualification allocations, not measured guarantees; include raw VIN=0 and slow/floating-source collapse. Full math: ../design/system_power_design.md SYS-007."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: four parallel 220uF/10V. Cmin=880uF*0.9^3=641.52uF; control<=1.825mA plus 0.817mA reverse allocation; Vinitial=3.013705831V; 1uC transition reserve gives 75.794309ms to 2.7V. At Cmain<=1mF and return/injection<=2.5mA: 10ms response +46.398757ms discharge to90mV +10ms low hold =66.398757ms TOTAL. Conditional margin9.395552ms. See ../design/sensor_alternative.md; startup/leakage/backfeed qualification pending."
 			(at 292.1 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9517,7 +9517,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 revised: 100R between U10 VOUT and AON_HOLD; CE senses downstream reservoir. Rmin/max=98.01/102.01 ohm with tolerance and 100C TCR allocation. At 1.125mA control load, drop<=0.11476125V. Pre-trip reverse <=80mV/98.01ohm<0.817mA. Short screen: 4.6^2/98.01<0.216W, below 1W nominal rating; temperature/pulse cycling qualification required. Full math: ../design/system_power_design.md SYS-007."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: 100R between U10 VOUT and AON_HOLD; CE senses downstream reservoir. Rmin/max=98.01/102.01ohm with tolerance and100C TCR allocation. At1.825mA control load, resistor drop<=0.18616825V. Pre-trip reverse<=80mV/98.01ohm<0.817mA. Short screen:4.6^2/98.01<0.216W, below1W nominal rating; temperature/pulse cycling qualification required. Topology: ../design/system_power_design.md SYS-007; revised reservoir: ../design/sensor_alternative.md SENS-010."
 			(at 279.4 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -10186,7 +10186,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100u"
+		(property "Value" "220u"
 			(at 332.74 109.9438 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10219,7 +10219,7 @@
 				)
 			)
 		)
-		(property "Description" "SYS-007: KEMET 100uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD."
+		(property "Description" "SENS-010: KEMET 220uF, 10V, +/-10% tantalum reservoir; positive terminal to AON_HOLD. Conditional shutdown budget, qualification pending."
 			(at 330.2 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -10241,7 +10241,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "T491D107K010AT"
+		(property "Manufacturer_Part_Number" "T491D227K010AT"
 			(at 330.2 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -10252,7 +10252,7 @@
 				)
 			)
 		)
-		(property "DigiKey_Part_Number" "399-3769-1-ND"
+		(property "DigiKey_Part_Number" "399-8379-1-ND"
 			(at 330.2 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -10263,7 +10263,7 @@
 				)
 			)
 		)
-		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D107K010AT/818629"
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/kemet/T491D227K010AT/2336333"
 			(at 330.2 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -10285,7 +10285,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Snapshot" "2026-09-07: DigiKey Active, stock 11863; USD 1.64/1.09/0.8033 at 1/10/100; 20wk lead; recheck before ordering."
+		(property "Sourcing_Snapshot" "2026-09-27: DigiKey Active; stock 3958 unreserved; USD2.24/1.521/1.14770 at 1/10/100; 20-week lead; recheck before purchase."
 			(at 330.2 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -10296,7 +10296,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 revised: four parallel 100uF/10V tantalum capacitors after R31. Cmin=400uF*0.9^3=291.6uF. Icontrol<=1.125mA plus 0.817mA pre-trip reverse allowance; initial Vhold=Vtrip_min-max(0.250V,Icontrol*102.24ohm)=3.013705831V. With combined <=1uC transition/initial-undershoot reserve, hold to 2.7V=46.589403ms. Qualification allocations, not measured guarantees; include raw VIN=0 and slow/floating-source collapse. Full math: ../design/system_power_design.md SYS-007."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: four parallel 220uF/10V. Cmin=880uF*0.9^3=641.52uF; control<=1.825mA plus 0.817mA reverse allocation; Vinitial=3.013705831V; 1uC transition reserve gives 75.794309ms to 2.7V. At Cmain<=1mF and return/injection<=2.5mA: 10ms response +46.398757ms discharge to90mV +10ms low hold =66.398757ms TOTAL. Conditional margin9.395552ms. See ../design/sensor_alternative.md; startup/leakage/backfeed qualification pending."
 			(at 330.2 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -11463,7 +11463,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 / PWR-004: two 22R 1W in parallel, Rpath_max=11.4211 ohm with qualified 0.2 ohm FET. Include 1.5mA key-filter return: at Cmain<=1mF, 3.6V to0.3V discharge <=28.997458ms; total <=38.997458ms includes shared10ms response. Derate and qualify repeated/continuous fault energy. Full equation: ../design/main_regulator_ltc3119.md."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: two22R1W in parallel; Rpath_max=11.4211ohm including allocated0.2ohm FET. At Cmain<=1mF and2.5mA total return/injection (1.5mA key filters +1mA other), Vinf=28.552750mV. 10ms response +46.398757ms from3.6V to90mV +10ms low hold =66.398757ms TOTAL; held75.794309ms conditional margin9.395552ms. Each22R worst initial power0.601052W. Derate and qualify FET resistance, backfeed and repeated/continuous fault energy. Full equation: ../design/sensor_alternative.md SENS-010."
 			(at 342.9 218.44 90)
 			(hide yes)
 			(show_name no)
@@ -12365,7 +12365,7 @@
 				)
 			)
 		)
-		(property "Selection_Basis" "SYS-007 / PWR-004: two 22R 1W in parallel, Rpath_max=11.4211 ohm with qualified 0.2 ohm FET. Include 1.5mA key-filter return: at Cmain<=1mF, 3.6V to0.3V discharge <=28.997458ms; total <=38.997458ms includes shared10ms response. Derate and qualify repeated/continuous fault energy. Full equation: ../design/main_regulator_ltc3119.md."
+		(property "Selection_Basis" "SENS-010 / SYS-007 revision: two22R1W in parallel; Rpath_max=11.4211ohm including allocated0.2ohm FET. At Cmain<=1mF and2.5mA total return/injection (1.5mA key filters +1mA other), Vinf=28.552750mV. 10ms response +46.398757ms from3.6V to90mV +10ms low hold =66.398757ms TOTAL; held75.794309ms conditional margin9.395552ms. Each22R worst initial power0.601052W. Derate and qualify FET resistance, backfeed and repeated/continuous fault energy. Full equation: ../design/sensor_alternative.md SENS-010."
 			(at 323.85 218.44 90)
 			(hide yes)
 			(show_name no)

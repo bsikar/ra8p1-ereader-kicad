@@ -1,6 +1,6 @@
 # Camera, removable storage and external-memory allocation
 
-Revision 27, 2026-09-13. Target: R7KA8P1KFLCAC#UC0, MIPI-enabled BGA289.
+Revision 28, 2026-09-27. Target: R7KA8P1KFLCAC#UC0, MIPI-enabled BGA289.
 This is an engineering allocation record for native KiCad implementation,
 not a completed schematic, verified timing closure or hardware qualification.
 Cross-references: [radio](radio_interface.md), [power](system_power_design.md),
@@ -43,6 +43,38 @@ DVP support for this shield on RA at retrieval time.
 [Zephyr's CU450 shield documentation](https://docs.zephyrproject.org/latest/boards/shields/arducam_cu450_ov5640/doc/index.html).
 
 ## CMS-016: Two-camera expansion and lighting requirements
+
+The [CMS-017 timing and bandwidth screen](camera_timing_budget.md) records
+the 2026-09-27 CEU clock ceiling, unsupported uncompressed mode combinations,
+sensor address-register evidence and remaining assembly qualification.
+
+Standalone-repository verification, 2026-09-27: this project now lives in
+`bsikar/ra8p1-ereader-kicad`; camera work is tracked in
+[issue #2](https://github.com/bsikar/ra8p1-ereader-kicad/issues/2) under
+[epic #21](https://github.com/bsikar/ra8p1-ereader-kicad/issues/21).
+The following paragraph supersedes the placement status in the older
+checkpoints below; those checkpoints remain historical evidence.
+
+The overview MCU block has been enlarged and the owner has completed a
+cosmetic pass across the sheets. All eleven CEU host labels and matching
+MCU sheet ports are placed. A fresh KiCad XML export from `a1d5f219`
+confirms D0..D7 at U1 B15/E9/B14/B13/A15/A13/A14/G14, HREF at D16,
+PCLK at D13 and VSYNC at E13. Each currently contains only its MCU pin:
+the external camera connector, power, control and data circuitry remain
+unimplemented. This verifies host allocation, not a working camera.
+
+The export contains 271 component records and 334 nets. Native Windows
+ERC reports 114 errors and 55 warnings, with the four existing ignored
+checks unchanged. The 44 additional warnings relative to the committed
+125-finding report are `Device:C_Small` library-cache mismatches. An
+inspected cache differs from the installed library in a hidden Description
+field position and one plate's stroke width (0.3048 versus 0.3302 mm).
+These warnings were retained at this allocation checkpoint and subsequently
+resolved by the native capacitor-cache refresh documented in
+[the September 27 ERC review](erc_review_2026-09-27.md). The current result
+is 111 errors and 11 warnings; neither that count nor the existing ignored
+checks constitutes electrical acceptance. Eleven isolated CEU labels remain
+pending the external circuit.
 
 Layout checkpoint, 2026-09-13: the native Pcam sheet was enlarged from A4
 to A3, its existing circuit moved together toward the upper left, and a

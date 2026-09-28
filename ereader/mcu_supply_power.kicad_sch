@@ -224,7 +224,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 -10.16 0)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -274,7 +274,7 @@
 						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -2181,6 +2181,7 @@
 							)
 						)
 					)
+					(alternate "IRQ28-DS" input line)
 				)
 				(pin bidirectional line
 					(at 15.24 -25.4 180)
@@ -2455,6 +2456,7 @@
 							)
 						)
 					)
+					(alternate "SCL0_A" bidirectional line)
 				)
 				(pin bidirectional line
 					(at -15.24 -35.56 0)
@@ -2725,6 +2727,7 @@
 							)
 						)
 					)
+					(alternate "SDA0_A" bidirectional line)
 				)
 				(pin bidirectional line
 					(at -15.24 -17.78 0)

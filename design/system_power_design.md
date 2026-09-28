@@ -1,5 +1,18 @@
 # E-reader system-power engineering basis
 
+Reservoir revision, 2026-09-27: native C63-C66 are now four 220uF/10V
+T491D227K010AT parts. [SENS-010](sensor_alternative.md#revised-reservoir-draft-implemented-2026-09-27)
+supersedes the historical four-100uF reservoir arithmetic below: 641.52uF
+minimum screen, 1.825mA control plus 0.817mA reverse allocation, and
+75.794309ms held-control screen. The revised discharge screen includes
+1.5mA key-filter return plus 1mA other injection and requires 66.398757ms
+total to reach 90mV and remain low for 10ms, including 10ms response.
+Margin is conditional, 9.395552ms; source collapse, early capacitor leakage,
+rail capacitance and backfeed remain qualification dependencies. Recovery
+model time to 3.25V is 0.657961s at raw 3.70V, with only 13.412mV steady
+headroom. The one-second settling and separate full source qualification
+requirements remain. Sensor replacement itself is not implemented.
+
 Current integration update, 2026-09-12: the native main regulator is U13
 TPS63806, described by [PWR-006](main_regulator_tps63806.md), and the
 [CMS-013](camera_storage_interfaces.md#steady-csi-branch-allocation) host

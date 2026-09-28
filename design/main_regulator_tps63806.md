@@ -240,8 +240,10 @@ source term that was negligible but omitted from PWR-004's rounded result.
 Four held branches retain a resistor-limited simultaneous charging screen
 of 18.773595 mA, steady load 22.773595 uA and VGS >=2.596278 V.
 The charging screen is below the inverter's 50 mA absolute output limit,
-not an authorization for sustained operation at that limit. The 1.125 mA
-held control budget retains 98.226405 uA after 500 uA reservoir leakage,
+not an authorization for sustained operation at that limit. Revision
+2026-09-27: [SENS-010](sensor_alternative.md) raises the held control
+allocation to 1.825mA after replacing C63-C66 with 220uF parts. It retains
+198.226405uA after 1.100mA reservoir leakage,
 500 uA inverter non-rail-input allowance, 4 uA static inverter current and
 the four branches; other already allocated held loads must fit that remainder.
 Preserve the 10 ms complete response allocation and 1 uC transition-charge
@@ -361,6 +363,10 @@ The output change is exactly +22 uF, not +22 uF minus 4.7 nF.
 | Radio-on source-charged total | 489.81 uF |
 
 These nominal totals match the independently audited native component inventory.
+That statement applies to the migration checkpoint. For the later saved
+schematic, [PWR-CAP-001](main_rail_capacitance.md) supersedes these totals:
+512.21uF directly on main, plus 10uF through FB1. Other rail storage and
+unqualified external module capacitance are tracked separately there.
 Input C73/C93/C96, raw C101 and removed private-LTC capacitors must be
 inventoried separately for source-side startup charge. Their values do not
 belong in the direct output-capacitance sum.
@@ -377,7 +383,11 @@ Retain the external discharge circuit: TPS63806 does not provide the
 TPS63807 output-discharge feature. PWR-004's conservative tail model uses
 11.4211 ohm maximum discharge resistance, 1.5 mA key-filter return current,
 3.6 V initial voltage and 0.3 V target. At 1 mF, including the 10 ms response
-allocation, it gives 38.997458 ms versus the existing 46.589403 ms hold.
+allocation, it gave 38.997458 ms versus the former 46.589403 ms hold.
+The 2026-09-27 native reservoir revision is now governed by
+[SENS-010](sensor_alternative.md): 75.794309ms hold against 66.398757ms
+total shutdown, including the stricter 90mV/10ms low interval and 1mA
+additional backfeed allowance on top of the existing 1.5mA key return.
 Keeping its 3.6 V initial bound is conservative for this proposal. New
 backpower or changes to held loading require recalculation; no hold or
 hard-off requirement is relaxed.

@@ -7,3 +7,5 @@
 .DS_Store
 fp-info-cache
 exports/.export-*/
+__pycache__/
+*.pyc

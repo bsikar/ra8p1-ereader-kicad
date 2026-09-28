@@ -251,6 +251,16 @@
 	)
 	(wire
 		(pts
+			(xy 199.39 120.65) (xy 207.01 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fa8a539-1ed7-4090-b9f7-38d6e22bd7f0")
+	)
+	(wire
+		(pts
 			(xy 129.54 133.35) (xy 129.54 140.97)
 		)
 		(stroke
@@ -288,6 +298,16 @@
 			(type default)
 		)
 		(uuid "4317273e-b827-48ac-8079-42484e86a32a")
+	)
+	(wire
+		(pts
+			(xy 199.39 128.27) (xy 207.01 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46813121-a546-4358-8065-1411ef809dc6")
 	)
 	(wire
 		(pts
@@ -681,6 +701,16 @@
 	)
 	(wire
 		(pts
+			(xy 429.26 189.23) (xy 441.96 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b524a25-4428-4285-81b2-2a3cd658bcca")
+	)
+	(wire
+		(pts
 			(xy 52.07 87.63) (xy 62.23 87.63)
 		)
 		(stroke
@@ -688,6 +718,16 @@
 			(type default)
 		)
 		(uuid "8fe72d74-381b-411a-9eab-02052c0cd0ea")
+	)
+	(wire
+		(pts
+			(xy 429.26 186.69) (xy 441.96 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9223a0a8-ed63-4a85-afce-6af795369248")
 	)
 	(wire
 		(pts
@@ -738,6 +778,16 @@
 			(type default)
 		)
 		(uuid "9b98dea6-d920-4fe4-bf05-9caeba05e82a")
+	)
+	(wire
+		(pts
+			(xy 556.26 186.69) (xy 568.96 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cb580cb-b12a-4cbd-99b6-642d26f5a2ec")
 	)
 	(wire
 		(pts
@@ -1011,6 +1061,16 @@
 	)
 	(wire
 		(pts
+			(xy 199.39 113.03) (xy 207.01 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f80e1106-eb21-4cc9-ba30-9a2622892e0b")
+	)
+	(wire
+		(pts
 			(xy 101.6 73.66) (xy 101.6 77.47)
 		)
 		(stroke
@@ -1149,6 +1209,16 @@
 		)
 		(uuid "3a84ba85-70e7-47b9-bf67-2dd30f4a7037")
 	)
+	(label "SENS_SDA"
+		(at 207.01 128.27 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3c9d09ea-af49-461c-9ce9-1b8961fd0c86")
+	)
 	(label "SDRAM_WE_N"
 		(at 379.73 133.35 0)
 		(effects
@@ -1178,6 +1248,16 @@
 			(justify right bottom)
 		)
 		(uuid "49447e16-b146-44e9-9387-8d6fc7efabc1")
+	)
+	(label "SENS_INT1"
+		(at 568.96 186.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4c81c0a6-0d52-4fbd-a1cd-a8fc21553ea5")
 	)
 	(label "SD_CMD"
 		(at 318.77 257.81 0)
@@ -1278,6 +1358,16 @@
 			(justify right bottom)
 		)
 		(uuid "6e1f5356-eefe-41e0-9427-ed86f96ccf8d")
+	)
+	(label "SENS_SDA"
+		(at 429.26 189.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "71cd62a7-f2d8-4cac-b822-e9cd2867f651")
 	)
 	(label "SDRAM_CAS_N"
 		(at 379.73 143.51 0)
@@ -1609,6 +1699,16 @@
 		)
 		(uuid "caa3c895-64d8-4cb0-b0ad-c2aa011d6008")
 	)
+	(label "SENS_SCL"
+		(at 207.01 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d32cc8a6-442b-400e-ac7f-03a8ed355aba")
+	)
 	(label "SD_PWR_REQ"
 		(at 104.14 73.66 90)
 		(effects
@@ -1648,6 +1748,16 @@
 			(justify left bottom)
 		)
 		(uuid "debd68e1-0a65-49d3-b03f-c696a17d50c4")
+	)
+	(label "SENS_SCL"
+		(at 429.26 186.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2b5108d-ec25-4e79-a91e-2ddee1fa5d42")
 	)
 	(label "NOR_DS_HOST"
 		(at 55.88 52.07 180)
@@ -1738,6 +1848,16 @@
 			(justify left bottom)
 		)
 		(uuid "f8a04a4c-af84-4e1b-8c0f-44cdc0026509")
+	)
+	(label "SENS_INT1"
+		(at 207.01 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fa008272-2568-4af7-bf3a-e67b925f5fea")
 	)
 	(label "SD_DAT1"
 		(at 318.77 262.89 0)
@@ -2699,6 +2819,36 @@
 				(justify left)
 			)
 		)
+		(pin "SENS_INT1" input
+			(at 199.39 113.03 0)
+			(uuid "d514b8f9-8a23-44c9-8998-20f95689db8c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SENS_SCL" output
+			(at 199.39 120.65 0)
+			(uuid "1ab0833c-2526-479c-8a8a-9e2ff78f7339")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SENS_SDA" bidirectional
+			(at 199.39 128.27 0)
+			(uuid "a8c136b2-b8fb-49f3-8198-66f6aac08874")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166"
@@ -3418,6 +3568,82 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166"
 					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 441.96 184.15)
+		(size 114.3 44.45)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d59ec418-2c7b-439f-857e-b8ddd452e261")
+		(property "Sheetname" "Orientation sensor"
+			(at 441.96 183.4384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "orientation_sensor.kicad_sch"
+			(at 441.96 229.1846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SENS_SCL" input
+			(at 441.96 186.69 180)
+			(uuid "81771c01-5114-42d3-881a-ab162a178bf4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SENS_SDA" bidirectional
+			(at 441.96 189.23 180)
+			(uuid "697c39fc-0dae-406c-b32d-8437ea23aa23")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SENS_INT1" output
+			(at 556.26 186.69 0)
+			(uuid "a0b7f71f-b15e-46e6-a71c-33b9f64e4a47")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166"
+					(page "14")
 				)
 			)
 		)

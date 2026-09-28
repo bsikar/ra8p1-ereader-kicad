@@ -247,7 +247,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 -10.16 0)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -297,7 +297,7 @@
 						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -1867,6 +1867,7 @@
 							)
 						)
 					)
+					(alternate "IRQ28-DS" input line)
 				)
 				(pin bidirectional line
 					(at 15.24 -25.4 180)
@@ -2141,6 +2142,7 @@
 							)
 						)
 					)
+					(alternate "SCL0_A" bidirectional line)
 				)
 				(pin bidirectional line
 					(at -15.24 -35.56 0)
@@ -2411,6 +2413,7 @@
 							)
 						)
 					)
+					(alternate "SDA0_A" bidirectional line)
 				)
 				(pin bidirectional line
 					(at -15.24 -17.78 0)
@@ -8241,6 +8244,16 @@
 	)
 	(wire
 		(pts
+			(xy 264.16 63.5) (xy 271.78 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2c73e8d-4a74-4a85-8683-3b19aa296589")
+	)
+	(wire
+		(pts
 			(xy 210.82 132.08) (xy 233.68 132.08)
 		)
 		(stroke
@@ -8301,6 +8314,16 @@
 	)
 	(wire
 		(pts
+			(xy 317.5 71.12) (xy 330.2 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f154332b-372c-426d-b421-85a6fcef4c90")
+	)
+	(wire
+		(pts
 			(xy 105.41 207.01) (xy 105.41 205.74)
 		)
 		(stroke
@@ -8308,6 +8331,16 @@
 			(type default)
 		)
 		(uuid "f20f02b9-88b8-42f5-9151-88fdc34287f8")
+	)
+	(wire
+		(pts
+			(xy 317.5 73.66) (xy 330.2 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4db03c0-9639-497f-a5cc-ac33a030cccd")
 	)
 	(wire
 		(pts
@@ -9166,6 +9199,17 @@
 		)
 		(uuid "550346bd-fc46-4fca-9505-1b5e968decff")
 	)
+	(hierarchical_label "SENS_SCL"
+		(shape output)
+		(at 317.5 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5537cb5b-293d-4c6d-9d78-ecab6b3505dc")
+	)
 	(hierarchical_label "POWER_BUTTON_N"
 		(shape input)
 		(at 271.78 55.88 0)
@@ -9529,6 +9573,17 @@
 		)
 		(uuid "d931e174-d155-4eac-b085-ea75b4755f6c")
 	)
+	(hierarchical_label "SENS_INT1"
+		(shape input)
+		(at 271.78 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d98d8e52-4b4e-4199-8f34-d5bfcc1a2b67")
+	)
 	(hierarchical_label "CAM_CLK_P"
 		(shape input)
 		(at 88.9 200.66 0)
@@ -9605,6 +9660,17 @@
 			(justify right)
 		)
 		(uuid "eee49d46-bef8-4c3b-b29a-f5e53c16db2b")
+	)
+	(hierarchical_label "SENS_SDA"
+		(shape bidirectional)
+		(at 317.5 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f8191d62-05e0-406a-bb87-55dbbfc489d0")
 	)
 	(hierarchical_label "CEU_D2"
 		(shape input)
@@ -11068,6 +11134,7 @@
 		)
 		(pin "D11"
 			(uuid "537ccc5a-fb3d-47da-b291-92c853b3da32")
+			(alternate "IRQ28-DS")
 		)
 		(pin "C11"
 			(uuid "c5f4b34f-f250-4488-bdc8-612e9e7b57f8")
@@ -18410,9 +18477,11 @@
 		)
 		(pin "R16"
 			(uuid "a7a6fbba-b515-4595-a393-e65fd136e62c")
+			(alternate "SDA0_A")
 		)
 		(pin "K13"
 			(uuid "737547a1-5f60-4cde-b10f-87aadecf8b56")
+			(alternate "SCL0_A")
 		)
 		(pin "M14"
 			(uuid "1828b0bb-24b9-4b61-8836-cb0ab877f322")

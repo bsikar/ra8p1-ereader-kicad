@@ -34,7 +34,7 @@ explicitly incomplete sections. It is not a fabrication drawing of the PCB.
 From the repository root, regenerate it with:
 
 ```sh
-./ra8p1_kicad/scripts/export_design.sh
+./scripts/export_design.sh
 ```
 
 The script also works when called by absolute path from another directory.
@@ -49,14 +49,17 @@ not save unsaved editor changes. `--help` shows the available arguments.
 Before each commit, save all sheets, export the complete PDF, inspect every
 page, and run ERC. During circuit development, record unresolved findings;
 do not hide unconnected pins merely to obtain a clean report. Before pushing,
-run the repository checks required by `../CLAUDE.md`.
+run `python scripts/check_clock_calculations.py`, review the relevant
+calculation checks in `design/`, and run `git diff --check`. Follow
+`.agents/AGENTS.md` and `LIBRARY_STANDARDS.md`; the former firmware checkout's
+parent-relative `CLAUDE.md` is not present in this standalone repository.
 
 ## Design references
 
 - [Hardware requirements](design/ereader_requirements.md)
 - [Library conventions](LIBRARY_STANDARDS.md)
 - [Imported parts inventory](PARTS-CHECKLIST.md)
-- [Hardware epic and section issues](https://github.com/bsikar/ra8-firmware/issues/821)
+- [Hardware epic and section issues](https://github.com/bsikar/ra8p1-ereader-kicad/issues/21)
 
 The Gaggia controller is a separate future board. Shared components belong in
 the functional libraries under `libs/`; board-specific sheets belong in their
