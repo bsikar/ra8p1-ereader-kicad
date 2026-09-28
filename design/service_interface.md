@@ -284,3 +284,23 @@ KiCad exported the symbol's unit for visual review. The refreshed complete
 14-page schematic PDF is pixel-identical to the previously reviewed checkpoint;
 native ERC remains 101 errors and 11 warnings. Clock arithmetic and the
 SERVICE-005 32-state/conditional-DC checks pass with their stated limitations.
+
+## SERVICE-008: native U27 placement WIP
+
+U27 now instantiates the TXU0202DCUR on the radio sheet (PDF page 6).
+Pin 8 B1Y has a wire stub named `C6_UART_RX`; the other end at U3.24
+is not implemented yet. The other seven U27 pins remain visibly open.
+This saves the beginning of circuit integration, not a working recovery
+interface. SERVICE-003/004 supply, ground, enable, UART, bypass, bias and
+fixture connections remain to be implemented and checked.
+
+Native netlist review finds 278 components and confirms that every existing
+net's pin membership is preserved. ERC is 114 errors and 12 warnings:
+the added 13 errors and one warning all concern unfinished U27 connections.
+The previous 101 errors and 11 warnings are unchanged. No ERC exclusions
+or no-connect markers were added. KiCad also regenerated the orientation
+sheet's document UUID on save; its drawing and connectivity are unchanged.
+
+The complete 14-page PDF was regenerated and rendered. Page 6 adds U27 in
+the open lower area; the other 13 pages are pixel-identical to the prior
+reviewed export. Clock arithmetic and SERVICE-005 conditional checks pass.
