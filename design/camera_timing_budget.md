@@ -80,3 +80,68 @@ operation remain open.
 
 The four lighting channels retain separate current/thermal budgets; none
 of these throughput calculations accounts for their battery load.
+
+## CMS-018: DC levels and translation decision (2026-09-27)
+
+Direct wiring is rejected for a camera using the documented 1.8V I/O
+condition. RA8P1 Table 2.5, printed pp47-48, applies 0.8*VCC VIH and
+0.2*VCC VIL to the remaining peripheral inputs, including CEU. Both host
+VCC domains use the main rail; its conditional 3.151819680..3.393012496V
+envelope requires a worst-case high of 2.714409997V and low below
+0.630363936V. OV5640 Table 8-3, printed p8-3, gives VOH >=1.62V and
+VOL <=0.18V at the documented conditions with 25pF output loading. The
+resulting high margin is -1.094409997V; low margin is +0.450363936V.
+These sensor numbers are not stated as supply-proportional formulas:
+do not extrapolate them to 2.8V or 3.0V to approve a different module.
+
+[TI SN74AXC8T245, SCES875C, January 2024](https://www.ti.com/lit/ds/symlink/sn74axc8t245.pdf)
+is a translator candidate, not a placed or sourced part. Sections 5.3/5.5
+give input thresholds 0.65/0.35 times supply in the 1.1..1.95V range.
+At exactly 1.8V, both sensor-to-translator DC margins are 0.45V. With its
+output supply on the host rail and static loading <=100uA, VOH >=VCCO-0.1V
+and VOL <=0.1V give host margins >=0.530363936V. This does not qualify
+dynamic edges, actual load, or sensor supply tolerance.
+
+Section 5.11 gives A-to-B delay 0.5..5ns for 1.8-to-3.3V translation
+under the specified test conditions. Allocate 4.5ns independent-path
+spread; do not treat typical channel matching as a guaranteed bound.
+Section 6 uses 15pF, generator slope <=1ns/V, and half-supply crossings;
+receiver threshold/edge uncertainty is additional. OE/DIR reference VCCA;
+pull OE high by default and qualify ramp isolation separately.
+
+Our resulting rising-edge timing requirement is sensor setup >=6.5ns and
+hold >=8ns, before cable/trace skew and jitter, if both clock and data
+take such translator paths. That requirement is still unproven. Eleven
+video signals need more than one eight-channel device; no inter-device
+matching credit is assumed. SCCB is bidirectional open-drain and needs
+its own suitable interface; this direction-controlled video candidate
+does not resolve SCCB, reset, power-down, or autofocus supply.
+
+`check_camera_budget.py` reproduces these margins with exact fractions.
+Next implementation prerequisite: identify an assembly with documented
+I/O rails and sufficient output timing, then qualify its regulator,
+isolation, connector and operating mode together. The candidate breakout's
+3.3V supply discrepancy remains unresolved; no camera-side circuitry was
+placed on the strength of these screens.
+
+### Alternative assembly lead
+
+ST's [MB1379 A05 reference](https://www.st.com.cn/resource/en/schematic_pack/mb1379-2v8-a05-schematic.pdf),
+dated August 19, 2020, names HDF5640-AF-V2.0 with separate AVDD/AF-VCC
+2.8V, DVDD 1.5V, and selectable DOVDD 1.8/2.8V. This is a useful lead
+for a camera supply architecture within the sensor's published range.
+The [B-CAMS-OMV product](https://www.st.com/en/evaluation-tools/b-cams-omv.html)
+bundles that daughterboard with an adapter; it is not a separately qualified
+bare-flex procurement item. A05 text was retrieved, but local PDF download
+and visual jumper tracing remain pending. Do not infer shipped configuration
+from the selectable-voltage note.
+
+A [Dogoozx catalogue listing](https://dgzx.hk/product/5mp-yuv-2k-1080p-ov5640-af-auto-focus-scan-code-camera-module-manufacturer-dvp/)
+uses the same HDF5640-AF-V2.0 name, but no matching electrical drawing,
+revision, guaranteed timing/current limits or distributor sourcing was
+established. A matching name alone does not qualify a substitute. Next
+research should trace the A05 rails and obtain an exact assembly contract,
+rather than repeating the already rejected direct-1.8V connection.
+
+Independent review reproduced CMS-018 arithmetic and checked TI's source
+conditions. No schematic or BOM changes were made for this research checkpoint.
