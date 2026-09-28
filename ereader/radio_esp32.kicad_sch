@@ -2933,6 +2933,17 @@
 		)
 		(uuid "80fa67e3-4738-46a7-8272-d6dc5e749f56")
 	)
+	(text "RADIO-021: GPIO0/1/5/11/18..23 unused.\nFirmware: enable internal bias after strap sampling.\nUART0 and USB recovery circuits remain OPEN.\nSee ../design/radio_interface.md (RADIO-021)."
+		(exclude_from_sim no)
+		(at 106.68 120.904 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8105440a-b290-4770-8023-1daeffebd673")
+	)
 	(text "RADIO-005: C47 / U4 VIN local bypass\n10 uF nominal, +/-10%, 35 V X7R; same exact TDK part as C46.\nC(3.3 V) = 9.69875 + (3.3-3.15)/0.85*(9.38950-9.69875)\n             = 9.64418 uF nominal; NOT a guaranteed minimum.\nDroop = integral(Iload-Isource)dt / Ceff + ESR/ESL effects.\nTI section 11: 1 uF usually sufficient; slow sources may need more.\nC47 is upstream: exclude it from C45+C46 output-discharge math.\nRegulator/transient qualification required; no source flag added.\nCalculations: ../design/radio_interface.md#radio-005-input-bypass"
 		(exclude_from_sim no)
 		(at 124.46 190.5 0)
@@ -3136,8 +3147,48 @@
 		(uuid "fca26e75-f51f-41f0-a917-ac85a049227b")
 	)
 	(no_connect
+		(at 137.16 100.33)
+		(uuid "16e8fd68-a04f-4144-8a25-bd9b96198206")
+	)
+	(no_connect
+		(at 137.16 102.87)
+		(uuid "173deb78-7fef-4e56-82b2-b3322f0d0de9")
+	)
+	(no_connect
+		(at 101.6 82.55)
+		(uuid "29a3da81-b71f-4c60-b3b8-23e9f3a7efc6")
+	)
+	(no_connect
+		(at 137.16 90.17)
+		(uuid "39e6b730-6acb-4380-abe0-5952ab72a454")
+	)
+	(no_connect
+		(at 101.6 80.01)
+		(uuid "7143f6a4-b3a0-4f81-baba-cee96de812db")
+	)
+	(no_connect
+		(at 137.16 80.01)
+		(uuid "8e300d90-8730-4d07-96bf-4d463bfa4882")
+	)
+	(no_connect
+		(at 137.16 95.25)
+		(uuid "a3485bcf-ca67-40a8-8001-8e731a093afa")
+	)
+	(no_connect
 		(at 101.6 105.41)
 		(uuid "bc12c865-d226-4c37-ba0e-1a85cf17e691")
+	)
+	(no_connect
+		(at 137.16 92.71)
+		(uuid "d0e9a64b-90a1-4f4c-b2dc-684466e63279")
+	)
+	(no_connect
+		(at 101.6 92.71)
+		(uuid "d5f0e4d4-32b8-4fff-9dbd-f0d895e06aa7")
+	)
+	(no_connect
+		(at 137.16 97.79)
+		(uuid "ee1588d4-d5e7-43a1-96aa-668fd0e43cfb")
 	)
 	(wire
 		(pts

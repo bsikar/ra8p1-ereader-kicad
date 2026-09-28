@@ -74,3 +74,24 @@ revised held-supply/discharge draft, camera timing screen, capacitor inventory,
 C9 candidate procurement record, and capacitor library-cache repair. Front-camera
 hardware, recovery, power-source/USB, display/touch/lighting, audio, and final
 electrical qualification remain open under epic #21.
+
+## RADIO-021 follow-up
+
+Native placement added ten intentional no-connects on U3 contacts
+5, 8, 9, 12, 16, 17, 18, 19, 20 and 21, plus the matching allocation note.
+These are unused GPIOs under the documented SPI transport, not unfinished
+recovery connections. Required firmware bias and its power-accounting limits
+are recorded in RADIO-021. U3 contacts 13/14/24/25 retain ERC findings.
+
+Fresh ERC: **101 errors, 11 warnings**. Set comparison against the preceding
+122 findings removed exactly those ten U3 unconnected-pin errors, with no
+new findings. Rules and exclusions were not changed. Full XML component
+records and every net's reference/pin membership match the prior checkpoint;
+there is no BOM change. Native save also regenerated the orientation sheet's
+document UUID only; component identities, connectivity and rendering agree.
+
+The complete PDF was regenerated. All 13 other rendered pages match the
+previously reviewed images byte-for-byte; changed radio page 6 was visually
+reviewed, including the separated four-line note. Clock arithmetic/BOM checks
+and `git diff --check` pass. Recovery circuitry and radio timing/power
+qualification remain incomplete.

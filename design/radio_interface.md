@@ -1,5 +1,33 @@
 # ESP32-C6 radio electrical interface
 
+## RADIO-021: unused GPIO disposition (2026-09-27)
+
+U3 contacts 8/9 (GPIO0/1), 5 (GPIO5), 12 (GPIO11), and 16..21
+(GPIO18..23) are intentionally unused in the SPI-coprocessor design.
+Native no-connect markers document this allocation. No external 32kHz
+radio crystal, ADC, LP UART, SDIO or pad JTAG interface is selected.
+GPIO5/MTDI samples an unused SDIO timing strap; its floating strap value
+does not select flash versus download boot. Existing GPIO8/9/15 bias and
+all active SPI/status/reset connections are retained.
+
+Authority: [module datasheet v1.4, Tables 3-1/4-1 and section 4.2](https://www.espressif.com/sites/default/files/documentation/esp32-c6-wroom-1_wroom-1u_datasheet_en.pdf).
+The [Espressif hardware checklist, GPIO section](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32c6/schematic-checklist.html#gpio)
+permits internal bias enabled during software initialization for unused
+high-impedance inputs. Require the coprocessor firmware to enable pull-downs
+on these ten GPIOs after strap sampling, disable their peripheral routing,
+and reestablish bias after sleep/reset as appropriate. Do not rely on these
+software settings to enforce any power-path or recovery safety function.
+ROM/early-boot input current and sleep leakage remain in the radio power
+qualification; no reduced current is credited by adding NC markers.
+
+Contacts 24/25 (UART0) remain unfinished for the protected recovery circuit
+in SERVICE-002..006. Contacts 13/14 (USB Serial/JTAG) also remain unmarked
+pending the final recovery/debug decision. None of these four pins is
+declared intentionally unused by this change. The service arbitration,
+adapter isolation and factory recovery are not implemented by this pass.
+
+The dated sections below retain their historical checkpoint counts.
+
 Design record for issue #826 and schematic `radio_esp32.kicad_sch`.
 The retained module candidate is ESP32-C6-WROOM-1-N8. This record is an
 interface design basis, not a completed circuit or demonstrated RA8P1 port.
