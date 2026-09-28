@@ -3539,6 +3539,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 306.07) (xy 144.78 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00c409fb-a0ef-4e65-aca1-db3854dca36c")
+	)
+	(wire
+		(pts
 			(xy 185.42 77.47) (xy 180.34 77.47)
 		)
 		(stroke
@@ -3746,6 +3756,16 @@
 			(type default)
 		)
 		(uuid "2d36e0d2-63a1-4b72-881f-4f839a3f9fa8")
+	)
+	(wire
+		(pts
+			(xy 149.86 306.07) (xy 170.18 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d4b3396-0699-4374-9db0-17c8efb5f32f")
 	)
 	(wire
 		(pts
@@ -4249,6 +4269,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 316.23) (xy 149.86 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86d3d64e-cac0-44d8-b0e6-ed53817a175b")
+	)
+	(wire
+		(pts
 			(xy 60.96 86.36) (xy 66.04 86.36)
 		)
 		(stroke
@@ -4636,6 +4666,16 @@
 			(type default)
 		)
 		(uuid "ce0f60c2-9480-453f-98e8-d2a7166d9243")
+	)
+	(wire
+		(pts
+			(xy 144.78 316.23) (xy 144.78 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce92965e-a251-4f91-beee-52f0a49f8371")
 	)
 	(wire
 		(pts
@@ -5176,6 +5216,16 @@
 			(justify right bottom)
 		)
 		(uuid "b9f9e6cf-6877-4901-8e7f-36b5d140dbfb")
+	)
+	(label "SERVICE_VIO"
+		(at 124.46 306.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bc329167-ab54-42e6-960c-2084df6703a6")
 	)
 	(label "C6_EN"
 		(at 73.66 33.02 180)
@@ -8835,6 +8885,84 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
 					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 170.18 306.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "690a1227-0198-4315-bc43-1eca52f97fdf")
+		(property "Reference" "#PWR0242"
+			(at 170.18 309.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3_RADIO"
+			(at 170.18 300.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 170.18 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "518b5c4a-5b3e-4135-8a72-6868ad69c18f")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "#PWR0242")
 					(unit 1)
 				)
 			)

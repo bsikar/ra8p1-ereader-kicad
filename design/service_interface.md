@@ -327,3 +327,24 @@ The complete 14-page PDF was regenerated and rendered. Page 6 was
 visually reviewed; the other 13 pages are pixel-identical to the previous
 reviewed export. Clock arithmetic and SERVICE-005 conditional DC and
 32-state checks pass, with their existing qualification limitations.
+
+## SERVICE-010: translator supply routing checkpoint
+
+U27.7 VCCB now joins the existing switched `+3V3_RADIO` net. U27.3
+VCCA has a separate local `SERVICE_VIO` rail. Exact netlist comparison
+confirms only this addition to the radio rail and preserves all other
+pin connectivity. SERVICE_VIO currently contains only U27.3: its fixture
+source, selector loads, discharge resistors and bypass are still open.
+No power flag was added to conceal that unfinished supply source.
+
+Native ERC is 105 errors and 12 warnings: three previous supply-pin errors
+are resolved, and the isolated SERVICE_VIO label adds one expected warning.
+The VCCA undriven-power error remains. The native save changed the
+orientation sheet's document UUID only and recorded #PWR0242 in the
+project designator inventory. No other drawing or net change is intended.
+
+All 14 PDF pages were regenerated and rendered; page 6 was reviewed and
+the other 13 pages are pixel-identical to SERVICE-009. Clock arithmetic and
+SERVICE-005 conditional checks pass. Next, implement the two local 100 nF
+bypass capacitors, idle-bias network, fixture-side signals and enable
+arbitration. This supply-routing checkpoint does not qualify operation.
