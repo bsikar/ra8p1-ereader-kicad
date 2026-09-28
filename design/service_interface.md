@@ -428,3 +428,28 @@ reviewed, and the other 13 pages are pixel-identical to SERVICE-012.
 Clock arithmetic and SERVICE-005 conditional DC/32-state checks pass.
 KiCad's save updated the resistor designator inventory and regenerated
 only the orientation sheet document UUID outside the radio drawing.
+
+## SERVICE-014: Fixture UART input idle-bias checkpoint
+
+R107 implements the fixture-side 10 kohm input pull-up from SERVICE-004.
+R107.1 joins SERVICE_VIO / U27.3; R107.2 joins U27.5 (A1), now named
+SERVICE_TX. Its crossing of SERVICE_UART_OE has no junction. R10 and
+all prior connectivity are unchanged. The part is YAGEO RC0603FR-0710KL,
+1%, 100 ppm/C, with the existing 2026-09-05 sourcing snapshot retained
+as historical, unreserved information. Footprint qualification is deferred.
+
+The exported 284-component netlist verifies both R107 terminals and
+preserves every prior net's pin membership after excluding only R107.
+Native ERC is 100 errors and 11 warnings, with no added findings. U27.5
+is no longer unconnected or undriven because of its pull-up path; this
+does not implement the fixture transmitter or establish a working service
+interface. The radio-side 10 kohm input pull-up, fixture contacts/supply
+and SERVICE-003 arbitration remain unfinished. Installed leakage and
+sequencing qualification remain open. No ERC exclusions, power flags or
+no-connect markers were added.
+
+The complete 14-page PDF was regenerated and rendered. Page 6 was
+visually reviewed; the other 13 pages are pixel-identical to SERVICE-013.
+Clock arithmetic and SERVICE-005 conditional DC/32-state checks pass.
+KiCad's save updated the designator inventory and regenerated only the
+orientation sheet document UUID outside the radio drawing.

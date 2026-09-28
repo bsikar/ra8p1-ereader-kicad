@@ -3404,6 +3404,12 @@
 		(uuid "2d83a465-51af-4e17-98c2-3e9ac23da034")
 	)
 	(junction
+		(at 96.52 306.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3157d7e7-09a3-4ab4-9648-4ac13d127ec7")
+	)
+	(junction
 		(at 228.6 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3588,6 +3594,16 @@
 			(type default)
 		)
 		(uuid "041edd50-56fe-4766-9c0e-efb27e80d344")
+	)
+	(wire
+		(pts
+			(xy 96.52 306.07) (xy 124.46 306.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05006834-9601-4519-b299-0303c4579768")
 	)
 	(wire
 		(pts
@@ -3941,7 +3957,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 306.07) (xy 124.46 306.07)
+			(xy 81.28 306.07) (xy 96.52 306.07)
 		)
 		(stroke
 			(width 0)
@@ -4268,6 +4284,16 @@
 			(type default)
 		)
 		(uuid "6c5479c7-45c8-49be-a83a-c9ffdd6db813")
+	)
+	(wire
+		(pts
+			(xy 96.52 306.07) (xy 96.52 312.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6da6ea87-7ac1-489c-984f-42e9e8e9e3dc")
 	)
 	(wire
 		(pts
@@ -4651,6 +4677,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 320.04) (xy 96.52 328.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0174f53-92cb-43aa-8f5f-32ea9f107223")
+	)
+	(wire
+		(pts
 			(xy 290.83 184.15) (xy 311.15 184.15)
 		)
 		(stroke
@@ -4658,6 +4694,16 @@
 			(type default)
 		)
 		(uuid "c01c49ed-0b96-46b2-a945-0b119595a687")
+	)
+	(wire
+		(pts
+			(xy 96.52 328.93) (xy 134.62 328.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0d7ddd1-5431-47b8-8f9b-40fda25ee861")
 	)
 	(wire
 		(pts
@@ -5108,6 +5154,16 @@
 			(type default)
 		)
 		(uuid "ffdfd13b-3fb7-4298-85d2-14bdb3d7bead")
+	)
+	(label "SERVICE_TX"
+		(at 111.76 328.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0cce630d-469d-4c1a-99a4-120a9e77ea18")
 	)
 	(label "C6_GPIO15"
 		(at 137.16 87.63 0)
@@ -13388,6 +13444,197 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
 					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 96.52 316.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b2140abb-4ead-405b-8f8d-2332edf2013e")
+		(property "Reference" "R107"
+			(at 100.33 314.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 100.33 317.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 94.742 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "YAGEO RC0603FR-0710KL; 10k, 1%, 100 ppm/C; U27 UART input idle-high pull-up to its local supply. SERVICE-004/005 conditional screen; leakage and sequencing qualification pending."
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "311-10.0KHRCT-ND"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0710KL/729827"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "Selected for U27 UART input idle-high pull-up to its local supply; installed leakage and sequencing qualification pending; footprint deferred."
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-05 indexed: stock 2922248; Active; USD CT 1:0.10 / 10:0.025 / 100:0.01220 / 1000:0.00661; 17wk lead; recheck before order"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "YAGEO"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0603FR-0710KL"
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Selection_Basis" "SERVICE-004/005: 10k pull-up on U27 A1 or B2 to the corresponding VCCA or VCCB supply. R=9801..10201 ohm under 1% tolerance and 1% temperature allocation. Conditional DC screen only; installed leakage, adapter and sequencing qualification pending."
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser_URL" ""
+			(at 96.52 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eaee1f5c-1df3-4ec5-bc51-b51614a00d4e")
+		)
+		(pin "2"
+			(uuid "fca70ab3-1a90-4e25-80c8-841250d7365f")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "R107")
 					(unit 1)
 				)
 			)
