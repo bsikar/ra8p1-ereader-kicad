@@ -4035,6 +4035,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 323.85) (xy 106.68 341.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50c7bac5-8e73-48aa-8f1d-cf3a0eaaf06c")
+	)
+	(wire
+		(pts
 			(xy 341.63 175.26) (xy 341.63 173.99)
 		)
 		(stroke
@@ -4272,6 +4282,16 @@
 			(type default)
 		)
 		(uuid "77780af2-5cfc-42f2-8438-87b13b5560ff")
+	)
+	(wire
+		(pts
+			(xy 134.62 323.85) (xy 106.68 323.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e524bed-92d3-40d8-91cd-2bf24895f9fe")
 	)
 	(wire
 		(pts
@@ -5032,6 +5052,16 @@
 			(justify right bottom)
 		)
 		(uuid "17ae5404-45c9-46e8-a2e7-25a40be8c181")
+	)
+	(label "SERVICE_UART_OE"
+		(at 106.68 323.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "27c7ddec-1c5c-41d9-ab57-bda205f845a7")
 	)
 	(label "C6_SCLK"
 		(at 95.25 95.25 180)
@@ -8276,6 +8306,154 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
 					(reference "#PWR0233")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 345.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b236cff-9c20-41fb-b552-5c052a4d07ad")
+		(property "Reference" "R104"
+			(at 109.22 344.1699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 109.22 346.7099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.902 345.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL"
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "YAGEO RC0603FR-0747KL; 47k, 1%, 100 ppm/C; U27 service UART OE pulldown to GND. SERVICE-005 conditional leakage screen; sequencing qualification pending."
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0603FR-0747KL"
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "YAGEO"
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "311-47.0KHRCT-ND"
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0747KL/727253"
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-12: DigiKey Active; 1985054 in stock; USD 1:0.10, 10:0.025, 100:0.0122. Unreserved snapshot; see microsd_power_interface.md."
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "Selected for U27 service UART OE pulldown to GND; installed leakage and sequencing qualification pending; footprint deferred."
+			(at 106.68 345.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2836f36e-6d2f-46e7-934f-3a704e1ba015")
+		)
+		(pin "2"
+			(uuid "70d0e1f8-b80e-421c-8bf7-aefec5eb55fa")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "R104")
 					(unit 1)
 				)
 			)
@@ -13451,7 +13629,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "cb5b2470-89c0-43b9-8190-17126ed4b53a")
 		(property "Reference" "#PWR0243"
 			(at 124.46 325.12 0)
@@ -13465,7 +13642,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 124.46 323.85 0)
+			(at 130.81 320.548 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14427,6 +14604,84 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
 					(reference "#PWR080")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 349.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e16f7028-a8f4-4553-9653-65fbf1bb87dd")
+		(property "Reference" "#PWR0245"
+			(at 106.68 355.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 354.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 349.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4de8a3df-eb62-494a-931d-d49c7d0f1ff0")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "#PWR0245")
 					(unit 1)
 				)
 			)

@@ -376,3 +376,27 @@ reviewed; the other 13 pages are pixel-identical to SERVICE-010. Clock
 arithmetic and SERVICE-005 conditional DC/32-state checks pass. KiCad's
 save also regenerated the orientation sheet document UUID only and updated
 the project designator inventory. This is an incremental WIP checkpoint.
+
+## SERVICE-012: UART enable pull-down checkpoint
+
+R104 now connects U27.6 (OE), named `SERVICE_UART_OE`, to GND through
+47 kohm. It uses YAGEO RC0603FR-0747KL, 1%, 100 ppm/C, with the existing
+2026-09-12 sourcing snapshot retained as historical, unreserved information.
+Its description and procurement fields identify the U27 enable role;
+footprint and installed leakage/sequencing qualification remain deferred.
+The SERVICE-005 conditional resistance/leakage screen still applies.
+
+The exported 281-component netlist verifies R104.1 = U27.6 and R104.2 =
+GND. Excluding only R104 preserves every previous net's pin membership.
+Native ERC is 103 errors and 11 warnings, with no new findings. The two
+removed findings are U27 OE unconnected and undriven input; the resistor
+provides a ground path but does not implement the SERVICE-003 enable gate.
+Fixture UART, idle bias, fixture source and service arbitration remain open.
+No ERC exclusions, power flags or no-connect markers were added.
+
+All 14 PDF pages were regenerated and rendered. Page 6 was reviewed;
+the other 13 pages are pixel-identical to SERVICE-011. The C116 ground
+text was moved clear of the new signal wire. Clock arithmetic and the
+SERVICE-005 conditional DC/32-state checks pass. KiCad's native save also
+updated the designator inventory and regenerated only the orientation
+sheet document UUID. This remains an incremental WIP checkpoint.
