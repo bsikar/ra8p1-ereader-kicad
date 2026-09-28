@@ -257,3 +257,30 @@ and brownout states; mode-change glitches; supervisor/strap timing;
 updated radio charge/discharge load; pad ESD and mechanical access;
 and physical recovery trials with host firmware absent. Authentication
 restrictions and unfinished clocks remain outside this recovery claim.
+
+## SERVICE-007: UART translator library checkpoint
+
+The project-local `Power_Devices:TXU0202DCUR` symbol is now available.
+It was created in the native KiCad Symbol Editor as an independent symbol;
+the existing TXU0102DCUR and all other library symbols are unchanged.
+TI [SCES942A Table 6-1](https://www.ti.com/lit/ds/symlink/txu0202.pdf)
+establishes the DCU mapping: 1 B2 input, 2 GND, 3 VCCA, 4 A2Y tristate
+output, 5 A1 input, 6 OE input, 7 VCCB, and 8 B1Y tristate output.
+The drawing shows A1-to-B1Y and B2-to-A2Y separately. Supply pins use
+power-input types; all eight pins occur once, with 150 mil legs and
+100 mil connection grids. Visible fields and pin text are 50 mil.
+
+Sourcing metadata identifies Texas Instruments TXU0202DCUR and
+[DigiKey 296-TXU0202DCURCT-ND](https://www.digikey.com/en/products/detail/texas-instruments/TXU0202DCUR/16677096).
+This identifies an ordering code, not reserved stock or a price commitment.
+The footprint remains blank pending the deferred package-qualification work.
+The hidden Footprint and Datasheet fields retain inherited off-origin
+positions; normalize those cosmetic positions before final library acceptance.
+
+This checkpoint adds the library symbol only. SERVICE-003/004 wiring,
+fixture contacts, bypass and bias resistors, and the SERVICE-006 acceptance
+gates remain open. No new schematic instance or BOM row is claimed.
+KiCad exported the symbol's unit for visual review. The refreshed complete
+14-page schematic PDF is pixel-identical to the previously reviewed checkpoint;
+native ERC remains 101 errors and 11 warnings. Clock arithmetic and the
+SERVICE-005 32-state/conditional-DC checks pass with their stated limitations.
