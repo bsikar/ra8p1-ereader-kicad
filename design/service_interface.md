@@ -348,3 +348,31 @@ the other 13 pages are pixel-identical to SERVICE-009. Clock arithmetic and
 SERVICE-005 conditional checks pass. Next, implement the two local 100 nF
 bypass capacitors, idle-bias network, fixture-side signals and enable
 arbitration. This supply-routing checkpoint does not qualify operation.
+
+## SERVICE-011: local translator bypass checkpoint
+
+C116 and C119 now provide separate 100 nF supply-to-ground bypasses for
+U27 in the native schematic. C116.1 joins SERVICE_VIO and U27.3 (VCCA);
+C119.1 joins +3V3_RADIO and U27.7 (VCCB). Both capacitor pin 2 returns
+join GND and U27.2. Future PCB placement must keep C116 close to the
+U27 3-to-2 pin pair and C119 close to the 7-to-2 pin pair, with short
+return paths. Physical placement and transient qualification remain open.
+
+Both use the existing sourced TDK C1608X7R1H104K080AA, 100 nF, 50 V,
+X7R, +/-10%, preserving the explicitly dated sourcing snapshot. The added
+nominal load is 0.1 uF on each supply; radio startup/load calculations still
+need to include the completed service circuit. Footprints remain deferred.
+
+The 280-component exported netlist preserves every previous net's pin
+membership after excluding only C116/C119, and verifies all four new
+capacitor terminals. Native ERC is 105 errors and 11 warnings: the isolated
+SERVICE_VIO-label warning is removed, with no new findings. Its unfinished
+fixture source still causes an undriven-power error; OE, fixture UART,
+bias and arbitration remain open. No ERC exclusions, power flags or
+no-connect markers were added.
+
+All 14 PDF pages were regenerated and rendered. Page 6 was visually
+reviewed; the other 13 pages are pixel-identical to SERVICE-010. Clock
+arithmetic and SERVICE-005 conditional DC/32-state checks pass. KiCad's
+save also regenerated the orientation sheet document UUID only and updated
+the project designator inventory. This is an incremental WIP checkpoint.

@@ -3428,6 +3428,12 @@
 		(uuid "5c442ac3-9960-436d-9686-41a3189e7255")
 	)
 	(junction
+		(at 170.18 306.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "617a85c6-0c37-48e5-b2e5-83fadd098621")
+	)
+	(junction
 		(at 349.25 194.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3656,6 +3662,16 @@
 			(type default)
 		)
 		(uuid "18fdf911-1e77-4b05-9c70-e20daca3cddf")
+	)
+	(wire
+		(pts
+			(xy 124.46 314.96) (xy 124.46 318.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cf3c039-4b9b-47c4-b91d-6866f3c954aa")
 	)
 	(wire
 		(pts
@@ -4159,6 +4175,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 314.96) (xy 170.18 318.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69b67557-eb02-45b6-9181-49fca3878451")
+	)
+	(wire
+		(pts
 			(xy 167.64 80.01) (xy 165.1 80.01)
 		)
 		(stroke
@@ -4276,6 +4302,16 @@
 			(type default)
 		)
 		(uuid "86d3d64e-cac0-44d8-b0e6-ed53817a175b")
+	)
+	(wire
+		(pts
+			(xy 124.46 306.07) (xy 124.46 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8817ed7a-b680-4eae-98f2-e023d35b2424")
 	)
 	(wire
 		(pts
@@ -4546,6 +4582,16 @@
 			(type default)
 		)
 		(uuid "c01c49ed-0b96-46b2-a945-0b119595a687")
+	)
+	(wire
+		(pts
+			(xy 170.18 306.07) (xy 170.18 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1c6b21e-5b7c-4843-ba29-98c39b6e5f85")
 	)
 	(wire
 		(pts
@@ -5395,6 +5441,84 @@
 			(justify left)
 		)
 		(uuid "b48e0b79-f343-4704-8942-79848c1b4e11")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 170.18 318.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0267b3ff-057b-4e56-b344-c9f98ddd1c2c")
+		(property "Reference" "#PWR0244"
+			(at 170.18 325.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 323.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 318.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 318.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 170.18 318.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "057bfae7-9143-48a9-acb7-db349e2b3772")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "#PWR0244")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9317,6 +9441,153 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
+		(at 124.46 312.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "75b8cda9-d543-4cfa-a871-67d832bc08c7")
+		(property "Reference" "C116"
+			(at 115.57 311.15 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 115.57 313.69 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "TDK C1608X7R1H104K080AA; 100 nF, 50 V, X7R, +/-10%; U27 local supply-to-GND bypass. Actual transient performance requires qualification."
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "445-1314-1-ND"
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H104K080AA/513811"
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "Selected - nominal DC-bias screened; final rail and PDN qualification open"
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-05: TDK Production; DigiKey Active, 374087 in stock, 24 weeks; USD 1:0.11, 10:0.06, 100:0.0359."
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "TDK"
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C1608X7R1H104K080AA"
+			(at 124.46 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "efca3f10-c997-40ab-8adf-84a0ffb71fbe")
+		)
+		(pin "2"
+			(uuid "37de9eb7-adea-44a1-8534-192f69746b71")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "C116")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 153.67 76.2 0)
 		(unit 1)
 		(body_style 1)
@@ -13172,6 +13443,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 124.46 318.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cb5b2470-89c0-43b9-8190-17126ed4b53a")
+		(property "Reference" "#PWR0243"
+			(at 124.46 325.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 124.46 323.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.46 318.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 124.46 318.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 124.46 318.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9846ae8c-f918-41ae-928b-e8fd0deec0f4")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "#PWR0243")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 248.92 87.63 0)
 		(unit 1)
 		(body_style 1)
@@ -14078,6 +14427,153 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
 					(reference "#PWR080")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 170.18 312.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e658dc0e-7edf-47c0-885d-589638b04c36")
+		(property "Reference" "C119"
+			(at 161.29 311.15 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 161.29 313.69 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "TDK C1608X7R1H104K080AA; 100 nF, 50 V, X7R, +/-10%; U27 local supply-to-GND bypass. Actual transient performance requires qualification."
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "445-1314-1-ND"
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H104K080AA/513811"
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "Selected - nominal DC-bias screened; final rail and PDN qualification open"
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-05: TDK Production; DigiKey Active, 374087 in stock, 24 weeks; USD 1:0.11, 10:0.06, 100:0.0359."
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "TDK"
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C1608X7R1H104K080AA"
+			(at 170.18 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c001fb84-6dfb-4cb9-ac5c-0b60da5df75f")
+		)
+		(pin "2"
+			(uuid "c3f0c09b-75ed-4a51-96ad-015e198a3e0d")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "C119")
 					(unit 1)
 				)
 			)
