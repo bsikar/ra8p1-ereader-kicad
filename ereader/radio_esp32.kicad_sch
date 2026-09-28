@@ -3589,6 +3589,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 107.95) (xy 139.7 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b214ea9-57f6-4b5d-89c5-4c2e89dc5da4")
+	)
+	(wire
+		(pts
 			(xy 233.68 62.23) (xy 233.68 63.5)
 		)
 		(stroke
@@ -3606,6 +3616,16 @@
 			(type default)
 		)
 		(uuid "0c610711-c774-4009-a3aa-a6577752177b")
+	)
+	(wire
+		(pts
+			(xy 142.24 105.41) (xy 142.24 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "174a4b01-c19a-49ec-8607-ffd56c173226")
 	)
 	(wire
 		(pts
@@ -3706,6 +3726,16 @@
 			(type default)
 		)
 		(uuid "2a9b0f18-fe24-4391-91f8-4ec9c8e2bdf4")
+	)
+	(wire
+		(pts
+			(xy 147.32 346.71) (xy 147.32 351.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2be1c360-d7bf-4b2f-a54f-48e0492453ba")
 	)
 	(wire
 		(pts
@@ -4056,6 +4086,16 @@
 			(type default)
 		)
 		(uuid "6129a071-e29e-4c96-ac13-010561b10fa1")
+	)
+	(wire
+		(pts
+			(xy 137.16 105.41) (xy 142.24 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61b70174-784f-470a-bb65-af6c30893c68")
 	)
 	(wire
 		(pts
@@ -4426,6 +4466,16 @@
 			(type default)
 		)
 		(uuid "b26ba9ae-a0b4-4acd-abcc-7030eb85039b")
+	)
+	(wire
+		(pts
+			(xy 160.02 334.01) (xy 177.8 334.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b415b21f-4760-4ba2-a7e8-bcb2f64157fe")
 	)
 	(wire
 		(pts
@@ -4819,6 +4869,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 107.95) (xy 139.7 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb4c3589-483e-4f30-9ba8-025bbe7a718b")
+	)
+	(wire
+		(pts
 			(xy 25.4 193.04) (xy 25.4 199.39)
 		)
 		(stroke
@@ -4997,6 +5057,16 @@
 		)
 		(uuid "82c3be37-6807-44f0-bad3-42bc4ebadae6")
 	)
+	(label "C6_UART_TX"
+		(at 177.8 334.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83dff7e5-127a-400c-b351-549d64fa3cfa")
+	)
 	(label "C6_DATA_READY"
 		(at 290.83 189.23 0)
 		(effects
@@ -5016,6 +5086,16 @@
 			(justify left bottom)
 		)
 		(uuid "8e75582d-0e28-44c6-bf93-af6733f7379c")
+	)
+	(label "C6_UART_RX"
+		(at 142.24 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91e3baf6-acdd-45f1-a412-04ac31d3806e")
 	)
 	(label "C6_COPI"
 		(at 66.04 86.36 0)
@@ -5136,6 +5216,16 @@
 			(justify right bottom)
 		)
 		(uuid "d7398447-c561-4d81-90b2-32d969d2e5a5")
+	)
+	(label "C6_UART_TX"
+		(at 139.7 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d95e4eaa-4b4c-4e47-87aa-6bb2bedecd38")
 	)
 	(label "C6_SCLK"
 		(at 66.04 83.82 0)
@@ -10477,6 +10567,84 @@
 			(project "ereader_rev1"
 				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
 					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 147.32 351.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8dcbfef8-61ed-4edb-a8d8-115ec06d1e83")
+		(property "Reference" "#PWR0241"
+			(at 147.32 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 147.32 356.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 351.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 351.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 147.32 351.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "55376358-63bd-4423-b360-afaf510f4cf6")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/9b84c337-6879-4714-899e-3993bcc30b88"
+					(reference "#PWR0241")
 					(unit 1)
 				)
 			)

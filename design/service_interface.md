@@ -304,3 +304,26 @@ sheet's document UUID on save; its drawing and connectivity are unchanged.
 The complete 14-page PDF was regenerated and rendered. Page 6 adds U27 in
 the open lower area; the other 13 pages are pixel-identical to the prior
 reviewed export. Clock arithmetic and SERVICE-005 conditional checks pass.
+
+## SERVICE-009: radio UART and ground wiring checkpoint
+
+Native KiCad wiring now connects U27.8 (B1Y) to U3.24 (RXD0/GPIO17)
+through `C6_UART_RX`, and U3.25 (TXD0/GPIO16) to U27.1 (B2)
+through `C6_UART_TX`. U27.2 is connected to the existing global GND.
+The exported netlist confirms these exact UART pairs and preserves all
+other pin connectivity. No parts were added beyond the ground symbol.
+
+This remains WIP: U27 VCCA, VCCB, OE, A1 and A2Y are open. Supply
+bypass, idle bias, fixture contacts and SERVICE-003 arbitration remain
+to be implemented; the recovery interface is not operational or qualified.
+
+ERC is now 108 errors and 11 warnings, removing six errors and one
+warning from SERVICE-008 with no added findings. No ERC exclusions or
+no-connect markers were added. Native save again regenerated only the
+orientation sheet's document UUID; its drawing and nets are unchanged.
+The project also records the newly used ground-symbol designator.
+
+The complete 14-page PDF was regenerated and rendered. Page 6 was
+visually reviewed; the other 13 pages are pixel-identical to the previous
+reviewed export. Clock arithmetic and SERVICE-005 conditional DC and
+32-state checks pass, with their existing qualification limitations.
