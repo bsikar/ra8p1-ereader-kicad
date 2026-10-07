@@ -1,0 +1,35 @@
+.title KiCad schematic
+.include "/Users/bsikar/ra8p1-ereader-kicad/sim/models/OPA161x.LIB"
+.include "/Users/bsikar/ra8p1-ereader-kicad/sim/models/OPA1622.LIB"
+.ac dec 50 10 10meg
+.options rshunt=1e12
+C7 /out 0 1n
+R12 /out 0 32
+R7 /ivn Net-_U3-+_ 499
+R5 /ivp Net-_U3--_ 499
+XU4 /att Net-_U4--_ /VP /VN Net-_U4--_ OPA1622
+R10 /att 0 40
+R11 Net-_U4--_ /out 0.1
+C6 Net-_U3-+_ 0 1.5n
+R8 Net-_U3-+_ 0 499
+R6 Net-_U3--_ /line 499
+C5 Net-_U3--_ /line 1.5n
+XU3 Net-_U3-+_ Net-_U3--_ /VP /VN /line OPA161x
+R9 /line /att 360
+C2 Net-_U2--_ 0 15p
+R4 Net-_U2--_ /ivn 392
+C4 Net-_U2--_ /ivn 1.3n
+XU2 /VCM Net-_U2--_ /VP /VN /ivn OPA161x
+E1 Net-_E1-N+_ /VCM /sig 0 1.525
+C3 Net-_U1--_ /ivp 1.3n
+R3 Net-_U1--_ /ivp 392
+XU1 /VCM Net-_U1--_ /VP /VN /ivp OPA161x
+C1 Net-_U1--_ 0 15p
+R1 Net-_E1-N+_ Net-_U1--_ 390
+E2 Net-_E2-N+_ /VCM /sig 0 -1.525
+V1 /sig 0 DC 0 SIN( 0 1 1k 0 0 0 ) AC 1  
+R2 Net-_E2-N+_ Net-_U2--_ 390
+V2 /VP 0 DC 5 
+V4 /VCM 0 DC 0 
+V3 /VN 0 DC -5 
+.end

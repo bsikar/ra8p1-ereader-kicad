@@ -1,0 +1,40 @@
+[
+  {
+    "mode": "transient",
+    "capacitance_f": 4e-09,
+    "gmin": 1e-10,
+    "feedback_r_ohm": 1000,
+    "feedback_c_f": 4.7e-11,
+    "nodeset": true,
+    "branches": 4,
+    "load_ohm": 8,
+    "component_mismatch": true,
+    "amplitude_v": -11,
+    "delay_s": 5e-07,
+    "rise_s": 1e-06,
+    "width_s": 1e-06,
+    "fall_s": 1e-06,
+    "stop_s": 6e-06,
+    "max_step_s": 5e-09,
+    "method": "gear"
+  },
+  {
+    "mode": "transient",
+    "capacitance_f": 4e-09,
+    "gmin": 1e-10,
+    "feedback_r_ohm": 1000,
+    "feedback_c_f": 4.7e-11,
+    "nodeset": true,
+    "branches": 4,
+    "load_ohm": 8,
+    "component_mismatch": true,
+    "amplitude_v": 11,
+    "delay_s": 5e-07,
+    "rise_s": 1e-06,
+    "width_s": 1e-06,
+    "fall_s": 1e-06,
+    "stop_s": 6e-06,
+    "max_step_s": 5e-09,
+    "method": "gear"
+  }
+]

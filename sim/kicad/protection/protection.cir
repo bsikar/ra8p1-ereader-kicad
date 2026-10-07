@@ -1,0 +1,50 @@
+.title KiCad schematic
+.include "/Users/bsikar/ra8p1-ereader-kicad/sim/kicad/study_models.lib"
+.model __D1 D
++           rs=0.5
++           cjo=300p
++           bv=14
++           ibv=1m
+.model __Q4 VDMOS NCHAN
++           vto=0.7
++           kp=10
+.tran 20u 200m
+C3 /FAULT_N 0 1u
+R12 /HP_L 0 32
+R10 /MCU_REQ /GATE 1k
+XK1 /COIL_3V /DRAIN /AMP_L /HP_L RELAY_G6K_3V
+D1 0 /DRAIN __D1
+MQ4 /DRAIN /GATE 0 __Q4
+XU7 /FAULT_N /VREF /VAUX 0 /GATE CMP_OD
+R11 /GATE 0 10k
+V4 /VNEG 0 DC -5 
+V3 /VPOS 0 DC 5 
+V1 /VAUX 0 DC 5 
+V2 /VREF 0 DC 2.5 
+V8 /AMP_R 0 DC 0 
+V7 /AMP_L 0 PWL( 0 0 100m 0 100.01m 4.5 ) 
+V5 /MCU_REQ 0 DC 3.3 
+V6 /COIL_3V 0 DC 3 
+XU6 /REF_0V167 Net-_U6--_ /VAUX 0 /FAULT_N CMP_OD
+C2 /SR 0 2.2u
+R7 /VREF Net-_U6--_ 100k
+R8 Net-_U6--_ /VNEG 200k
+R5 /VPOS Net-_U5-+_ 100k
+R6 Net-_U5-+_ 0 100k
+XU4 /SR /WLO /VAUX 0 /FAULT_N CMP_OD
+XU5 Net-_U5-+_ /REF_2V25 /VAUX 0 /FAULT_N CMP_OD
+XU1 /WHI /SL /VAUX 0 /FAULT_N CMP_OD
+R9 /VAUX /FAULT_N 1000k
+XU3 /WHI /SR /VAUX 0 /FAULT_N CMP_OD
+XU2 /SL /WLO /VAUX 0 /FAULT_N CMP_OD
+R13 /VREF /REF_2V25 2.5k
+R14 /REF_2V25 /WHI 9.5k
+R15 /WHI /WLO 1k
+R16 /WLO /REF_0V167 10.33k
+R17 /REF_0V167 0 1.67k
+C1 /SL 0 2.2u
+R1 /AMP_L /SL 470k
+R2 /VREF /SL 470k
+R4 /VREF /SR 470k
+R3 /AMP_R /SR 470k
+.end

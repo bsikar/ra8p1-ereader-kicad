@@ -1,0 +1,27 @@
+* Behavioural parts for the audio study schematics. Not vendor models.
+* Open-drain comparator: output is pulled to vee (about 50 ohm) while inp < inn.
+.subckt CMP_OD inp inn vcc vee out params: offs=0
+Rp inp vee 1e12
+Rn inn vee 1e12
+Rv vcc vee 1e6
+B1 out vee I = v(out,vee)/50 * 0.5*(1+tanh(4000*(v(inn)-v(inp)+{offs})))
+.ends
+
+* Omron G6K-2F-Y 3 V relay, one pole. 91 ohm coil; worst-case catalog pick-up 26.4 mA,
+* release 3.3 mA; 3 ms mechanical delay each way. Coil inductance is an estimate.
+.subckt RELAY_G6K_3V cp cn com no params: lcoil=0.2
+Rc cp c1 91
+Lc c1 c2 {lcoil}
+Vs c2 cn 0
+Bi ic 0 V = i(Vs)
+Ri ic 0 1k
+S1 st 0 ic 0 coilsw
+.model coilsw sw(vt=14.85m vh=11.55m ron=1 roff=1e9)
+Vst s5 0 1
+Rst s5 st 1k
+Bstn stn 0 V = 1 - v(st)
+Td stn 0 dly 0 z0=1k td=3m
+Rtd dly 0 1k
+S2 com no dly 0 contact
+.model contact sw(vt=0.5 vh=0.1 ron=0.1 roff=1e9)
+.ends

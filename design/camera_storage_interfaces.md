@@ -1,0 +1,2943 @@
+# Camera, removable storage and external-memory allocation
+
+Revision 28, 2026-09-27. Target: R7KA8P1KFLCAC#UC0, MIPI-enabled BGA289.
+This is an engineering allocation record for native KiCad implementation,
+not a completed schematic, verified timing closure or hardware qualification.
+Cross-references: [radio](radio_interface.md), [power](system_power_design.md),
+[single button](single_button_power.md), and [parts inventory](../PARTS-CHECKLIST.md).
+
+## CMS-001: Architecture and evidence boundary
+
+The single-camera allocation below is the historical starting point.
+CMS-016 supersedes that product scope with front and rear cameras; its
+unresolved CEU/audio/button conflicts must be closed before the allocation
+can be called complete. CMS-014/015 retain the implemented Pcam MIPI path.
+
+Reserve 64 MiB of 32-bit SDRAM, at least 64 MiB of soldered NOR, a separate
+4-bit microSD socket, and the CU450_OV5640 camera interface in MIPI mode.
+This preserves the minimum evaluation-board memory capacities without
+pretending that 64 MiB of firmware/assets NOR is a GB-scale music library.
+Music resides on microSD in this baseline. An additional managed eMMC is
+possible, but no exact in-stock production eMMC is selected in this record.
+
+| Function | Allocation | Reason / restriction |
+| --- | --- | --- |
+| External RAM | SDRAMC, 16M x 32, 64 MiB | EK capacity baseline; complete port reservation in CMS-004 |
+| Soldered firmware/assets | OSPI0; reserve octal group | Existing EK firmware is part-specific; Quad alternative is not Octal performance equivalence |
+| Removable music/data | SDHI1_B, four data bits, 3.3 V | Avoids SDRAM, radio and proposed SSI1_A audio |
+| Camera | Two-lane MIPI CSI-2 + P501/P709/P511/P512/P010 | EK DVP mapping conflicts with SDHI1_B and radio |
+| Audio coordination | SSI1_A: P907/P906/P206 | Do not reuse SSI0_A, SSI0_B or SSI1_B blindly |
+| Five physical controls | Power INT P303; page P309/P310; volume P311/P909 | Independent IRQ-DS channels; CMS-009 |
+| Application shutdown | POWER_KILL_N P903/D9 | NMOS-open-drain GPIO, switched VCC; BTN-009 |
+| Optional managed storage | Reserve SDHI0_C, four data bits | Eight bits would consume audio P206; PD02/PD03 also replace the EK SCI8 console |
+
+The existing [camera capture example](../../examples/ek_ra8d2/hw_validated/hil/camera_capture/README.md)
+is a DVP/CEU capture path. The existing
+[USB/microSD self-test](../../examples/ek_ra8d2/hw_validated/hil/usb_selftest_microsd/README.md)
+uses SCI0 Simple-SPI, not native SDHI. Therefore neither example proves the
+new simultaneous MIPI + native-SDHI allocation. CSI and VIN HAL source exists
+in [ra8_mipi_csi.c](../../libs/ra8_hal/src/ra8_mipi_csi.c) and
+[ra8_vin.c](../../libs/ra8_hal/src/ra8_vin.c); implementation is not evidence
+of a validated RA8P1 capture configuration. Zephyr likewise documents only
+DVP support for this shield on RA at retrieval time.
+[Zephyr's CU450 shield documentation](https://docs.zephyrproject.org/latest/boards/shields/arducam_cu450_ov5640/doc/index.html).
+
+## CMS-016: Two-camera expansion and lighting requirements
+
+The [CMS-017 timing and bandwidth screen](camera_timing_budget.md) records
+the 2026-09-27 CEU clock ceiling, unsupported uncompressed mode combinations,
+sensor address-register evidence and remaining assembly qualification.
+
+Standalone-repository verification, 2026-09-27: this project now lives in
+`bsikar/ra8p1-ereader-kicad`; camera work is tracked in
+[issue #2](https://github.com/bsikar/ra8p1-ereader-kicad/issues/2) under
+[epic #21](https://github.com/bsikar/ra8p1-ereader-kicad/issues/21).
+The following paragraph supersedes the placement status in the older
+checkpoints below; those checkpoints remain historical evidence.
+
+The overview MCU block has been enlarged and the owner has completed a
+cosmetic pass across the sheets. All eleven CEU host labels and matching
+MCU sheet ports are placed. A fresh KiCad XML export from `a1d5f219`
+confirms D0..D7 at U1 B15/E9/B14/B13/A15/A13/A14/G14, HREF at D16,
+PCLK at D13 and VSYNC at E13. Each currently contains only its MCU pin:
+the external camera connector, power, control and data circuitry remain
+unimplemented. This verifies host allocation, not a working camera.
+
+The export contains 271 component records and 334 nets. Native Windows
+ERC reports 114 errors and 55 warnings, with the four existing ignored
+checks unchanged. The 44 additional warnings relative to the committed
+125-finding report are `Device:C_Small` library-cache mismatches. An
+inspected cache differs from the installed library in a hidden Description
+field position and one plate's stroke width (0.3048 versus 0.3302 mm).
+These warnings were retained at this allocation checkpoint and subsequently
+resolved by the native capacitor-cache refresh documented in
+[the September 27 ERC review](erc_review_2026-09-27.md). The current result
+is 111 errors and 11 warnings; neither that count nor the existing ignored
+checks constitutes electrical acceptance. Eleven isolated CEU labels remain
+pending the external circuit.
+
+Layout checkpoint, 2026-09-13: the native Pcam sheet was enlarged from A4
+to A3, its existing circuit moved together toward the upper left, and a
+separate five-line interface/startup note added below it. The refreshed
+13-page PDF camera page was visually reviewed. All 334 exported net
+partitions and all 117 ERC finding identities match the preceding radio
+checkpoint; no component or pin allocation changed in this layout pass.
+The overview MCU frame still needs more space; unsuccessful native resize
+attempts were cancelled without saved changes to that sheet. This is a
+layout checkpoint, not completion of either camera qualification or the
+full schematic.
+
+Status, 2026-09-13: required architecture revision, not a placed CEU circuit.
+The owner requires front and rear cameras, front selfie illumination and a
+rear flashlight. Battery power, premium audio, all five physical controls,
+and the Waveshare-based display/touch/warm-cool frontlight scope remain.
+The intended camera interfaces are two-lane MIPI CSI-to-VIN and parallel
+CEU. Separate interfaces do not prove simultaneous capture at arbitrary
+resolution or frame rate; clocks, buffering, memory arbitration and total
+bandwidth need a combined budget. English HUM retrieval did not establish
+a simultaneous-capture guarantee during this review.
+
+[Renesas CEU documentation](https://renesas.github.io/fsp/group___c_e_u.html)
+supports an 8-bit sensor on VIO_D0..D7 as well as a 16-bit camera bus.
+VIO_CLK receives sensor PCLK; HD/VD receive horizontal/vertical timing.
+The 16-bit-capable peripheral therefore does not require a 16-bit sensor.
+Firmware control and SCCB remain separate from the capture data interface.
+
+Independent review of the BGA289 alternatives in
+[RA8P1 datasheet Rev.1.30, Table 1.17, pp26-33][cms13-ra] identifies this
+8-bit route for further coordinated review:
+
+| CEU signal | Candidate port / ball | Existing allocation affected |
+| --- | --- | --- |
+| VIO_D0 | P206 / B15 | Former SSI1_A reservation; audio moved to SSI1_B |
+| VIO_D1 | P902 / E9 | No inspected placed net |
+| VIO_D2 | P909 / B14 | Volume-up relocated to P307; CEU not yet placed |
+| VIO_D3 | P908 / B13 | No inspected placed net |
+| VIO_D4 | P907 / A15 | Former SSI1_A reservation; audio moved to SSI1_B |
+| VIO_D5 | P906 / A13 | Former SSI1_A reservation; audio moved to SSI1_B |
+| VIO_D6 | P905 / A14 | No inspected placed net |
+| VIO_D7 | P703 / G14 | Radio CS_N relocated to P604; CEU not yet placed |
+| VIO_CLK | PB04 / D13 | No inspected placed net |
+| VIO_HD | PB03 / D16 | No inspected placed net |
+| VIO_VD | PB02 / E13 | No inspected placed net |
+
+P312/C13 is deliberately excluded: CMS-009 records a conflict between
+its datasheet listing and HUM Table 21.10 availability for MIPI289. An
+unconnected symbol pin does not resolve that manufacturer-document issue.
+
+The coordinated candidate moves the radio transport from SPIA_C to
+SCI0 Simple SPI, freeing SSI1_B for the complete existing audio function.
+Only five already connected MCU signals move: radio clock, COPI, CIPO,
+CS_N and volume-up. The three audio pins are reservation changes, not
+removal of the DAC/headphone/speaker/USB-DAC requirements.
+
+| Function | Candidate port / ball | Alternate / direction |
+| --- | --- | --- |
+| Audio BCLK | P702 / F13 | SSIBCK1_B, input from DAC |
+| Audio LRCLK | P701 / F15 | SSILRCK1_B, input from DAC |
+| Audio data | P700 / F12 | SSIDATA1_B, output |
+| RADIO_SCLK | P601 / P4 | SCK0_B, SCI0 clock output |
+| RADIO_COPI | P603 / P1 | MOSI0_B, SCI0 output |
+| RADIO_CIPO | P602 / P2 | MISO0_B, SCI0 input |
+| RADIO_CS_N | P604 / N2 | GPIO output; software-controlled select |
+| VOL_UP_N | P307 / C11 | IRQ27-DS input; disable trace function |
+
+The other four controls remain POWER_BUTTON_N P303/B6 IRQ29-DS,
+PAGE_PREV_N P309/A12 IRQ25-DS, PAGE_NEXT_N P310/E10 IRQ24-DS and
+VOL_DOWN_N P311/B12 IRQ23-DS. Radio READY P704/G13 IRQ26,
+HANDSHAKE P705/F17 IRQ19, reset request P706/E17 and power request
+P707/F16 remain. Disable alternate IRQ routing on the SCI/GPIO-CS pins,
+particularly IRQ27 on P603, IRQ29 on P601 and IRQ26 on P604; those
+channels already belong to the selected button/radio inputs.
+
+Read-only Python comparison against the recovered native XML on
+2026-09-13 found the CEU8, SSI1_B, SCI0, five-button, retained radio-control
+and camera groups mutually disjoint. The only occupied balls reassigned
+are B14, F12, F13, F15 and G14. SDRAM, NOR and microSD connections
+remain, including P708/N12 SD_IO_REQ. Existing MIPI contacts and camera
+SCCB P512/P13 and P511/U15, control P709/P16, and P501/R8/P010/P10
+reservations remain. This is a candidate net-allocation check, not evidence
+that the revised connections are placed or that every remaining product
+function has an assigned pin.
+
+[Renesas SCI_B SPI documentation][cms16-sci] explicitly supports RA8P1,
+full-duplex transfers, both clock polarities/phases and DMA. In controller
+mode CS must be driven in software. SCI0 here is hardware Simple SPI,
+not a UART or bit-banged replacement. Preserve the radio's initial 5MHz
+evaluation target, isolation and handshake protocol, but recalculate its
+SCI receive/setup and round-trip timing, clock divider, DMA priorities
+and cache-coherency contract. SPIA timing evidence does not automatically
+transfer to SCI0. SSI1_B must retain the DAC-supplied clock direction and
+the existing audio frequency/format limits.
+
+The candidate retains switched +3V3_MCU logic supplies: current VCC and
+VCC2 both connect to that rail, while the MIPI PHY retains its separate
++1V8_MIPI supply. It creates no AON_HOLD load. This supply observation
+does not substitute for checking each revised pin's VCC/VCC2/analog-bank
+classification, drive strength, Schmitt thresholds and powered-off limits
+against current HUM electrical tables. Recheck the unchanged button RC
+screen for P307 and confirm its deep-standby enable/flag selection; the
+IRQ27-DS datasheet entry alone is not a complete wake implementation.
+The English HUM retrieval limitation remains explicit.
+
+Independent placement review, 2026-09-13: GO for the five listed MCU
+connectivity changes. RA8P1 datasheet Table 2.6
+pp51-52 explicitly classifies P307 as VCC and P600..P607 as VCC2; both
+native supplies presently connect to +3V3_MCU. P307 is a non-5V-tolerant
+Schmitt input with the existing 1uA leakage allocation. Re-executed CMS-009
+button calculations retain low maximum 0.341555V, minimum low margin
+0.315032V and high minimum 2.977558V. Keep the external filter/pullup and
+disable the internal pull and trace output.
+
+Renesas's [RA8P1 device header][cms16-header] corroborates IRQ27 wake
+enable DPSIER5.DIRQ27E bit 3 and flag DPSIFR5.DIRQ27F bit 3, but edge
+selection is DPSIEGR4.DIRQ27EG bit 3. Do not infer an edge register 5
+from the enable/flag register numbers. The [LPM API][cms16-lpm-api]
+defines falling edge as zero and rising edge as one; the
+[LPM implementation][cms16-lpm] reads flags before writing zero.
+Preserve other wake sources and handle a key already held before sleep.
+This corroborates the allocation; full HUM sequencing and bench wake
+verification remain open. SCI receive timing and drive/edge qualification
+also remain open and cannot inherit the SPIA timing signoff.
+
+Native migration checkpoint, 2026-09-13: all four radio bus signals have
+moved to the reviewed SCI0/GPIO group, using aligned 300mil stubs and
+50mil left-facing hierarchical labels. Exported XML confirms these exact
+two-node nets: SCLK U1.P4/U5.2, CIPO U1.P2/U5.5, COPI U1.P1/U5.3,
+and CS_N U1.N2/U5.4. Former balls F13/F12/F15/G14 are isolated pending
+audio/CEU implementation. Read-only partition comparison proves exactly
+these four MCU substitutions, retaining every other net membership and
+all component/library records (U1 unit UUID order is normalized without
+changing its set). There are 334 nets. Native and CLI ERC remain 122 findings:
+120 errors and two warnings, with unchanged type counts. The MCU note
+now describes CMS-016 and links here. The complete two-camera allocation and SCI timing,
+isolation, reset behavior and hardware operation remain unqualified.
+Independent read-only review passed the four-substitution scope, all 266
+component records, 35 library parts, 13 libraries, the net partition and
+the matching native/documented allocation. This does not close the
+remaining product-level allocation or electrical qualifications.
+
+Volume-up migration checkpoint, 2026-09-13: VOL_UP_N now joins U1.C11
+(P307_IN, Input), C61.1, R26.2 and R30.2. B14 is isolated for future
+CEU VIO_D2. The native MCU library defines default P307 as Bidirectional
+and its selected P307_IN alternate as Input; every placed U1 unit cache
+was synchronized while preserving fields and other selected functions.
+Read-only XML partition comparison against the radio checkpoint proves
+exactly the B14-to-C11 substitution and the exchanged isolated pin, with
+all other memberships unchanged across 334 nets. All 266 component and
+13 library records remain unchanged after normalizing U1 unit UUID order.
+The only changed library pin record is C11's corrected default type.
+Native and CLI ERC now agree at 123 findings (121 errors, two warnings): the added
+pin_not_driven finding is the freed B14 input awaiting its CEU connection.
+It is retained, not suppressed. Independent read-only review passed all
+five substitutions, the unchanged records, all four synchronized MCU
+library caches, the selected input alternate and the exact ERC delta.
+The four ignored ERC checks remain unchanged. These five placed moves do not qualify
+the unimplemented second camera or the revised peripheral timing.
+
+Review-output checkpoint, 2026-09-13: root and MCU allocation pages are
+now A2 landscape. The core/analog root blocks occupy separate lower areas;
+the MCU C39 note is larger, left-aligned and separated below the circuit.
+Camera R98 reference/value now sit left of the resistor, clear of R99.
+All 13 PDF pages were rendered and visually reviewed; the root MCU
+hierarchical block still needs further spacing, so this is not final layout
+acceptance. Native BOM export contains 103 grouped rows, 19 columns and
+263 included components; TP1..TP3 retain their explicit BOM exclusions.
+Read-only comparison after these layout edits preserves all 334 net
+partitions and 266 component records, with ERC still 121 errors/two warnings.
+
+Other VIO_D2 choices consume microSD DAT3 or SDRAM A6. A 16-bit route
+additionally conflicts with page/volume controls or radio/SDRAM. Display,
+illumination and service reservations remain incomplete. Complete their
+combined allocation before calling the system pin plan closed; do not
+delete buttons or reduce audio functionality to make CEU fit.
+
+Adafruit 5840 OV5640 autofocus breakout is a candidate for a parallel
+interface audit, not a selected production BOM item. Its
+[manufacturer pinout](https://learn.adafruit.com/adafruit-ov5640-camera-breakout/pinouts)
+describes 3.3V board power, eight data outputs D2..D9, PCLK, HS, VS,
+SCCB, reset/power-down and external/onboard clock options. Map its D2..D9
+to CEU D0..D7 only after the exact board revision, voltage limits, current,
+off-state behavior, clock configuration, autofocus and connector are
+qualified. Two OV5640 modules require independently addressable control
+paths or a qualified SCCB mux/address arrangement.
+
+Independent assembly review, 2026-09-13: the
+[Adafruit Eagle schematic](https://github.com/adafruit/Adafruit-OV5640-Camera-Breakout-PCB)
+establishes this JP2 physical-pad map for the exact 5840 breakout. These
+are reviewed interface candidates, not placed nets or a completed power design.
+
+| JP2 contact | Assembly signal | Proposed host connection |
+| --- | --- | --- |
+| 1 / 2 | 3.3V / GND | Qualified camera supply / GND |
+| 3 / 4 | SCL / SDA | Independent second-camera SCCB path |
+| 5 | VSYNC | PB02/E13, CEU VD |
+| 6 | HREF | PB03/D16, CEU HD |
+| 7 | PCLK | PB04/D13, CEU CLK |
+| 8 | External XCLK | NC with onboard INT clock selected |
+| 9 | DATA9 | P703/G14, CEU D7 |
+| 10 | DATA8 | P905/A14, CEU D6 |
+| 11 | DATA7 | P906/A13, CEU D5 |
+| 12 | DATA6 | P907/A15, CEU D4 |
+| 13 | DATA5 | P908/B13, CEU D3 |
+| 14 | DATA4 | P909/B14, CEU D2 |
+| 15 | DATA3 | P902/E9, CEU D1 |
+| 16 | DATA2 | P206/B15, CEU D0 |
+| 17 / 18 | RESET_N / PWDN | Separate controlled outputs; allocation open |
+
+The onboard oscillator is 24MHz; selecting it requires cutting EXT and
+bridging INT. RESET_N has a 10k pullup and 100nF; PWDN has a 10k
+pulldown, so the untouched assembly defaults enabled. Explicitly design
+reset/powerdown arbitration. Its SCCB pullups are 10k to camera supply,
+and PCLK already has 22pF. Include that loading in the interconnect budget.
+The [5840 product requirements](https://www.adafruit.com/product/5840)
+also require VM jumper closure and autofocus firmware. Motor current,
+acquisition current and inrush are not yet bounded. STROBE is a test pad,
+not a JP2 contact; the front light needs a separate driver and control.
+
+The [Adafruit driver](https://raw.githubusercontent.com/adafruit/Adafruit_CircuitPython_OV5640/main/adafruit_ov5640/__init__.py)
+defaults to 7-bit SCCB address 0x3C, colliding with Pcam. Its address
+argument does not demonstrate a programmable hardware address. A separate
+bus or qualified mux must also resolve powered-off injection from pullups
+and host-driven control pins. PWDN does not disconnect board input power.
+
+Production qualification gap: Adafruit specifies regulated 3.3V board
+operation and connects DOVDD directly to that input. However, its genuine
+[OmniVision OV5640 v2.03 datasheet, Table 8-3, printed p8-2](https://cdn-learn.adafruit.com/assets/assets/000/118/994/original/OV5640_datasheet.pdf?1677598686=)
+lists 3.0V maximum VDD-IO. This discrepancy requires assembly-specific
+manufacturer clarification; it does not establish that the sold module
+fails. Do not declare the proposed 3.1518..3.3930V rail envelope qualified
+or substitute bare-sensor figures for assembly current, temperature,
+logic-level and sequencing limits. A separately linked Leopard
+LI-OV5640-MIPI-AF document describes a different assembly and cannot close
+these requirements. Signal planning can continue while power qualification
+remains open.
+
+Procurement snapshot, 2026-09-13, unreserved: Adafruit 5840 lists 15 stock,
+USD 9.95/8.96/7.96 at 1/10/100; [DigiKey 1528-5840-ND](https://www.digikey.com/en/products/detail/adafruit-industries-llc/5840/22163377)
+lists Active, 134 stock, four-week lead and USD 9.95 at one. This is not
+a production BOM selection or purchase authorization.
+
+Provide four independently controlled lighting functions: warm display,
+cool display, front camera illumination and rear flashlight. Front/rear
+visible LEDs need regulated current, hardware default-off/reset inhibition,
+separate continuous and pulsed limits, and source/thermal budgets. Camera
+light does not replace the panel light guide. Infrared/depth sensing for
+face authentication remains an investigation; ordinary RGB capture and
+visible illumination do not establish spoof-resistant authentication.
+The existing SYS-010 single-camera current screen excludes the second
+camera and both camera lights and must not be treated as the new maximum.
+
+[cms16-sci]: https://renesas.github.io/fsp/group___s_c_i___b___s_p_i.html
+[cms16-header]: https://github.com/renesas/fsp/blob/master/ra/fsp/src/bsp/cmsis/Device/RENESAS/Include/R7KA8P1KF_core0.h
+[cms16-lpm-api]: https://github.com/renesas/fsp/blob/master/ra/fsp/inc/api/r_lpm_api.h
+[cms16-lpm]: https://github.com/renesas/fsp/blob/master/ra/fsp/src/r_lpm/r_lpm.c
+
+## CMS-002: Exact camera module and connector contract
+
+Procurement correction, 2026-09-12: Renesas staff confirms that CU450 was
+designed for Renesas and is not sold separately. Retain the following as
+the EK reference contract, not a production purchasing instruction.
+[Renesas verified support answer](https://community.renesas.com/mcu/ra/f/forum/60538/regarding-buying-an-arducam-0v5640-cu450-cmos-5mp-mipi-csi-2-camera).
+CMS-014 below evaluates the independently orderable Pcam 5C alternative;
+CMS-015 records the later host-connector/control leaf placement and six
+CSI hierarchy joins, followed by all three MCU control joins. Camera
+qualification remains pending.
+
+The historical allocation used **Arducam CU450_OV5640**, the 36 x 40 mm Camera Expansion Board named in
+the [EK-RA8P1 v1 manual, Rev.1.04, section 3 and Table 36](https://www.renesas.com/en/document/mat/ek-ra8p1-v1-users-manual).
+This identifies the module and its actual 40-contact interface. The raw
+OV5640 sensor datasheet does not define that connector. B0156, B0530,
+OV5647 Raspberry Pi cameras, and arbitrary OV5640 breakout boards are not
+pin-compatible substitutes without their own complete connector audit.
+
+The following is the EK Table 36 MIPI-mode contract, visually checked
+against the original PDF. Contact numbers are module-interface numbers,
+not a promise about an unselected FFC connector's top/bottom contact side.
+
+| Module contact(s) | Net/function | RA8P1 port / BGA289 ball |
+| --- | --- | --- |
+| 5 / 6 | CAM_DL1_P / CAM_DL1_N | Dedicated MIPI_DL1_P T3 / MIPI_DL1_N U3 |
+| 8 / 9 | CAM_CL_P / CAM_CL_N | Dedicated MIPI_CL_P T2 / MIPI_CL_N U2 |
+| 11 / 12 | CAM_DL0_P / CAM_DL0_N | Dedicated MIPI_DL0_P T1 / MIPI_DL0_N U1 |
+| 20 | Camera SCL | P512 / P13, SCL1_A |
+| 21 | Camera SDA | P511 / U15, SDA1_A |
+| 25 | Camera reset | P709 / P16, GPIO |
+| 26 | Camera XCLK | P501 / R8, GTIOC12A |
+| 28 | Camera interrupt | P010 / P10, IRQ14 |
+| 31, 34, 35, 36, 39 | Module +3.3 V | Camera supply domain; qualify peak current and sequencing |
+| 1, 4, 7, 10, 13, 16, 19, 22, 29, 30, 32, 33, 37, 38, 40 | GND | Common ground |
+| 2, 3, 14, 15, 17, 18, 23, 24, 27 | Unused in MIPI mode | Intentional no-connect on host |
+
+The MCU additionally needs VCC18_MIPI at R2 (1.65..1.95 V), AVCC_MIPI
+at T4 (2.90..3.60 V), and VSS_MIPI at R3 (GND). Remove any prior no-connect
+markers from those supply/PHY pins when implementing this function.
+The [RA8P1 datasheet](../../docs/reference/ra8p1-datasheet.pdf), Table 2.44,
+specifies supply rise gradients in **us/V**, not V/us. A separate qualified
+1.8 V supply, decoupling, ramp/sequence review and CSI clock calculation are
+required; a global power label alone does not create that rail.
+
+The module shares its differential contacts with DVP pins. Select MIPI in
+the sensor configuration; do not wire both operating modes simultaneously.
+The existing DVP setup's nominal 24 MHz XCLK, reset low/high delays and
+SCCB transaction path are useful bring-up evidence, not a complete MIPI
+sensor-register program. The PHY is shared with MIPI-DSI, so this allocation
+precludes a simultaneous MIPI-DSI display; the e-paper interface does not
+need DSI. Signal polarity and clock/data lane ordering are fixed above.
+
+Production gates: obtain exact CU450 orderability, module revision/schematic,
+power consumption and FFC/cable mating contract. An independently purchasable
+CU450 listing with current DigiKey/Mouser stock was not verified. The EK
+module supports prototyping, but this record does not authorize buying an
+unverified camera or inferring its internal regulators. For camera power
+gating, address SCCB pullups and every clock/control back-power path; pulling
+RESET low is not equivalent to removing power safely.
+
+## CMS-014: Pcam 5C module implementation candidate
+
+Digilent **410-358**, Pcam 5C, supplies an OV5640 with two MIPI lanes.
+This is the next implementation candidate, subject to the electrical and
+cable checks below. The selected RA8P1 package and dedicated lane allocation
+remain unchanged. The MCU host supply is already implemented under CMS-013;
+the camera module's 3.3V demand is additional.
+
+[Digilent's manual](https://media.digikey.com/pdf/Data%20Sheets/Digilent%20PDFs/Pcam_5C_RefManual_Web.pdf)
+specifies 3.0..3.6V, 200mA maximum, SCCB up to 400kHz with 1.5k host
+pullups, and a 12MHz onboard clock. Its module-side J1 contract is:
+
+| J1 contact | Function | Proposed RA8P1 endpoint |
+| --- | --- | --- |
+| 2 / 3 | Lane 0 N / P | U1 / T1 |
+| 5 / 6 | Lane 1 N / P | U3 / T3 |
+| 8 / 9 | Clock N / P | U2 / T2 |
+| 13 / 14 | SCL / SDA | P512/P13 / P511/U15 |
+| 11 | PWUP | P709/P16, subject to hardware default/clear circuit |
+| 15 | 3.3V input | Qualified camera supply |
+| 1 / 4 / 7 / 10 | Ground | GND |
+| 12 | NC | Explicit no-connect |
+
+Use host connector candidate **TE 1-1734248-5**, matching J2 on
+[Digilent Zybo Z7 D.1 sheet 2](https://files.digilent.com/resources/programmable-logic/zybo-z7/zybo-z7-d1-sch.pdf).
+[Zybo manual Table 15.1 and installation instructions](https://digilent.com/reference/_media/reference/programmable-logic/zybo-z7/zybo-z7_rm.pdf)
+give the same numbered functions as Pcam J1. The documented installation
+therefore connects host contact n to module contact n, not 16-n.
+[Wurth 686715100001 drawing](https://www.we-online.com/components/products/datasheet/686715100001.pdf),
+Rev.001.003 dated 2026-06-03, identifies the schematic's 100mm cable as
+15-conductor, 1.00mm pitch, Type 2 with opposite exposed ends.
+The TE connector is vertical and single-sided, accepting 0.30+/-0.05mm
+flex. Follow the [TE drawing Rev.E1](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=1734248&DocType=Customer+Drawing&PartCntxt=1-1734248-5)
+circuit-one mark when creating the
+native symbol and later qualifying the footprint; do not infer numbering
+from a generic connector image. Module-end exposed contacts face its PCB;
+the Zybo host-end contacts face away from that board's center. The new
+board's assembly instructions must translate these references to its own
+orientation. P501/R8 external XCLK
+and P010/P10 interrupt are unnecessary for the basic Pcam interface; keep
+their earlier reservations until the replacement is actually integrated.
+The camera firmware must adapt its PLL setup to 12MHz and PWUP timing
+(low at least 100ms, then high at least 50ms before SCCB access). Existing
+EK 24MHz setup is not a compatible binary configuration.
+
+[Digilent schematic 500-358 C.0](https://digilent.com/reference/_media/reference/add-ons/pcam-5c/pcam_5c_sch.pdf)
+identifies GTL2002 SCCB translation, LP5907 1.8V/2.8V regulators and
+onboard reset sequencing. PWUP is a regulator-enable control, not a
+separate sensor reset. Host pullups, module translator bias, and PHY
+collapse sequencing require independent off-state review; do not infer
+zero backfeed from the presence of onboard regulators. No raw-sensor
+supply circuit is being substituted for this module.
+
+The host control candidate is SN74LVC1G97 configured as camera request
+AND MCU_RESET_N, with request and PWUP pulldowns. This addresses the
+[LP5907](https://www.ti.com/lit/ds/symlink/lp5907.pdf) EN-low limit of
+0.4V versus the 0.5V host GPIO-low allowance. The
+[logic gate](https://www.ti.com/lit/ds/symlink/sn74lvc1g97.pdf) specifies
+0.1V maximum low at 100uA; verify the complete input/leakage load and
+reset fanout under CMS-015's allocation. Its common reset connection is
+now integrated, as are the six CSI signals, request and SCCB controls.
+[GTL2002 function tables](https://www.nxp.com/docs/en/data-sheet/GTL2002.pdf)
+support translator isolation with SREF at zero. A separately switched
+module supply is therefore not inherently required for commanded off,
+but the transition while its 1.8V supply decays still needs review.
+LP5907's 230-ohm discharge value is typical, not a guaranteed shutdown
+deadline. Require camera transmitter-off before host PHY power removal;
+unexpected collapse needs a qualified timing/hold-up contract.
+
+Source snapshot, 2026-09-12: [DigiKey 1286-1191-ND](https://www.digikey.com/en/products/detail/digilent-inc/410-358/8111762)
+lists Active, 376 units, four-week manufacturer lead time and USD53 at
+quantity one, excluding tax/shipping. Stock is not reserved. The June 2,
+2026 [Digilent regional-availability PCN](https://www.mouser.com/PCN/Digilent_Inc_Digilent_EMC_PCN_3871911_Product_availability_table_%281%29.pdf)
+identifies non-US restrictions and does not identify a US restriction.
+Confirm acceptance for any non-US destination; an Active listing alone
+is not a worldwide procurement approval.
+
+The same dated [DigiKey host-connector listing, A101418CT-ND](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1-1734248-5/2272380)
+shows Active, 25,233 units, eight-week manufacturer lead time and
+USD1.49 / 1.268 / 1.0772 at quantities 1 / 10 / 100.
+These are procurement records for the later CMS-015 leaf placement;
+refreshed full-project BOM reconciliation remains pending.
+
+The 200mA camera allocation must be added to the CMS-013 2.095A main-rail
+screen if powered there. Before host pullups and any new interface logic,
+the tentative total becomes 2.295A. Applying the same modeled conversion
+conditions as SYS-010 gives the following deliberately incomplete budget:
+
+```python
+from math import isclose
+camera_a = .200
+digital_a = 2.095 + camera_a
+source_a = (digital_a * 3.393012496197 / .75 + 2.892695047520901) / 3.2
+assert isclose(digital_a, 2.295)
+assert source_a > 4
+print('tentative digital A / source subtotal A', digital_a, source_a)
+```
+
+Executed result: 4.148535402A source subtotal at 3.2V.
+This is a source-budget screen, not converter qualification or a measured
+peak. It already exceeds the initial 4A source allocation before the
+remaining audio, display and front-light loads. Complete SYS-010's pack,
+harness and thermal review before increasing that allocation.
+
+## CMS-015: Pcam control, reset loading and SCCB screens
+
+Status, 2026-09-13: the inspected camera working XML contains U24
+**SN74LVC1G97DBVR**, R96/R97 10k, R98/R99 1.5k and C112 100n.
+The earlier DCKR proposal is not the native selection. J3 is the host
+connector. The reset connection is now integrated through the hierarchy.
+The request and SCCB signals now join their MCU ports through the root
+hierarchy, as verified in the control integration checkpoint below.
+This does not establish electrical qualification, refreshed PDF/BOM
+acceptance or successful capture.
+
+CSI integration checkpoint, 2026-09-13: all six MCU-side no-connect
+markers have been replaced in the native editor by short wires and
+input hierarchical labels. Matching root sheet pins, wire stubs and
+local labels now join the camera to the MCU. Exported-netlist checks
+and independent review confirm exactly these two-contact nets:
+
+| MCU input port | U1 BGA contact | Joined camera connector contact |
+| --- | --- | --- |
+| CAM_CLK_N | U2 | J3.8 |
+| CAM_CLK_P | T2 | J3.9 |
+| CAM_D0_N | U1 | J3.2 |
+| CAM_D0_P | T1 | J3.3 |
+| CAM_D1_N | U3 | J3.5 |
+| CAM_D1_P | T3 | J3.6 |
+
+All 266 component records and 35 library-part records are unchanged by
+these root joins. Independent netlist comparison confirms exactly six
+net unions (343 to 337 nets), with every other net and the eight-contact
+common reset preserved. Native and all-severity CLI ERC agree at
+126 errors and 2 warnings. Compared with the 152-finding parent-port
+checkpoint, exactly six unconnected sheet-pin errors and 18 isolated
+label warnings are removed; there are no new findings. The four ignored
+tests are unchanged. Remaining ERC work is not waived.
+
+The root page is now A2 landscape. MCU supply blocks occupy a separate
+row, and the camera block has space for six aligned 500mil wire stubs
+and 50mil labels at 100mil pitch. All 272 root object UUIDs are unique.
+The crowded MCU root block still requires layout work; refreshed native
+BOM and full PDF review remain required before phase acceptance.
+
+Historical MCU control-leaf checkpoint, 2026-09-13: native wires and 50mil
+hierarchical labels now connect CAM_PWR_REQ to P709/P16 (output),
+CAM_SDA to P511/U15 and CAM_SCL to P512/P13 (bidirectional). These
+are still separate from the camera leaf. The exported XML retains
+266 components, 337 nets and exactly the previous net memberships.
+CLI ERC is 131 findings: the three unused MCU-pin errors are replaced
+by three missing-parent-pin errors and three isolated-label warnings;
+every other finding is unchanged. Manual root port placement and joins
+remain required. An automatic root import was undone because it moved
+the sheet boundary and left 11 wire ends dangling; the saved checkpoint
+has no such wire-end findings.
+
+Control integration checkpoint, 2026-09-13: manual native root ports
+and labeled wire stubs now join all three control nets. MCU parent
+ports are spaced at 200mil pitch; camera-side stubs are 500mil long
+with 50mil labels. The MCU filename and nearby NOR_CK_HOST text have
+been repositioned to clear the control group.
+
+| Joined net | Exact component contacts |
+| --- | --- |
+| CAM_PWR_REQ | U1.P16, R96.1, U24.3 |
+| CAM_SCL | U1.P13, J3.13, R98.1 |
+| CAM_SDA | U1.U15, J3.14, R99.1 |
+
+Read-only XML comparison confirms exactly these three net unions
+(337 to 334 nets). Every other node partition and all 266 component
+records, library parts and library records remain unchanged. Native and
+CLI ERC agree at 122 findings (120 errors, 2 warnings), down from the 131-finding
+leaf checkpoint: three hierarchy mismatches, three unconnected pins
+and three isolated labels are removed. No wire-end errors appear.
+The MCU overview still needs more space; this checkpoint does not
+constitute complete layout, electrical qualification, or PDF/BOM acceptance.
+
+The dedicated IIC1 assignment was independently reviewed against
+[RA8P1 Rev.1.30 Tables 1.17, 2.5 and 2.7][cms13-ra]. Retain
+ICFER.FMPE=1 for the modeled pullup load, with SCCB clock at most
+400kHz. The guaranteed 15mA sink row applies to SCL1_A/SDA1_A;
+the 20mA typical row is not the acceptance limit. P709 uses ordinary
+low drive, with its output latch initialized low before enabling the
+output. Sensor-side VOL, bus timing, leakage and rail-collapse behavior
+remain qualification items. CMS-016 preserves these three assignments.
+
+Independent review of the reset-stage XML confirms /MCU_RESET_N contains
+exactly J1.10, R1.2, U1.D5, U15.A4, U19.6, U2.6, U24.6 and U7.3;
+the separate camera-leaf reset net no longer exists. ERC falls from 143
+to 140 findings: the unconnected reset sheet pin, isolated reset label
+and undriven U24.6 input are removed. Recreating the parent sheet block
+changed nine remaining camera sheet-pin UUIDs/positions; those are the
+same unconnected-port findings, not new electrical regressions. Comparison
+by sheet, severity, type and item description finds only the three reset
+removals, no additions; all other retained finding details and ignored
+checks are unchanged. Remaining ERC work is not waived.
+
+| U24 pin | Leaf connection |
+| --- | --- |
+| 1 IN1, 2 GND | GND |
+| 3 IN0 | CAM_PWR_REQ; R96.1, with R96.2 to GND |
+| 4 Y | J3.11 PWUP and R97.1; R97.2 to GND |
+| 5 VCC | +3V3_MCU; C112 to GND |
+| 6 IN2 | MCU_RESET_N; verified common-reset join |
+
+[TI SCES416N, sections 5/6.5/8.4][cms15-gate] establishes this pin map
+and Y = IN0 AND IN2 when IN1 is grounded. R96/R97 are YAGEO
+RC0603FR-0710KL; the 1% initial and 100ppm/C, 100C excursion model gives
+9801..10201 ohm. The 100C excursion is an arithmetic assumption, not
+whole-module temperature qualification. No extra pull is added to reset.
+
+### Shared MIPI PHY pin types
+
+The project BGA289 symbol `R7KA8P1KFLCAC#UC0` now represents all six
+MIPI contacts as bidirectional, and the targeted U1 library update is
+saved: CL_N U2, CL_P T2, DL0_N U1, DL0_P T1, DL1_N U3 and DL1_P T3.
+This is an engineering representation of selectable DSI transmit and
+CSI receive functions. The current camera hierarchy uses input ports
+at the MCU boundary to express the intended CSI receiver configuration;
+it does not make these silicon contacts dedicated receiver-only pins.
+
+[RA8P1 datasheet R01DS0439EJ0130, Rev.1.30, Table 1.16, p19][cms13-ra]
+describes the contacts as DSI/CSI. Its direction column lists clock and
+data lane 1 as output, and data lane 0 as I/O. That DSI-oriented column
+does not establish unconditional input-only behavior for CSI. The
+[quick guide, sections 17.1-17.3][cms15-phy-guide] describes mutually
+exclusive DSI and CSI use, with DSI transmission and CSI reception.
+The currently served R01AN7883EU0110 Rev.1.10 is titled RA8x2 MCU Quick
+Design Guide (printed pp77-79); the earlier RA8P1 Rev.1.00 section 17.3
+also identifies CSI reception. The RA8P1 datasheet remains the
+device-specific pin reference.
+
+Bidirectional preserves the selectable active PHY capability instead
+of hiding it behind passive pin types. It is not a claim that every
+lane supports reverse traffic while CSI is selected. This review did
+not retrieve the English HUM successfully and therefore does not
+certify every CSI low-power/escape state as receive-only. Firmware
+must retain the intended CSI mode; pin typing does not close signal
+integrity, power sequencing, off-state or capture qualification.
+
+### Reset and PWUP default model
+
+Before camera integration, [RST-002](reset_coordination_tps3890.md) and
+CMS-011C allocate MCU 5uA + U7 5uA + NOR 2uA + U19 5uA = 17uA.
+U24 was not reserved: add 5uA, yielding 22uA devices. Preserve the 13uA
+overhead for supervisor, board, debugger and other adverse leakage,
+giving **35uA for the current reset-integrated circuit**. The preceding
+30uA CMS-011C/RST-002 calculations describe the pre-camera baseline;
+this section supersedes that loading screen for the added U24 input.
+The total is an acceptance allocation, not a guaranteed current sum.
+
+The gate's +/-5uA input limit uses VI=0 or 5.5V and VCC=0..5.5V;
+Ioff is separately +/-10uA at VCC=0. Its input capacitance is 3.5pF
+typical, not a maximum. Do not extend these conditions through arbitrary
+partial power. At VCC=3.0V, VT+ maximum is 1.87V and VT- minimum is
+0.84V; threshold rows at discrete supplies do not prove an interpolated
+continuous-rail bound. Retain reset edge/fanout qualification.
+
+[LP5907 SNVS798Q][cms15-ldo] specifies EN low <=0.4V and high >=1.2V
+for VIN=2.2..5.5V. U24's VOL<=0.1V at <=100uA, VCC=1.65..5.5V,
+avoids relying on the host's 0.5V GPIO-low allowance. Verify complete
+module/board current into PWUP remains within that sink test. At VCC=3V,
+the gate's VOH>=2.4V at 16mA supports a separate high-state test-point
+screen; R97 alone draws up to 0.3462mA, so the 100uA VOH row does not
+apply. Module enable/RC loads and charging transients must be included.
+
+Allocate 10uA adverse request leakage (MCU plus gate) and 20uA adverse
+PWUP leakage for default-state screens. These are acceptance budgets,
+including board/module effects where relevant, not published module
+maxima. Disable internal MCU pulls. No guarantee is made below valid
+gate supply or for a missing/unpowered module with external injection.
+
+```python
+from math import isclose
+
+vhi, vlo = 3.393012496197, 3.151819680
+vfall = 3.000822726706337
+rmin, rmax = 10000*.99*.99, 10000*1.01*1.01
+reset_devices = (5+5+2+5+5)*1e-6
+reset_total = reset_devices + 13e-6
+reset_sink = vhi/rmin + reset_total
+reset_high = vlo - reset_total*rmax
+reset_margin = reset_high - .8*vlo
+fall_high = vfall - reset_total*rmax
+fall_margin = fall_high - .8*vfall
+gate_3v_margin = 3.0 - reset_total*rmax - 1.87
+assert isclose(reset_devices, 22e-6)
+assert isclose(reset_total, 35e-6)
+assert reset_sink < .0004
+assert isclose(reset_high, 2.794784680)
+assert isclose(reset_margin, .273328936)
+request_default = 10e-6*rmax
+pwup_default = 20e-6*rmax
+assert request_default < .35 and pwup_default < .4
+print('CMS-015 current reset sink A / high V / MCU margin V',
+      reset_sink, reset_high, reset_margin)
+print('fall high / MCU margin / separate 3V gate margin V',
+      fall_high, fall_margin, gate_3v_margin)
+print('additional reset drop V / sink headroom A',
+      5e-6*rmax, .0004-reset_sink)
+print('request / PWUP allocated defaults V', request_default, pwup_default)
+```
+
+Executed results: sink 0.381190439mA, leaving 18.809561uA below the
+0.4mA test load; high 2.794784680V and MCU margin 0.273328936V.
+At the falling corner, high is 2.643787727V and margin 0.243129545V.
+The added drop is 51.005mV. At the separate 3V gate point the high margin
+is 0.772965V. Request/PWUP allocated defaults are 0.10201/0.20402V.
+Reported decimals are rounded results, not outward-rounded guarantee
+inequalities. U2's <=0.25V low at VDD>=1.5V and 0.4mA supports only
+the stated static sink screen, not low-POR or collapse behavior.
+
+### SCCB pullup current and timing model
+
+R98.2/R99.2 connect to +3V3_MCU; R98.1 and J3.13 form CAM_SCL,
+R99.1 and J3.14 form CAM_SDA. Use 1.5k host pulls as required by the
+[Pcam manual][cms15-manual]. The module schematic also has 1.5k pulls
+to its 1.8V rail, so a sinking device sees both sides through GTL2002.
+The screen below assumes the module pull resistors meet the host's
+1%/100ppm grade and its 1.8V rail stays within +2%; those combined
+module bounds require confirmation and are not established by resistor
+values on the schematic alone. The host selected MPN is
+[RC0603FR-071K5L][cms15-r15].
+
+[RA8P1 Table 2.7][cms13-ra] specifies IIC VOL<=0.4V at 3mA,
+or <=0.6V at 6mA. The modeled 0.4V load slightly exceeds 3mA.
+Configure the dedicated IIC with ICFER.FMPE=1 to use its <=0.4V at
+15mA specification, VCC>=2.7V; do not use the generic GPIO 1mA screen.
+The Pcam manual does not establish sensor sink/VIL limits or combined
+translator drop. Obtain those limits and verify both directions.
+
+```python
+from math import log, isclose
+
+rpmin, rpmax = 1500*.99*.99, 1500*1.01*1.01
+vhost, vcam = 3.393012496197, 1.8*1.02
+sink_zero = (vhost+vcam)/rpmin
+sink_04 = (vhost+vcam-2*.4)/rpmin
+# Host-side lumped 30%-70% RC rise model, not translated-bus closure.
+cap_300ns = 300e-9/(log(7/3)*rpmax)
+cap_1000ns = 1e-6/(log(7/3)*rpmax)
+assert .003 < sink_04 < sink_zero < .015
+assert isclose(cap_300ns, 231.39349105849004e-12)
+print('CMS-015 conditional zero/0.4V sink mA', sink_zero*1e3, sink_04*1e3)
+print('host RC capacitance at 300ns / 1000ns pF',
+      cap_300ns*1e12, cap_1000ns*1e12)
+```
+
+Executed current screens are 3.556788/3.012626mA. The
+[TI pullup derivation][cms15-rise] gives tr=ln(7/3)*R*C, hence
+231.393491pF for 300ns and 771.311637pF for 1000ns in this model.
+These are not permissions to exceed other bus capacitance limits.
+Include cable, connector, protection, receiver and translator capacitance;
+verify both translated waveforms, VOL, high level and edge timing at the
+chosen <=400kHz rate. GTL2002's test-point Ron/capacitance values are not
+a complete sensor/host timing or voltage-margin proof.
+
+### Off-state and power-budget boundary
+
+[GTL2002 Tables 4/5][cms15-gtl] support static isolation with SREF=0;
+this supports using the module's own PWUP-controlled LDOs for commanded
+off without inherently requiring another supply switch. LP5907's 230-ohm
+discharge is typical-only and it lacks dedicated UVLO. Keep the host PHY
+powered while stopping capture and lowering PWUP; establish transmitter
+off before removing host PHY power. Unexpected main collapse still needs
+measured/qualified rail ordering or a revised isolation/hold-up circuit.
+Neither the gate nor static translator table supplies that timing proof.
+Use the manual's >=100ms PWUP-low reset and >=50ms high-before-SCCB
+policy with qualified host rails; those waits do not prove fault shutdown.
+
+CMS-014's 2.295A main subtotal and 4.148535402A source screen exclude
+the new host pulls, gate and dynamic interface load. Account for these
+without adding the module's internal pull current twice to its 200mA
+allocation. Do not increase the 4A source allocation without SYS-010's
+remaining pack/harness/thermal review. No firmware change is claimed.
+
+[cms15-gate]: https://www.ti.com/lit/ds/symlink/sn74lvc1g97.pdf
+[cms15-ldo]: https://www.ti.com/lit/ds/symlink/lp5907.pdf
+[cms15-manual]: https://media.digikey.com/pdf/Data%20Sheets/Digilent%20PDFs/Pcam_5C_RefManual_Web.pdf
+[cms15-r15]: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071K5L
+[cms15-rise]: https://www.ti.com/lit/an/slva689/slva689.pdf
+[cms15-gtl]: https://www.nxp.com/docs/en/data-sheet/GTL2002.pdf
+[cms15-phy-guide]: https://www.renesas.com/en/document/apn/ra8p1-mcu-quick-design-guide
+
+## CMS-003: microSD native connection and a repository mismatch
+
+Reserve the entire SDHI1_B six-signal bus. The BGA289 assignment is checked
+against [RA8P1 Table 1.17](../../docs/reference/ra8p1-datasheet.pdf) and also
+[RA8D2 Table 1.16](../../docs/reference/ra8d2-datasheet.pdf), Rev.1.30,
+2026-02-27. P400/P401 appear on printed page 32 in both datasheets.
+
+| Signal | Port / ball | DM3AT-SF-PEJM5 contact |
+| --- | --- | --- |
+| SD1CLK_B | P400 / P17 | 5 CLK |
+| SD1CMD_B | P401 / N17 | 3 CMD |
+| SD1DAT0_B | P402 / L14 | 7 DAT0 |
+| SD1DAT1_B | P403 / H13 | 8 DAT1 |
+| SD1DAT2_B | P404 / J13 | 1 DAT2 |
+| SD1DAT3_B | P405 / G12 | 2 DAT3 |
+| SD1CD | P406 / F14 | MP2 CD_B; MP4 CD_A to GND |
+| Card supply / ground | Qualified +3.3 V / GND | 4 VDD / 6 VSS |
+
+The socket's A/B detect switch is separate from its eight card contacts.
+The project symbol `Connectors:DM3AT-SF-PEJM5` now names MP2 `CD_B`,
+MP4 `CD_A`, and MP1/MP3/MP5/MP6 `SHIELD1`..`SHIELD4`. Ground all four
+shield pads. Hirose's
+[EDC-325165-00-00 drawing, page 1, note 2](https://www.hirose.com/product/download/?distributor=chip1&lang=en&num=DM3AT-SF-PEJM5&type=2d)
+shows A/B open without a card and closed with a card. The mapping is an
+audit of the imported pad identities: B is the rear contact beside DAT1
+(MP2), and A is the side contact 10.5 mm forward (MP4). `MP` here is the
+imported identifier, not a declaration that every such pad is a shield.
+Pin 2 is displayed as `DAT3` to avoid confusing the card's DAT3/CD function
+with this independent mechanical switch. No pin numbers were changed.
+All fourteen pins remain passive, with consistent 150 mil pin lengths and
+50 mil text. The two detect contacts and four shields are visually grouped.
+The native Symbol Checker reported no issues at the library checkpoint.
+The socket is now J2 on the microSD sheet, with mechanical detect under
+CMS-012 and power/data integration under the
+[microSD implementation contract](microsd_power_interface.md). Native
+placement and BOM reconciliation do not qualify the retained footprint.
+microSD has no mechanical write-protect switch. SD1WP is available at P700,
+which is already assigned to the radio; it is not needed for this socket.
+
+Sourcing snapshot, 2026-09-08: the exact active socket is
+[DigiKey HR1964CT-ND](https://www.digikey.com/en/products/detail/hirose-electric-co-ltd/DM3AT-SF-PEJM5/2533566),
+30,851 in stock, USD 3.55 / 3.019 / 2.56560 each at quantities 1 / 10 / 100,
+with a quoted 16-week manufacturer lead time. Stock is not reserved and
+prices exclude tax/shipping. The imported Mouser part number
+`798-DM3AT-SF-PEJM5` is retained; a current US/USD Mouser quote was not
+verified in that checkpoint. The dated procurement fields are now in the
+schematic instance and reconciled native BOM; retain their observation date.
+
+Use 3.3 V signaling. Do not claim UHS/HS200/HS400 capability from an eMMC
+marketing version. The RA8P1 SDHI SDR timing table gives a 20 ns minimum
+clock period in the relevant 3.3 V conditions. Keep all CMD/DAT/CLK pins in
+the selected _B timing group. Begin initialization at the card-specified
+low speed; 50 MHz is an upper interface target, not an automatically valid
+board clock. Select CMD/DAT pullups, card-detect pullup, source termination,
+low-capacitance protection, effective bypass capacitance and any load switch
+after their leakage, drive, timing and inrush calculations. Do not pull up
+CLK by habit. Power-off states must not phantom-power the card through IOs.
+
+Confirmed software-definition defect, not changed by this hardware task;
+tracked separately in [issue #845](https://github.com/bsikar/ra8-firmware/issues/845):
+[connectors.h](../../libs/ra8_board_ek_ra8d2/inc/ra8_board_ek_ra8d2_connectors.h)
+calls P400 CMD, P401 CLK, P406 WP, P407 CD, and selects
+instance 0. Both silicon datasheets instead give the assignment above;
+P407 has no SD1CD function. The corresponding pin-init routine and demos
+must be corrected and tested in a separate firmware change. Copying that
+enum into a schematic would create a real wiring error.
+
+The historically validated EK SPI fallback uses SCI0 SCK=P601, COPI=P603,
+CIPO=P602, CS=P604 on EK Pmod2. Those pins now serve the placed radio on
+this design under CMS-016. The EK example remains a protocol/filesystem
+reference, not a compatible replacement for this board's native SDHI1_B.
+No switched dual-routing network is proposed for production.
+
+## CMS-004: External RAM and soldered NOR baseline
+
+Both EK boards contain 512 Mbit, 16M x 32 SDRAM, **IS42S32160F-6BLI**.
+That is 64 MiB, not 512 MB. EK-RA8P1 uses **MX25LW51245GXDI00** for its
+512 Mbit Octal NOR; EK-RA8D2 instead uses **IS25LX512M-JHLE**. Their
+capacity is the same but commands, reset behavior and Octal byte ordering
+are not interchangeable. See the EK-RA8P1 manual sections 6.3/6.4 and the
+[committed EK-RA8D2 manual](../../docs/reference/ek-ra8d2-v1-users-manual.pdf).
+
+The existing imported **IME5132SDBETG-6I** also provides 16M x 32 SDRAM at
+3.0..3.6 V, but uses TSOP-86 rather than the EK part's BGA-90. Retaining it
+preserves the user's imported part and the required capacity, subject to
+pin-by-pin and timing qualification using its actual manufacturer's
+[512 Mbit SDRAM datasheet](https://www.mouser.com/datasheet/2/1445/DS_SDRAM_512Mb_16Mx32_IME5132SDBET_B-3600416.pdf).
+Do not infer pin equivalence from matching density or run 166 MHz merely
+because the memory is rated for it. RA8P1 SDRAMC timing, selected clock,
+trace skew, loading, refresh, voltage and temperature are independent limits.
+CMS-010 records the current ISSI selection, exact pin-number contract and
+remaining electrical qualification gates; CMS-008 retains historical sourcing.
+
+Reserve these SDRAM signal ports, in bit order:
+
+| Signal group | MCU ports |
+| --- | --- |
+| A0..A12 | PA03 PA02 PA01 PA00 P503 P504 P505 P506 P507 P508 P509 P510 P608 |
+| BA0 / BA1 | PD00 / PC15 |
+| DQ0..DQ7 | P302 P301 P300 P112 P113 P114 P115 P609 |
+| DQ8..DQ15 | PA11 PA12 PA13 PA14 P610 P611 P612 P613 |
+| DQ16..DQ23 | PC14 PC13 PC12 PC11 PC10 PC09 PC08 PC07 |
+| DQ24..DQ31 | PC06 PC05 PC04 PC03 PC02 PC01 PC00 P607 |
+| CKE / CLK | PA06 / PA15 |
+| DQM0..DQM3 | P614 PA05 P615 PA04 |
+| WE# / CAS# / RAS# / CS# | PA08 / PA09 / PA10 / P813 |
+
+This consumes 57 distinct signal ports. It conflicts with OSPI1 and with
+SSI0_B on P112..P115. Use OSPI0 for NOR and reserve SSI1_B
+P702/P701/P700 for audio under CMS-016. P708 is not in this SDRAM allocation.
+
+The selected NOR is now Infineon S28HL01GTFPBHI030, 1 Gbit / 128 MiB,
+3 V Octal DDR with a read data strobe. This doubles the EK capacity without
+substituting a Quad device. Reserve OSPI0 as follows: CS#=P104/M6,
+CLK=P808/U5, DQS=P801/P6; IO0..IO7=P100/U6, P803/P7, P103/R4,
+P101/R5, P102/P5, P800/T6, P802/R6, P804/R7. P104 is OM_0_CS1,
+not CS0. INT# uses P105/N7 as GPIO IRQ0, not an assumed ECS# protocol.
+Flash RESET# joins the existing MCU_RESET_N wire. P106/N6 was released
+from the NOR reservation at this historical checkpoint, but the later
+microSD power interface assigns it to SD_PWR_REQ; it is no longer free.
+Internal MCU watchdog/software resets do not
+assert that external wire. CMS-011 below is the controlling pin, passive,
+reset, sourcing and qualification contract, including ten 30R series paths.
+
+Existing imported IS25LP01GJ-RHLE is 1 Gbit / 128 MiB Quad NOR, not Octal.
+The historical capacity-only comparison Winbond **W25Q512JVFIQ**, 64 MiB
+Quad NOR, is not an approved fallback for the selected Octal interface.
+Its primary [selection guide](https://www.winbond.com/export/sites/winbond/product-selection-guide/file/2025-Product-Selection-Guide-Winbond-Code-Storage-Flash-Memory.pdf)
+confirms 2.7..3.6 V and 133 MHz STR, not Octal/DTR equivalence. The
+[manufacturer datasheet, section 3.4](https://www.winbond.com/resource-files/W25Q512JV%20SPI%20RevB%2006252019%20KMS.pdf)
+gives SOIC-16 pins: IO3=1, VCC=2, RESET#=3, CS#=7, IO1=8, IO2=9,
+GND=10, IO0=15, CLK=16; 4..6 and 11..14 are NC/DNU. This older linked
+revision is adequate for candidate identification, not final release:
+the manufacturer index lists a newer 2026-05-25 revision requiring review.
+It must not be silently substituted in the schematic or firmware.
+
+## CMS-005: Optional eMMC and pin-conflict checks
+
+2026-10-05 update: the optional SDHI0_C reservation below is reassigned to
+the radio by [RADIO-024](radio_sdio_migration.md). No additional eMMC is
+selected. Retain the existing microSD/NOR storage. The historical mapping
+below remains useful provenance, but is no longer a free storage bus.
+
+RA8P1 hardware does support eMMC 4.51 through SDHI, including 1/4/8-bit SDR;
+this is explicitly in the [RA8P1 hardware manual](https://www.renesas.com/en/document/mah/ra8p1-group-users-manual-hardware)
+and [Renesas SDHI driver documentation](https://renesas.github.io/fsp/group___s_d_h_i.html).
+Support is not limited to removable SD. Nevertheless, a modern eMMC's
+maximum HS200/HS400 rate is not achievable just because its protocol can
+fall back to this controller.
+
+For a separate managed-storage option reserve SDHI0_C in four-bit mode:
+CLK PD05/C16, CMD PD04/C14, DAT0 PD03/C15, DAT1 PD02/B17,
+DAT2 PD01/B16, DAT3 P111/E8. No overlap with the preceding mandatory buses.
+The EK SCI8 console already uses PD02/PD03; move that console if this option
+is implemented. The eight-bit extension consumes DAT4 P110, DAT5 P109,
+DAT6 P108, DAT7 P206, with DAT7 conflicting with CMS-016 CEU VIO_D0.
+No eMMC MPN, supply network or connector is approved by this reservation.
+
+The original EK DVP camera group uses P703/P702/P701/P700/P406/P405/P902/P400
+for eight data bits, plus PB02/PB03/PB04 for synchronization/clock. It
+therefore directly conflicts with SSI1_B audio and native microSD.
+CMS-016 uses an alternate CEU8 mapping and relocates the radio to SCI0.
+These are pin conflicts, not problems solved by software scheduling if the
+two external devices remain physically connected without isolation.
+
+## CMS-006: Python-verifiable allocation and capacity arithmetic
+
+Historical single-camera allocation, superseded by CMS-016 for current
+pin ownership. The old radio, SSI1_A and volume-up groups below are retained
+only to reproduce the original conflict analysis; do not implement them.
+Executed using Python's standard library. This proves the listed historical
+sets and arithmetic, not alternate-function programming or timing closure.
+
+```python
+from itertools import combinations
+
+groups = {
+    "sdram": "PA03 PA02 PA01 PA00 P503 P504 P505 P506 P507 P508 P509 P510 P608 "
+             "PD00 PC15 P302 P301 P300 P112 P113 P114 P115 P609 PA11 PA12 PA13 "
+             "PA14 P610 P611 P612 P613 PC14 PC13 PC12 PC11 PC10 PC09 PC08 PC07 "
+             "PC06 PC05 PC04 PC03 PC02 PC01 PC00 P607 PA06 PA15 P614 PA05 P615 "
+             "PA04 PA08 PA09 PA10 P813",
+    "ospi0": "P104 P808 P801 P100 P803 P103 P101 P102 P800 P802 P804 P105",
+    "sdhi1": "P400 P401 P402 P403 P404 P405 P406",
+    "camera_control": "P512 P511 P709 P501 P010",
+    "radio": "P700 P701 P702 P703 P704 P705 P706 P707",
+    "audio_ssi1_a": "P907 P906 P206",
+    "emmc4_reserved": "PD05 PD04 PD03 PD02 PD01 P111",
+    "buttons": "P309 P310 P311 P909 P303",
+    "power_control": "P903",
+}
+sets = {name: set(pins.split()) for name, pins in groups.items()}
+assert len(sets["sdram"]) == 57
+assert len(sets["ospi0"]) == 12 and "P106" not in sets["ospi0"]
+for name, pins in groups.items():
+    assert len(pins.split()) == len(sets[name]), name
+for a, b in combinations(sets, 2):
+    assert not sets[a] & sets[b], (a, b, sets[a] & sets[b])
+dvp = set("P703 P702 P701 P700 P406 P405 P902 P400 PB02 PB03 PB04".split())
+assert dvp & sets["radio"] == set("P700 P701 P702 P703".split())
+assert dvp & sets["sdhi1"] == set("P400 P405 P406".split())
+assert {"P110", "P109", "P108", "P206"} & sets["audio_ssi1_a"] == {"P206"}
+
+memory_bytes = 512 * 2**20 // 8
+assert memory_bytes == 16 * 2**20 * 32 // 8 == 64 * 2**20
+vga_yuv422 = 640 * 480 * 2
+full_yuv422 = 2592 * 1944 * 2
+assert 2 * full_yuv422 < memory_bytes
+pcm_bytes_per_s = 192000 * 24 // 8 * 2
+sd_raw_bytes_per_s = 50_000_000 * 4 // 8
+print("Memory bytes / MiB", memory_bytes, memory_bytes / 2**20)
+print("VGA YUV422 / full sensor YUV422 bytes", vga_yuv422, full_yuv422)
+print("192 kHz, 24-bit stereo PCM bytes/s", pcm_bytes_per_s)
+print("64 MiB all-PCM theoretical seconds", memory_bytes / pcm_bytes_per_s)
+print("4-bit 50 MHz raw bus bytes/s", sd_raw_bytes_per_s)
+```
+
+Results: 67,108,864 bytes; VGA frame 614,400 bytes; full-resolution YUV422
+frame 10,077,696 bytes; PCM 1,152,000 bytes/s; only 58.254222 seconds if
+the historical minimum 64 MiB NOR capacity were used for that PCM; the
+selected 128 MiB NOR is checked separately in CMS-011. The native SD bus
+theoretical payload is 25,000,000 bytes/s before protocol overhead and media stalls.
+Two large frames fitting RAM does not prove capture frame rate, CPU/cache
+coherency, DMA arbitration, ISP throughput or available application heap.
+Audio buffering must cover real card latency, not this raw bus-rate quotient.
+
+## CMS-007: Procurement snapshots and release checklist
+
+Retrieved 2026-09-07, USD, excluding tax/shipping; availability is not a
+reservation. Search-index quantities older than the direct page were not
+treated as current stock.
+
+| Exact part | Source | Observed stock | Unit USD at 1 / 10 | Status |
+| --- | --- | ---: | --- | --- |
+| DM3AT-SF-PEJM5 | [DigiKey HR1964CT-ND](https://www.digikey.com/en/products/detail/hirose-electric-co-ltd/DM3AT-SF-PEJM5/2533566) | 30,866 | 3.55 / 3.019 | Existing socket candidate |
+| W25Q512JVFIQ | [DigiKey W25Q512JVFIQ-ND](https://www.digikey.com/en/products/detail/winbond-electronics/W25Q512JVFIQ/10244707) | 1,807 | 15.69 / 14.56 | Quad fallback; purchase limits, no backorders |
+| MX25LW51245GXDI00 | [DigiKey 1092-MX25LW51245GXDI00-ND](https://www.digikey.com/en/products/detail/macronix/MX25LW51245GXDI00/18110053) | 0 | 15.86 / 14.717 | Exact EK-RA8P1 Octal part; sourcing hold |
+| IS25LX512M-JHLE | [DigiKey 706-IS25LX512M-JHLE-ND](https://www.digikey.com/en/products/detail/issi-integrated-silicon-solution-inc/IS25LX512M-JHLE/16529389) | 0 | 16.04 / 14.884 | Exact EK-RA8D2 Octal part; sourcing hold |
+| IS25LP01GJ-RHLE | [DigiKey 706-IS25LP01GJ-RHLE-ND](https://www.digikey.com/en/products/detail/issi-integrated-silicon-solution-inc/IS25LP01GJ-RHLE/24617301) | 0 | 20.02 / 18.565 | Imported 128 MiB Quad; sourcing hold |
+| IME5132SDBETG-6I | [DigiKey 5107-IME5132SDBETG-6I-ND](https://www.digikey.com/en/products/detail/intelligent-memory-ltd/IME5132SDBETG-6I/21801792) | 2 | 31.42 / 29.088 | Existing RAM; refreshed direct page, 26-week lead time |
+
+For IME RAM, Mouser part 822-IME5132SDBETG-6I also exists; the observed
+139-stock category result was older cached data, not a verified current US
+snapshot. Refresh through the user's distributor browser before BOM release.
+CU450 availability and the final camera connector/cable remain open.
+
+Before marking the native sections complete: resolve those source gates;
+verify every selected memory's symbol pins and supply domains; add local
+bypass, startup/reset and pull networks with calculation IDs; check rail
+inrush and hard-off behavior; reconcile this allocation against every other
+sheet; perform schematic visual review and ERC. The GPIO set test excludes
+unallocated power-control outputs, touch, e-paper, frontlight and additional
+audio control nets, so it is not a full-project conflict signoff.
+
+Suggested schematic note: `CMS-001..010: design/camera_storage_interfaces.md`.
+Place the relevant local calculation/result beside each functional block,
+not a large unrelated wall of text on the root sheet.
+
+## CMS-008: Stocked single-device SDRAM alternative
+
+Recommend **Alliance AS4C16M32SC-7TIN** as the sourced schematic candidate,
+not as a pin-compatible replacement for the EK's BGA90 device. It preserves
+64 MiB, x32, four-bank, 13-row/9-column organization. CMS-010 contains the
+completed 86-pin identity audit; this record does not change the native BOM.
+The existing IME part's two-unit DigiKey stock is not a robust sourcing basis.
+
+Fresh direct-page snapshots, 2026-09-07, USD, excluding tax/shipping:
+
+| Exact MPN | Distributor | Stock | Unit price 1 / 10 | Factory lead time |
+| --- | --- | ---: | --- | --- |
+| AS4C16M32SC-7TIN | [DigiKey 1450-1468-ND](https://www.digikey.com/en/products/detail/alliance-memory-inc/AS4C16M32SC-7TIN/9681183) | 178 | 32.99 / 30.54 | 16 weeks |
+| AS4C16M32SC-7TIN | [Mouser 913-AS4C16M32SC-7TIN](https://www.mouser.com/ProductDetail/Alliance-Memory/AS4C16M32SC-7TIN?qs=qSfuJ%252Bfl%2Fd6SYuToPnq%2F9w%3D%3D) | 29 | 32.99 / 30.54 | 16 weeks |
+| AS4C16M32SB-6BCN | [DigiKey 1450-AS4C16M32SB-6BCN-ND](https://www.digikey.com/en/products/detail/alliance-memory-inc/AS4C16M32SB-6BCN/25902539) | 364 | 31.12 / 28.811 | 16 weeks |
+| AS4C16M32SB-6BCN | [Mouser 913-AS4C16M32SB-6BCN](https://www.mouser.com/en/ProductDetail/Alliance-Memory/AS4C16M32SB-6BCN?qs=3vio67wFuYob2ya%252BUS0X4g%3D%3D) | 468 | 31.12 / 28.82 | 16 weeks |
+
+Use the SC datasheet's **7.5 ns minimum CL3 period / 133 MHz** rating, not
+the 143 MHz family-catalog entry. Its VDD/VDDQ are 3.0..3.6 V LVTTL;
+industrial ambient rating is -40..85 C. Input limits are VIH >=2.0 V and
+VIL <=0.8 V; output guarantees are VOH >=2.4 V and VOL <=0.4 V at 4 mA.
+Full-temperature self-refresh IDD6 is <=5 mA; x32 operating/burst/refresh
+maxima are 70/90/170 mA under their distinct datasheet test conditions.
+Those currents are not additive modes. Capacitive I/O switching adds load.
+[Alliance SC primary datasheet, Rev.1.0, Tables 1/2/10/12/13](https://www.alliancememory.com/wp-content/uploads/AllianceMemory_512M-SDRAM_Cdie_AS4C16M32SC-AS4C32M16SC-AS4C64M8SC-7TIN_Sept2018_rev1.0.pdf).
+
+The SB alternative is 90-ball, 8 x 13 mm BGA, 3.0..3.6 V, CL3/166 MHz;
+the actually stocked BCN grade is only 0..70 C. Its Table 15 specifies
+**60 mA maximum self-refresh**, visually verified as mA rather than uA.
+Its larger inventory therefore does not justify selecting it for retention
+sleep. At nominal 3.3 V, the RAM-only worst-case retention allocations are
+16.5 mW for SC versus 198 mW for SB, a factor of 12. At 3.6 V they become
+18 mW and 216 mW. Neither is an ultra-low-power retained-memory promise.
+[Alliance SB primary datasheet, Rev.1.0, February 2023](https://www.alliancememory.com/wp-content/uploads/AllianceMemory_512Mb_AS4C16M32SB-6BxN_Datasheet_16Feb2023_ver1.0.pdf).
+
+The existing [SDRAM HAL timing definitions](../../libs/ra8_hal/src/ra8_sdramc.c)
+document 125 MHz, CL3, RAS=6, RCD=4, RP=4, WR=2 cycles,
+refresh recovery=12 cycles and refresh interval=900 cycles. The following
+checks those documented nominal durations against SC minimums. It does
+not independently decode MCU registers or prove read/write setup, hold,
+clock skew, signal integrity, mode-register recovery or self-refresh exit.
+
+```python
+from math import isclose
+
+sdclk_hz = 125_000_000
+tck_ns = 1e9 / sdclk_hz
+cycles = {"tRAS": 6, "tRCD": 4, "tRP": 4, "tWR": 2, "tRFC": 12}
+sc_min_ns = {"tRAS": 44, "tRCD": 15, "tRP": 15, "tWR": 15, "tRFC": 66}
+assert tck_ns >= 7.5
+for name, count in cycles.items():
+    actual_ns = count * tck_ns
+    assert actual_ns >= sc_min_ns[name], name
+    print(name, "nominal ns", actual_ns, "margin ns", actual_ns - sc_min_ns[name])
+assert (cycles["tRAS"] + cycles["tRP"]) * tck_ns >= 66  # same-bank tRC
+refresh_us = 900 / sdclk_hz * 1e6
+assert refresh_us <= 7.8  # datasheet conservative rounded interval
+assert 8192 * 900 / sdclk_hz <= 64e-3
+assert 16 * 2**20 * 32 // 8 == 64 * 2**20
+for volts in (3.3, 3.6):
+    print("retention mW at V", volts, "SC", volts * 5, "SB", volts * 60)
+assert isclose(60 / 5, 12)
+print("refresh us", refresh_us, "8192-row sweep ms", 8192 * 900 / sdclk_hz * 1e3)
+```
+
+Executed results: nominal durations RAS/RCD/RP/WR/RFC = 48/32/32/16/96 ns;
+margins = 4/17/17/1/30 ns. Refresh interval = 7.2 us and full sweep =
+58.9824 ms. The 1 ns write-recovery margin deserves explicit clock and
+controller-encoding review; nominal arithmetic is not production signoff.
+Keep VDD and VDDQ in the same sequenced 3.3 V domain and audit every supply
+pin and bypass location. Do not power-gate RAM while MCU outputs remain
+driven. Hard-off loses RAM; retained sleep requires correct self-refresh
+entry/exit and an always-retained supply. Capacity equivalence does not
+establish evaluation-board timing or firmware equivalence.
+
+The retrieved SC document still labels its revision preliminary; confirm
+the contractual current specification with Alliance for production release.
+For this schematic phase, it is the best verified stocked industrial
+single-x32 candidate found, not a claim of abundant long-term supply.
+
+## CMS-009: Five exposed controls and wake allocation
+
+This implements the allocation basis for the owner's five-button requirement
+in [ereader_requirements.md](ereader_requirements.md), issues #821/#832.
+Native checkpoint, 2026-09-07: page 8,
+[user_controls.kicad_sch](../ereader/user_controls.kicad_sch), now contains
+the four placed and locally wired page/volume circuits: 20 purchased parts,
+12 GND symbols, four +3V3_MCU pullup connections and four output hierarchical
+labels. The native XML export independently confirms the local connectivity.
+Both visible CMS-009 calculation notes are now drawn and link back to this
+record. Matching MCU-leaf Input labels/wires and all four root routes are
+complete. Independent KiCad 10.0.5 XML export verifies each filtered node
+through the hierarchy to exactly its assigned P309/A12, P310/E10, P311/B12
+or P909/B14 pin. All eight native sheets are accessible and every root
+sheet's port names/directions match its child labels. This closes the
+four-key schematic-connectivity checkpoint, not firmware wake validation
+or hardware qualification.
+
+The full-project ERC run on 2026-09-07 at 21:22 local time reports 204
+errors and two warnings, with zero findings on page 8 or the six assigned
+MCU control pins. The whole project is not ERC-clean: 197 unconnected-pin
+errors, four undriven-power errors, three VLO output-conflict errors and
+two radio-label warnings remain. The run included error, warning and
+exclusion severities; ignored project checks were not silently re-enabled.
+The native GUI review additionally displays 15 excluded warnings: 17
+warnings including exclusions and 221 total displayed findings. Those
+excluded findings are not counted as fixed by the four-key work.
+These findings must remain visible while the remaining sections are built.
+
+Reciprocal native note identifiers are:
+
+- `CMS-009 - FOUR INDEPENDENT PAGE / VOLUME KEYS`, UUID
+  `0a046f20-7e8a-4e51-abb0-1f079de7b531`: references, DC corner assumptions,
+  threshold/contact equations and held-key current.
+- `CMS-009 - FILTER TIMING AND BUTTON BEHAVIOR`, UUID
+  `6bf7c991-6015-499e-997f-02b0f6403ffd`: conditional capacitance range,
+  nominal RC equations, debounce, boot/held-key behavior and ESD limits.
+
+| Key / output net | Switch | Series, 1k | Pullup, 10k | Filter, 100n | TVS |
+| --- | --- | --- | --- | --- | --- |
+| PAGE_PREV_N | SW2 | R23 | R27 | C58 | D2 |
+| PAGE_NEXT_N | SW3 | R24 | R28 | C59 | D3 |
+| VOL_DOWN_N | SW4 | R25 | R29 | C60 | D4 |
+| VOL_UP_N | SW5 | R26 | R30 | C61 | D5 |
+
+These are the native references for every calculation in CMS-009 below.
+SW2..SW5 pin 2, D2..D5 pin 1 and R23..R26 pin 1 form each protected
+external node. R23..R26 pin 2, R27..R30 pin 2, C58..C61 pin 1 and the
+corresponding assigned U1 pin form each filtered output node. Pullup pin 1
+goes to +3V3_MCU; switch pin 1,
+capacitor pin 2 and TVS pin 2 go to GND. No external or filtered node is
+shared between keys. This pin-number mapping is from KiCad's XML netlist,
+not an assumption based on the rotated resistor's appearance.
+
+The four matching root routes and exact end-to-end netlist checks pass.
+The full PDF and BOM have been refreshed, with native visual review of all
+eight PDF pages. Preserve the verified routes and keep these exports
+synchronized during subsequent work.
+U1's P309_IN/P310_IN/P311_IN
+and P307_IN selected pin functions model the intended Input types;
+the reusable default GPIO types are Bidirectional. Symbol functions do not
+configure the MCU's firmware pin routing or prove wake behavior.
+
+| Control / net | Port / BGA289 ball | External interrupt | Deep-standby enable bit |
+| --- | --- | --- | --- |
+| Previous page / PAGE_PREV_N | P309 / A12 | IRQ25-DS | DPSIER5.DIRQ25E, bit 1 |
+| Next page / PAGE_NEXT_N | P310 / E10 | IRQ24-DS | DPSIER5.DIRQ24E, bit 0 |
+| Volume down / VOL_DOWN_N | P311 / B12 | IRQ23-DS | DPSIER4.DIRQ23E, bit 7 |
+| Volume up / VOL_UP_N | P307 / C11 | IRQ27-DS | DPSIER5.DIRQ27E, bit 3 |
+| Power-controller INT / POWER_BUTTON_N | P303 / B6 | IRQ29-DS | DPSIER5.DIRQ29E, bit 5 |
+
+Evidence: RA8P1 datasheet Table 1.17 and
+[Hardware Manual R01UH1064EJ0130](https://www.renesas.com/en/document/mah/ra8p1-group-users-manual-hardware),
+Tables 21.2/21.10/21.16, pp.849/869/877. All five use the VCC domain,
+here switched +3V3_MCU. The four direct-key inputs are non-5V-tolerant;
+P303 is 5V-tolerant, but its pullup still belongs to +3V3_MCU. Datasheet
+Tables 2.5/2.7 give Schmitt limits 0.8*VCC high and 0.2*VCC low, with
+1 uA off-state leakage for the direct-key pins and 5 uA for P303.
+
+P312 was rejected despite its C13 entry in Table 1.17: HUM Table 21.10
+visually marks it unavailable for MIPI289. The original P909 allocation
+avoided that unresolved conflict; CMS-016 now moves volume-up to P307
+and reserves P909 for CEU. CMS-016 records the current IRQ27 flag/edge
+registers and qualification limits. Do not confuse the e-reader with EK header
+routing. The older GPIO test in CMS-006 records the original reservations. IRQ channels
+also remain distinct from camera IRQ14 and radio IRQ19/26. Alternate IRQ
+functions on SDRAM, debug and other peripheral pins must remain disabled.
+
+The four placed direct-key circuits share this topology:
+
+```text
++3V3_MCU -- 10k --+-- PAGE_PREV_N (or other allocated MCU input)
+                 +-- 100nF -- GND
+                 +-- 1k -- KEY_EXT -- normally-open switch -- GND
+                          +-- ESD441DPYR pin 1; pin 2 -- GND
+```
+
+The placed parts use EVQP7A01P switches, RC0603FR-0710KL pullups,
+RC0603FR-071KL series resistors and C1608X7R1H104K080AA capacitors from
+[BTN-003/006](single_button_power.md). Disable MCU internal pulls; their
+10..300 uA spread is not the resistor calculation. The external defaults
+also exist during reset. No key is a boot strap, resistor ladder or matrix;
+all four can be pressed simultaneously without ghosting or output contention.
+The power switch retains its independent LTC2954 PB circuit and internal
+reset/boot service pads remain separate. Do not wire that switch directly
+to P303 or tie any of these keys to MD, radio BOOT, EN or KILL.
+The separate shutdown output POWER_KILL_N uses P903/D9;
+[BTN-009](single_button_power.md#btn-009-actual-ra8p1-interrupt-and-shutdown-pins)
+contains the open-drain initialization and 70 mV guaranteed DC low-margin check.
+
+D2..D5 place one **ESD441DPYR** at each direct key's external node, before
+its 1k resistor. Its ground-only protection has no supply-rail connection that
+could bypass hard-off. TI SLVSH26C, verified 2026-09-12, corrects the
+recommended IO-to-GND range to 0..5.5 V; the earlier negative steady-state
+rating is not supported. Section 5.6 specifies 5.5 V positive stand-off
+with <100 nA across operating temperature. The separate 50 nA maximum
+leakage row applies at 5.5 V and 25 C, not all temperatures. The pin map
+is 1=IO, 2=GND. The positive 3.0..3.6 V key calculation and its 0.1 uA
+TVS allocation below remain valid; no negative DC rating is needed.
+[TI ESD441 SLVSH26C, sections 4, 5.4, 5.6 and revision history](https://www.ti.com/lit/ds/symlink/esd441.pdf).
+Fresh 2026-09-07 stock: [DigiKey 296-ESD441DPYRCT-ND](https://www.digikey.com/en/products/detail/texas-instruments/ESD441DPYR/28715599)
+3,273, USD 0.34/0.207 at 1/10; [Mouser 595-ESD441DPYR](https://www.mouser.com/ProductDetail/Texas-Instruments/ESD441DPYR?qs=bpu3f%2FCR1jziUA14lbLOFw%3D%3D)
+11,380, USD 0.34/0.149 at 1/10, both 9-week factory lead time.
+Its component IEC rating is not enclosure certification. PCB ESD-current
+return, resistor pulse stress and the residual MCU waveform require later
+physical verification; do not claim the TVS clamps to 3.3 V.
+
+The arithmetic below screens +3V3_MCU=3.0..3.6 V, resistors +/-1% plus
+100 ppm/C over 100 C, and 0.5 Ohm initial contact resistance. Per direct key,
+allocate 1 uA MCU +0.1 uA TVS +0.1 uA capacitor +1 uA board leakage.
+The capacitor/board terms are design allowances, not manufacturer maxima.
+
+```python
+from itertools import product
+from math import log
+
+rp = (10000 * .99 * .99, 10000 * 1.01 * 1.01)
+rs = (1000 * .99 * .99, 1000 * 1.01 * 1.01 + .5)
+vmin, vmax, leakage = 3.0, 3.6, 2.2e-6
+cases = list(product((vmin, vmax), rp, rs))
+closed = lambda v, r, s: (v/r + leakage) / (1/r + 1/s)
+vlo_max = max(closed(*case) for case in cases)
+low_margin = min(.2*v - closed(v, r, s) for v, r, s in cases)
+vhi_min = vmin - leakage * rp[1]
+external_high_min = vhi_min - .1e-6 * (rs[1] - .5)
+contact_min = vmin/(rp[1]+rs[1]) - leakage
+four_held_max = 4 * (vmax/(rp[0]+rs[0]) + leakage)
+assert low_margin > 0 and vhi_min > .8*vmin
+assert contact_min > 10e-6 and external_high_min > 2
+assert vmax/rs[0] < 50e-3  # capacitor discharge/contact peak screen
+assert vlo_max < .341555 and low_margin > .31503
+assert vhi_min > 2.97755 and contact_min > 265.14e-6
+assert external_high_min > 2.97745 and four_held_max < 1.345e-3
+print("low max / low margin / high min V", vlo_max, low_margin, vhi_min)
+print("external open-contact minimum V", external_high_min)
+print("contact min uA / four held max mA", contact_min*1e6, four_held_max*1e3)
+print("nominal RC assert/release ms",
+      -(10000*1000/11000)*100e-9*log((.2-1/11)/(1-1/11))*1e3,
+      -10000*100e-9*log((1-.8)/(1-1/11))*1e3)
+channels = [25, 24, 23, 21, 29, 14, 19, 26]
+assert len(channels) == len(set(channels))
+assert sum(1 << (irq-16) for irq in (21, 23)) == 0xA0
+assert sum(1 << (irq-24) for irq in (24, 25, 29)) == 0x23
+power_high_min = vmin - (5+2+1)*1e-6*rp[1]
+power_low_margin = .2*vmin - .4
+power_sink_max = vmax/rp[0] + (5+1)*1e-6
+assert power_high_min > .8*vmin and power_low_margin > 0
+assert power_sink_max < 3e-3
+print("power high min / low margin V / INT sink max mA",
+      power_high_min, power_low_margin, power_sink_max*1e3)
+```
+
+Executed, with outward-rounded bounds: closed <0.341555 V; correlated
+minimum low margin >0.31503 V; filtered input VHIGH >2.97755 V;
+contact >265.14 uA; four held <1.345 mA. The exact screened input-high
+value is 2.9775578 V and contact current is 265.141555... uA; do not round
+these lower bounds upward inside a >= claim. The exposed open-contact
+voltage is a different node: allowing the TVS's 0.1 uA through the maximum
+series resistance gives 2.97745579 V, hence >2.97745 V and above 2 V.
+Nominal RC threshold delays are 0.193 ms assertion / 1.514 ms release.
+These are noise filtering, not complete debounce: require 20 ms continuously
+stable state per key before delivering a press/release. The switch specifies
+10 ms bounce. RC timing is nominal; debounce must not depend on a precise
+X7R capacitance. Opposing page or volume keys cancel their corresponding
+action until one is released; firmware limits volume to the qualified audio
+range. Reset/update may ignore ordinary actions until all keys release.
+
+**Wake contract:** retained-rail Sleep uses each routed IRQ; Software Standby
+also needs WUPEN configuration. Hardware disables the ordinary PCLKB IRQ
+filter in Software Standby (HUM 14.5.6), so retain the external RC and debounce
+after wake. Deep Sleep uses the allocated IELSR/NVIC slot's DSLPWUPIRQEN
+bit, not blindly the external IRQ number. Deep Software Standby is a reset
+wake: preserve/capture the wake cause and reconstruct state. For all five
+keys, enable DPSIER4 bits 5/7 and DPSIER5 bits 0/1/5; select falling edges
+by clearing the corresponding DPSIEGR3/4 bits. Preserve unrelated sources.
+After modifying enables, observe the manual's six-PCLKB-cycle wait and
+read-before-zero flag clearing (11.2.33/34). Recheck inputs and pending
+events when entering sleep; do not enter edge-wake standby with a key already
+held. Read, debounce and wait for release after reset so one held key does
+not create repeated actions. These are firmware requirements, not changes
+to the current firmware or proof that SDRAM is retained in every mode.
+
+In hard-off, the four direct keys do nothing: no live pullups or energy source
+remain in their circuit. Only the power controller starts the rails. In a
+firmware freeze, page/volume cannot recover the system; the held power key
+still forces off independently. POWER_BUTTON_N's existing 10k pullup to
+the switched rail accepts LTC2954 INT <=0.4 V at 3 mA with >=0.2 V low
+margin at VCC=3.0 V; a conservative sink requirement is <0.374 mA. Its
+high-state allowance of 5 uA P303 +2 uA INT +1 uA board gives >=2.918392 V.
+The 2 uA INT allowance exceeds the published 1 uA test at 3 V; it is not
+a new manufacturer guarantee at every voltage. Keep P303 input-only and
+use the controller's debounce, not the four direct-key RC for the PB timer.
+The visible schematic math notes use calculation ID `CMS-009` and link to
+`../design/camera_storage_interfaces.md`. Their SW2..SW5, R23..R26,
+R27..R30, C58..C61 and D2..D5 references match the reciprocal table above.
+The notes show the voltage/leakage/tolerance assumptions, threshold/contact
+equations and nominal RC calculations, not only component values. Keep
+these two notes and this record synchronized when values or assumptions
+change; their presence is not hardware qualification.
+
+## CMS-010: IS42S32160F-7TLI pin and electrical contract
+
+Native SDRAM interconnect and reset-default checkpoint, 2026-09-08, for
+[memory issue #827](https://github.com/bsikar/ra8-firmware/issues/827).
+This section records native SDRAM implementation and its electrical
+contract, not electrical qualification or fabrication approval. It does not
+change firmware, ERC settings or the existing CMS-009 controls checkpoint.
+The selected part is ISSI
+IS42S32160F-7TLI; this supersedes the CMS-008 historical Alliance candidate
+for implementation without rewriting that sourcing history. Footprint geometry
+is outside this pin-number audit. Page 10 contains the placed memory units,
+completed power/bypass wiring and all 57 signal connections through the
+root hierarchy to page 2. The ten command/clock pullups and all 57 selected
+MCU electrical pin roles are now implemented. Startup, signal-integrity,
+timing, power-distribution and shutdown qualification remain open.
+
+Primary evidence:
+
+- [ISSI-authored Rev. C, 2025-02-26, distributor-hosted copy](https://www.mouser.com/datasheet/3/3722/1/42_45R_S_32160F.pdf):
+  p3 (TSOP86 pinout), p14 (DC), p15 (current/capacitance), pp16-18
+  (AC limits and test conditions), pp19-20 (initialization), and p58
+  (exact industrial TSOP ordering code). The manufacturer-hosted
+  [family URL](https://www.issi.com/WW/pdf/42-45R-S-32160F.pdf) retrieved
+  during this review served older Rev. B, not the cited Rev. C. A second
+  [distributor-hosted Rev. C copy](https://www.farnell.com/datasheets/4555730.pdf)
+  corroborates the current initialization and AC-test text.
+- [RA8P1 datasheet R01DS0439EJ0130](https://www.renesas.com/en/document/dst/ra8p1-group-datasheet):
+  Table 1.17 (MIPI-enabled BGA289 pin functions), Tables 2.3/2.4/2.7
+  (supply and logic levels), Table 2.50 (SDCLK waveform limits), and
+  Table 2.57 / Figures 2.45-2.51 (SDRAM timing).
+- [RA8P1 HUM R01UH1064EJ0130](https://www.renesas.com/en/document/mah/ra8p1-group-users-manual-hardware):
+  section 9.2.32 p354 (disabled SDCLK is high), section 9.10.10
+  (clock selection), sections 15.3.18/19 pp613-614 (initialization and
+  address shift), section 15.6.6 (self-refresh), section 15.6.11.1 p671
+  (controller initialization), and Table 15.38 pp680-681 (address mapping).
+- [EK-RA8P1 Rev.1.04 Table 30 pp36-37](https://www.renesas.com/en/document/mat/ek-ra8p1-v1-users-manual)
+  corroborates the port reservation, but does not establish ISSI
+  timing or its TSOP pin numbers.
+
+### CMS-010A: Complete pin-number map
+
+The 57 signal rows below match CMS-004 and the current project MCU library
+pin identities. The memory A0 pin receives MCU external-bus A02, not A00.
+MCU A02..A14 connect to memory A0..A12; MCU A15/A16 connect to BA0/BA1.
+For x32, select the nine-bit row-address shift, `SDADR.MXC=01`, and 32-bit
+bus width. Memory A10/AP receives MCU A12's precharge-select function.
+There are 13 row bits, nine column bits, four banks, and four bytes/word:
+`8192 * 512 * 4 * 4 = 67108864 bytes = 64 MiB`.
+
+| Signal | ISSI pin | MCU port | U1 ball |
+| --- | ---: | --- | --- |
+| CLK | 68 | PA15 | E1 |
+| CKE | 67 | PA06 | C1 |
+| CS# | 20 | P813 | B1 |
+| RAS# | 19 | PA10 | F2 |
+| CAS# | 18 | PA09 | F4 |
+| WE# | 17 | PA08 | F3 |
+| BA0 | 22 | PD00 | K4 |
+| BA1 | 23 | PC15 | K1 |
+| A0 | 25 | PA03 | G2 |
+| A1 | 26 | PA02 | F1 |
+| A2 | 27 | PA01 | H4 |
+| A3 | 60 | PA00 | G1 |
+| A4 | 61 | P503 | H2 |
+| A5 | 62 | P504 | H1 |
+| A6 | 63 | P505 | H3 |
+| A7 | 64 | P506 | J1 |
+| A8 | 65 | P507 | J2 |
+| A9 | 66 | P508 | J3 |
+| A10/AP | 24 | P509 | J4 |
+| A11 | 21 | P510 | K3 |
+| A12 | 69 | P608 | K2 |
+| DQM0 | 16 | P614 | E3 |
+| DQM1 | 71 | PA05 | G3 |
+| DQM2 | 28 | P615 | E2 |
+| DQM3 | 59 | PA04 | D1 |
+| DQ0 | 2 | P302 | A5 |
+| DQ1 | 4 | P301 | C4 |
+| DQ2 | 5 | P300 | B5 |
+| DQ3 | 7 | P112 | A4 |
+| DQ4 | 8 | P113 | A2 |
+| DQ5 | 10 | P114 | B3 |
+| DQ6 | 11 | P115 | A3 |
+| DQ7 | 13 | P609 | A1 |
+| DQ8 | 74 | PA11 | B4 |
+| DQ9 | 76 | PA12 | B2 |
+| DQ10 | 77 | PA13 | C3 |
+| DQ11 | 79 | PA14 | D4 |
+| DQ12 | 80 | P610 | D3 |
+| DQ13 | 82 | P611 | D2 |
+| DQ14 | 83 | P612 | E4 |
+| DQ15 | 85 | P613 | C2 |
+| DQ16 | 31 | PC14 | F5 |
+| DQ17 | 33 | PC13 | J5 |
+| DQ18 | 34 | PC12 | G5 |
+| DQ19 | 36 | PC11 | H5 |
+| DQ20 | 37 | PC10 | M5 |
+| DQ21 | 39 | PC09 | L4 |
+| DQ22 | 40 | PC08 | M4 |
+| DQ23 | 42 | PC07 | K5 |
+| DQ24 | 45 | PC06 | N4 |
+| DQ25 | 47 | PC05 | L5 |
+| DQ26 | 48 | PC04 | L3 |
+| DQ27 | 50 | PC03 | L1 |
+| DQ28 | 51 | PC02 | L2 |
+| DQ29 | 53 | PC01 | M3 |
+| DQ30 | 54 | PC00 | M1 |
+| DQ31 | 56 | P607 | M2 |
+
+| Supply or unused group | ISSI pins | Connection |
+| --- | --- | --- |
+| VDD | 1, 15, 29, 43 | +3V3_MCU |
+| VDDQ | 3, 9, 35, 41, 49, 55, 75, 81 | Same +3V3_MCU |
+| VSS | 44, 58, 72, 86 | GND |
+| VSSQ | 6, 12, 32, 38, 46, 52, 78, 84 | GND |
+| NC | 14, 30, 57, 70, 73 | Explicit no-connect |
+
+All 86 numbers were checked against ISSI Rev. C p3 and compared with the
+existing `Memory:IME5132SDBETG-6I` symbol:
+57 signal, 12 power, 12 ground and five NC identities match. A distinct
+ISSI symbol `Memory:IS42S32160F-7TLI` now reuses that four-unit drawing
+through native Save As, with separate sourced identity, datasheet and BOM
+fields and no inherited IME on-die-ECC claim. The native symbol has 25
+control/address Input pins, 32 Bidirectional DQ pins, 24 Power input
+supply/ground pins and five Not connected pins. Native Symbol Checker
+reported no issues. All four U14 units are now placed. The 12 supply pins
+connect to +3V3_MCU, the 12 ground pins connect to GND, and the five NC
+pins remain isolated. Those power/bypass and NC connections are unchanged
+from the preceding checkpoint. Native XML now verifies all 56 direct U1-U14
+signal pairs against the table above. CLK is the remaining signal:
+U1.E1 and R43.2 form `SDRAM_CLK_SRC`; R43.1 and U14.68 form `SDRAM_CLK`.
+The populated 0R link preserves separate source and load nets.
+
+Each leaf now has four vector hierarchical labels,
+`SDRAM_A[0..12]`, `SDRAM_BA[0..1]`, `SDRAM_DQ[0..31]` and
+`SDRAM_DQM[0..3]`, plus six scalar labels: `SDRAM_CLK`, `SDRAM_CKE`,
+`SDRAM_CS_N`, `SDRAM_RAS_N`, `SDRAM_CAS_N` and `SDRAM_WE_N`.
+All ten root sheet-pin connections join the matching leaf labels; the
+whole-project XML contains 284 nets. No memory signal is marked no-connect.
+
+The checkpoint CLI ERC reports 145 errors and two active warnings, with
+zero findings on page 10 and no SDRAM-related root findings. All 147 active
+finding identities are unchanged by the MCU pin-role and pullup work.
+The native GUI shows 145 errors and 17 warnings, including the same 15 existing excluded
+warnings; all four ignored checks are unchanged. No new exclusion or rule
+waiver was used to obtain these counts. The project is not ERC-clean.
+The native BOM contains 63 groups, 173 components and 18 columns, including
+R43 and one quantity-ten row for R44-R53. Reciprocal CMS-010 notes are
+present on pages 2 and 10.
+
+All 57 selected MCU signal pins now have the intended electrical types:
+25 Output address/control/clock pins and 32 Bidirectional DQ pins. The
+project symbol and all four embedded MCU definitions are updated.
+Symbol pin typing is an ERC model, not firmware pin configuration or
+dynamic driver qualification. R44-R53 implement the ten 10k command/clock
+pullups specified below. This checkpoint does not establish full-circuit
+ERC acceptance or electrical qualification.
+
+### CMS-010B: Shared supply, pull and bypass basis
+
+Use the same switched +3V3_MCU for VDD, VDDQ and their pullups. Both MCU VCC
+and VCC2 must remain in the 3.3 V domain: DQ0..19 use VCC and DQ20..31 use
+VCC2. The 3.0..3.6 V memory range is narrower than the MCU's general
+operating range. No separately powered probe or peripheral may inject this
+bus during hard-off. The PWR-003 250 mA memory allocation remains a design
+limit to qualify, not a proven worst-case consumption bound: ISSI's -7 IDD4
+maximum is 210 mA with outputs open, before external I/O charging current.
+Do not scale that table limit linearly with clock rate or omit bus loading.
+Include all added capacitors in SYS-007's main-rail
+discharge-capacitance budget. [Main digital power basis](power_decoupling.md).
+
+The placed default network is ten separate 10k pullups on CKE, DQM0..3,
+CS#, RAS#, CAS#, WE# and CLK. Every resistor pin 1 connects to switched
++3V3_MCU; its pin 2 connects to the signal in this native reference map:
+
+| Reference | Signal net | U14 pin |
+| --- | --- | ---: |
+| R44 | SDRAM_CKE | 67 |
+| R45 | SDRAM_DQM0 | 16 |
+| R46 | SDRAM_DQM1 | 71 |
+| R47 | SDRAM_DQM2 | 28 |
+| R48 | SDRAM_DQM3 | 59 |
+| R49 | SDRAM_CS_N | 20 |
+| R50 | SDRAM_RAS_N | 19 |
+| R51 | SDRAM_CAS_N | 18 |
+| R52 | SDRAM_WE_N | 17 |
+| R53 | SDRAM_CLK | 68 |
+
+R53 is on R43's memory side, not `SDRAM_CLK_SRC`. The five CKE/DQM pulls
+preserve the required high states while MCU pins are inputs; CS# high
+inhibits commands. The
+other control pulls avoid floating command inputs, and CLK high matches
+the peripheral's disabled-clock polarity. Do not substitute a CKE pull-down
+or rely on firmware-enabled internal pullups during reset. These pulls do
+not supply the missing power-on clock or prove initialization by themselves.
+
+All ten parts are YAGEO RC0603FR-0710KL, DigiKey 311-10.0KHRCT-ND,
+with native value `10k` and footprint geometry deferred. The verified
+2026-09-08 [DigiKey sourcing snapshot](https://www.digikey.com/en/products/detail/yageo/RC0603FR-0710KL/729827)
+is 2,866,522 in stock, USD 0.10 / 0.025 / 0.0122 at quantities 1 / 10 / 100;
+availability is not reserved. The part is 0603, +/-1%, +/-100 ppm/C,
+0.1 W at 70 C, with a -55..155 C operating range and 75 V maximum working
+voltage; the power/temperature derating requirement still applies.
+Screen +/-1% initial tolerance and +/-100 ppm/C over a conservative 100 C
+change, as in BTN-006:
+`Rmin = 10000 * 0.99 * 0.99 = 9801 Ohm` and
+`Rmax = 10000 * 1.01 * 1.01 = 10201 Ohm`.
+ISSI input leakage is +/-5 uA; the selected non-5V-tolerant MCU ports
+have +/-1 uA off-state leakage. Add 1 uA board leakage as a qualification
+allocation, not a vendor guarantee. For a tristated MCU input,
+`Ioff = (5 + 1 + 1) uA = 7 uA`, hence
+`VHIGHmin = 3.0 - 7e-6 * 10201 = 2.928593 V`.
+For an actively LOW MCU output, its input-leakage term is not added again:
+`Isink = 3.6 / 9801 + (5 + 1)e-6 = 0.373309458... mA`, below the
+ordinary control pins' 1 mA DC test condition. The CLK pullup is selected
+for the MCU's reset/disabled-clock polarity, not a pull-down leakage failure.
+The CLK output itself is PA15's high-speed drive class and needs the
+separate waveform qualification below, not the generic control-pin VOL proof.
+[Yageo RC0603FR-0710KL specification](https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL).
+
+The conservative resistor stress uses the full 3.6 V across Rmin, without
+credit for a nonzero GPIO low voltage:
+`Pmax = 3.6^2 / 9801 = 1.322314049... mW` per resistor.
+For all ten signals LOW at once, the pull-resistor rail load is
+`10 * 3.6 / 9801 = 3.673094582... mA`, and their total heat is
+`10 * 3.6^2 / 9801 = 13.223140495... mW`.
+Including the memory/board leakage terms in the conservative sink sum gives
+`10 * Isink = 3.733094582... mA`. These are static screens, not estimates
+of normal command duty cycle or memory switching current. Reserve 4 mA
+inside the existing PWR-003 250 mA SDRAM allocation, leaving 246 mA for
+the memory and dynamic I/O qualification; do not increase the main
+1.65 A allocation silently. The remaining 246 mA is an allocation, not a
+verified worst-case bound. All screens require the stated leakage,
+temperature and resistor bounds; they do not establish lifetime drift,
+signal integrity or board thermal qualification.
+
+These ten pullups introduce no always-on source or intentional capacitance:
+their rail is the same switched +3V3_MCU as MCU VCC/VCC2 and memory
+VDD/VDDQ. Do not count them as guaranteed shutdown discharge paths when
+MCU pins tristate, or permit an externally powered probe to inject the bus
+during hard-off. Retained self-refresh must actively hold CKE LOW against
+R44, adding up to `3.6 / 9801 = 0.367309458... mA` resistor current.
+Releasing that drive lets the pullup change the intended retention state.
+Hard-off still discards RAM; startup, retention and shutdown qualification
+remain separate from the completed passive interconnections.
+
+Page 10's completed bypass wiring is C76-C87, 12 x 100nF, one for each
+VDD/VDDQ pin, plus C88, 10uF local bulk, with no separate filter or load
+switch splitting VDDQ. The parts are C1608X7R1H104K080AA and
+C3216X7R1V106K160AC. Their nominal total is 11.2uF, within the main-rail
+capacitance budget; effective capacitance and power-distribution impedance
+are not qualified by the nominal sum or schematic wiring.
+These are engineering starting values, not an ISSI capacitance minimum
+or proof of effective capacitance, impedance or transient response. Qualify
+bias, temperature, aging and mounting inductance with the selected parts.
+The [Renesas quick guide](https://www.renesas.com/en/document/apn/ra8p1-mcu-quick-design-guide)
+and [memory architecture note](https://www.renesas.com/en/document/apn/getting-started-ra8p1-memory-architecture-configurations-and-topologies)
+reviewed here do not prescribe exact SDRAM series-resistor/bypass values.
+
+There is no VREF pin or DDR-style VTT requirement. R43 now provides the
+populated source-series clock-resistor position on page 2. Its exact part
+is YAGEO RC0603JR-070RL, DigiKey 311-0.0GRCT-ND, with a blank deferred
+footprint and the native value `0R`. The
+[manufacturer part specification](https://www.yageogroup.com/component-documentation/download/specsheet/RC0603JR-070RL)
+and [RC_L series Table 2, p5](https://www.yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L)
+identify a 0603 jumper with initial resistance <50 mOhm and 1 A rated
+current; this is not a claim of an ideal zero resistance or a useful
+"5% of zero" tolerance. Its copied native sourcing snapshot is
+2026-09-08: [DigiKey stock 7,899,620](https://www.digikey.com/en/products/detail/yageo/RC0603JR-070RL/726675),
+USD 0.10 / 0.011 / 0.0066 at quantities 1 / 10 / 100. Stock is not reserved.
+R43 is an SI-tuning starting link, not approved damping or timing closure;
+no 22/33 Ohm value is approved yet. R53 now pulls up its
+memory-side `SDRAM_CLK` node, not `SDRAM_CLK_SRC`.
+Decide address/control and bidirectional DQ damping from the actual load,
+driver model and both-direction timing. A clock-only delay can consume
+write-hold margin. Do not claim the EK resistor value is valid for this
+TSOP memory, or copy OSPI trace rules into the SDRAM timing contract.
+
+### CMS-010C: Initialization and retention contract
+
+ISSI Rev. C pp19-20 requires simultaneous VDD/VDDQ rise and at least
+100 us with stable CLK, CKE/DQM high and NOP or command-inhibit states,
+followed by precharge-all, at least two auto-refresh cycles and MRS.
+The note permits MRS before the refresh cycles. A conservative 200 us
+and eight refresh cycles may be retained, but waiting with CLK stopped
+does not satisfy the stable-clock interval. DQ must not be driven against
+the memory during initialization. Program CL2 or CL3; this part does not
+support CL1. Do not transfer the Alliance mode-register options blindly.
+
+RA8P1 SDCKOCR resets to zero and disabled SDCLK is high. Firmware must
+hold safe command/mask states while starting SDCLK, wait the specified
+stable-clock interval, then follow HUM Figure 15.48's 32-bit sequence.
+ISSI's startup contract replaces the prior Alliance simultaneous-clock
+wording blocker; it does not establish that existing firmware implements it.
+In particular,
+BSIZE/EXENB sequencing must follow the 32-bit case, rather than using the
+16-bit exception. Program mode/timing/address shift, enable refresh and
+finally enable accesses with the specified readback/barrier. Existing
+`ra8_sdramc_init()` is EK-RA8D2 firmware, not approved ISSI startup:
+its reviewed clock enable is immediately followed by initialization with
+no explicit clock-stable 100 us pause. No firmware was changed here.
+
+For the -7 grade, the timing-programming basis includes tRC=63 ns,
+tRP/tRCD=20 ns, tRRD/tDPL=14 ns, tDAL=35 ns and tXSR=70 ns.
+Honor both the 14 ns tMRD entry and p17's two-cycle requirement.
+Round each requirement up using the actual controller clock and register
+encoding; these values are not already-converted register settings.
+
+Hard-off discards RAM. Retention requires self-refresh entry before stopping
+SDCLK, keeping supply present and CKE actively low, including the HUM's
+IOKEEP/standby-output handling. Tristating CKE against its pullup exits that
+controlled state. Wake must honor the selected part's tXSR, restore the
+clock/control sequence and only then permit bus access. Ordinary power-down
+is not self-refresh and cannot retain data indefinitely.
+
+### CMS-010D: DC and timing qualification gates
+
+PWR-002's fixed-PWM static main-rail range is
+3.242044111..3.358485094 V, not a transient envelope. RA SDRAM inputs require
+VIH >=0.7*VCC or 0.7*VCC2, not the generic GPIO 0.8 factor. Against ISSI
+VOH >=2.4 V, the static read-high margin is only 49.060435 mV. The rail at
+zero high margin is 2.4/0.7 = 3.428571429 V; this is not an acceptable
+operating target or allowance to spend on ringing. Establish a positive
+noise-margin requirement and measured/modelled IO waveforms, including
+rail overshoot and ground offset. Static read-low margin is 572.613233 mV.
+ISSI's VOH/VOL limits use -2/+2 mA tests, not the prior Alliance 4 mA test.
+Ordinary control-output DC screens give 742.044111 mV high and 300 mV low
+margin using the RA 1 mA test, but do not prove dynamic edges or PA15 CLK.
+
+RA Table 2.57 condition 2 requires SDCLK high-speed/high drive, other bus
+outputs high drive, and a 15 pF output-load condition. BCLK operation permits
+125 MHz; BCLKA has a separate 133 MHz limit. Do not configure simultaneous
+CSC operation while claiming these condition-2 timings. ISSI p15 lists
+characterized clock capacitance 3.5 pF, command/address 3.8 pF and DQ 6 pF;
+MCU input capacitance for these pins is <=8 pF under its listed test.
+Interconnect and probes add loading and are not included by those numbers.
+
+The following are zero-interconnect screens at 125 MHz/CL3, not timing
+closure. RA delay/setup/hold limits come from Table 2.57. ISSI timings
+come from Rev. C pp16-18; no typical parameters are used as
+all-corner guarantees.
+
+| Screen | Arithmetic, ns | Unallocated result |
+| --- | --- | ---: |
+| Read setup | 8 - 5.4 - 2.1 | 0.5 ns |
+| Write/address/control setup | 8 - 6.0 - 1.5 | 0.5 ns |
+| Write/address/control hold | 0.8 - 0.8 | 0 ns |
+| Read hold at ISSI's 50 pF test load only | 2.5 - 1.5 | 1.0 ns |
+
+ISSI's -7 tOH=2.5 ns and tAC=5.4 ns use the stated 50 pF test load.
+Rev. C gives no 0 pF hold-time endpoint; neither the former Alliance
+1.8 ns endpoint nor interpolation supplies an ISSI arbitrary-load guarantee.
+The 1 ns read-hold result is therefore a test-load screen, not PCB closure.
+ISSI uses a 1.4 V AC timing reference and a 1 ns transition assumption;
+RA bus output timing uses the half-supply crossing. Correct the reference
+levels and apply ISSI's slow-edge adjustments before adding flight,
+skew, jitter, duty-cycle and model uncertainties. Also verify ISSI's
+2.5 ns minimum clock-high/low widths and 0.3..1.2 ns transition condition;
+RA's separate SDCLK waveform limits are not an automatic compatibility proof.
+
+For matched reference levels, let tc be MCU-to-memory clock flight and td
+be data flight. A first write screen adds (td-tc) to hold and subtracts it
+from setup; a read setup screen subtracts tc+td. Clock-only series delay
+therefore improves write setup but worsens write hold and read setup.
+These signs explain why matching lengths or slowing SDCLK alone does not
+close every constraint. At 62.5 MHz/CL3 the raw setup screens become 8.5 ns,
+but raw write hold remains zero. Use lower frequency for initial evaluation
+if appropriate; it is not an approved solution to the hold/DC/startup gates.
+
+### CMS-010E: Reproducible identity and arithmetic checks
+
+Run this Python block from the repository root. It checks the displayed
+pin-map coverage against independently transcribed memory signal numbers,
+capacity, pull and voltage corners, and timing arithmetic. Manufacturer
+identities were visually/source checked above; Python cannot turn those
+datasheet inputs into a board qualification or verify a future schematic.
+
+```python
+from pathlib import Path
+from math import isclose
+import re
+
+document = Path('ra8p1_kicad/design/camera_storage_interfaces.md').read_text()
+section = document.split('## CMS-010: IS42S32160F-7TLI pin and electrical contract')[1]
+rows = re.findall(
+    r'^\| ([A-Za-z0-9#/]+) \| (\d+) \| (P[0-9A-D][0-9]{2}) \| ([A-Z][0-9]+) \|$',
+    section, re.M)
+assert len(rows) == 57
+assert len({row[0] for row in rows}) == 57
+assert len({row[2] for row in rows}) == 57
+assert len({row[3] for row in rows}) == 57
+signals = {name: int(number) for name, number, port, ball in rows}
+expected = {'CLK': 68, 'CKE': 67, 'CS#': 20, 'RAS#': 19, 'CAS#': 18, 'WE#': 17}
+for prefix, pins in (
+    ('A', [25, 26, 27, 60, 61, 62, 63, 64, 65, 66, 24, 21, 69]),
+    ('BA', [22, 23]),
+    ('DQM', [16, 71, 28, 59]),
+    ('DQ', [2, 4, 5, 7, 8, 10, 11, 13, 74, 76, 77, 79, 80, 82, 83, 85,
+            31, 33, 34, 36, 37, 39, 40, 42, 45, 47, 48, 50, 51, 53, 54, 56]),
+):
+    expected.update({f'{prefix}{index}': pin for index, pin in enumerate(pins)})
+expected['A10/AP'] = expected.pop('A10')
+assert signals == expected
+groups = re.findall(r'^\| (VDDQ?|VSSQ?|NC) \| ([0-9, ]+) \| ([^|]+) \|$', section, re.M)
+assert len(groups) == 5
+other_pins = [int(pin) for name, numbers, connection in groups for pin in numbers.split(',')]
+assert sorted(list(signals.values()) + other_pins) == list(range(1, 87))
+expected_groups = {
+    'VDD': [1, 15, 29, 43], 'VDDQ': [3, 9, 35, 41, 49, 55, 75, 81],
+    'VSS': [44, 58, 72, 86], 'VSSQ': [6, 12, 32, 38, 46, 52, 78, 84],
+    'NC': [14, 30, 57, 70, 73],
+}
+assert {name: [int(pin) for pin in numbers.split(',')]
+        for name, numbers, connection in groups} == expected_groups
+assert 2**13 * 2**9 * 4 * 4 == 64 * 2**20
+print('57 unique signals and MCU identities; all 86 memory pins covered once; 64 MiB')
+
+pull_rows = re.findall(r'^\| (R\d+) \| (SDRAM_[A-Z0-9_]+) \| (\d+) \|$', section, re.M)
+expected_pulls = {
+    'R44': ('SDRAM_CKE', 67), 'R45': ('SDRAM_DQM0', 16),
+    'R46': ('SDRAM_DQM1', 71), 'R47': ('SDRAM_DQM2', 28),
+    'R48': ('SDRAM_DQM3', 59), 'R49': ('SDRAM_CS_N', 20),
+    'R50': ('SDRAM_RAS_N', 19), 'R51': ('SDRAM_CAS_N', 18),
+    'R52': ('SDRAM_WE_N', 17), 'R53': ('SDRAM_CLK', 68),
+}
+assert len(pull_rows) == 10
+assert {ref: (net, int(pin)) for ref, net, pin in pull_rows} == expected_pulls
+assert len({pin for net, pin in expected_pulls.values()}) == 10
+assert {pin for net, pin in expected_pulls.values()} <= set(signals.values())
+print('R44-R53 ten-pull reference/target map PASS; native wiring checked separately')
+
+placed_bypass_nominal_uf = 12 * .1 + 10
+assert isclose(placed_bypass_nominal_uf, 11.2)
+print('C76-C88 nominal bypass uF', placed_bypass_nominal_uf,
+      '; not effective capacitance or proof of the whole-rail capacitance budget')
+
+vmin, vmax = 3.242044111302129, 3.3584850935146022  # PWR-002 static, not ripple
+read_high_margin = 2.4 - .7 * vmax
+read_low_margin = .3 * vmin - .4
+assert isclose(read_high_margin, .04906043453977871)
+assert isclose(read_low_margin, .5726132333906387)
+assert vmax < 2.4 / .7
+print('read high/low static margins V', read_high_margin, read_low_margin)
+print('zero high-margin rail V', 2.4 / .7)
+print('ordinary control high/low margins V', vmin - .5 - 2.0, .8 - .5)
+
+rmin, rmax = 10000 * .99 * .99, 10000 * 1.01 * 1.01
+memory_leak, mcu_leak, board_allocation = 5e-6, 1e-6, 1e-6
+pull_high = 3.0 - (memory_leak + mcu_leak + board_allocation) * rmax
+pull_sink = 3.6 / rmin + memory_leak + board_allocation
+assert isclose(pull_high, 2.928593) and pull_high > 2.0
+assert isclose(pull_sink, .3733094582185491e-3)
+assert pull_sink < .374e-3 and pull_sink < 1e-3
+print('pull high V / low-output sink mA', pull_high, pull_sink * 1e3)
+
+pull_resistor_current = 3.6 / rmin
+pull_resistor_power = 3.6**2 / rmin
+ten_pull_current = 10 * pull_resistor_current
+ten_sink_screen = 10 * pull_sink
+ten_resistor_power = 10 * pull_resistor_power
+pull_allocation = 4e-3
+memory_allocation = 250e-3  # PWR-003; not a manufacturer maximum
+remaining_memory_allocation = memory_allocation - pull_allocation
+assert isclose(pull_resistor_current, .3673094582185491e-3)
+assert isclose(pull_resistor_power, 1.322314049586777e-3)
+assert isclose(ten_pull_current, 3.673094582185491e-3)
+assert isclose(ten_sink_screen, 3.733094582185491e-3)
+assert isclose(ten_resistor_power, 13.22314049586777e-3)
+assert ten_pull_current < ten_sink_screen < pull_allocation
+assert isclose(remaining_memory_allocation, .246)
+print('per-pull resistor current mA / heat mW',
+      pull_resistor_current * 1e3, pull_resistor_power * 1e3)
+print('all ten LOW: resistor current mA / sink screen mA / resistor heat mW',
+      ten_pull_current * 1e3, ten_sink_screen * 1e3, ten_resistor_power * 1e3)
+print('pull allocation mA / remaining memory and dynamic IO allocation mA',
+      pull_allocation * 1e3, remaining_memory_allocation * 1e3,
+      '; both within existing PWR-003 memory allocation, not hardware qualification')
+
+for frequency in (125_000_000, 62_500_000):
+    period_ns = 1e9 / frequency
+    read_setup = period_ns - 5.4 - 2.1
+    write_setup = period_ns - 6.0 - 1.5
+    write_hold = .8 - .8
+    read_hold_test_load = 2.5 - 1.5  # ISSI 50 pF test; no arbitrary-load guarantee
+    assert isclose(read_setup, write_setup)
+    assert isclose(write_hold, 0) and isclose(read_hold_test_load, 1.0)
+    assert isclose(read_setup, .5 if frequency == 125_000_000 else 8.5)
+    print('Hz / raw read setup / write setup / write hold / read hold at 50 pF ns',
+          frequency, read_setup, write_setup, write_hold, read_hold_test_load)
+print('CMS-010 arithmetic PASS; startup, SI, positive noise margin and hardware qualification OPEN')
+```
+
+The selected order code is IS42S32160F-7TLI, industrial -40..85 C,
+86-pin TSOP-II, -7 speed grade (143 MHz at CL3). CMS-008's Alliance
+stock/prices are historical and must not populate the ISSI symbol or BOM.
+Use ISSI manufacturer identity and a verified matching distributor order
+code; do not inherit the IME or Alliance procurement fields through Save As.
+
+Sourcing refresh, 2026-09-08, for this exact ordering code:
+
+| Distributor / order code | Stock | USD one / ten | Availability restriction |
+| --- | ---: | --- | --- |
+| [DigiKey 706-1417-5-ND](https://www.digikey.com/en/products/detail/issi-integrated-silicon-solution-inc/IS42S32160F-7TLI/5319838) | 440 | 17.04 / 15.812 | Maximum 108 per 30 days; no backorders |
+| [Mouser 870-42S32160F7TLI](https://www.mouser.com/en/ProductDetail/ISSI/IS42S32160F-7TLI?qs=N2Tevpb%252Bvoaf83cqUgjrcA%3D%3D) | 27 | 17.05 / 15.82 | 52-week stated lead time; 324 on order without a delivery date |
+
+This is a distributor snapshot, not reserved stock or a volume-supply
+guarantee. The native symbol uses the DigiKey ordering code and snapshot.
+
+Reciprocal native annotations now present:
+
+- Page 2, `CMS-010 | R43: 0R source clock link.`, UUID
+  `5e3b6d56-5b13-4749-aa0d-b25d6926db3d`: populated tuning position,
+  with damping and timing explicitly unqualified.
+- Page 10, `CMS-010 | SDRAM power and bypass`, UUID
+  `3dfe9a7d-05b9-43c6-b336-a2b76637c897`: shared supply, C76-C88
+  identities and the nominal `12 * 0.1 + 10 = 11.2 uF` calculation.
+- Page 10, `CMS-010 | R44-R53: 10k reset defaults`, UUID
+  `5e5b0bd4-c7e4-4068-83f4-db1d46ee8941`: resistor and leakage bounds,
+  `VHIGHmin = 3.0 - 7uA * 10201 = 2.928593 V`, and qualification limits.
+- Page 10, `CMS-010 | Pull load and power states`, UUID
+  `47df23ed-e7e5-4c56-9ffa-338aec18de44`: sink-current and resistor-power
+  equations, all-ten-LOW totals, the 4 mA allocation and retention/hard-off
+  constraints.
+
+All four annotations hyperlink to this CMS-010 contract. Page 10's block
+heading now identifies signal and reset-default circuits, with startup,
+SI/timing and hardware qualification explicitly open. Preserve these
+reciprocal references when the circuit changes. A future timing annotation
+should show the local results,
+`125 MHz raw setup 0.5 ns; write hold 0 ns; read-high static margin 49.06 mV.
+Startup/SI qualification OPEN.` That additional timing note is not claimed
+present in the current schematic.
+
+## CMS-011: 128 MiB Octal NOR electrical contract
+
+Tracking: [memory issue #827](https://github.com/bsikar/ra8-firmware/issues/827).
+Selected: **Infineon S28HL01GTFPBHI030**, industrial -40..85 C, 1 Gbit,
+2.7..3.6 V core and IO, 24-ball 8 x 8 mm BGA, 1 mm pitch, tray.
+The [manufacturer product record](https://www.infineon.com/part/S28HL01GTFPBHI030)
+identifies an active preferred product. This is an Octal capacity upgrade,
+not a pin-compatible or command-compatible substitution for the EK Macronix.
+The MCU VCC2 bank remains at +3V3_MCU with SDRAM; a 1.8 V NOR is not a
+substitute for this contract.
+
+**Native library checkpoint:** `Memory:S28HL01GTFPBHI030` is implemented in
+`../libs/symbols/Memory.kicad_sym`, with 13 interface pins in unit A and
+11 power/reserved pins in unit B. All 24 balls are explicit; DNU balls use
+the unconnected electrical type. The native Symbol Checker reports no
+issues. Both units use 150 mil pins, 50 mil text and filled body outlines.
+Exact manufacturer/distributor fields and the dated sourcing snapshot are
+embedded in the library symbol; its footprint remains deliberately blank.
+
+**Native supply checkpoint:** page 11,
+[`nor_flash.kicad_sch`](../ereader/nor_flash.kicad_sch), now instantiates
+U15A/B and C89-C92. Optional unit display names were cleared in the shared
+library so references render conventionally as U15A and U15B, without
+appending long descriptions. B4/D1/E4 share +3V3_MCU; B3/C1/E5 share GND.
+C89-C91 are the selected 100n parts and C92 is the selected 10u part,
+all between those same rails, with CMS-011-specific sourcing fields.
+All five DNU balls remain explicit, electrically unconnected pins.
+No PWR_FLAG or simulation exclusion was added.
+
+**Native series/default-state checkpoint:** R54-R61 connect DQ0-DQ7,
+R62 connects CK and R63 connects DS through ten independently sourced
+30R parts. Each pin 1 is on its distinct MCU host net; each pin 2
+shares a net with exactly its intended U15 ball. R64 is the 10k CS pull
+and R65 is the 47k INT pull, both to +3V3_MCU. Their values, manufacturer
+parts, order codes, dated availability and qualification notes are native
+symbol fields and are included in the whole-project BOM.
+
+**Native MCU/hierarchy checkpoint:** the twelve selected MCU pins now
+connect through the root/child hierarchy. Each of the ten host nets contains
+exactly its selected U1 ball and series-resistor pin 1, separate from the
+corresponding resistor pin 2 / U15 ball net. CS# connects U1.M6, U15.C2 and
+R64.2; INT# separately connects U1.N7, U15.A5 and R65.2. RESET# U15.A4 joins
+the common node, now J1.10, R1.2, U1.D5, U2.6, U7.3 and U19.6.
+The original NOR checkpoint used former U2.1 and preceded U19; RST-002
+owns the current supervisor and added microSD gate input. No signal
+series resistor is bypassed, and INT# is not joined to common reset.
+
+The project processor library and all four embedded MCU definitions have
+the same twelve configured pin-type updates: eight Bidirectional DQ pins,
+Output CK/CS# and Input DS/INT#. All 289 ball identities, unit assignments,
+positions and other pin properties are preserved. These electrical types
+model the selected circuit for ERC; they do not program the MCU.
+
+The integrated whole-project netlist has 299 nets and 193 components.
+Its complete node partitions match the prior leaf checkpoint plus the
+twelve intended MCU joins and the common-reset join. All 272 partitions
+restricted to non-NOR, non-reserved-MCU nodes are unchanged. This is a
+connectivity proof, not complete ERC acceptance or electrical qualification.
+The final CLI ERC reports 133 active errors and two active warnings; the
+native ERC total is 150 including 15 existing excluded warnings. Compared
+with the leaf checkpoint, 13 errors and 11 warnings are removed and no
+active finding identity is added. The two remaining active warnings are
+the existing radio DATA_READY and HANDSHAKE isolated hierarchical labels.
+The four ignored checks are unchanged; no new ERC exclusion or rule waiver
+was added. The project is not ERC-clean, and rendered-sheet review remains
+a separate check.
+
+The refreshed BOM has 69 groups, 18 fields and 190 included references.
+The difference from 193 netlist components is exactly the three existing
+BOM-excluded service points TP1-TP3. It includes U15 once, four bypass
+capacitors and all twelve NOR resistors. Existing CMS-010 and other
+component connectivity is preserved.
+
+The native supply annotation `a9ed9069-8e7a-4cab-88ec-2a1ce6c5d680`
+on page 11 hyperlinks to CMS-011B, with its arithmetic checked by CMS-011F.
+Sheet instance UUID: `23859413-ab36-480e-aeef-d0e8a227b709`.
+Reciprocal MCU/interface annotation review remains a separate check.
+The native series/pull annotation `18d4ef73-0341-4ce2-81e6-ceda0da87e84`
+on page 11 hyperlinks to CMS-011C. Its displayed resistance, leakage and
+sink-current arithmetic is recomputed by CMS-011F below. The same native
+note records connected MCU hierarchy/common reset, read-only DS with
+P801 Input / WRMSKMD=0, and the CMS-011D reset/protocol obligations.
+
+### CMS-011A: Source revision and exact pin contract
+
+The released English manufacturer datasheet available through Mouser is
+[002-18216 Rev. AB, 2024-05-13][nor-ab], not advance information. Its
+Figure 1 / Table 7, pp.6-7, define the following ball map and directions.
+The newer manufacturer [Chinese Rev. AD, 2025-06-30][nor-ad] is a revision
+cross-check, not a replacement for controlling English specifications:
+its notice gives English precedence. The revision history, p.179, records
+AC changes to tDIS, tBE units and thermal data, then AD changes to tSU/tHD.
+The current English download redirects to authentication. Obtain and
+review current English AD and applicable errata before design release;
+no separate public errata found in this review is not proof none exist.
+
+| Flash signal | Flash ball | MCU port | MCU ball | Connection / native pin type |
+| --- | --- | --- | --- | --- |
+| DQ0 | D3 | P100 | U6 | 30R series; bidirectional |
+| DQ1 | D2 | P803 | P7 | 30R series; bidirectional |
+| DQ2 | C4 | P103 | R4 | 30R series; bidirectional |
+| DQ3 | D4 | P101 | R5 | 30R series; bidirectional |
+| DQ4 | D5 | P102 | P5 | 30R series; bidirectional |
+| DQ5 | E3 | P800 | T6 | 30R series; bidirectional |
+| DQ6 | E2 | P802 | R6 | 30R series; bidirectional |
+| DQ7 | E1 | P804 | R7 | 30R series; bidirectional |
+| CK | B2 | P808 | U5 | 30R series; flash input |
+| DS | C3 | P801 | P6 | 30R series; flash output, MCU input in this mode |
+| CS# | C2 | P104 | M6 | Direct OM_0_CS1; flash input, 10k pullup |
+| INT# | A5 | P105 | N7 | Direct GPIO IRQ0; flash open-collector, 47k pullup |
+| RESET# | A4 | - | - | Direct MCU_RESET_N; flash input, existing R1 pullup |
+
+| Flash supply / unused | Flash balls | Connection / native pin type |
+| --- | --- | --- |
+| VCC | B4 | +3V3_MCU, power input |
+| VCCQ | D1, E4 | Same +3V3_MCU node, power input |
+| VSS | B3 | GND, power input |
+| VSSQ | C1, E5 | GND, power input |
+| DNU | A2, A3, B1, B5, C5 | Individually unconnected, no-connect type/marker |
+
+A1 is depopulated: do not create a twenty-fifth pin. There are 13 signal,
+6 supply/ground and 5 DNU balls. Supply symbols must represent actual nets,
+not hide absent wiring; no local PWR_FLAG is justified by this passive load.
+Use one common VCC/VCCQ supply node so sequencing cannot make VCCQ exceed
+VCC. Do not insert independently switched or delayed VCCQ branches.
+The [RA8P1 datasheet Rev.1.30][nor-ra-ds], Table 1.17, confirms the
+GPIO/IRQ allocation. The [hardware manual Rev.1.30][nor-ra-hum],
+Table 21.2, p.849, identifies the VCC2 supply domain. CMS-006 checks
+reservation collisions. P106/N6 is no longer free: the later microSD power interface assigns it to SD_PWR_REQ. No dedicated flash-reset GPIO
+is required.
+
+For this flash, DS is read-only output (Rev. AB Table 7, p.7), so the
+configured MCU P801 pin is to be an input, not an output. Hardware manual
+section 45.2.1.7, p.3003, defines WRMSKMD: leave it at zero so the optional
+DQS write-mask output is disabled. Figure 45.10, p.3035, shows the
+DDR-with-DS mode sampling DQS while its output enable is low. This is a
+required firmware mode contract, not a claim that the firmware is already
+implemented; generic pad bidirectionality does not authorize driving the
+flash DS output. The native MCU pin-type update is now implemented.
+
+### CMS-011B: Series, default-state and local supply components
+
+[RA8P1 hardware manual Rev.1.30][nor-ra-hum], Table 45.2, p.2997, requires
+external **30 ohm +/-1%** series resistors on the eight SIO lines, SCLK and
+DQS for the JESD251 driver definition. Thus this circuit requires ten,
+not only a clock tuning position. SCLKN is unused. Do not copy SDRAM R43's
+0R rule to NOR, and do not add series elements to CS#, RESET# or INT# by
+analogy. The proposed MCU-side grouping is a layout starting point; it
+does not establish bidirectional signal integrity or prescribe trace lengths.
+
+Select ten **RT0603BRD0730RL**, 30R, +/-0.1%, +/-25 ppm/C. The
+[YAGEO RT specification, V17, 2026-02-12][nor-rt] gives 0.1 W at 70 C,
+derating to zero at 155 C, and 75 V maximum working voltage for this case.
+The actual continuous voltage limit is the lower of 75 V and sqrt(P*R),
+not permission to apply 75 V to 30R. These are signal resistors, not
+series DC supply resistors. Pulse loading, temperature rise and parasitic
+impedance remain SI/qualification tasks.
+
+For a conservative 100 C departure from the resistance reference temperature:
+
+```text
+R30min = 30*(1-0.001)*(1-25e-6*100) = 29.895075 ohm
+R30max = 30*(1+0.001)*(1+25e-6*100) = 30.105075 ohm
+Initial tolerance plus TCR therefore remain inside 29.7..30.3 ohm.
+Ordinary +/-1%, 100 ppm/C parts span 29.403..30.603 ohm for the same screen.
+```
+
+This does not include aging, assembly drift or AC impedance. Infineon's
+factory CFR4N/V[7:5]=101 selects an **internal** nominal 30R driver
+(Rev. AB Table 58, p.97); it does not replace the ten external parts.
+Keep that initial setting for qualification; any tuning must recheck both
+read and write directions and should not rewrite nonvolatile settings
+at every boot.
+
+Passive contract; all twelve new resistors and four bypass capacitors are
+placed. U15.A4 is connected to the existing common-reset network:
+
+| Function | Quantity / value | Exact MPN | Existing native donor |
+| --- | --- | --- | --- |
+| DQ0..7, CK, DS series | 10 x 30R | YAGEO RT0603BRD0730RL | R54-R63 placed; dedicated 30R metadata |
+| CS# idle-high | 1 x 10k to +3V3_MCU | YAGEO RC0603FR-0710KL | R64 placed, sourced from R44 |
+| INT# idle-high | 1 x 47k to +3V3_MCU | YAGEO RC0603FR-0747KL | R65 placed; dedicated 47k metadata |
+| Local VCC / VCCQ bypass | 3 x 100n to GND | TDK C1608X7R1H104K080AA | C89-C91 placed, sourced from C76 |
+| Shared local bulk bypass | 1 x 10u to GND | TDK C3216X7R1V106K160AC | C92 placed, sourced from C88 |
+| RESET# idle-high | Existing R1, no added pull | Existing common-reset network | No new component |
+
+The capacitor proposal is an engineering starting point, not a claimed
+manufacturer minimum or completed impedance design. Nominal total is
+`3*0.1 + 10 = 10.3 uF`; initial +/-10% alone gives 9.27..11.33 uF.
+[TDK 100n product data][nor-c100] and [10u product data][nor-c10] identify
+50 V X7R 0603 and 35 V X7R 1206 respectively. PWR-001 records the 100n
+nominal DC-bias curve; the [10u characterization sheet][nor-c10-curve]
+is reference characterization, not an all-corners effective-capacitance
+guarantee. Include DC bias, temperature, aging, mounting inductance,
+rail ripple and main-rail discharge in later PDN qualification.
+
+### CMS-011C: Pull and common-reset arithmetic
+
+Use the PWR-002 static rail envelope 3.242044111..3.358485094 V, with a
+separate 3.6 V stress screen; neither includes unqualified transient ripple.
+RC0603 initial +/-1% and +/-100 ppm/C over 100 C give multiplicative
+resistance bounds 0.9801..1.0201 times nominal. The
+[10k manufacturer specification][nor-rc10] and
+[47k manufacturer specification][nor-rc47] identify the selected parts.
+At the conservative 125 C resistor-temperature screen, linear derating
+leaves `0.1*(155-125)/(155-70) = 35.294118 mW`; the DC loads below fit
+that power allowance and the lower of sqrt(P*R) or the 75 V case limit.
+This does not qualify contamination leakage or reset/interrupt edge speed.
+
+Flash ILI/ILO are +/-2 uA at 85 C (Rev. AB Table 87, pp.131-132,
+VCC maximum, input at VIH or VSS, CS# HIGH test conditions).
+P105 uses the ordinary **1 uA** MCU input/off-state bound, not an invented
+6 uA limit (RA8P1 Table 2.7, p.57). Allocate another 1 uA per node to board
+leakage; that is an acceptance condition requiring verification.
+
+```text
+R47min/max = 46064.7 / 47944.7 ohm
+INT high adverse current = 2uA flash + 1uA MCU + 1uA board = 4uA
+INT VHIGHmin = 3.242044111 - 4uA*47944.7 = 3.050265311 V
+INT high margin = VHIGHmin - 0.8*3.358485094 = 0.363477236 V
+INT low sink = 3.6/46064.7 + 1uA MCU + 1uA board = 80.150949 uA
+INT resistor stress = 3.6^2/46064.7 = 0.281343415 mW
+
+R10min/max = 9801 / 10201 ohm
+CS high adverse current = 2uA flash + 1uA MCU + 1uA board = 4uA
+CS VHIGHmin = 3.242044111 - 4uA*10201 = 3.201240111 V
+CS low sink = 3.6/9801 + 2uA flash + 1uA board = 0.370309458 mA
+CS resistor stress = 3.6^2/9801 = 1.322314050 mW
+```
+
+Infineon recommends a 5k..10k INT pullup, but its tabulated VOL <=0.2 V
+test is only 100 uA. The selected 47k is an explicit design departure to
+stay within that guaranteed DC test load: do not silently claim it is the
+vendor's recommendation. Its release-edge RC time and interrupt detection
+need qualification with actual trace/input capacitance and configured IRQ
+filtering, including release during active transactions rather than only
+the table's CS# HIGH leakage test. There is no arbitrary frequency or
+maximum-capacitance guarantee in this calculation. Flash off-state leakage is not added again to the
+actively sinking flash output; board/MCU adverse current is.
+
+The current common reset net contains R1.2, U2.6, U1.D5, J1.10,
+U7.3, U15.A4 and the added microSD power-gate input U19.6. U2 is now
+TPS389001DSET. [RST-002](reset_coordination_tps3890.md) owns the current
+source, threshold and loading basis; former TPS3808 U2.1/1mA/3.02395V
+calculations are superseded.
+
+The prior 12 uA device allocation was MCU 5 uA + U7 5 uA + flash 2 uA;
+it did not reserve U19. Adding its 5 uA gives 17 uA. Preserve the former
+13 uA overhead, giving **30 uA total** for devices, released-supervisor
+leakage, board, probe and any other adverse current. This is an installed
+acceptance allocation, not a measured or universally guaranteed sum.
+Using RST-002's main envelope and R1=9801..10201 ohm:
+
+```text
+Sink <= 3.393012496/9801 + 30uA = 0.376190439 mA <0.4 mA
+Released high >= 3.151819680 - 30uA*10201 = 2.845789680 V
+MCU high margin = 2.845789680 - .8*3.151819680 = 0.324333936 V
+At falling-corner rail 3.000822727 V: high >=2.694792727 V
+MCU high margin at falling corner = 0.294134545 V
+U19 additional drop = 5uA*10201 = 51.005 mV
+```
+
+U2 VOL <=0.25 V at VDD>=1.5 V and 0.4 mA applies to this conditional
+sink screen. Flash's 2 uA term still contributes 20.402 mV, already
+inside the total. Its RESET# adds at most 7.5 pF (Table 85, p.130);
+MCU/gate capacitance figures do not establish a whole-node maximum.
+Keep R1 and qualify receiver thresholds, release edges, probe loading,
+startup and brownout; no additional NOR pullup is proposed. The falling
+corner is a static screen, not a reset propagation or rail-collapse proof.
+
+### CMS-011D: Power, reset and transaction contract
+
+Apply Rev. AB sections 4.13/4.15, pp.73-81, and Table 89, pp.140-141:
+CS# must track the rising supply and remain inactive during initialization.
+For 1 Gbit, tPU is 500 us maximum after VCC reaches its operating minimum;
+tRP is 200 ns minimum, tRH is 500 us **from RESET# LOW to CS# LOW**,
+and tRS is 50 ns from RESET# HIGH to CS# LOW. A long-held reset can
+cover tRH; 500 us after every release is not the datasheet definition.
+
+The implementation policy is deliberately conservative: keep CS# HIGH and
+wait at least **1 ms after both qualified supply and external reset release**
+before the first NOR command. This is a firmware/fixture obligation, not a
+newly implemented delay circuit. Current U2's conditional >=8.148276 ms
+CT charge interval (RST-002) and the 3 ms service reset cover the long-reset
+case under their stated supply conditions; a short debug pulse must still
+meet tRP and the pre-access delay. NOR reset timing must not be inferred
+from the MCU's shorter minimum reset pulse/internal wait.
+
+Hardware RESET# only handles assertions of the external MCU_RESET_N wire.
+An internal MCU watchdog or software reset can leave NOR powered in its
+previous volatile Octal state. Initialization must recover the current
+protocol without unsafe speculative writes, inspect device status, then
+configure the intended mode before XIP or DMA. Use the read-only DS
+direction in the selected xSPI flash profile; do not apply
+HyperBus write-mask signaling or drive against the flash strobe output.
+Preserve the factory nonvolatile SPI startup configuration and enter Octal through volatile
+configuration. Hardware reset reloads nonvolatile configuration; it does
+not erase a previously changed nonvolatile mode back to factory SPI.
+Recovery after internal resets, resets during writes and corrupt settings
+requires explicit testing. No firmware changes are included in this record.
+
+The full cold-restart screen requires VCC below 0.7 V for at least 25 us
+after a drop below the 2.4 V cutoff; observe the specified minimum rise/fall
+times of 1/30 us per volt, not an assumed instantaneous safe ramp.
+Include the local 10.3 uF in SYS-007 hard-off/discharge qualification;
+the whole-rail capacitance/active-load contract still controls. Neither
+shared reset nor supply discharge guarantees completion of interrupted
+program/erase. Journaled metadata and recoverable images remain required.
+
+This part is not a promise of the Macronix LW family's true simultaneous
+read/write behavior. Use the documented suspend/read/resume restrictions,
+or execute update-critical code from internal MRAM/SDRAM. Do not assume
+uninterrupted XIP from NOR while an embedded write operation blocks reads.
+
+### CMS-011E: Clock and power qualification gates
+
+The proposed performance baseline is **125 MHz Octal DDR with DS**, not
+Quad, and not a production timing guarantee. The selected HL-T limit is
+166 MHz: `1e9/166e6 = 6.024096386 ns`. A 166.666667 MHz MCU divider with
+a 6 ns period exceeds it despite rounded marketing labels. Frequency
+tolerance also belongs in the final selected-clock proof.
+
+The RA8P1 Rev.1.30 Table 2.65 high-speed conditions, drive selections and
+15 pF loading must be applied to the actual paths including all ten series
+resistors. In particular, minimum specified MCU CK slew and the flash AC
+test slew are not interchangeable; a nominal frequency comparison does
+not close timing. Verify DS alignment, input/output loading, trace skew,
+setup/hold, clock duty cycle, ringing and overshoot at supply/temperature
+corners. Current English AD review is also required; retaining AB's more
+conservative low-speed SPI setup/hold values is an interim screen, not
+permission to disregard a changed released specification.
+
+Rev. AB Table 87, pp.132-134, gives 1 Gbit program/erase maxima of 66 mA,
+POR 80 mA, 85 C standby 160 uA and deep-power-down 26 uA. Read-current
+figures exclude output switching. Its 173 mA DDR row is labeled 200 MHz
+for both HL/HS devices although the selected HL maximum is 166 MHz.
+That ambiguity prevents treating 173 mA as a clean manufacturer bound for
+this exact selected operating point.
+
+Reserve **250 mA for this NOR domain** as a qualification allocation,
+including its IO switching and pulls, not a manufacturer maximum.
+For an illustrative 15 pF total load on each of eight data outputs plus DS,
+with one charging transition per clock cycle on every output:
+
+```text
+I_switch_screen = 9 * 15pF * Vrail_max * fCK
+At 125 MHz: 56.674436 mA; 173 + 56.674436 = 229.674436 mA
+At 166 MHz: 75.263651 mA; 173 + 75.263651 = 248.263651 mA
+```
+
+This is charge arithmetic, not a simulation or a guarantee that 173 mA is
+valid/monotonic at lower clocks. The illustrative 15 pF must include the
+actual receiving/input and interconnect load; flash input capacitance is
+not a replacement for that output-load budget. Do not add the MCU's CK
+driver loss to NOR current while omitting it from the MCU rail budget.
+Reserve 1 mA within the 250 mA for the two external pulls and leakage;
+the executable screen below checks this conservative static allowance.
+
+The earlier PWR-003 NOR allocation of 100 mA is superseded for this
+selected part. Keeping other allocations unchanged raises the main rail
+from **1.65 A to 1.80 A**, the radio-off cold-start reference screen from
+1.730 A to **1.880 A**, and the wake screen from 1.670 A to **1.820 A**.
+Radio-on cold start would screen at **2.380 A** and remains prohibited.
+These are allocations/reference-current sums, not all-corners startup
+maxima; non-DCDC MCU current, capacitor charging, regulator efficiency,
+current-limit behavior, thermal rise and load transients still need closure.
+At 1.80 A the existing nominal 2 A TPS63802 has only 0.20 A nameplate
+headroom; do not certify guaranteed delivery or thermal margin from that
+subtraction. Reopen [PWR-003](power_decoupling.md#pwr-003-tps63802-main-digital-converter)
+and the battery/source budget before approving simultaneous operation.
+High-quality audio, radio and the required storage scope are not silently
+reduced to make this arithmetic fit.
+
+### CMS-011F: Exact sourcing snapshot and reproducible checks
+
+Snapshot 2026-09-08, USD excluding tax/shipping, not reserved stock. NOR,
+30R and 47k rows were refreshed directly; 10k/capacitor rows retain the
+same-date verified native-donor snapshots. Copy identity and order code,
+not another value's inherited sourcing metadata.
+
+| Exact MPN / DigiKey order code | Stock | USD at 1 / 10 / 100 |
+| --- | ---: | --- |
+| [S28HL01GTFPBHI030 / 448-S28HL01GTFPBHI030-ND][nor-dk] | 2553 | 22.21 / 20.586 / 18.9691 |
+| [RT0603BRD0730RL / 13-RT0603BRD0730RLCT-ND][nor-r30-dk] | 10201 | 0.10 / 0.067 / 0.0559 |
+| [RC0603FR-0747KL / 311-47.0KHRCT-ND][nor-r47-dk] | 2036190 | 0.10 / 0.025 / 0.0122 |
+| [RC0603FR-0710KL / 311-10.0KHRCT-ND][nor-r10-dk] | 2866522 | 0.10 / 0.025 / 0.0122 |
+| [C1608X7R1H104K080AA / 445-1314-1-ND][nor-c100-dk] | 372402 | 0.11 / 0.06 / 0.0359 |
+| [C3216X7R1V106K160AC / 445-14799-1-ND][nor-c10-dk] | 9358 | 0.68 / 0.424 / 0.2903 |
+
+The exact [Mouser NOR listing][nor-mouser], order code
+727-S28HL01GTFPBHI30, was also checked, but a current direct-page price
+and purchasable quantity could not be verified. Do not present an older
+search-index nonstock/MOQ result as current stock. DigiKey is the current
+verified source for this selection; refresh both before procurement.
+
+Run from the worktree root. This checks the displayed contract against
+independently transcribed pin identities and recomputes the engineering
+screens. This first block checks the contract, not native connectivity;
+the second block below checks a freshly exported native netlist and BOM.
+
+```python
+from pathlib import Path
+from math import isclose, sqrt
+import re
+
+document = Path('ra8p1_kicad/design/camera_storage_interfaces.md').read_text()
+section = document.split('\n## CMS-011: 128 MiB Octal NOR electrical contract', 1)[1]
+rows = re.findall(
+    r'^\| (DQ[0-7]|CK|DS|CS#|INT#|RESET#) \| ([A-E][1-5]) '
+    r'\| (P\d{3}|-) \| ([A-Z]\d+|-) \| ([^|]+) \|$', section, re.M)
+expected = {
+    'DQ0': ('D3', 'P100', 'U6'), 'DQ1': ('D2', 'P803', 'P7'),
+    'DQ2': ('C4', 'P103', 'R4'), 'DQ3': ('D4', 'P101', 'R5'),
+    'DQ4': ('D5', 'P102', 'P5'), 'DQ5': ('E3', 'P800', 'T6'),
+    'DQ6': ('E2', 'P802', 'R6'), 'DQ7': ('E1', 'P804', 'R7'),
+    'CK': ('B2', 'P808', 'U5'), 'DS': ('C3', 'P801', 'P6'),
+    'CS#': ('C2', 'P104', 'M6'), 'INT#': ('A5', 'P105', 'N7'),
+    'RESET#': ('A4', '-', '-'),
+}
+assert len(rows) == 13
+assert {name: (ball, port, mcu_ball) for name, ball, port, mcu_ball, conn in rows} == expected
+assert sum('30R series' in conn for name, ball, port, mcu_ball, conn in rows) == 10
+assert 'MCU_RESET_N' in next(conn for name, ball, port, mcu_ball, conn in rows if name == 'RESET#')
+supply_rows = re.findall(
+    r'^\| (VCCQ?|VSSQ?|DNU) \| ([A-E1-5, ]+) \| ([^|]+) \|$', section, re.M)
+supply_groups = {name: balls.replace(',', '').split() for name, balls, conn in supply_rows}
+assert supply_groups == {
+    'VCC': ['B4'], 'VCCQ': ['D1', 'E4'], 'VSS': ['B3'],
+    'VSSQ': ['C1', 'E5'], 'DNU': ['A2', 'A3', 'B1', 'B5', 'C5'],
+}
+all_balls = [item[0] for item in expected.values()] + [b for group in supply_groups.values() for b in group]
+assert len(all_balls) == len(set(all_balls)) == 24
+assert set(all_balls) == {f'{r}{c}' for r in 'ABCDE' for c in range(1, 6)} - {'A1'}
+ports = {port for ball, port, mcu_ball in expected.values() if port != '-'}
+assert len(ports) == 12 and 'P106' not in ports
+reservation = re.search(r'"ospi0": "([^"]+)"', document).group(1).split()
+assert ports == set(reservation)
+assert len({mcu_ball for ball, port, mcu_ball in expected.values() if port != '-'}) == 12
+capacity = 2**30 // 8
+assert capacity == 128 * 2**20 and capacity >= 64 * 2**20
+print('CMS-011: 24 balls once, 12 reserved MCU ports, ten 30R paths, 128 MiB PASS')
+
+vmin, vmax, vstress = 3.242044111302129, 3.3584850935146022, 3.6
+initial_tol, tcr, delta_t = .01, 100e-6, 100
+def pull_bounds(nominal):
+    return (nominal*(1-initial_tol)*(1-tcr*delta_t),
+            nominal*(1+initial_tol)*(1+tcr*delta_t))
+r10min, r10max = pull_bounds(10000)
+r47min, r47max = pull_bounds(47000)
+assert isclose(r10min, 9801) and isclose(r10max, 10201)
+assert isclose(r47min, 46064.7) and isclose(r47max, 47944.7)
+flash_leak, mcu_leak, board_alloc = 2e-6, 1e-6, 1e-6
+int_high = vmin - (flash_leak+mcu_leak+board_alloc)*r47max
+int_sink = vstress/r47min + mcu_leak + board_alloc
+int_margin = int_high - .8*vmax
+cs_high = vmin - (flash_leak+mcu_leak+board_alloc)*r10max
+cs_sink = vstress/r10min + flash_leak + board_alloc
+int_heat, cs_heat = vstress**2/r47min, vstress**2/r10min
+assert isclose(int_high, 3.0502653113021294)
+assert isclose(int_margin, .3634772364904473) and int_margin > 0
+assert isclose(int_sink, 80.15094855713812e-6) and int_sink < 100e-6
+assert isclose(int_heat, .28134341480569726e-3)
+assert isclose(cs_high, 3.201240111302129)
+assert cs_high > .65*vmax and .5 < .35*vmin
+assert isclose(cs_sink, .3703094582185491e-3) and cs_sink < 1e-3
+assert isclose(cs_heat, 1.322314049586777e-3)
+pull_allocation = 1e-3
+assert int_sink + cs_sink < pull_allocation
+derated_power_125c = .1*(155-125)/(155-70)
+assert isclose(derated_power_125c, .03529411764705882)
+assert int_heat < derated_power_125c and cs_heat < derated_power_125c
+assert vstress < min(75, sqrt(derated_power_125c*r10min), sqrt(derated_power_125c*r47min))
+print('INT high V / margin V / sink uA / resistor mW',
+      int_high, int_margin, int_sink*1e6, int_heat*1e3)
+print('CS high V / high margin V / sink mA / resistor mW',
+      cs_high, cs_high-.65*vmax, cs_sink*1e3, cs_heat*1e3)
+print('two active-low pull sinks mA / allocated mA',
+      (int_sink+cs_sink)*1e3, pull_allocation*1e3)
+
+r30min = 30*(1-.001)*(1-25e-6*100)
+r30max = 30*(1+.001)*(1+25e-6*100)
+assert isclose(r30min, 29.895075) and isclose(r30max, 30.105075)
+assert 30*.99 < r30min < r30max < 30*1.01
+assert isclose(30*.99*.99, 29.403) and isclose(30*1.01*1.01, 30.603)
+assert sqrt(.1*r30min) < 75  # Actual DC power limit is lower than case voltage.
+print('30R initial+TCR screen ohm', r30min, r30max, '; aging/AC qualification OPEN')
+nominal_cap_uf = 3*.1 + 10
+assert isclose(nominal_cap_uf, 10.3)
+assert isclose(nominal_cap_uf*.9, 9.27) and isclose(nominal_cap_uf*1.1, 11.33)
+print('NOR bypass nominal/initial min/max uF', nominal_cap_uf,
+      nominal_cap_uf*.9, nominal_cap_uf*1.1, '; not effective-C guarantee')
+
+reset_main_min, reset_main_max = 3.151819680, 3.393012496
+reset_device_alloc = (5+5+2+5)*1e-6  # MCU, U7, NOR, added U19.
+reset_leak_alloc = reset_device_alloc + 13e-6
+reset_sink = reset_main_max/r10min + reset_leak_alloc
+reset_drop_added = 5e-6*r10max  # Added U19, not the already-counted NOR.
+reset_vtrip_min = 3.000822726706337
+reset_high = reset_main_min - reset_leak_alloc*r10max
+reset_margin = reset_high - .8*reset_main_min
+reset_fall_high = reset_vtrip_min - reset_leak_alloc*r10max
+reset_fall_margin = reset_fall_high - .8*reset_vtrip_min
+assert isclose(reset_device_alloc, 17e-6) and isclose(reset_leak_alloc, 30e-6)
+assert isclose(reset_sink, .0003761904393429242) and reset_sink < .4e-3
+assert isclose(reset_drop_added, .051005)
+assert isclose(flash_leak*r10max, .020402)
+assert isclose(reset_high, 2.845789680) and isclose(reset_margin, .324333936)
+assert isclose(reset_fall_high, 2.6947927267063374)
+assert isclose(reset_fall_margin, .2941345453412675)
+assert reset_margin > 0 and reset_fall_margin > 0
+print('current common reset sink uA / U19 added drop mV / high margin V',
+      reset_sink*1e6, reset_drop_added*1e3, reset_margin)
+pre_access_policy_s = .001
+assert pre_access_policy_s > 500e-6 and pre_access_policy_s > 50e-9
+print('1 ms pre-access is a required policy, not implemented firmware or an RC proof')
+
+f_baseline, f_limit = 125e6, 166e6
+assert isclose(1e9/f_limit, 6.024096385542169)
+assert 1e9/6 > f_limit and f_baseline < f_limit
+nor_allocation, ambiguous_read_row = .250, .173
+for freq, expected_dynamic in ((f_baseline, .05667443595305891),
+                               (f_limit, .07526365094566276)):
+    dynamic = 9*15e-12*vmax*freq
+    assert isclose(dynamic, expected_dynamic)
+    print('Hz / illustrative switching mA / ambiguous-row sum mA',
+          freq, dynamic*1e3, (ambiguous_read_row+dynamic)*1e3)
+    assert ambiguous_read_row + dynamic + pull_allocation < nor_allocation
+new_main = 1.65 - .100 + nor_allocation
+cold_radio_off = 1.730 - .100 + nor_allocation
+wake_screen = 1.670 - .100 + nor_allocation
+assert isclose(new_main, 1.8) and isclose(cold_radio_off, 1.880)
+assert isclose(wake_screen, 1.820) and isclose(cold_radio_off+.5, 2.380)
+assert cold_radio_off+.5 > 2.0
+print('main / cold radio-off / wake / prohibited cold radio-on allocations A',
+      new_main, cold_radio_off, wake_screen, cold_radio_off+.5)
+print('CMS-011 arithmetic PASS; current/timing/reset qualification OPEN; native integration checked separately')
+```
+
+Historical NOR-only checkpoint verification follows. Its U2.1 identity,
+six-endpoint reset partition, component/net counts and BOM expectations
+predate RST-002 and U19; do not run it against current native exports or
+use it as the current reset contract. It requires the corresponding saved
+checkpoint XML and BOM. The export command records the original procedure:
+
+```sh
+/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch export netlist --format kicadxml -o /tmp/ereader-nor-integrated.xml ra8p1_kicad/ereader/ereader_rev1.kicad_sch
+```
+
+```python
+from pathlib import Path
+import csv
+import xml.etree.ElementTree as ET
+
+root = ET.parse('/tmp/ereader-nor-integrated.xml').getroot()
+net_by_pin = {}
+pins_by_net = {}
+type_by_pin = {}
+for net in root.findall('./nets/net'):
+    pins_by_net[net.get('name')] = set()
+    for node in net.findall('node'):
+        key = (node.get('ref'), node.get('pin'))
+        assert key not in net_by_pin
+        net_by_pin[key] = net.get('name')
+        type_by_pin[key] = node.get('pintype')
+        pins_by_net[net.get('name')].add(key)
+for ball in ('B4', 'D1', 'E4'):
+    assert net_by_pin['U15', ball] == '+3V3_MCU'
+for ball in ('B3', 'C1', 'E5'):
+    assert net_by_pin['U15', ball] == 'GND'
+for ref in ('C89', 'C90', 'C91', 'C92'):
+    assert net_by_pin[ref, '1'] == '+3V3_MCU'
+    assert net_by_pin[ref, '2'] == 'GND'
+for ball in ('A2', 'A3', 'B1', 'B5', 'C5'):
+    assert net_by_pin['U15', ball].startswith('unconnected-')
+    assert pins_by_net[net_by_pin['U15', ball]] == {('U15', ball)}
+    assert type_by_pin['U15', ball] == 'no_connect'
+assert len([key for key in net_by_pin if key[0] == 'U15']) == 24
+
+prefix = '/128 MiB Octal NOR/'
+signals = [(f'DQ{i}', ball, mcu_ball, 'bidirectional')
+           for i, (ball, mcu_ball) in enumerate(zip(
+               ('D3', 'D2', 'C4', 'D4', 'D5', 'E3', 'E2', 'E1'),
+               ('U6', 'P7', 'R4', 'R5', 'P5', 'T6', 'R6', 'R7')))]
+signals += [('CK', 'B2', 'U5', 'output'), ('DS', 'C3', 'P6', 'input')]
+for number, (signal, ball, mcu_ball, mcu_type) in enumerate(signals, 54):
+    ref = f'R{number}'
+    host = 'NOR_DQ_HOST' + signal[2:] if signal.startswith('DQ') else f'NOR_{signal}_HOST'
+    assert net_by_pin[ref, '1'] == '/' + host
+    assert pins_by_net['/' + host] == {(ref, '1'), ('U1', mcu_ball)}
+    assert pins_by_net[prefix + 'NOR_' + signal] == {(ref, '2'), ('U15', ball)}
+    assert net_by_pin[ref, '1'] != net_by_pin[ref, '2']
+    assert type_by_pin['U1', mcu_ball] == mcu_type
+for ref, signal, ball, mcu_ball, mcu_type in (
+        ('R64', 'NOR_CS_N', 'C2', 'M6', 'output'),
+        ('R65', 'NOR_INT_N', 'A5', 'N7', 'input')):
+    assert net_by_pin[ref, '1'] == '+3V3_MCU'
+    assert pins_by_net['/' + signal] == {(ref, '2'), ('U15', ball), ('U1', mcu_ball)}
+    assert type_by_pin['U1', mcu_ball] == mcu_type
+reset_net = net_by_pin['U15', 'A4']
+assert pins_by_net[reset_net] == {
+    ('J1', '10'), ('R1', '2'), ('U1', 'D5'), ('U15', 'A4'), ('U2', '1'), ('U7', '3')}
+assert reset_net != net_by_pin['U15', 'A5']
+assert len(pins_by_net) == 299
+assert len(root.findall('./components/comp')) == 193
+
+bom = list(csv.DictReader(Path('ra8p1_kicad/exports/ereader_rev1_bom.csv').open()))
+by_ref = {}
+for row in bom:
+    for ref in row['Reference'].split(','):
+        assert ref not in by_ref
+        by_ref[ref] = row
+mpns = {'U15': 'S28HL01GTFPBHI030', 'C92': 'C3216X7R1V106K160AC',
+        'R64': 'RC0603FR-0710KL', 'R65': 'RC0603FR-0747KL',
+        **{f'R{i}': 'RT0603BRD0730RL' for i in range(54, 64)},
+        **{ref: 'C1608X7R1H104K080AA' for ref in ('C89', 'C90', 'C91')}}
+for ref, mpn in mpns.items():
+    assert by_ref[ref]['Manufacturer_Part_Number'] == mpn
+    assert 'CMS-011' in by_ref[ref]['Selection_Basis']
+    assert 'CMS-011' in by_ref[ref]['Procurement_Status']
+assert by_ref['U15']['Qty'] == '1'
+print('CMS-011 native supply: six balls, eight capacitor terminals, five DNU, BOM identities PASS')
+print('CMS-011 native integration: twelve MCU roles, ten separate series paths, two pulls and common reset PASS')
+print('Firmware, timing/SI, PDN/current and reset qualification remain OPEN; not complete ERC acceptance')
+```
+
+Proposed additional interface note, to be tailored to actual references when
+placed: `CMS-011 | 128 MiB Octal NOR; 10 x 30R external JESD251 series.
+CS 10k. INT 47k: ILOW <=80.151uA; VHIGH >=3.050265V (4uA screen).
+3 x 100n + 10u = 10.3uF nominal. 125MHz DDR/DS candidate; SI/PDN open.
+Shared external reset only; >=1ms pre-access policy; internal MCU reset
+needs protocol recovery. NOR 250mA allocation reopens main-rail budget.`
+The note must hyperlink here; record its actual native page/UUID after
+placement, without implying that this proposal is already on the schematic.
+
+[nor-ab]: https://www.mouser.com/datasheet/3/70/1/8HS01GT_S28HL512T_S28HL01GT_512MB_1GB_SEMPER_TM_FLASH_OCTAL_INTERFACE_1_8V_3-DataSheet-v68_00-EN.pdf
+[nor-ad]: https://www.infineon.com/assets/row/public/documents/10/49/infineon-s28hs512t-s28hs01gt-s28hl512t-s28hl01gt-512mb-1gb-semper-tm-flash-octal-interface-1-8v-3-datasheet-cn.pdf
+[nor-ra-ds]: https://www.renesas.com/en/document/dst/ra8p1-group-datasheet
+[nor-ra-hum]: https://www.renesas.com/en/document/mah/ra8p1-group-users-manual-hardware
+[nor-rt]: https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L
+[nor-rc10]: https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL
+[nor-rc47]: https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL
+[nor-c100]: https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA
+[nor-c10]: https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R1V106K160AC
+[nor-c10-curve]: https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/charasheet/c3216x7r1v106k160ac.pdf
+[nor-dk]: https://www.digikey.com/en/products/detail/infineon-technologies/S28HL01GTFPBHI030/15903885
+[nor-r30-dk]: https://www.digikey.com/en/products/detail/yageo/RT0603BRD0730RL/1072456
+[nor-r47-dk]: https://www.digikey.com/en/products/detail/yageo/RC0603FR-0747KL/730200
+[nor-r10-dk]: https://www.digikey.com/en/products/detail/yageo/RC0603FR-0710KL/729827
+[nor-c100-dk]: https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H104K080AA/513811
+[nor-c10-dk]: https://www.digikey.com/en/products/detail/tdk/C3216X7R1V106K160AC/3956465
+[nor-mouser]: https://www.mouser.com/ProductDetail/Infineon-Technologies/S28HL01GTFPBHI030?qs=sPbYRqrBIVlVJsyzP6oGfQ%3D%3D
+
+## CMS-012: Independent mechanical microSD card detect
+
+2026-09-08 implementation contract; native mechanical detect wiring and
+host/root hierarchy integration are complete and netlist-verified.
+This section covers only J2's mechanical switch and its host input, not
+the card power supply, CMD/DAT/CLK interface or complete microSD acceptance.
+The saved local circuit has exactly J2.MP2, R72.2, R73.1 and D6.1 on one
+contact node; R72.1 on +3V3_MCU; and exactly R73.2 plus U1.F14 on the
+end-to-end SD_CD_N net through the microSD and MCU hierarchy ports. D6.2,
+J2.6 and MP1/MP3/MP4/MP5/MP6 are GND. Four unique ground symbols remain,
+with no duplicated wire segments. Card VDD and all six bus signals remain
+open at this stage. All four embedded MCU symbol caches match the library's
+289-pin map: only P406/F14 changed from Passive to Input relative to the
+preceding checkpoint; other pin identities, alternate definitions, geometry
+and placed U1 fields were retained. The 210 preceding component references
+retain all 312 original net partitions after excluding the four new parts
+J2/R72/R73/D6. These checks establish CD connectivity, not complete ERC
+acceptance or card power/bus completion.
+
+```text
++3V3_MCU -- R72 10k --+-- J2.MP2 (CD_B)
+                     +-- D6.1 (IO); D6.2 -- GND
+                     +-- R73 1k -- SD_CD_N -- U1.P406 / F14 (SD1CD input)
+J2.MP4 (CD_A) -- GND
+J2.6 (VSS), MP1/MP3/MP5/MP6 (four shields) -- GND
+```
+
+R72 is on the **contact side** of R73, unlike the CMS-009 key pullups.
+There is no 1k/10k closed-state divider. No capacitor is placed on SD_CD_N:
+the initially considered C102=100nF is omitted entirely, not a DNP part.
+Neither detect contact is connected to card VDD or a card signal. J2.2 is
+DAT3, not this mechanical CD contact. The separate switched card supply
+and protected/isolated bus remain incomplete and must not be bypassed by
+connecting them to the main host rail.
+
+### Exact reusable parts and primary limits
+
+| Reference | Native donor / exact manufacturer part | Existing supplier identity |
+| --- | --- | --- |
+| R72, 10k | R18 / YAGEO RC0603FR-0710KL | [311-10.0KHRCT-ND][nor-r10-dk] |
+| R73, 1k | R19 / YAGEO RC0603FR-071KL | [311-1.00KHRCT-ND](https://www.digikey.com/en/products/detail/yageo/RC0603FR-071KL/726843) |
+| D6 | D1 / Texas Instruments ESD441DPYR | [296-ESD441DPYRCT-ND](https://www.digikey.com/en/products/detail/texas-instruments/ESD441DPYR/28715599) |
+
+Preserve those donors' exact MPN, manufacturer, supplier URL and explicitly
+dated 2026-09-07 snapshots; update Description, Selection_Basis and
+Procurement_Status for CMS-012. Reuse is not a fresh stock verification.
+The donor snapshots are R72 2,904,275 and R73 4,068,534 pieces, each USD
+0.10/0.025/0.0122 at 1/10/100; D6 3,273, USD 0.34/0.207/0.1291.
+These are unreserved historical observations, not current order guarantees.
+
+Primary evidence:
+
+- [Hirose EDC-325165-00-00 drawing][cms12-hrs-drawing], sheet 1 of 6,
+  revision mark 4 dated 2024-09-02, note 2: A/B open without a card and
+  closed with a card. [DM3 catalog D49662_en][cms12-hrs-catalog], printed
+  edition 2017.1, retrieved with August 2026 watermark, page 2: 100mOhm
+  initial contact resistance tested at **1mA**, with maximum 40mOhm change
+  after listed environmental/durability tests; DM3AT durability 10,000 cycles;
+  operating -25..85C. The series 0.5A/125VAC ratings are not evidence of a
+  minimum CD wetting current or permission to hot-switch that load.
+- [RA8P1 datasheet R01DS0439EJ0130][nor-ra-ds], Rev.1.30, 2026-02-27,
+  Tables 2.1/2.4/2.5/2.7, pages 44/46-49/57: P406 is not 5V-tolerant,
+  ordinary-port off-state leakage is at most 1uA at the stated rail-endpoint
+  tests, and its input capacitance category is 8pF maximum **at 25C**.
+  The SD_B ch1 peripheral threshold row is 0.625*VCC high / 0.25*VCC low;
+  GPIO and other VCC Schmitt inputs use 0.8*VCC / 0.2*VCC. This calculation
+  deliberately uses the stricter 0.8/0.2 envelope in both configurations;
+  it does not infer a separate SD1CD Schmitt-hysteresis guarantee.
+- [RA8P1 HUM R01UH1064EJ0130][nor-ra-hum], same revision/date,
+  Tables 21.2/21.11 and 48.2: P406 is VCC-powered, SD1CD is input-only.
+  Section 48.3.2.1 describes active-low mechanical detection. SD_INFO1
+  SDCDMON=1 means the pin is low/card present; 0 means high/absent.
+  SD_OPTION.CTOP sets the continuous detection interval in PCLKB cycles.
+- [YAGEO 10k][nor-rc10] and [1k exact specifications][cms12-r1]: 1%,
+  +/-100ppm/C. The following screen compounds tolerance and TCR over 100C,
+  giving R72=9801..10201Ohm and R73=980.1..1020.1Ohm. That calculation
+  excursion is not an expansion of the socket's -25..85C operating rating.
+- [TI ESD441 SLVSH26C][cms12-tvs], verified 2026-09-12, sections 5.4/5.6:
+  recommended IO-to-GND range is 0..5.5V; the revision corrects the earlier
+  negative-range claim. No -5.5V steady-state rating is supported.
+  Positive 5.5V stand-off specifies <100nA across operating temperature;
+  the separate 50nA maximum at 5.5V is a 25C limit. Pin 1 is IO, pin 2
+  GND; 1pF is typical at 0V, 1MHz, 30mV peak-to-peak and 25C, with no
+  specified maximum. The positive 3.0..3.6V card-detect reasoning and
+  0.1uA TVS allocation below remain valid, so its calculations are
+  unchanged. Component IEC ratings and typical clamp voltages do not
+  establish the residual MCU waveform or qualify negative transients.
+
+### Executable DC and parasitic screen
+
+Use the full host range 3.0..3.6V, not a draft narrowed converter range.
+Allocate 1uA MCU +0.1uA TVS +1uA board/socket leakage = 2.1uA. The last
+term is a design allowance, not a guaranteed manufacturer maximum; it
+includes contamination and open-switch leakage. Conservatively moving all
+leakage to the MCU node overstates both high-state loss and low-state rise.
+The 0.14Ohm closed-contact value combines Hirose's initial/test-change
+numbers, but its applicability at this circuit's lower steady current is a
+**qualification assumption**, not a demonstrated wetting guarantee.
+
+```python
+from itertools import product
+
+rp = (10000*.99*.99, 10000*1.01*1.01)
+rs = (1000*.99*.99, 1000*1.01*1.01)
+voltages, leak, contact = (3.0, 3.6), 2.1e-6, .14
+cases = list(product(voltages, rp, rs))
+low = lambda v, r, s: v*contact/(r+contact) + leak*(s+r*contact/(r+contact))
+high = lambda v, r, s: v-leak*(r+s)
+vhigh = min(high(*case) for case in cases)
+vlow = max(low(*case) for case in cases)
+high_margin = min(high(v,r,s)-.8*v for v,r,s in cases)
+low_margin = min(.2*v-low(v,r,s) for v,r,s in cases)
+contact_min = voltages[0]/(rp[1]+contact)-leak
+contact_max = voltages[1]/rp[0]+leak
+pull_power = voltages[1]**2/rp[0]
+assert vhigh > 2.976435 and vlow < .002194
+assert high_margin > .576435 and low_margin > .597814
+assert contact_min > 291.984e-6 and contact_max < 369.410e-6
+assert pull_power < 1.323e-3
+print('CMS-012 high min / low max V', vhigh, vlow)
+print('high / low correlated margins V', high_margin, low_margin)
+print('contact min / max uA', contact_min*1e6, contact_max*1e6)
+print('R72 maximum steady power mW', pull_power*1e3)
+
+# Conditional two-node parasitic budget, NOT a guaranteed PCB measurement.
+# 8pF is the MCU's specified 25C test maximum; add 50pF host allowance.
+# 10pF contact allowance includes the TVS (1pF typical, no max) and routing.
+ch, ce = (8+50)*1e-12, 10e-12
+# Elmore first moment from rail to host for this passive two-node RC ladder.
+tracking_time = (rp[1]+rs[1])*ch + rp[1]*ce
+# For a continuous monotonic ramp, slew*time plus DC leakage bounds lag.
+fall_slew = (.3-leak*(rp[1]+rs[1]))/tracking_time
+assert tracking_time < .752834e-6 and fall_slew > 367193
+print('conditional tracking time us / maximum fall slope V/s',
+      tracking_time*1e6, fall_slew)
+print('corresponding 3.6V constant-slope fall minimum us',
+      3.6/fall_slew*1e6)
+print('CMS-012 DC screen PASS; wetting, bounce, parasitics and ESD qualification OPEN')
+```
+
+Executed results: high minimum 2.97643569V; low maximum
+0.002193926586V; correlated high/low margins 0.57643569V /
+0.597814643846V. Screened held contact current is 291.984778760..
+369.409458219uA. R72 dissipation is below 1.323mW. These are conditional
+design bounds, not a claim that Hirose guaranteed contact resistance at
+0.292mA. No published minimum CD wetting current or CD-specific maximum
+bounce duration was found in the cited documents. Confirm low-current
+contact reliability for the service environment, or revise pullup/part
+selection with explicit authority; do not silently treat the 1mA resistance
+test as either a mandatory minimum or a proven minimum-current guarantee.
+
+For the explicit parasitic budget, tracking time is 0.7528338us; maximum
+continuous falling slew is 367193.516V/s (a 3.6V constant-slope fall takes
+at least 9.804095us). This is a bounded circuit screen, not a measured
+all-temperature capacitance or guaranteed arbitrary-rail-collapse result.
+Verify actual parasitics and local host-rail slew, including fault/brownout
+and hard-off, before claiming Vin <= VCC+0.3 under all conditions. Ideal
+steps, ESD events and unbounded parasitics are outside this ramp calculation.
+
+The rejected 100nF-at-MCU version would retain energy directly on P406;
+an upstream series resistor would not limit that capacitor's current into
+the MCU input. With 126.558nF screened total capacitance and the original
+2.2uA leakage allowance, its equivalent conservative falling-slew limit
+was only 193.866V/s (18.57ms for a full 3.6V linear fall). The existing
+loaded hard-off circuit does not establish that restriction. Therefore no
+C102 is placed, and no internal clamp-current allowance is assumed.
+
+### Defaults, firmware contract and remaining qualification
+
+With a valid settled host rail, no card means high/absent and an inserted
+card means low/present; the mechanical state is independent of card VDD.
+Keep P406 input-only, with internal pulls disabled during GPIO and SD1CD
+use. Those internal pull currents span 10..300uA and are not part of the
+external-resistor calculation. Reset/high-impedance GPIO does not remove
+the external default. When the host rail is off, detection is not a valid
+logic indication and must not be used to infer a powered card interface.
+
+There is **no intentional analog debounce**. Require at least 20ms of
+continuously stable state before accepting insertion/removal or the initial
+post-reset state; this is a design policy, not a Hirose bounce guarantee.
+Use SD_OPTION.CTOP and/or software so the interval remains >=20ms at the
+actual fastest PCLKB, including clock changes. HUM 48.2.16 defines CTOP
+0x0..0xE as 2^10..2^24 cycles; 0xF is prohibited. Do not rewrite it while
+SD_INFO2.CBSY=1. On reset or wake, resample/debounce instead of assuming
+that a new insertion edge will occur for an already inserted card. Firmware
+debounce, power sequencing and removal-safe storage handling are requirements,
+not implemented changes in this schematic stage.
+
+D6 remains at the socket-side node with a short ground-current return.
+Its stand-off rating does not mean it clamps to 3.3V; qualify residual
+voltage at P406, R73 pulse stress, enclosure/contact ESD and PCB cleanliness.
+Do not claim overall ERC acceptance, microSD operation, card-power isolation,
+firmware correctness or full-system qualification from this CD-only screen.
+
+[cms12-hrs-drawing]: https://www.hirose.com/product/download/?distributor=chip1&lang=en&num=DM3AT-SF-PEJM5&type=2d
+[cms12-hrs-catalog]: https://www.hirose.com/en/product/document?documentid=D49662_en&documenttype=Catalog&lang=en&series=DM3
+[cms12-r1]: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL
+[cms12-tvs]: https://www.ti.com/lit/ds/symlink/esd441.pdf
+
+## CMS-013 - MIPI host 1.8V supply (implementation in progress)
+
+Status: native implementation in progress. U23, the project-local
+`Power_Devices:LT3042IMSE#PBF`, is placed on the MCU I/O and analog supply
+sheet with EN/UV tied to IN and OUTS tied to OUT. IN, EN/UV and PGFB
+connect to +3V3_MCU; ILIM and both ground contacts connect to GND, and
+PG has an explicit no-connect. C108 and C109 provide the selected 22uF
+input/output bypasses. C110 is the selected 100nF C0G SET-to-GND
+capacitor. These connections have passed focused exported-netlist checks;
+the pre-existing net partitions were preserved after adding the bypasses.
+R94 is the selected 1k permanent output load, connected across OUT and
+GND. Focused checks confirm its exact net membership and corrected part
+metadata, and all 330 preceding microSD net partitions remain intact after
+excluding the newly added MIPI components. R95 is the selected 18k,
+0.1%, 25ppm/C SET resistor, connected in parallel with C110. Its exact
+SET/GND membership, MPN, distributor SKU and sourcing metadata have
+passed focused checks; all 330 baseline net partitions remain preserved.
+The output is named +1V8_MIPI, with exact exported membership
+U23.9, U23.10, C109.1, R94.2, U1.R2 and C111.1. C111.2 connects to
+GND. At this supply checkpoint the MCU VCC18_MIPI no-connect was removed,
+while the six camera-lane no-connects remained. CMS-015 records their
+later replacement by CSI input ports. Independent read-only review confirmed this connection
+and preservation of all 329 other baseline net partitions after excluding
+new components and the intentional R2 join. This section does not establish camera power,
+interface operation or rail-sequencing closure. The refreshed native BOM
+contains 19 columns, 98 groups and 256 included references. The full
+12-page PDF includes the MCU bypass and both native CMS-013 calculation
+notes. All pages received independent visual review; its C111/USB-001
+overlap finding was corrected in the native editor. SD-003 now explicitly
+identifies its pre-MIPI subtotal and the added 20mA branch. Independent
+review passed both visual corrections and C111 metadata. Full BOM-to-netlist
+identity, quantities, values and MPN checks pass; only TP1-TP3 are excluded.
+CMS-013 and clock Python checks, version and whitespace checks pass.
+The ASCII check retains its pre-existing 63-character failure in unchanged
+PARTS-CHECKLIST.md. These are bounded implementation checks, not complete
+schematic or hardware acceptance.
+Native ERC and the exported all-severity report both retain 125 findings
+(123 errors, two warnings). Comparison by sheet, severity, violation type
+and item identity found no additions or removals against the microSD
+checkpoint. This is preservation of the existing backlog, not ERC closure.
+
+The RA8P1 datasheet R01DS0439EJ0130, Table 2.2, specifies 1.65..1.95V for
+VCC18_MIPI. Table 2.44 specifies a minimum rise gradient of 8.4us/V for
+both MIPI supplies. Table 2.39 lists CSI high-speed VCC18_MIPI current up
+to 4.1mA at 105C, two lanes and 720Mbps; this is not a startup-current limit.
+Use the official [RA8P1 datasheet][cms13-ra] and retain the selected MCU's
+temperature grade. AVCC_MIPI remains a separate 3.3V supply requirement.
+The RA8P1 Quick Design Guide Rev. 1.10, Table 1, additionally requires
+a local 100nF bypass between MCU R2 and VSS_MIPI. The regulator's SET
+capacitor does not provide this supply bypass.
+
+C111 implements that local bypass using TDK C1608X7R1H104K080AA,
+100nF, +/-10%, 50V X7R. Its native description and selection basis identify
+R2 and QDG Table 1. Installed capacitance and PDN qualification remain
+open. Its explicitly historical September 5 sourcing snapshot is retained
+from the existing TDK selection; availability must be rechecked before
+purchase. This is separate from C110, the regulator SET capacitor.
+
+The proposed LT3042 connection follows [ADI Rev. C][cms13-adi]: IN pins
+1/2 and EN/UV pin 3 follow the main rail; PGFB pin 6 connects to IN to
+disable fast start. PG pin 4 is unused. OUTS pin 9 connects to OUT pin 10;
+GND pin 8 and exposed pad 11 connect to ground. Grounded ILIM pin 5
+retains internal current limiting, not a small branch-current allocation.
+SET pin 7 uses a resistor and capacitor to ground. Output capacitance
+must remain at least 4.7uF effective. Reverse-output protection supports
+retained output during input collapse; PGFB tied to IN does not preserve
+negative-input protection. Do not claim complete board reverse protection.
+
+Proposed passive selections, verified at DigiKey on 2026-09-12:
+
+| Function | Exact MPN | Stock | USD 1 / 10 / 100 |
+|---|---|---:|---|
+| SET resistor, 18k, 0.1%, 25ppm/C | [RT0603BRD0718KL][cms13-rset-stock] | 45,015 | 0.10 / 0.067 / 0.0559 |
+| Permanent bleed, 1k, 1%, 100ppm/C | [RC0603FR-071KL][cms13-bleed-stock] | 4,828,305 | 0.10 / 0.025 / 0.0122 |
+| SET capacitor, 100nF, 5%, C0G, 50V | [GRM31C5C1H104JA01K][cms13-cset-stock] | 68,175 | 0.52 / 0.316 / 0.2112 |
+| Input and output, one each, 22uF, 20%, X7R, 16V | [CL32B226MOJNNNE][cms13-cio-stock] | 162,494 | 0.52 / 0.318 / 0.2122 |
+
+All four distributor listings indicated Active. Primary specifications:
+[YAGEO SET resistor][cms13-rset], [YAGEO bleed resistor][cms13-bleed],
+[Murata SET capacitor][cms13-cset] and [Samsung input/output capacitor][cms13-cio].
+These parts are now present in the native regulator circuit as R95, R94,
+C110 and C108/C109 respectively, and are included in the refreshed BOM.
+
+The Samsung part is an existing native donor. Its conditional effective
+capacitance screen is 22uF * 0.8 initial tolerance * 0.85 temperature *
+0.6 residual retention = 8.976uF per part, exceeding 4.7uF. The remaining
+bias/aging/etc. retention must be at least 31.4172% after initial tolerance
+and temperature. The 60% allocation requires verification; manufacturer
+typical curves do not guarantee this combined installed-part bound. One
+10uF, 10% donor under the same screen gives only 4.59uF and is insufficient.
+
+The following tolerance screen uses a 100C resistor excursion and a
+100nA combined SET leakage allocation. ADI's 98..102uA SET-current and
+2mV offset limits apply under specified settled operating conditions,
+including 2V < VIN < 20V and at least 1mA load. The bleed satisfies that
+load condition at
+the minimum operating rail. These limits do not bound initial startup.
+
+```python
+rmin = 18000 * .999 * (1 - 25e-6 * 100)
+rmax = 18000 * 1.001 * (1 + 25e-6 * 100)
+vmin = (98e-6 - 100e-9) * rmin - .002
+vmax = (102e-6 + 100e-9) * rmax + .002
+bleed_min = 1.65 / (1000 * 1.01 * 1.01)
+assert 1.65 < vmin < vmax < 1.95
+assert bleed_min > 1e-3
+print('CMS-013 modeled DC V / minimum bleed A', vmin, vmax, bleed_min)
+
+# Conditional SET charging model; not an instantaneous OUT-slew guarantee.
+cmin = 100e-9 * .95 * (1 - 30e-6 * 100)
+set_slope = (102e-6 + 100e-9) / cmin / 1e6
+assert set_slope < 1 / 8.4
+print('conditional CSET minimum F / SET slope V/us', cmin, set_slope)
+
+cio_min = 22e-6 * .8 * .85 * .6
+required_retention = 4.7e-6 / (22e-6 * .8 * .85)
+assert cio_min > 4.7e-6
+print('conditional input/output C minimum F / retention floor',
+      cio_min, required_retention)
+
+# Separate no-bias cold endpoint screen; not a combined lifetime bound.
+cold_min = 100e-9 * .95 * (1 - .0024)
+cold_max = 100e-9 * 1.05 * (1 + .0058)
+assert cold_min > cmin
+print('CSET -55C endpoint minimum / maximum F', cold_min, cold_max)
+```
+
+Executed results: 1.754036706..1.846236894V, minimum bleed 1.617488482mA,
+conditional CSET minimum 94.715nF and SET slope 0.001077971V/us.
+The slope calculation is a charging model, not guaranteed OUT behavior.
+Murata's coefficient explicitly covers 25..125C. Its Jan. 10, 2025 reference
+sheet, Table A on page 6, separately specifies cold-endpoint changes:
+-55C -0.24..+0.58%, -30C -0.17..+0.40%, and -10C -0.11..+0.25%.
+With initial tolerance, the -55C endpoint is 94.772..105.609nF. Page 3
+specifies no bias, five minutes per temperature stage and less than 1Vrms
+measurement; separate drift and environmental allowances remain. Do not
+call these endpoint tests an arbitrary combined lifetime bound. Resolve
+actual output startup/restart behavior, effective output capacitance,
+rail discharge and MCU supply sequencing before claiming acceptance.
+The 100nA leakage allowance requires implementation evidence. Account for
+regulator quiescent current and permanent bleed in the system power budget.
+
+### Steady CSI branch allocation
+
+Allocate 20mA additional +3V3_MCU current for U23 and its loads. This
+raises the [SD-003 subtotal](microsd_power_interface.md#sd-003-main-rail-budget-and-reproducible-screens)
+from 2.075A to 2.095A. The 2.090A alternative applies only after the
+existing 5mA radio-support overlap is established. These are planning
+allocations, not complete system maxima or startup-current bounds.
+
+[ADI Rev. C][cms13-adi] specifies full-temperature ground-current maxima
+of 3.5mA at 1mA load, 5mA at 50mA, 7mA at 100mA and 13mA at 200mA.
+Note 6 identifies dropout, VIN = VOUT, as the worst ground-current
+condition; the ground-current figure excludes SET and ILIM currents.
+Use 13mA as a deliberately conservative engineering allocation here,
+not as a newly guaranteed interpolated row at the approximately 6mA load.
+Allocate another 100uA for auxiliary currents, including ILIM, EN/UV,
+PGFB and leakage. This allowance requires verification: the nominal ILIM
+ratio and typical PGFB current do not prove a combined maximum.
+
+The [RA8P1 Table 2.39][cms13-ra] CSI HS condition uses at most 4.0mA
+VCC18_MIPI current at 95C, two lanes and 720Mbps. The screen below uses
+4.1mA from the 105C row conservatively, without expanding the selected
+MCU's temperature grade. AVCC_MIPI current remains within the existing
+750mA MCU allocation; it is not added again. No DSI/all-mode current
+claim follows from this CSI screen. Sensor power is still separate.
+
+```python
+from math import isclose
+bleed_max = 1.95 / (1000 * .99 * .99)
+branch_screen = .0041 + bleed_max + .013 + .000102 + .000100
+branch_allocation = .020
+assert branch_screen < branch_allocation
+total = 2.075 + branch_allocation
+assert isclose(total, 2.095)
+assert isclose(total - .005, 2.090)
+vmain_hi = 3.393012496197
+source_current = vmain_hi * total / .75 / 3.2
+converter_loss = vmain_hi * total * (1/.75 - 1)
+assert 2.961 < source_current < 2.962
+assert 2.369 < converter_loss < 2.370
+print('bleed / branch screen A', bleed_max, branch_screen)
+print('main allocation / source screen A / converter loss W',
+      total, source_current, converter_loss)
+```
+
+Executed screen: 1.989592899mA bleed, 19.291592899mA branch,
+2.095A main allocation, 2.961817158A input and 2.369453727W converter
+loss at the stated 3.2V input and assumed 75% efficiency. Source support,
+inductor/current and thermal acceptance remain open. Charging C108/C109
+and downstream capacitance, regulator startup behavior and other loads
+are not bounded by this steady-state arithmetic.
+
+[cms13-ra]: https://www.renesas.com/en/document/dst/ra8p1-group-datasheet
+[cms13-adi]: https://www.analog.com/media/en/technical-documentation/data-sheets/lt3042.pdf
+[cms13-rset-stock]: https://www.digikey.com/en/products/detail/yageo/RT0603BRD0718KL/1072301
+[cms13-bleed-stock]: https://www.digikey.com/en/products/detail/yageo/RC0603FR-071KL/726843
+[cms13-cset-stock]: https://www.digikey.com/en/products/detail/murata-electronics/GRM31C5C1H104JA01K/2548138
+[cms13-rset]: https://yageogroup.com/component-documentation/download/specsheet/RT0603BRD0718KL
+[cms13-bleed]: https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL
+[cms13-cset]: https://www.mouser.com/datasheet/3/76/1/GRM31C5C1H104JA01-01A.pdf
+[cms13-cio-stock]: https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL32B226MOJNNNE/3891481
+[cms13-cio]: https://product.samsungsem.com/mlcc/CL32B226MOJNNN.do
+
+## CMS-010 sourcing correction - 2026-10-05
+
+U14 now uses native `Memory:AS4C16M32SC-7TIN` instead of the
+NRND/discontinued distributor ordering code `IS42S32160F-7TLI`.
+The Alliance candidate preserves all 86 package pins across four units,
+64 MiB x32 organization, 3.0..3.6 V operation and industrial temperature.
+All saved net memberships are unchanged. The prior ISSI-specific timing,
+power and startup screens are historical evidence, **not qualification of
+Alliance's limits**; repeat them against released exact-part specifications.
+
+The public September 2018 Rev 1.0 Alliance datasheet remains PRELIMINARY.
+Released limits/manufacturer confirmation, lifecycle horizon, startup,
+refresh, timing/SI, PDN/current and footprint remain HOLD. A visible note
+on the SDRAM sheet records this limitation. Qty-one tray sourcing is
+available, but distributor price is substantially higher than the
+manufacturer-linked store's unconfirmed-stock offer. See the complete
+[component audit](component_audit_2026-10-05.md) before purchase.

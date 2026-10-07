@@ -1,0 +1,8 @@
+[submodule "firmware"]
+	path = firmware
+	url = https://github.com/bsikar/ra8-firmware.git
+	shallow = true
+[submodule "emulator"]
+	path = emulator
+	url = https://github.com/bsikar/ra8-emulator.git
+	shallow = true
