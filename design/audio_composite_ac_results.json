@@ -1,0 +1,960 @@
+{
+  "status": "INVESTIGATION ONLY; HARDWARE HOLD",
+  "model_sha256": {
+    "opa1656/OPA1656.LIB": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055",
+    "buf634a/buf634a_a.lib": "63d75a17c849f6ac6fedf332a263505bff9a6b4d079237cfbe34d2ca4ba9a18a"
+  },
+  "library_sha256": "3238d82f02b6d08d8703a28ea894bcfdf59906dd4a59ad2e93eeec532a0454a3",
+  "code_model_sha256": {
+    "analog": "750e2e8eef53313799c962f3553b2798c2c2fedd1f41668448bb84686f105af4",
+    "spice2poly": "8859cbf806da2cf0b5a4ea6b26f14731872c75e7325082a5f3f72cfd5184427b",
+    "table": "f4b79c3c31a2609e5aee78d1676c1f865bf37dfb04b3d8a7422a1c12ac1ff860",
+    "xtradev": "f0f1f5ee6c4445d6134b08230e1b323adebe5ba758e7c5c4efce0f46a280f57c",
+    "xtraevt": "4e8c54573e21d5113c24de2f97b5ec6445e72ecd393a998a452dd4655bbc9a41",
+    "digital": "7f049b2c708b59b048087ed790a7d6b6e45e56aac65fd8edc5c63582899f32bd",
+    "tlines": "3cc2d42cb9b764dcf5219abf60f59ae5c9af0804b20a6202f5a91213e931490e"
+  },
+  "bias_method": ".options keepopinfo; read op1 retained by the AC run",
+  "cases": [
+    {
+      "case": {
+        "capacitance_f": 0,
+        "gmin": 1e-10,
+        "mode": "closed"
+      },
+      "capacitance_f": 0,
+      "gmin": 1e-10,
+      "mode": "closed",
+      "operating_point": {
+        "out": [
+          0.0004893534291055791
+        ],
+        "vp#branch": [
+          -0.005348625759633319
+        ],
+        "vn#branch": [
+          0.005333336671365887
+        ],
+        "drive0": [
+          -0.039010393317006745
+        ],
+        "sense0": [
+          0.0004927177338922816
+        ],
+        "fbnet0": [
+          0.0004927177339415534
+        ]
+      },
+      "gain_at_10hz": 0.9931728100497328,
+      "peak_db": 0.8215697647476252,
+      "gain_at_20khz": 0.9931763326440678,
+      "phase_at_20khz_deg": -0.021928307471338136,
+      "peak_frequency_hz": 8317637.7110273745,
+      "branch_20khz_a_per_v": [
+        [
+          0.03103675812405853,
+          -1.1878424799720474e-05
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-10 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fbnet0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 0,
+        "gmin": 1e-10,
+        "mode": "loop"
+      },
+      "capacitance_f": 0,
+      "gmin": 1e-10,
+      "mode": "loop",
+      "operating_point": {
+        "out": [
+          0.0004886352499759045
+        ],
+        "vp#branch": [
+          -0.005348670425784938
+        ],
+        "vn#branch": [
+          0.0053333334645128214
+        ],
+        "drive0": [
+          -0.2056198113406261
+        ],
+        "sense0": [
+          0.0004919946173195964
+        ],
+        "fbnet0": [
+          0.0004919946173195964
+        ]
+      },
+      "gain_at_10hz": 4972421.834791745,
+      "peak_db": 133.93135929702373,
+      "gain_at_20khz": 2510.3863460552175,
+      "phase_at_20khz_deg": -90.53003000902133,
+      "peak_frequency_hz": 10.0,
+      "branch_20khz_a_per_v": [
+        [
+          -0.031036732661581433,
+          1.2362845692287976e-05
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [
+        {
+          "frequency_hz": 18734428.429958034,
+          "phase_margin_deg": 59.85779815565066
+        }
+      ],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-10 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 0",
+        "Vtest0 fb0 fbnet0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fb0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-10,
+        "gmin": 1e-10,
+        "mode": "closed"
+      },
+      "capacitance_f": 1e-10,
+      "gmin": 1e-10,
+      "mode": "closed",
+      "operating_point": {
+        "out": [
+          0.0004893612027658626
+        ],
+        "vp#branch": [
+          -0.0053486260066892685
+        ],
+        "vn#branch": [
+          0.005333337385393334
+        ],
+        "drive0": [
+          -0.03719013034411928
+        ],
+        "sense0": [
+          0.0004927255610410354
+        ],
+        "fbnet0": [
+          0.000492725561090308
+        ]
+      },
+      "gain_at_10hz": 0.9931728100497373,
+      "peak_db": 0.9141298403846642,
+      "gain_at_20khz": 0.9931763497930219,
+      "phase_at_20khz_deg": -0.02208524285350266,
+      "peak_frequency_hz": 10000000.000000812,
+      "branch_20khz_a_per_v": [
+        [
+          0.031036763426697738,
+          4.876206424219134e-07
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-10 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fbnet0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-10",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-10,
+        "gmin": 1e-10,
+        "mode": "loop"
+      },
+      "capacitance_f": 1e-10,
+      "gmin": 1e-10,
+      "mode": "loop",
+      "operating_point": {
+        "out": [
+          0.0004893560552234301
+        ],
+        "vp#branch": [
+          -0.005348625838091527
+        ],
+        "vn#branch": [
+          0.0053333369435928785
+        ],
+        "drive0": [
+          -0.03838615089320599
+        ],
+        "sense0": [
+          0.0004927203770755579
+        ],
+        "fbnet0": [
+          0.0004927203771248299
+        ]
+      },
+      "gain_at_10hz": 4972421.846356775,
+      "peak_db": 133.93135931722566,
+      "gain_at_20khz": 2510.3865254226457,
+      "phase_at_20khz_deg": -90.53251423793176,
+      "peak_frequency_hz": 10.0,
+      "branch_20khz_a_per_v": [
+        [
+          -0.03103673815723019,
+          -3.1896074046703293e-09
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [
+        {
+          "frequency_hz": 19803780.288597386,
+          "phase_margin_deg": 55.26962350897498
+        }
+      ],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-10 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 0",
+        "Vtest0 fb0 fbnet0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fb0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-10",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-09,
+        "gmin": 1e-10,
+        "mode": "closed"
+      },
+      "capacitance_f": 1e-09,
+      "gmin": 1e-10,
+      "mode": "closed",
+      "operating_point": {
+        "out": [
+          -0.05846710877715121
+        ],
+        "vp#branch": [
+          -0.01906526317086827
+        ],
+        "vn#branch": [
+          0.005333333464677944
+        ],
+        "drive0": [
+          0.028601421202982424
+        ],
+        "sense0": [
+          -0.05548358650012645
+        ],
+        "fbnet0": [
+          -0.05548358650567481
+        ]
+      },
+      "gain_at_10hz": 0.9931728100499283,
+      "peak_db": 15.460089958274125,
+      "gain_at_20khz": 0.9931765037558081,
+      "phase_at_20khz_deg": -0.023497633904119193,
+      "peak_frequency_hz": 21134890.398368277,
+      "branch_20khz_a_per_v": [
+        [
+          0.031036814197481402,
+          0.00011178206241570579
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-10 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fbnet0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-09",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-09,
+        "gmin": 1e-10,
+        "mode": "loop"
+      },
+      "capacitance_f": 1e-09,
+      "gmin": 1e-10,
+      "mode": "loop",
+      "operating_point": {
+        "out": [
+          0.016401687426758998
+        ],
+        "vp#branch": [
+          -0.02319854884525877
+        ],
+        "vn#branch": [
+          0.005333333465155952
+        ],
+        "drive0": [
+          0.07235946090764613
+        ],
+        "sense0": [
+          0.02028955843020908
+        ],
+        "fbnet0": [
+          0.020289558432238036
+        ]
+      },
+      "gain_at_10hz": 4972419.820584271,
+      "peak_db": 133.9313557785798,
+      "gain_at_20khz": 2510.3910931367973,
+      "phase_at_20khz_deg": -90.55486618387967,
+      "peak_frequency_hz": 10.0,
+      "branch_20khz_a_per_v": [
+        [
+          -0.031036790664955044,
+          -0.00011129754079255718
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [
+        {
+          "frequency_hz": 23083050.344211705,
+          "phase_margin_deg": -17.80508869945955
+        }
+      ],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-10 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 0",
+        "Vtest0 fb0 fbnet0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fb0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-09",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 0,
+        "gmin": 1e-11,
+        "mode": "closed"
+      },
+      "capacitance_f": 0,
+      "gmin": 1e-11,
+      "mode": "closed",
+      "operating_point": {
+        "out": [
+          0.0004893442827282592
+        ],
+        "vp#branch": [
+          -0.005348626890277426
+        ],
+        "vn#branch": [
+          0.0053333334651277774
+        ],
+        "drive0": [
+          -0.038214895725765925
+        ],
+        "sense0": [
+          0.0004927085246682731
+        ],
+        "fbnet0": [
+          0.0004927085246732002
+        ]
+      },
+      "gain_at_10hz": 0.9931728100497301,
+      "peak_db": 0.821569761958823,
+      "gain_at_20khz": 0.9931763326440678,
+      "phase_at_20khz_deg": -0.021928307471022892,
+      "peak_frequency_hz": 8317637.7110273745,
+      "branch_20khz_a_per_v": [
+        [
+          0.03103675812405853,
+          -1.187842479954971e-05
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-11 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fbnet0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 0,
+        "gmin": 1e-11,
+        "mode": "loop"
+      },
+      "capacitance_f": 0,
+      "gmin": 1e-11,
+      "mode": "loop",
+      "operating_point": {
+        "out": [
+          0.0004886352499759045
+        ],
+        "vp#branch": [
+          -0.005348670425784938
+        ],
+        "vn#branch": [
+          0.0053333334645128214
+        ],
+        "drive0": [
+          -0.2056198113406261
+        ],
+        "sense0": [
+          0.0004919946173195964
+        ],
+        "fbnet0": [
+          0.0004919946173195964
+        ]
+      },
+      "gain_at_10hz": 4972421.834791745,
+      "peak_db": 133.93135929702373,
+      "gain_at_20khz": 2510.3863460552175,
+      "phase_at_20khz_deg": -90.53003000902133,
+      "peak_frequency_hz": 10.0,
+      "branch_20khz_a_per_v": [
+        [
+          -0.031036732661581433,
+          1.2362845692287976e-05
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [
+        {
+          "frequency_hz": 18734428.429958034,
+          "phase_margin_deg": 59.85779815565066
+        }
+      ],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-11 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 0",
+        "Vtest0 fb0 fbnet0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fb0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-10,
+        "gmin": 1e-11,
+        "mode": "closed"
+      },
+      "capacitance_f": 1e-10,
+      "gmin": 1e-11,
+      "mode": "closed",
+      "operating_point": {
+        "out": [
+          0.0004893437491000167
+        ],
+        "vp#branch": [
+          -0.0053486268638608045
+        ],
+        "vn#branch": [
+          0.005333333465127451
+        ],
+        "drive0": [
+          -0.03829658554581853
+        ],
+        "sense0": [
+          0.0004927079864101764
+        ],
+        "fbnet0": [
+          0.0004927079864151035
+        ]
+      },
+      "gain_at_10hz": 0.9931728100497391,
+      "peak_db": 0.9141298446813152,
+      "gain_at_20khz": 0.9931763497930228,
+      "phase_at_20khz_deg": -0.022085242853808293,
+      "peak_frequency_hz": 10000000.000000812,
+      "branch_20khz_a_per_v": [
+        [
+          0.031036763426697762,
+          4.87620642256354e-07
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-11 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fbnet0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-10",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-10,
+        "gmin": 1e-11,
+        "mode": "loop"
+      },
+      "capacitance_f": 1e-10,
+      "gmin": 1e-11,
+      "mode": "loop",
+      "operating_point": {
+        "out": [
+          0.000489346571688447
+        ],
+        "vp#branch": [
+          -0.00534862670424655
+        ],
+        "vn#branch": [
+          0.005333333465130161
+        ],
+        "drive0": [
+          -0.03761903529622394
+        ],
+        "sense0": [
+          0.0004927108283899008
+        ],
+        "fbnet0": [
+          0.0004927108283948279
+        ]
+      },
+      "gain_at_10hz": 4972421.842928174,
+      "peak_db": 133.93135931123655,
+      "gain_at_20khz": 2510.386525604245,
+      "phase_at_20khz_deg": -90.53251423783924,
+      "peak_frequency_hz": 10.0,
+      "branch_20khz_a_per_v": [
+        [
+          -0.03103673815723016,
+          -3.189608298815249e-09
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [
+        {
+          "frequency_hz": 19803780.29226624,
+          "phase_margin_deg": 55.26962361950068
+        }
+      ],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-11 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 0",
+        "Vtest0 fb0 fbnet0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fb0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-10",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-09,
+        "gmin": 1e-11,
+        "mode": "closed"
+      },
+      "capacitance_f": 1e-09,
+      "gmin": 1e-11,
+      "mode": "closed",
+      "operating_point": {
+        "out": [
+          0.0014878695113208504
+        ],
+        "vp#branch": [
+          -0.02282579054182546
+        ],
+        "vn#branch": [
+          0.0053333334655649555
+        ],
+        "drive0": [
+          0.06660913649489208
+        ],
+        "sense0": [
+          0.005293625667848201
+        ],
+        "fbnet0": [
+          0.005293625667901137
+        ]
+      },
+      "gain_at_10hz": 0.9931728100497733,
+      "peak_db": 15.464684526686543,
+      "gain_at_20khz": 0.9931765037201914,
+      "phase_at_20khz_deg": -0.023497619678641408,
+      "peak_frequency_hz": 21134890.398368277,
+      "branch_20khz_a_per_v": [
+        [
+          0.03103681419634063,
+          0.00011178207011756157
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-11 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fbnet0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-09",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    },
+    {
+      "case": {
+        "capacitance_f": 1e-09,
+        "gmin": 1e-11,
+        "mode": "loop"
+      },
+      "capacitance_f": 1e-09,
+      "gmin": 1e-11,
+      "mode": "loop",
+      "operating_point": {
+        "out": [
+          -0.05713320871938725
+        ],
+        "vp#branch": [
+          -0.019178056378653937
+        ],
+        "vn#branch": [
+          0.0053333334651782536
+        ],
+        "drive0": [
+          0.029321334916248325
+        ],
+        "sense0": [
+          -0.054125051264302504
+        ],
+        "fbnet0": [
+          -0.05412505126484375
+        ]
+      },
+      "gain_at_10hz": 4972419.908535304,
+      "peak_db": 133.93135593221385,
+      "gain_at_20khz": 2510.391003243799,
+      "phase_at_20khz_deg": -90.55486645893848,
+      "peak_frequency_hz": 10.0,
+      "branch_20khz_a_per_v": [
+        [
+          -0.031036790665020093,
+          -0.0001112975403506427
+        ]
+      ],
+      "imbalance_20khz_a_per_v": [
+        0.0
+      ],
+      "downward_crossings": [
+        {
+          "frequency_hz": 23082879.05374963,
+          "phase_margin_deg": -17.8054825186629
+        }
+      ],
+      "netlist": [
+        "OPA1656 BUF634A own-output unity cell: nominal investigation",
+        ".include \"opa1656/OPA1656.LIB\"",
+        ".include \"buf634a/buf634a_a.lib\"",
+        "Vp vp 0 12",
+        "Vn vn 0 -12",
+        ".options keepopinfo gmin=1e-11 rshunt=1e12 itl1=500",
+        "Vin inp 0 dc 0 ac 0",
+        "Vtest0 fb0 fbnet0 dc 0 ac 1",
+        "Vfeedback0 sense0 fbnet0 0",
+        "Xop0 inp fb0 vp vn drive0 OPA1656",
+        "Xbuf0 drive0 sense0 vp vn BUF634A",
+        "Vbranch0 sense0 branch0 0",
+        "Rb0 branch0 out 0.22",
+        "Rload out 0 32",
+        "Cl out 0 1e-09",
+        ".ac dec 200 10 1e9",
+        ".end"
+      ],
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "runtime_log": [
+        "stdout ** ngspice-46 shared library",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29",
+        "stdout ** ngspice-46 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** Creation Date: Apr 14 2026   05:15:29"
+      ]
+    }
+  ],
+  "matrix_results": [],
+  "path_normalization": "Only model include paths are relative; pass the separately obtained model root to the harness."
+}

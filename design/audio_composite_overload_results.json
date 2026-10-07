@@ -1,0 +1,69 @@
+{
+  "status": "UNKNOWN; HARDWARE HOLD",
+  "model_sha256": {
+    "opa1656/OPA1656.LIB": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055",
+    "buf634a/buf634a_a.lib": "63d75a17c849f6ac6fedf332a263505bff9a6b4d079237cfbe34d2ca4ba9a18a"
+  },
+  "library_sha256": "3238d82f02b6d08d8703a28ea894bcfdf59906dd4a59ad2e93eeec532a0454a3",
+  "code_model_sha256": {
+    "analog": "750e2e8eef53313799c962f3553b2798c2c2fedd1f41668448bb84686f105af4",
+    "spice2poly": "8859cbf806da2cf0b5a4ea6b26f14731872c75e7325082a5f3f72cfd5184427b",
+    "table": "f4b79c3c31a2609e5aee78d1676c1f865bf37dfb04b3d8a7422a1c12ac1ff860",
+    "xtradev": "f0f1f5ee6c4445d6134b08230e1b323adebe5ba758e7c5c4efce0f46a280f57c",
+    "xtraevt": "4e8c54573e21d5113c24de2f97b5ec6445e72ecd393a998a452dd4655bbc9a41",
+    "digital": "7f049b2c708b59b048087ed790a7d6b6e45e56aac65fd8edc5c63582899f32bd",
+    "tlines": "3cc2d42cb9b764dcf5219abf60f59ae5c9af0804b20a6202f5a91213e931490e"
+  },
+  "bias_method": "AC: retained op1 via keepopinfo; transient: initial waveform sample",
+  "cases": [
+    {
+      "case": {
+        "mode": "transient",
+        "capacitance_f": 4e-09,
+        "gmin": 1e-10,
+        "feedback_r_ohm": 1000,
+        "feedback_c_f": 4.7e-11,
+        "nodeset": true,
+        "branches": 4,
+        "load_ohm": 8,
+        "component_mismatch": true,
+        "amplitude_v": -11,
+        "delay_s": 5e-07,
+        "rise_s": 1e-06,
+        "width_s": 1e-06,
+        "fall_s": 1e-06,
+        "stop_s": 6e-06,
+        "max_step_s": 5e-09,
+        "method": "gear"
+      },
+      "error": "Worker exceeded 30-second limit",
+      "error_kind": "timeout",
+      "timeout_s": 30
+    },
+    {
+      "case": {
+        "mode": "transient",
+        "capacitance_f": 4e-09,
+        "gmin": 1e-10,
+        "feedback_r_ohm": 1000,
+        "feedback_c_f": 4.7e-11,
+        "nodeset": true,
+        "branches": 4,
+        "load_ohm": 8,
+        "component_mismatch": true,
+        "amplitude_v": 11,
+        "delay_s": 5e-07,
+        "rise_s": 1e-06,
+        "width_s": 1e-06,
+        "fall_s": 1e-06,
+        "stop_s": 6e-06,
+        "max_step_s": 5e-09,
+        "method": "gear"
+      },
+      "error": "Worker exceeded 30-second limit",
+      "error_kind": "timeout",
+      "timeout_s": 30
+    }
+  ],
+  "matrix_results": []
+}

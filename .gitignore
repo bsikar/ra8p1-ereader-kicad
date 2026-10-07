@@ -1,0 +1,16 @@
+# Machine-local KiCad state and recoverable editor history.
+*.kicad_prl
+*.lck
+*.bak
+*-backups/
+.history/
+.DS_Store
+fp-info-cache
+exports/.export-*/
+__pycache__/
+*.pyc
+
+# Simulation study: local environment, vendor models (not redistributed) and generated output.
+sim/.venv/
+sim/out/
+sim/models/
