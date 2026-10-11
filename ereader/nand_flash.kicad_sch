@@ -859,7 +859,7 @@
 (wire (pts (xy 88.9 160.02) (xy 124.46 160.02)) (stroke (width 0) (type default)) (uuid "beb18e69-f9ba-4735-adc6-c68cb17356a3"))
 (junction (at 88.9 140.97) (diameter 0) (color 0 0 0 0) (uuid "41d11ac9-54ae-4d67-9035-b7cbb4921d53"))
 (junction (at 88.9 160.02) (diameter 0) (color 0 0 0 0) (uuid "79c80f98-7cd3-45bb-8871-c64d52a7cb9c"))
-(text "C144/C145: U39 VCC8/GND4\nC146: U40 VCCA1/VCCY5/GND3" (at 88.9 163.83 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "ee8b98b7-3073-40c2-959c-74e379714763"))
+(text "C144/C145: U39 VCC8/GND4\nC146: U40 VCCA1/VCCY5/GND3" (at 139.7 163.83 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "ee8b98b7-3073-40c2-959c-74e379714763"))
 (text "256 MiB SLC NAND / dedicated SCI4_C / buffered MISO" (at 25.4 22.86 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "b0d8c3b3-7ef7-4906-a23c-a6179d2cff8e"))
 (text "Initial contract: mode0, <=10MHz, 45-55% SCK duty; -40..85C.\nSame +3V3_MCU rail for host, NAND and both buffer supplies.\nRead timing requires CL<=10pF at U40Y and <=5ns path/edge allowance.\nFirmware: CS high before output enable, CLK low, wait startup/busy; ECC8 + bad blocks + FTL.\nNo high-rate uncompressed playback or power-loss durability acceptance yet." (at 25.4 176.53 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "946d1293-8971-41cd-a284-774ee40d40c3"))
 (embedded_fonts no))
