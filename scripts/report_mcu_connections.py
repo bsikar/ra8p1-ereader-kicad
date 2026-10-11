@@ -100,7 +100,7 @@ def main():
             "[camera/storage interfaces](camera_storage_interfaces.md), and",
             "[audio platform](audio_platform_study.md). These records distinguish",
             "future reservations from saved native wiring. Re-run after CAD changes:", "",
-            "`python scripts/report_mcu_connections.py NETLIST.xml --output design/mcu_connection_audit.md`", "",
+            "`python scripts/report_mcu_connections.py NETLIST.xml --output exports/mcu_connection_audit.md`", "",
             "| Port | Ball | Cached type | Electrical state | Net | Other package pins | Documented reservation |",
             "| --- | --- | --- | --- | --- | --- | --- |", *rows, ""]
     args.output.write_text("\n".join(text), encoding="utf-8")

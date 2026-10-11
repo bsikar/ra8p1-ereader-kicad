@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read-only CMS-017/018 camera interface screens, not qualification.
 
-Sources, electrical assumptions and exclusions: design/camera_timing_budget.md.
+Sources, electrical assumptions and exclusions: tracker-record:redacted
 All rates are decimal MB/s; frame storage is binary MiB. No CAD files are read
 or written. Blanking, arbitration, refresh and processing add further demand.
 """

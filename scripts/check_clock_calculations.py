@@ -2,7 +2,7 @@
 """Verify CLK-001/002 arithmetic and exported BOM inputs without editing files.
 
 Run from any directory with Python 3. Uses exact rational arithmetic in pF
-and ohms. See design/clock_calculations.md for sources and model limitations.
+and ohms. See tracker-record:redacted for sources and model limitations.
 This is not a simulator or a hardware qualification test.
 """
 

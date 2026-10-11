@@ -56,10 +56,10 @@ parent-relative `CLAUDE.md` is not present in this standalone repository.
 
 ## Design references
 
-- [Hardware requirements](design/ereader_requirements.md)
+- [Hardware requirements](tracker-record:redacted)
 - [Library conventions](LIBRARY_STANDARDS.md)
 - [Imported parts inventory](PARTS-CHECKLIST.md)
-- [Hardware epic and section issues in YouTrack](tracker-record:RA8HW-1)
+- [Hardware epic and section issues in YouTrack](tracker-record:RA8HW-23)
 
 Use YouTrack for current hardware tasks, dependencies, status and review
 evidence. The owner migrated and closed the GitHub issues; older issue links
@@ -83,3 +83,7 @@ Both are wired in as submodules for context:
 Clone with `git clone --recurse-submodules`, or run
 `git submodule update --init --depth 1` in an existing clone. Both submodules
 are registered shallow; nothing in this repository builds against them.
+
+## Engineering records
+
+Full engineering Markdown sources are published individually in the [YouTrack KB index](tracker-record:redacted). [The migration manifest](exports/migration-manifest.json) records source commits, hashes, article URLs and attachment readback. Historical proposals keep their original status; preserved notes do not constitute new circuit qualification. Concise redirects retain frozen CAD/library references. Executable calculation data, legal records and files blocked by the server attachment size limit remain in Git.
