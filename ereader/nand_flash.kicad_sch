@@ -1,0 +1,865 @@
+(kicad_sch (version 20260306) (generator "eeschema") (generator_version "10.0") (uuid "b75639e2-03a3-42cb-951b-b07f622dcf47") (paper "A4") (title_block (title "RA8P1 - 256 MiB SLC NAND") (date "2026-10-11") (rev "0.4 DRAFT")) (lib_symbols (symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:VCC"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VCC"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VCC_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VCC_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Memory:W25N02KVZEIR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 3.81 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "W25N02KVZEIR"
+			(at 1.27 16.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "Winbond W25N02KVxxIR/U Rev G 2021-06-25, pp7-8,60-68,71"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Winbond 2Gbit / 256MiB SLC NAND, 8-bit ECC, 2.7-3.6V, -40..85C; SPI/Dual/Quad; WSON ZE. Schematic candidate; qualification pending."
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flash memory SPI"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "W25N02KVZEIR_0_0"
+			(pin input line
+				(at -10.16 5.08 0)
+				(length 3.81)
+				(name "~{CS}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 17.78 5.08 180)
+				(length 3.81)
+				(name "DO/IO_{1}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 17.78 0 180)
+				(length 3.81)
+				(name "~{WP}/IO_{2}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -12.7 90)
+				(length 3.81)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -10.16 0 0)
+				(length 3.81)
+				(name "DI/IO_{0}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 2.54 0)
+				(length 3.81)
+				(name "CLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 17.78 -2.54 180)
+				(length 3.81)
+				(name "~{HOLD}/IO_{3}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 12.7 270)
+				(length 3.81)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "W25N02KVZEIR_1_1"
+			(rectangle
+				(start -6.35 8.89)
+				(end 13.97 -8.89)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Memory:74AUP1T34GW" (pin_names (offset 0.508)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 15.24 0) (effects (font (size 1.27 1.27)) ))(property "Value" "74AUP1T34GW" (at 0 12.7 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AUP1T34.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Description" "Nexperia non-inverting Schmitt dual supply buffer; Rev10 GW pinout" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27)) ))(symbol "74AUP1T34GW_0_1" (rectangle (start -8.89 6.35) (end 8.89 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "74AUP1T34GW_1_1" (pin power_in line (at -2.54 10.16 270) (length 3.81) (name "VCCA" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin input line (at -12.7 0 0) (length 3.81) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 -10.16 90) (length 3.81) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin output line (at 12.7 0 180) (length 3.81) (name "Y" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin power_in line (at 2.54 10.16 270) (length 3.81) (name "VCCY" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) )))
+(symbol (lib_id "Memory:W25N02KVZEIR") (at 129.54 74.93 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "610e5022-eb50-4d1f-b1e1-60720a16a82f") (property "Reference" "U39" (at 129.54 46.99 0) (effects (font (size 1.27 1.27)) ))(property "Value" "W25N02KVZEIR" (at 129.54 49.53 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 129.54 74.93 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "Winbond W25N02KVxxIR/U RevG2021-06-25 pp7-8,60-68,71" (at 129.54 74.93 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "W25N02KVZEIR" (at 129.54 74.93 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Winbond" (at 129.54 74.93 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "256MiB mandatory SLC NAND;8-bit ECC; single-SPI SCI4_C; exact eight-pin RevG mapping; firmware ECC/FTL/power-loss testing open" (at 129.54 74.93 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 129.54 74.93 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "Winbond RevG exact ZEIR ordering source; prior prototype sourcing; recheck before purchase" (at 129.54 74.93 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "U39") (unit 1)))))
+(symbol (lib_id "Memory:74AUP1T34GW") (at 196.85 69.85 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d8b8d2ba-b01e-4aea-97ee-c33971c6c59d") (property "Reference" "U40" (at 196.85 41.91 0) (effects (font (size 1.27 1.27)) ))(property "Value" "74AUP1T34GW,125" (at 196.85 44.45 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 196.85 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AUP1T34.pdf" (at 196.85 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "74AUP1T34GW,125" (at 196.85 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Nexperia" (at 196.85 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "DO2.4V guaranteed high -> MCU0.8VCC; Schmitt buffer both supplies +3V3_MCU; -40..85C, output leakage<=20uA, CL<=10pF timing contract" (at 196.85 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 196.85 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey consulted2026-10-11;Active;12256stock; unreserved" (at 196.85 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "U40") (unit 1)))))
+(symbol (lib_id "power:VCC") (at 129.54 57.15 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "15cca136-e3e3-41e8-875a-99cc220ecee6") (property "Reference" "#PWR0901" (at 129.54 57.15 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "+3V3_MCU" (at 129.54 52.07 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 129.54 57.15 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 129.54 57.15 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0901") (unit 1)))))
+(wire (pts (xy 129.54 57.15) (xy 129.54 62.23)) (stroke (width 0) (type default)) (uuid "f9d97db0-3af8-4d3c-a322-524d0548997f"))
+(symbol (lib_id "power:GND") (at 129.54 92.71 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a0d4bfd8-e53a-42e3-b081-33d7669e65c8") (property "Reference" "#PWR0902" (at 129.54 92.71 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "GND" (at 129.54 97.79 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 129.54 92.71 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 129.54 92.71 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0902") (unit 1)))))
+(wire (pts (xy 129.54 87.63) (xy 129.54 92.71)) (stroke (width 0) (type default)) (uuid "c455ea57-f686-4c6f-aaca-40d4adea7070"))
+(wire (pts (xy 119.38 69.85) (xy 90.17 69.85)) (stroke (width 0) (type default)) (uuid "a0e0b53a-9a41-4dee-a861-ed39d96c1804"))
+(hierarchical_label "NAND_CS_N" (shape input) (at 90.17 69.85 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "62ee3cdc-5968-47c7-a6d2-2a6519402965"))
+(wire (pts (xy 119.38 72.39) (xy 106.68 72.39)) (stroke (width 0) (type default)) (uuid "38f0217c-882d-402e-bc5b-945a2b89f16e"))
+(label "NAND_CLK" (at 106.68 72.39 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "c16b2647-6ec6-493b-8710-73b7ecdaed26"))
+(wire (pts (xy 119.38 74.93) (xy 106.68 74.93)) (stroke (width 0) (type default)) (uuid "b37791ad-b626-48a6-b456-802c747d2084"))
+(label "NAND_DI" (at 106.68 74.93 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b392a1fb-b4ce-491d-a236-f66cac46e2e9"))
+(wire (pts (xy 147.32 74.93) (xy 161.29 74.93)) (stroke (width 0) (type default)) (uuid "c36c88e6-9b03-44d4-8cd9-77b174758425"))
+(label "NAND_WP_N" (at 161.29 74.93 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d047cdbe-5ee9-4338-a830-b2de393fc0b4"))
+(wire (pts (xy 147.32 77.47) (xy 161.29 77.47)) (stroke (width 0) (type default)) (uuid "8694d86f-6e38-40c2-b26f-a1039b9d2ba9"))
+(label "NAND_HOLD_N" (at 161.29 77.47 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "af31574e-6699-4b55-ba65-aa0c5ef821d0"))
+(wire (pts (xy 147.32 69.85) (xy 180.34 69.85)) (stroke (width 0) (type default)) (uuid "d9cc9844-890b-48a3-8516-ec18f829051c"))
+(wire (pts (xy 180.34 69.85) (xy 184.15 69.85)) (stroke (width 0) (type default)) (uuid "d21f293b-9226-4e88-b1b9-136307f078e2"))
+(junction (at 180.34 69.85) (diameter 0) (color 0 0 0 0) (uuid "1f02debf-46bf-4db5-a260-93fc4136b4f1"))
+(wire (pts (xy 180.34 69.85) (xy 180.34 83.82)) (stroke (width 0) (type default)) (uuid "fb548a57-b81a-4b9b-88cb-8d5aa197bb8e"))
+(symbol (lib_id "Device:R") (at 180.34 87.63 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a4095744-4720-4844-809b-f01ee8cd4e55") (property "Reference" "R133" (at 182.88 86.36 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "47k" (at 182.88 88.9 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 180.34 87.63 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 180.34 87.63 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060347K0FKEA" (at 180.34 87.63 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 180.34 87.63 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 180.34 87.63 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 180.34 87.63 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey page consulted2026-10-11;Active;82044stock; unreserved" (at 180.34 87.63 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R133") (unit 1)))))
+(symbol (lib_id "power:GND") (at 180.34 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6b99b13c-6aba-4d30-b32a-fceba074dd8a") (property "Reference" "#PWR0903" (at 180.34 91.44 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "GND" (at 180.34 96.52 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 180.34 91.44 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 180.34 91.44 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0903") (unit 1)))))
+(wire (pts (xy 209.55 69.85) (xy 214.63 69.85)) (stroke (width 0) (type default)) (uuid "e77ee5b7-5f64-402c-90fd-52321e569928"))
+(symbol (lib_id "Device:R") (at 218.44 69.85 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "307844d8-f8e3-4d37-af6f-6210d59f70b8") (property "Reference" "R128" (at 218.44 63.5 90) (effects (font (size 1.27 1.27)) ))(property "Value" "33" (at 218.44 66.04 90) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 218.44 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 218.44 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060333R0FKEA" (at 218.44 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 218.44 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 218.44 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 218.44 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey indexed listing consulted2026-10-11;158735stock, crawled4weeksold; recheck before purchase" (at 218.44 69.85 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R128") (unit 1)))))
+(wire (pts (xy 222.25 69.85) (xy 241.3 69.85)) (stroke (width 0) (type default)) (uuid "1fc95588-efb2-4f5e-83a3-dd9e41e7a124"))
+(hierarchical_label "NAND_MISO" (shape output) (at 241.3 69.85 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "268989b1-e7a6-4a2e-bc4b-d5eaf7d87886"))
+(wire (pts (xy 194.31 59.69) (xy 194.31 55.88)) (stroke (width 0) (type default)) (uuid "8c269c74-c48c-4dfd-a91a-7a9942ee371a"))
+(wire (pts (xy 199.39 59.69) (xy 199.39 55.88)) (stroke (width 0) (type default)) (uuid "91af4e2a-f64a-4546-88b8-58a443cea97d"))
+(wire (pts (xy 194.31 55.88) (xy 196.85 55.88)) (stroke (width 0) (type default)) (uuid "ff90e638-60a5-4461-95be-604006b7d934"))
+(wire (pts (xy 196.85 55.88) (xy 199.39 55.88)) (stroke (width 0) (type default)) (uuid "d9acfb8c-0379-422b-bad9-d269a7561f60"))
+(junction (at 196.85 55.88) (diameter 0) (color 0 0 0 0) (uuid "7d70b13e-26b2-4980-ac9e-49040d9b2cfc"))
+(symbol (lib_id "power:VCC") (at 196.85 55.88 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "09d396b9-2d24-4504-ad38-84c3dd99b6f9") (property "Reference" "#PWR0904" (at 196.85 55.88 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "+3V3_MCU" (at 196.85 50.8 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 196.85 55.88 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 196.85 55.88 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0904") (unit 1)))))
+(wire (pts (xy 196.85 80.01) (xy 196.85 85.09)) (stroke (width 0) (type default)) (uuid "a0216b0b-2d67-439a-9dca-aa744e1e10b1"))
+(symbol (lib_id "power:GND") (at 196.85 85.09 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "744ebb78-e165-495e-9bd2-b46ddbd5a4e1") (property "Reference" "#PWR0905" (at 196.85 85.09 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "GND" (at 196.85 90.17 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 196.85 85.09 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 196.85 85.09 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0905") (unit 1)))))
+(hierarchical_label "NAND_SCK" (shape input) (at 27.94 45.72 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "6a93439e-b6ca-46ef-a97c-dddfede13874"))
+(wire (pts (xy 27.94 45.72) (xy 41.91 45.72)) (stroke (width 0) (type default)) (uuid "5f1dc5c7-9500-42a3-b8aa-7d10d661c7b6"))
+(symbol (lib_id "Device:R") (at 45.72 45.72 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6963876d-2fe9-4386-be49-1a14229463b0") (property "Reference" "R126" (at 45.72 39.37 90) (effects (font (size 1.27 1.27)) ))(property "Value" "33" (at 45.72 41.91 90) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 45.72 45.72 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 45.72 45.72 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060333R0FKEA" (at 45.72 45.72 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 45.72 45.72 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 45.72 45.72 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 45.72 45.72 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey indexed listing consulted2026-10-11;158735stock, crawled4weeksold; recheck before purchase" (at 45.72 45.72 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R126") (unit 1)))))
+(wire (pts (xy 49.53 45.72) (xy 67.31 45.72)) (stroke (width 0) (type default)) (uuid "014f0bf3-2c41-4983-9574-4746cf274367"))
+(label "NAND_CLK" (at 67.31 45.72 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "13788bfd-775b-4bac-8186-98d0533cab39"))
+(hierarchical_label "NAND_MOSI" (shape input) (at 27.94 58.42 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "65aa34fa-db73-4351-95cb-4a9ac1516eed"))
+(wire (pts (xy 27.94 58.42) (xy 41.91 58.42)) (stroke (width 0) (type default)) (uuid "82fed612-ec30-4e78-993b-f0d98fe6e821"))
+(symbol (lib_id "Device:R") (at 45.72 58.42 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "17e2c4fe-4dc9-4f4b-a4b9-f54a75a06e58") (property "Reference" "R127" (at 45.72 52.07 90) (effects (font (size 1.27 1.27)) ))(property "Value" "33" (at 45.72 54.61 90) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 45.72 58.42 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 45.72 58.42 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060333R0FKEA" (at 45.72 58.42 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 45.72 58.42 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 45.72 58.42 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 45.72 58.42 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey indexed listing consulted2026-10-11;158735stock, crawled4weeksold; recheck before purchase" (at 45.72 58.42 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R127") (unit 1)))))
+(wire (pts (xy 49.53 58.42) (xy 67.31 58.42)) (stroke (width 0) (type default)) (uuid "ea17e765-77be-4596-9eef-40ddd8522129"))
+(label "NAND_DI" (at 67.31 58.42 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9f6e5967-71d2-480b-bae1-87a5f48468b3"))
+(symbol (lib_id "power:VCC") (at 43.18 109.22 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c1277b2d-b978-4402-87ca-838b54a71618") (property "Reference" "#PWR0906" (at 43.18 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "+3V3_MCU" (at 43.18 104.14 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 43.18 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 43.18 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0906") (unit 1)))))
+(symbol (lib_id "Device:R") (at 43.18 116.84 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "049b042d-1cdb-4f8c-9077-93968b99297a") (property "Reference" "R129" (at 45.72 115.57 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "10k" (at 45.72 118.11 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 43.18 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 43.18 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060310K0FKEA" (at 43.18 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 43.18 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 43.18 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 43.18 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey page consulted2026-10-11;Active;4174782stock; unreserved" (at 43.18 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R129") (unit 1)))))
+(wire (pts (xy 43.18 109.22) (xy 43.18 113.03)) (stroke (width 0) (type default)) (uuid "f9233adc-981c-4964-b56c-109d73c21361"))
+(wire (pts (xy 43.18 120.65) (xy 43.18 127.0)) (stroke (width 0) (type default)) (uuid "b78b5557-148b-4e9f-82b5-f424a8769d24"))
+(label "NAND_CS_N" (at 43.18 127.0 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d2808798-3946-4ba8-82fe-963f6d2feadd"))
+(symbol (lib_id "power:VCC") (at 83.82 109.22 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6697d4f5-ab5b-452b-9dc8-c4953efe4a2e") (property "Reference" "#PWR0907" (at 83.82 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "+3V3_MCU" (at 83.82 104.14 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 83.82 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 83.82 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0907") (unit 1)))))
+(symbol (lib_id "Device:R") (at 83.82 116.84 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8838ccbd-84c0-4aa3-95a1-6c59c2ba2342") (property "Reference" "R130" (at 86.36 115.57 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "10k" (at 86.36 118.11 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 83.82 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 83.82 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060310K0FKEA" (at 83.82 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 83.82 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 83.82 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 83.82 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey page consulted2026-10-11;Active;4174782stock; unreserved" (at 83.82 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R130") (unit 1)))))
+(wire (pts (xy 83.82 109.22) (xy 83.82 113.03)) (stroke (width 0) (type default)) (uuid "d80fb6e9-cf86-426e-95ad-3104388954bf"))
+(wire (pts (xy 83.82 120.65) (xy 83.82 127.0)) (stroke (width 0) (type default)) (uuid "a4eb0731-e407-4023-aa91-e226c30e18ea"))
+(label "NAND_WP_N" (at 83.82 127.0 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f302852a-8ace-4817-9aa9-a8c74e759362"))
+(symbol (lib_id "power:VCC") (at 124.46 109.22 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6f5911d0-2043-4b58-8f68-8c2916a8ff56") (property "Reference" "#PWR0908" (at 124.46 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "+3V3_MCU" (at 124.46 104.14 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 124.46 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 124.46 109.22 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0908") (unit 1)))))
+(symbol (lib_id "Device:R") (at 124.46 116.84 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "77132ccb-0c4c-4d4d-bbc4-243ad7213c01") (property "Reference" "R131" (at 127.0 115.57 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "10k" (at 127.0 118.11 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 124.46 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 124.46 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060310K0FKEA" (at 124.46 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 124.46 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 124.46 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 124.46 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey page consulted2026-10-11;Active;4174782stock; unreserved" (at 124.46 116.84 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R131") (unit 1)))))
+(wire (pts (xy 124.46 109.22) (xy 124.46 113.03)) (stroke (width 0) (type default)) (uuid "9e254c96-e129-45c1-a7a4-d49e51e3d643"))
+(wire (pts (xy 124.46 120.65) (xy 124.46 127.0)) (stroke (width 0) (type default)) (uuid "251c1469-d619-4698-aef5-60c182f2840c"))
+(label "NAND_HOLD_N" (at 124.46 127.0 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e57a42e2-d60d-4195-bb7d-eaaffb89a523"))
+(symbol (lib_id "Device:R") (at 43.18 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "47f57fa8-8ff5-428e-8d06-2dc13d704ed8") (property "Reference" "R132" (at 45.72 149.86 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "47k" (at 45.72 152.4 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 43.18 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf" (at 43.18 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "CRCW060347K0FKEA" (at 43.18 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "Vishay" (at 43.18 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND single-SPI;1%,100ppm/K, conservative1.75% resistance corner over -40..85C including initial tolerance/TCR" (at 43.18 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 43.18 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey page consulted2026-10-11;Active;82044stock; unreserved" (at 43.18 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "R132") (unit 1)))))
+(wire (pts (xy 43.18 140.97) (xy 43.18 147.32)) (stroke (width 0) (type default)) (uuid "4aab2574-d169-490c-9442-c123ab03e37e"))
+(label "NAND_CLK" (at 43.18 140.97 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "dde8ddbe-5802-4272-b4b5-e86d594261bb"))
+(symbol (lib_id "power:GND") (at 43.18 154.94 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6b13d635-fde7-41ea-b6fd-2e45e9302762") (property "Reference" "#PWR0909" (at 43.18 154.94 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "GND" (at 43.18 160.02 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 43.18 154.94 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 43.18 154.94 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0909") (unit 1)))))
+(symbol (lib_id "power:VCC") (at 88.9 140.97 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a5296a85-8638-4d93-bf54-0571a127c178") (property "Reference" "#PWR0910" (at 88.9 140.97 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "+3V3_MCU" (at 88.9 135.89 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 88.9 140.97 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 88.9 140.97 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0910") (unit 1)))))
+(symbol (lib_id "Device:C") (at 88.9 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "dffc7a87-3c7d-4893-b9b4-cecfd4d9aca9") (property "Reference" "C144" (at 91.44 149.86 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "100n" (at 91.44 152.4 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 88.9 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU" (at 88.9 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "C0603C104K5RACTU" (at 88.9 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "KEMET" (at 88.9 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND local bypass; X7R10%; nominal capacity only, DC-bias/PDN waveform qualification remains open" (at 88.9 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 88.9 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey indexed listing consulted2026-10-11;Active;6477405stock, crawledlastmonth; recheck before purchase" (at 88.9 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "C144") (unit 1)))))
+(wire (pts (xy 88.9 140.97) (xy 88.9 147.32)) (stroke (width 0) (type default)) (uuid "776881a1-dd20-4570-ae1b-28071d0874da"))
+(wire (pts (xy 88.9 154.94) (xy 88.9 160.02)) (stroke (width 0) (type default)) (uuid "8c29e404-a989-42e8-9cc5-4312e50f3e3a"))
+(symbol (lib_id "power:GND") (at 88.9 160.02 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0f4532e0-bf81-4d6c-8e8e-82d4c795bbff") (property "Reference" "#PWR0911" (at 88.9 160.02 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "GND" (at 88.9 165.1 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 88.9 160.02 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 88.9 160.02 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0911") (unit 1)))))
+(symbol (lib_id "Device:C") (at 124.46 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fc251021-0a57-409d-8d65-be7db6ff08c0") (property "Reference" "C145" (at 127.0 149.86 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "1u" (at 127.0 152.4 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 124.46 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0603C105K8RACTU" (at 124.46 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "C0603C105K8RACTU" (at 124.46 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "KEMET" (at 124.46 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND local bypass; X7R10%; nominal capacity only, DC-bias/PDN waveform qualification remains open" (at 124.46 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 124.46 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey indexed listing consulted2026-10-11;Active;687805stock, crawledlastmonth; recheck before purchase" (at 124.46 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "C145") (unit 1)))))
+(wire (pts (xy 124.46 140.97) (xy 124.46 147.32)) (stroke (width 0) (type default)) (uuid "2f5784f6-84ce-425f-978a-fae3709699df"))
+(wire (pts (xy 124.46 154.94) (xy 124.46 160.02)) (stroke (width 0) (type default)) (uuid "3f8bed96-6d75-4eae-85fb-459c8d00be62"))
+(symbol (lib_id "power:VCC") (at 210.82 140.97 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "dc5adf2f-3929-4dd5-8e68-caf37655ec8a") (property "Reference" "#PWR0912" (at 210.82 140.97 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "+3V3_MCU" (at 210.82 135.89 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 210.82 140.97 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 210.82 140.97 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0912") (unit 1)))))
+(symbol (lib_id "Device:C") (at 210.82 151.13 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "dd357eee-1544-403a-aad8-b72a8a0d639b") (property "Reference" "C146" (at 213.36 149.86 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Value" "100n" (at 213.36 152.4 0) (effects (font (size 1.27 1.27)) (justify left)))(property "Footprint" "" (at 210.82 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0603C104K5RACTU" (at 210.82 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Part_Number" "C0603C104K5RACTU" (at 210.82 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Manufacturer_Name" "KEMET" (at 210.82 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Selection_Basis" "NAND local bypass; X7R10%; nominal capacity only, DC-bias/PDN waveform qualification remains open" (at 210.82 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Procurement_Status" "Source-selected schematic candidate; no purchase; physical qualification open" (at 210.82 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Sourcing_Snapshot" "DigiKey indexed listing consulted2026-10-11;Active;6477405stock, crawledlastmonth; recheck before purchase" (at 210.82 151.13 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "C146") (unit 1)))))
+(wire (pts (xy 210.82 140.97) (xy 210.82 147.32)) (stroke (width 0) (type default)) (uuid "9633f49a-6597-4f35-991f-0087236dfd92"))
+(wire (pts (xy 210.82 154.94) (xy 210.82 160.02)) (stroke (width 0) (type default)) (uuid "22fe79d5-1609-464c-9fcb-7d2c0de87cc5"))
+(symbol (lib_id "power:GND") (at 210.82 160.02 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bb5d1f8f-2486-4ac6-90b5-1904e05f3e6d") (property "Reference" "#PWR0913" (at 210.82 160.02 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Value" "GND" (at 210.82 165.1 0) (effects (font (size 1.27 1.27)) ))(property "Footprint" "" (at 210.82 160.02 0) (hide yes) (effects (font (size 1.27 1.27)) ))(property "Datasheet" "" (at 210.82 160.02 0) (hide yes) (effects (font (size 1.27 1.27)) ))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2" (reference "#PWR0913") (unit 1)))))
+(wire (pts (xy 88.9 140.97) (xy 124.46 140.97)) (stroke (width 0) (type default)) (uuid "745dbf86-8e61-4831-ad87-8816a2a0755c"))
+(wire (pts (xy 88.9 160.02) (xy 124.46 160.02)) (stroke (width 0) (type default)) (uuid "beb18e69-f9ba-4735-adc6-c68cb17356a3"))
+(junction (at 88.9 140.97) (diameter 0) (color 0 0 0 0) (uuid "41d11ac9-54ae-4d67-9035-b7cbb4921d53"))
+(junction (at 88.9 160.02) (diameter 0) (color 0 0 0 0) (uuid "79c80f98-7cd3-45bb-8871-c64d52a7cb9c"))
+(text "C144/C145: U39 VCC8/GND4\nC146: U40 VCCA1/VCCY5/GND3" (at 88.9 163.83 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "ee8b98b7-3073-40c2-959c-74e379714763"))
+(text "256 MiB SLC NAND / dedicated SCI4_C / buffered MISO" (at 25.4 22.86 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "b0d8c3b3-7ef7-4906-a23c-a6179d2cff8e"))
+(text "Initial contract: mode0, <=10MHz, 45-55% SCK duty; -40..85C.\nSame +3V3_MCU rail for host, NAND and both buffer supplies.\nRead timing requires CL<=10pF at U40Y and <=5ns path/edge allowance.\nFirmware: CS high before output enable, CLK low, wait startup/busy; ECC8 + bad blocks + FTL.\nNo high-rate uncompressed playback or power-loss durability acceptance yet." (at 25.4 176.53 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "946d1293-8971-41cd-a284-774ee40d40c3"))
+(embedded_fonts no))

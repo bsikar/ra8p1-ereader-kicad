@@ -21241,4 +21241,13 @@
 		)
 	)
 	(wire (pts (xy 167.64 121.92) (xy 172.72 121.92)) (stroke (width 0) (type default)) (uuid "075d6eaa-bff6-47a3-af35-5b96a45f3688"))
+
+(wire (pts (xy 360.68 83.82) (xy 382.27 83.82)) (stroke (width 0) (type default)) (uuid "b208819e-089e-420b-a20a-c941f03caf34"))
+(hierarchical_label "NAND_SCK" (shape output) (at 382.27 83.82 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f2d135f1-83c2-47a5-a6cb-61d90dcf5bcd"))
+(wire (pts (xy 330.2 81.28) (xy 308.61 81.28)) (stroke (width 0) (type default)) (uuid "b57e0193-5b2b-40b1-a55e-3d1a977db1cb"))
+(hierarchical_label "NAND_CS_N" (shape output) (at 308.61 81.28 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "262274ae-82b1-40d3-b5ea-67d136cf49f5"))
+(wire (pts (xy 71.12 157.48) (xy 88.9 157.48)) (stroke (width 0) (type default)) (uuid "8c89114a-90d4-4a61-9b50-7b0bf9a0d9c6"))
+(hierarchical_label "NAND_MOSI" (shape output) (at 88.9 157.48 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6ec85c0c-0589-47d2-a5c5-4245673a8139"))
+(wire (pts (xy 71.12 160.02) (xy 88.9 160.02)) (stroke (width 0) (type default)) (uuid "a81cabe6-fee0-48a9-b157-1792c3fda52b"))
+(hierarchical_label "NAND_MISO" (shape input) (at 88.9 160.02 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "68238af8-72e8-4dea-ae2c-bad7b31f3e20"))
 )
