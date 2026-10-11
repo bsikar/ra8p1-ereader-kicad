@@ -1,0 +1,427 @@
+{
+  "date": "2026-10-11",
+  "kicad_version": "10.0.6",
+  "scope": "Schematic appearance cleanup; connectivity and component metadata preserved.",
+  "reviewed_sheets": 15,
+  "changed_sheets": [
+    "audio_headphones.kicad_sch",
+    "camera.kicad_sch",
+    "ereader_rev1.kicad_sch",
+    "main_3v3_supply.kicad_sch",
+    "mcu_clocks_debug.kicad_sch",
+    "mcu_interfaces.kicad_sch",
+    "microsd.kicad_sch",
+    "orientation_sensor.kicad_sch",
+    "power_button.kicad_sch",
+    "radio_esp32.kicad_sch"
+  ],
+  "components": 343,
+  "nets": 372,
+  "identical_component_pin_groups": true,
+  "identical_native_component_properties": true,
+  "identical_raw_symbol_properties": true,
+  "identical_no_connect_markers": true,
+  "no_connect_count": 26,
+  "erc": {
+    "before_errors": 99,
+    "after_errors": 99,
+    "before_warnings": 16,
+    "after_warnings": 16,
+    "ignored_checks_unchanged": true,
+    "by_type": {
+      "pin_not_connected": 90,
+      "isolated_pin_label": 15,
+      "pin_not_driven": 4,
+      "power_pin_not_driven": 5,
+      "multiple_net_names": 1
+    }
+  },
+  "parent_net_alias_changes": [
+    [
+      "/Power button and source control/POWER_BUTTON_N",
+      "/POWER_BUTTON_N"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_HANDSHAKE",
+      "/RADIO_HANDSHAKE"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_RESET_REQ_N",
+      "/RADIO_RESET_REQ_N"
+    ],
+    [
+      "/Power button and source control/POWER_KILL_N",
+      "/POWER_KILL_N"
+    ],
+    [
+      "/Page and volume buttons/PAGE_PREV_N",
+      "/PAGE_PREV_N"
+    ],
+    [
+      "/Page and volume buttons/VOL_DOWN_N",
+      "/VOL_DOWN_N"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_CIPO",
+      "/RADIO_CIPO"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_SCLK",
+      "/RADIO_SCLK"
+    ],
+    [
+      "/Page and volume buttons/PAGE_NEXT_N",
+      "/PAGE_NEXT_N"
+    ],
+    [
+      "/Main 3V3 digital supply/RUN_U13",
+      "/MAIN_RUN_PERMIT"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_CS_N",
+      "/RADIO_CS_N"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_COPI",
+      "/RADIO_COPI"
+    ],
+    [
+      "/Page and volume buttons/VOL_UP_N",
+      "/VOL_UP_N"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_DATA_READY",
+      "/RADIO_DATA_READY"
+    ],
+    [
+      "/ESP32-C6 radio/RADIO_PWR_EN",
+      "/RADIO_PWR_EN"
+    ]
+  ],
+  "bom_fidelity": "PASS: 339 references, 19 columns, 4 exclusions",
+  "clock_calculations": "PASS: CLK-001 and CLK-002",
+  "pdf_pages_inspected": 15,
+  "source_hashes": {
+    "audio_headphones.kicad_sch": {
+      "before_sha256": "880362609be9ff80c6205e7d72966016981876e39caf76859c1167abb554a539",
+      "after_sha256": "239001311e71e6773e9b1010fa72c7216b905e80c597806d7452b9448cd64721"
+    },
+    "camera.kicad_sch": {
+      "before_sha256": "1d72d47abe9cfc89f96e49f115f89b8c35ea92d3eebd86c6bbd4c0ec4e369803",
+      "after_sha256": "e27d047dc62be5652e83327d526f8f80bc959c576459a0867fb87e4a61cc16dd"
+    },
+    "ereader_rev1.kicad_sch": {
+      "before_sha256": "afafe955522edb55b557960beeee2bad7394c9529cb1abfb3b6343d79ad59dbd",
+      "after_sha256": "2b998fe7e372e0ae5647181a378f013ceae30135b3a2030d48d10aeb0f2e9492"
+    },
+    "main_3v3_supply.kicad_sch": {
+      "before_sha256": "5c397af01a3cdbfe04e1ac128ada88e7eb88516c42729bc5f6d7b5507b43b656",
+      "after_sha256": "1e7c558a822b2c24aceccdf15077b3da74cac13362821354f64b88eda420e424"
+    },
+    "mcu_clocks_debug.kicad_sch": {
+      "before_sha256": "ab9a256485471d2e1355d5f225558f86fb60535b6c324b385477d58e4bf3a060",
+      "after_sha256": "b861e8ea7f963af1faad13eb28805caf722dfe4820291763466fe19d70bfa840"
+    },
+    "mcu_core_power.kicad_sch": {
+      "before_sha256": "f47db2bfe646e401b23d629a61f3aa1a4d31986756d7c82c07ea71fd2acb680b",
+      "after_sha256": "e70abfa7c5c32fd85f553831119aa7e427e6e39ae18c77536379269bda1ca72b"
+    },
+    "mcu_interfaces.kicad_sch": {
+      "before_sha256": "abfd336e3506b40ad5ca2dd6f20edfd5882418f963df6d8ae209d3551e2ed414",
+      "after_sha256": "58a0722888c4ac9903323449197a345ab31eddbbfa026855d1402b72f3930a32"
+    },
+    "mcu_supply_power.kicad_sch": {
+      "before_sha256": "56d7addebd482fc5ddffa5223d4feb7c0c9bbf6a0d0ccc3bd5f8aa79ecdc3730",
+      "after_sha256": "1d1f8987b5aa6e41f8638257fb5e17f259e1bb7576e3c9e305df349fd6300592"
+    },
+    "microsd.kicad_sch": {
+      "before_sha256": "0bd15195d02c01bb10573e1e697fb3cff7785328978342e30645ac04ecaee2e0",
+      "after_sha256": "81e3dabef26e9ad80a0467d920432f9d3ea44299951931f7e215bf04939dff40"
+    },
+    "nor_flash.kicad_sch": {
+      "before_sha256": "228d508495201cf1643ff3a3a1cd75192d2426c8f835eabdd66efa91502851ee",
+      "after_sha256": "17dc1263b01e78eb589924d84a320c529707e3d6407fb5915c0abef1968bcbf8"
+    },
+    "orientation_sensor.kicad_sch": {
+      "before_sha256": "783d56fc9ba1574b9ed5ecc70461d60227577abe6a93485d3b2b64d10841d554",
+      "after_sha256": "886847314b9ae19cf52489d39d2b4712255ef5cba60a44a0d5181449f74587b1"
+    },
+    "power_button.kicad_sch": {
+      "before_sha256": "1e99d5397636a76bfa2d812764b895f4823e98ede35580757f20775152e98fa4",
+      "after_sha256": "acdb16f43b6de38fb89e5b02f6781fce7f07fc04620054ff0328bd30ecb1ffc1"
+    },
+    "radio_esp32.kicad_sch": {
+      "before_sha256": "7662824c2dbd7cadce4f9f0bbda504bfb3ec0c3dab3bea824b4b32c028f65b45",
+      "after_sha256": "786004dc2ab1620ef3662e916a3ef94cf5fb340144c42cf465236b90e7492020"
+    },
+    "sdram.kicad_sch": {
+      "before_sha256": "0100c2de7a59147c82048fd4f2266f3ed17c73ee9c2dae82a461231c542e5bbb",
+      "after_sha256": "ad65b9f493064ec722a2038f186c6db976cb9d8e21e324b90db5251128059b7a"
+    },
+    "user_controls.kicad_sch": {
+      "before_sha256": "8912ce9f877b110dd5884bbb06c1daa2c642874a327827a08fb1c4810c725616",
+      "after_sha256": "26584568fd5ce35b6a4455b78dff4507ea14768fea0a3fddafb74b41c5308a86"
+    }
+  },
+  "sheet_port_followup": {
+    "corrected_labels": [
+      "SENS_INT1",
+      "SENS_SCL",
+      "SENS_SDA",
+      "AUDIO_AUX_PG",
+      "AUDIO_AUX_REQ"
+    ],
+    "all_root_sheet_ports_reviewed": true,
+    "audio_ports_repositioned_to_clear_adjacent_sheet": true,
+    "nets": 372,
+    "identical_pin_groups": true,
+    "identical_net_names": true,
+    "identical_component_properties": true,
+    "erc_violations_before": 115,
+    "erc_violations_after": 115,
+    "root_sha256": "4bd44b986ae4a36d1dfcd80c4309b428d14481c7b19f44b5f789ad62763378b8"
+  },
+  "label_font_followup": {
+    "signal_labels_and_sheet_ports_mm": 1.27,
+    "mils": 50,
+    "normalized_signal_labels": 36,
+    "all_15_sheets_audited": true,
+    "pin_groups_and_net_names_unchanged": true,
+    "erc_findings": 115,
+    "normalized_component_reference_fields": 2,
+    "current_source_hashes": {
+      "audio_headphones.kicad_sch": "239001311e71e6773e9b1010fa72c7216b905e80c597806d7452b9448cd64721",
+      "camera.kicad_sch": "e27d047dc62be5652e83327d526f8f80bc959c576459a0867fb87e4a61cc16dd",
+      "ereader_rev1.kicad_sch": "2b998fe7e372e0ae5647181a378f013ceae30135b3a2030d48d10aeb0f2e9492",
+      "main_3v3_supply.kicad_sch": "1e7c558a822b2c24aceccdf15077b3da74cac13362821354f64b88eda420e424",
+      "mcu_clocks_debug.kicad_sch": "b861e8ea7f963af1faad13eb28805caf722dfe4820291763466fe19d70bfa840",
+      "mcu_core_power.kicad_sch": "e70abfa7c5c32fd85f553831119aa7e427e6e39ae18c77536379269bda1ca72b",
+      "mcu_interfaces.kicad_sch": "58a0722888c4ac9903323449197a345ab31eddbbfa026855d1402b72f3930a32",
+      "mcu_supply_power.kicad_sch": "1d1f8987b5aa6e41f8638257fb5e17f259e1bb7576e3c9e305df349fd6300592",
+      "microsd.kicad_sch": "81e3dabef26e9ad80a0467d920432f9d3ea44299951931f7e215bf04939dff40",
+      "nor_flash.kicad_sch": "17dc1263b01e78eb589924d84a320c529707e3d6407fb5915c0abef1968bcbf8",
+      "orientation_sensor.kicad_sch": "712005ea602515ebbc5d941df6d615104a6216d0b9f11e41fd6c5d02094547f2",
+      "power_button.kicad_sch": "acdb16f43b6de38fb89e5b02f6781fce7f07fc04620054ff0328bd30ecb1ffc1",
+      "radio_esp32.kicad_sch": "786004dc2ab1620ef3662e916a3ef94cf5fb340144c42cf465236b90e7492020",
+      "sdram.kicad_sch": "ad65b9f493064ec722a2038f186c6db976cb9d8e21e324b90db5251128059b7a",
+      "user_controls.kicad_sch": "26584568fd5ce35b6a4455b78dff4507ea14768fea0a3fddafb74b41c5308a86"
+    }
+  },
+  "capacitor_layout_followup": {
+    "isolated_capacitor_blocks": 24,
+    "changed_sheets": [
+      "audio_headphones.kicad_sch",
+      "camera.kicad_sch",
+      "main_3v3_supply.kicad_sch",
+      "mcu_clocks_debug.kicad_sch",
+      "mcu_interfaces.kicad_sch",
+      "microsd.kicad_sch",
+      "orientation_sensor.kicad_sch",
+      "power_button.kicad_sch",
+      "radio_esp32.kicad_sch"
+    ],
+    "power_leads": "compact symbols directly at capacitor terminals",
+    "reference_and_value_offsets_mm": [
+      2.54,
+      -1.27,
+      1.27
+    ],
+    "identical_net_names_and_pin_groups": true,
+    "identical_component_properties": true,
+    "erc_findings": 115,
+    "source_hashes": {
+      "audio_headphones.kicad_sch": "2a468dbff8aa7867984d64c8b8b0bd3269e919b7e1fb74e431af17812ae17bcf",
+      "camera.kicad_sch": "a51b96825c4bbec535b34d3fe439020519d4b4a533392bce31dbbebeb6f82833",
+      "ereader_rev1.kicad_sch": "2b998fe7e372e0ae5647181a378f013ceae30135b3a2030d48d10aeb0f2e9492",
+      "main_3v3_supply.kicad_sch": "0158c6721611b261fdc03079554dd721e0289d0eae28d43917e807fff804eae4",
+      "mcu_clocks_debug.kicad_sch": "1565933ca42f67a7d476fbc4ec1272f194b5c069cd463459676f31ec275072aa",
+      "mcu_core_power.kicad_sch": "f47db2bfe646e401b23d629a61f3aa1a4d31986756d7c82c07ea71fd2acb680b",
+      "mcu_interfaces.kicad_sch": "8acf60556bfead9367539b899eed5ef0f4c8bdb14330380b4c0ac2c4a632a8a9",
+      "mcu_supply_power.kicad_sch": "56d7addebd482fc5ddffa5223d4feb7c0c9bbf6a0d0ccc3bd5f8aa79ecdc3730",
+      "microsd.kicad_sch": "df4668f49150782e35f64b15a16cd1728e7d450a4cfc077c3517c04886be1d4e",
+      "nor_flash.kicad_sch": "228d508495201cf1643ff3a3a1cd75192d2426c8f835eabdd66efa91502851ee",
+      "orientation_sensor.kicad_sch": "ff0373f3522dd6bbe446754a0778cd7a7d58bfbb7f1e1d39d0b646fc46843fd4",
+      "power_button.kicad_sch": "723edb702c5e859878def7a54a02a1c7e9ecec090230ef082bd0900fde483fd9",
+      "radio_esp32.kicad_sch": "214ffcaccc86e40ee50889b163342fd3ba5d82d4223ea04bd91d4e9202627186",
+      "sdram.kicad_sch": "0100c2de7a59147c82048fd4f2266f3ed17c73ee9c2dae82a461231c542e5bbb",
+      "user_controls.kicad_sch": "8912ce9f877b110dd5884bbb06c1daa2c642874a327827a08fb1c4810c725616"
+    }
+  },
+  "mcu_label_alignment_followup": {
+    "aligned_labels": 56,
+    "wire_stub_mm": 5.08,
+    "pin_groups_and_net_names_unchanged": true,
+    "component_properties_unchanged": true,
+    "erc_findings": 115,
+    "source_sha256": "6de6cd13f8e0dece0528c0d4265c16fdfcaf628e85c6d1f1d15b343b0b4fc837"
+  },
+  "core_regulator_layout_followup": {
+    "L1_moved_mm": [
+      193.04,
+      132.08
+    ],
+    "C9_moved_mm": [
+      254,
+      177.8,
+      152.4,
+      165.1
+    ],
+    "connections_and_net_names_unchanged": true,
+    "component_properties_unchanged": true,
+    "erc_findings": 115,
+    "source_sha256": "5641aa893643baaeb38709a884edac4652839997f170e18a0f73299782d54fff"
+  },
+  "full_visual_audit": {
+    "date": "2026-10-11",
+    "scope": "Full schematic visual/layout audit of all 15 sheets; preserves electrical design.",
+    "confidence": "High for native connectivity comparison and rendered findings; no new electrical design qualification performed.",
+    "categories": [
+      "wire detours and excessive length",
+      "label column alignment and orientation",
+      "sheet port inside/outside text",
+      "component field and power text clearance",
+      "capacitor grouping and spacing",
+      "junction clarity",
+      "annotation clearance"
+    ],
+    "sheet_count": 15,
+    "label_positions_changed": 184,
+    "sheet_audit": [
+      {
+        "page": 1,
+        "file": "ereader_rev1.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Moved audio port pair to an open bottom edge; corrected inside/outside text justification; reviewed every sheet boundary.",
+        "label_positions_changed": 2,
+        "source_sha256": "6b09ebfb56be2dcd1038876b16fec9e4439cc4700bb060d5ca39ed63105104a2"
+      },
+      {
+        "page": 2,
+        "file": "mcu_interfaces.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned remaining direct IC signal labels; reviewed buses, USB/MIPI return routes, and capacitor trio.",
+        "label_positions_changed": 55,
+        "source_sha256": "153fa2d4b8a6ae7c21d3482e4fe47ada14b10ea5203c14444f3c94cfb6f00163"
+      },
+      {
+        "page": 3,
+        "file": "mcu_core_power.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Compacted two capacitor banks with captions; reviewed internal buck and bulk capacitor returns.",
+        "label_positions_changed": 0,
+        "source_sha256": "6824042bca248a5c656728ddf14f299b43633c3979d4eae2b9a222982b6e0610"
+      },
+      {
+        "page": 4,
+        "file": "mcu_supply_power.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Compacted four capacitor banks; reviewed analog supplies, LDO, and annotation spacing.",
+        "label_positions_changed": 0,
+        "source_sha256": "807587a4b2c8d940d55d4f683b28b83a980d35e72af7c970f6e603a73eb0b6d4"
+      },
+      {
+        "page": 5,
+        "file": "mcu_clocks_debug.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned signal labels and removed duplicate reset alias; reviewed connector, crystal pairs, reset switches and supervisor.",
+        "label_positions_changed": 12,
+        "source_sha256": "3cc17eee300986e7be667ddfed4fee4f5769ff6d99c5067094d4c1b2b68b3370"
+      },
+      {
+        "page": 6,
+        "file": "radio_esp32.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Replaced U30 input ground detour with local symbol; removed duplicate U28 RADIO_PWR_EN alias; aligned direct IC labels; reviewed all radio/service blocks.",
+        "label_positions_changed": 34,
+        "source_sha256": "c141ea90d9486b127961f18890b7cc0bff08495b0645addc5f212392b2387695"
+      },
+      {
+        "page": 7,
+        "file": "power_button.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned signal labels and moved output pull resistor group to clear MAIN_PWR_EN text; reviewed held supply, timer/supervisor and shutdown clamps.",
+        "label_positions_changed": 2,
+        "source_sha256": "7a7aa261ebf94a707647871ad52cb24156f250c72e5ed8711054d78fa63d1c97"
+      },
+      {
+        "page": 8,
+        "file": "user_controls.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Reviewed all four repeated switch/filter cells and notes; no geometry changes required in this pass.",
+        "label_positions_changed": 0,
+        "source_sha256": "8912ce9f877b110dd5884bbb06c1daa2c642874a327827a08fb1c4810c725616"
+      },
+      {
+        "page": 9,
+        "file": "main_3v3_supply.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned gate input label; reviewed regulator feedback, output/input banks, enable and shutdown branches.",
+        "label_positions_changed": 1,
+        "source_sha256": "c55dfdc1290728f505b5ab79c94b66865c061ff425798c7558ea1ad2786113a2"
+      },
+      {
+        "page": 10,
+        "file": "sdram.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned address/control/data label columns; reviewed reset-default resistor row and both capacitor banks.",
+        "label_positions_changed": 57,
+        "source_sha256": "590b945ad534d1129f8595564c74dfea272283a2e56f30291a317a62801e893b"
+      },
+      {
+        "page": 11,
+        "file": "nor_flash.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned direct IC labels; reviewed each series resistor link, pull resistors, supply unit and capacitor bank.",
+        "label_positions_changed": 13,
+        "source_sha256": "ac6e5ac68791d36d366886e58e13a182ecc3849b0a4785b6621facc9da174b1a"
+      },
+      {
+        "page": 12,
+        "file": "microsd.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Replaced U19/U20 input ground loops with local symbols; aligned IC signal label; reviewed all switch lanes, ESD, socket, power and ready/reset gates.",
+        "label_positions_changed": 1,
+        "source_sha256": "94b6ecd6f51afdedcc7f00cad47d0cf83ed7af6efa0a305886f108feaf8c618d"
+      },
+      {
+        "page": 13,
+        "file": "camera.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Replaced U24 ground loop, made upper rail symbols upright, repositioned U24 fields, aligned signal ports; reviewed connector and I2C return branches.",
+        "label_positions_changed": 2,
+        "source_sha256": "e204846c3172bc172ec73c8522de66746dd470e4de8456a4e4e282eace079c71"
+      },
+      {
+        "page": 14,
+        "file": "orientation_sensor.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned interrupt label; reviewed three sensor blocks, address strap, capacitor bank and individual bypass blocks at enlarged scale.",
+        "label_positions_changed": 1,
+        "source_sha256": "95ca9e74c896f47e238bbfc2525dba001c62112b87534a247364d50a2864b68b"
+      },
+      {
+        "page": 15,
+        "file": "audio_headphones.kicad_sch",
+        "review": "Reviewed before and after render; enlarged details for identified collisions.",
+        "result": "Aligned direct IC labels; replaced U36 FB2 ground detour with local symbol to clear PG label; reviewed relay, amplifier feedback, auxiliary supply/gate and supervisor.",
+        "label_positions_changed": 4,
+        "source_sha256": "9b5968506cd602ea1159ca1a4de058c5baa7c5ceedc73667e0cae8c174bceac0"
+      }
+    ],
+    "verification": {
+      "nets": 372,
+      "all_pin_groups_identical": true,
+      "all_net_names_identical": true,
+      "native_component_properties_identical": true,
+      "raw_component_property_values_identical": true,
+      "no_connect_uuids_identical": true,
+      "erc_errors": 99,
+      "erc_warnings": 16,
+      "erc_count_unchanged": true,
+      "clock_arithmetic_checks": "both passed",
+      "git_diff_whitespace_check": "passed"
+    },
+    "saved_locally": true,
+    "commit_status_at_audit": "uncommitted snapshot; see Git history for publication"
+  }
+}

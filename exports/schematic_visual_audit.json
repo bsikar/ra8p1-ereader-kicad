@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-11",
+  "scope": "Full schematic visual/layout audit of all 15 sheets; preserves electrical design.",
+  "confidence": "High for native connectivity comparison and rendered findings; no new electrical design qualification performed.",
+  "categories": [
+    "wire detours and excessive length",
+    "label column alignment and orientation",
+    "sheet port inside/outside text",
+    "component field and power text clearance",
+    "capacitor grouping and spacing",
+    "junction clarity",
+    "annotation clearance"
+  ],
+  "sheet_count": 15,
+  "label_positions_changed": 184,
+  "sheet_audit": [
+    {
+      "page": 1,
+      "file": "ereader_rev1.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Moved audio port pair to an open bottom edge; corrected inside/outside text justification; reviewed every sheet boundary.",
+      "label_positions_changed": 2,
+      "source_sha256": "6b09ebfb56be2dcd1038876b16fec9e4439cc4700bb060d5ca39ed63105104a2"
+    },
+    {
+      "page": 2,
+      "file": "mcu_interfaces.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned remaining direct IC signal labels; reviewed buses, USB/MIPI return routes, and capacitor trio.",
+      "label_positions_changed": 55,
+      "source_sha256": "153fa2d4b8a6ae7c21d3482e4fe47ada14b10ea5203c14444f3c94cfb6f00163"
+    },
+    {
+      "page": 3,
+      "file": "mcu_core_power.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Compacted two capacitor banks with captions; reviewed internal buck and bulk capacitor returns.",
+      "label_positions_changed": 0,
+      "source_sha256": "6824042bca248a5c656728ddf14f299b43633c3979d4eae2b9a222982b6e0610"
+    },
+    {
+      "page": 4,
+      "file": "mcu_supply_power.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Compacted four capacitor banks; reviewed analog supplies, LDO, and annotation spacing.",
+      "label_positions_changed": 0,
+      "source_sha256": "807587a4b2c8d940d55d4f683b28b83a980d35e72af7c970f6e603a73eb0b6d4"
+    },
+    {
+      "page": 5,
+      "file": "mcu_clocks_debug.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned signal labels and removed duplicate reset alias; reviewed connector, crystal pairs, reset switches and supervisor.",
+      "label_positions_changed": 12,
+      "source_sha256": "3cc17eee300986e7be667ddfed4fee4f5769ff6d99c5067094d4c1b2b68b3370"
+    },
+    {
+      "page": 6,
+      "file": "radio_esp32.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Replaced U30 input ground detour with local symbol; removed duplicate U28 RADIO_PWR_EN alias; aligned direct IC labels; reviewed all radio/service blocks.",
+      "label_positions_changed": 34,
+      "source_sha256": "c141ea90d9486b127961f18890b7cc0bff08495b0645addc5f212392b2387695"
+    },
+    {
+      "page": 7,
+      "file": "power_button.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned signal labels and moved output pull resistor group to clear MAIN_PWR_EN text; reviewed held supply, timer/supervisor and shutdown clamps.",
+      "label_positions_changed": 2,
+      "source_sha256": "7a7aa261ebf94a707647871ad52cb24156f250c72e5ed8711054d78fa63d1c97"
+    },
+    {
+      "page": 8,
+      "file": "user_controls.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Reviewed all four repeated switch/filter cells and notes; no geometry changes required in this pass.",
+      "label_positions_changed": 0,
+      "source_sha256": "8912ce9f877b110dd5884bbb06c1daa2c642874a327827a08fb1c4810c725616"
+    },
+    {
+      "page": 9,
+      "file": "main_3v3_supply.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned gate input label; reviewed regulator feedback, output/input banks, enable and shutdown branches.",
+      "label_positions_changed": 1,
+      "source_sha256": "c55dfdc1290728f505b5ab79c94b66865c061ff425798c7558ea1ad2786113a2"
+    },
+    {
+      "page": 10,
+      "file": "sdram.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned address/control/data label columns; reviewed reset-default resistor row and both capacitor banks.",
+      "label_positions_changed": 57,
+      "source_sha256": "590b945ad534d1129f8595564c74dfea272283a2e56f30291a317a62801e893b"
+    },
+    {
+      "page": 11,
+      "file": "nor_flash.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned direct IC labels; reviewed each series resistor link, pull resistors, supply unit and capacitor bank.",
+      "label_positions_changed": 13,
+      "source_sha256": "ac6e5ac68791d36d366886e58e13a182ecc3849b0a4785b6621facc9da174b1a"
+    },
+    {
+      "page": 12,
+      "file": "microsd.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Replaced U19/U20 input ground loops with local symbols; aligned IC signal label; reviewed all switch lanes, ESD, socket, power and ready/reset gates.",
+      "label_positions_changed": 1,
+      "source_sha256": "94b6ecd6f51afdedcc7f00cad47d0cf83ed7af6efa0a305886f108feaf8c618d"
+    },
+    {
+      "page": 13,
+      "file": "camera.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Replaced U24 ground loop, made upper rail symbols upright, repositioned U24 fields, aligned signal ports; reviewed connector and I2C return branches.",
+      "label_positions_changed": 2,
+      "source_sha256": "e204846c3172bc172ec73c8522de66746dd470e4de8456a4e4e282eace079c71"
+    },
+    {
+      "page": 14,
+      "file": "orientation_sensor.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned interrupt label; reviewed three sensor blocks, address strap, capacitor bank and individual bypass blocks at enlarged scale.",
+      "label_positions_changed": 1,
+      "source_sha256": "95ca9e74c896f47e238bbfc2525dba001c62112b87534a247364d50a2864b68b"
+    },
+    {
+      "page": 15,
+      "file": "audio_headphones.kicad_sch",
+      "review": "Reviewed before and after render; enlarged details for identified collisions.",
+      "result": "Aligned direct IC labels; replaced U36 FB2 ground detour with local symbol to clear PG label; reviewed relay, amplifier feedback, auxiliary supply/gate and supervisor.",
+      "label_positions_changed": 4,
+      "source_sha256": "9b5968506cd602ea1159ca1a4de058c5baa7c5ceedc73667e0cae8c174bceac0"
+    }
+  ],
+  "verification": {
+    "nets": 372,
+    "all_pin_groups_identical": true,
+    "all_net_names_identical": true,
+    "native_component_properties_identical": true,
+    "raw_component_property_values_identical": true,
+    "no_connect_uuids_identical": true,
+    "erc_errors": 99,
+    "erc_warnings": 16,
+    "erc_count_unchanged": true,
+    "clock_arithmetic_checks": "both passed",
+    "git_diff_whitespace_check": "passed"
+  },
+  "saved_locally": true,
+  "commit_status_at_audit": "uncommitted snapshot; see Git history for publication"
+}

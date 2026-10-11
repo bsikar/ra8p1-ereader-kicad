@@ -6338,7 +6338,7 @@
 	)
 	(text "VCL2 / VSS2"
 		(exclude_from_sim no)
-		(at 224.79 62.23 0)
+		(at 199.39 62.23 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6349,7 +6349,7 @@
 	)
 	(text "VCL11 / VSS11"
 		(exclude_from_sim no)
-		(at 339.09 102.87 0)
+		(at 275.59 102.87 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6371,7 +6371,7 @@
 	)
 	(text "VCL4 / VSS4"
 		(exclude_from_sim no)
-		(at 300.99 62.23 0)
+		(at 250.19 62.23 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6382,7 +6382,7 @@
 	)
 	(text "VCL3 / VSS3"
 		(exclude_from_sim no)
-		(at 262.89 62.23 0)
+		(at 224.79 62.23 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6393,7 +6393,7 @@
 	)
 	(text "VCL9 / VSS9"
 		(exclude_from_sim no)
-		(at 262.89 102.87 0)
+		(at 224.79 102.87 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6404,7 +6404,7 @@
 	)
 	(text "VCL8 / VSS8"
 		(exclude_from_sim no)
-		(at 224.79 102.87 0)
+		(at 199.39 102.87 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6448,7 +6448,7 @@
 	)
 	(text "VCL10 / VSS10"
 		(exclude_from_sim no)
-		(at 300.99 102.87 0)
+		(at 250.19 102.87 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6470,7 +6470,7 @@
 	)
 	(text "VCL1 / VSS1"
 		(exclude_from_sim no)
-		(at 186.69 62.23 0)
+		(at 173.99 62.23 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6493,7 +6493,7 @@
 	)
 	(text "VCL5 / VSS5"
 		(exclude_from_sim no)
-		(at 339.09 62.23 0)
+		(at 275.59 62.23 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6504,7 +6504,7 @@
 	)
 	(text "VCL7 / VSS7"
 		(exclude_from_sim no)
-		(at 186.69 102.87 0)
+		(at 173.99 102.87 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6537,7 +6537,7 @@
 	)
 	(text "ERC source: internal buck through L1."
 		(exclude_from_sim no)
-		(at 287.02 149.86 0)
+		(at 172.72 149.86 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -6565,7 +6565,7 @@
 		(uuid "084f366d-e60b-46f5-8970-24c2c0cee9d0")
 	)
 	(junction
-		(at 266.7 53.34)
+		(at 228.6 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10b83b28-c518-4ccc-bd9f-042a16cf2235")
@@ -6601,19 +6601,19 @@
 		(uuid "1ee463c0-a4a5-4f25-9a34-c9988f894162")
 	)
 	(junction
-		(at 304.8 73.66)
+		(at 254 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "206e18ba-7056-49fa-bf79-b9f195739f2a")
 	)
 	(junction
-		(at 190.5 73.66)
+		(at 177.8 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2ddae600-f54c-4e45-a44d-5a997de39009")
 	)
 	(junction
-		(at 304.8 53.34)
+		(at 254 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f7c9acb-340a-4b22-8b5e-0936b71f2950")
@@ -6625,7 +6625,7 @@
 		(uuid "36e771fc-7e88-4956-889c-cfe30751e27c")
 	)
 	(junction
-		(at 266.7 73.66)
+		(at 228.6 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b05bb0b-e45e-447f-96c5-e4a3925e9b5c")
@@ -6655,25 +6655,25 @@
 		(uuid "4834ce67-e9d2-4e58-b17b-e1554a933547")
 	)
 	(junction
-		(at 228.6 53.34)
+		(at 203.2 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4c393181-19e2-4793-8472-5e1fdd90a352")
 	)
 	(junction
-		(at 228.6 73.66)
+		(at 203.2 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "552b865f-b4be-44c1-9bf3-95c42faf088d")
 	)
 	(junction
-		(at 304.8 33.02)
+		(at 254 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5785b751-2a0c-4d19-a673-b17eb6827391")
 	)
 	(junction
-		(at 228.6 33.02)
+		(at 203.2 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5aab8064-04d1-47c5-8d70-33074704deb6")
@@ -6715,7 +6715,7 @@
 		(uuid "87654543-9056-45b5-b079-91ee4660b887")
 	)
 	(junction
-		(at 228.6 93.98)
+		(at 203.2 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e3fa825-0a0f-46f6-b220-ae7a9ef25850")
@@ -6727,7 +6727,7 @@
 		(uuid "8edbeba8-f1b3-42d0-82d5-985ff5b9d925")
 	)
 	(junction
-		(at 342.9 93.98)
+		(at 279.4 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "90326758-813d-438c-9adf-8a009198ee19")
@@ -6745,7 +6745,7 @@
 		(uuid "953ca74d-e185-4af1-8488-50c111f49df3")
 	)
 	(junction
-		(at 266.7 93.98)
+		(at 228.6 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "96ddd96f-8c5a-4633-b45c-810b529a9dd1")
@@ -6757,19 +6757,19 @@
 		(uuid "98fed41f-9e37-4247-9fe6-5e933fae550c")
 	)
 	(junction
-		(at 342.9 53.34)
+		(at 279.4 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "991fbef1-c66c-49b0-bc50-a864cb2994e3")
 	)
 	(junction
-		(at 190.5 33.02)
+		(at 177.8 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a3556c9a-4112-462e-b750-ea9bbe19bfde")
 	)
 	(junction
-		(at 254 154.94)
+		(at 152.4 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a6c3283b-2e29-42df-9b95-18a5e00895bb")
@@ -6781,7 +6781,7 @@
 		(uuid "ab32d431-1a97-485f-8058-6a0d6a22a906")
 	)
 	(junction
-		(at 190.5 93.98)
+		(at 177.8 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b1f9fcda-1c3a-4510-93bc-9b1e33a6030b")
@@ -6799,13 +6799,13 @@
 		(uuid "b9128331-2db0-4435-8c09-4bbd51ca52b8")
 	)
 	(junction
-		(at 304.8 93.98)
+		(at 254 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2e77184-8722-4516-ba78-f556147073be")
 	)
 	(junction
-		(at 266.7 33.02)
+		(at 228.6 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c5ee01e6-ec5e-4663-b72b-6aa08b78585e")
@@ -6847,7 +6847,7 @@
 		(uuid "e6e66bc9-8509-42b8-a880-37cc9f627dd5")
 	)
 	(junction
-		(at 279.4 154.94)
+		(at 165.1 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e94feee9-7b73-4717-9dd2-b7a3a3f6b423")
@@ -6865,7 +6865,7 @@
 		(uuid "ec8491c3-323b-4c9c-9704-fa1893b30ed1")
 	)
 	(junction
-		(at 190.5 53.34)
+		(at 177.8 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff7d77b5-8478-4008-b227-559162231d4b")
@@ -6892,7 +6892,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 46.99) (xy 228.6 53.34)
+			(xy 203.2 46.99) (xy 203.2 53.34)
 		)
 		(stroke
 			(width 0)
@@ -6912,7 +6912,7 @@
 	)
 	(wire
 		(pts
-			(xy 287.02 154.94) (xy 279.4 154.94)
+			(xy 172.72 154.94) (xy 165.1 154.94)
 		)
 		(stroke
 			(width 0)
@@ -6932,7 +6932,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 80.01) (xy 266.7 73.66)
+			(xy 228.6 80.01) (xy 228.6 73.66)
 		)
 		(stroke
 			(width 0)
@@ -6952,7 +6952,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 53.34) (xy 228.6 53.34)
+			(xy 177.8 53.34) (xy 203.2 53.34)
 		)
 		(stroke
 			(width 0)
@@ -6962,7 +6962,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 73.66) (xy 228.6 73.66)
+			(xy 177.8 73.66) (xy 203.2 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7002,7 +7002,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 93.98) (xy 342.9 93.98)
+			(xy 254 93.98) (xy 279.4 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7122,7 +7122,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 33.02) (xy 266.7 33.02)
+			(xy 203.2 33.02) (xy 228.6 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7132,7 +7132,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 80.01) (xy 304.8 73.66)
+			(xy 254 80.01) (xy 254 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7172,7 +7172,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 46.99) (xy 190.5 53.34)
+			(xy 177.8 46.99) (xy 177.8 53.34)
 		)
 		(stroke
 			(width 0)
@@ -7192,7 +7192,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 93.98) (xy 304.8 93.98)
+			(xy 228.6 93.98) (xy 254 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7222,7 +7222,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 87.63) (xy 304.8 93.98)
+			(xy 254 87.63) (xy 254 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7262,7 +7262,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 73.66) (xy 342.9 73.66)
+			(xy 254 73.66) (xy 279.4 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7322,7 +7322,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 73.66) (xy 304.8 73.66)
+			(xy 228.6 73.66) (xy 254 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7332,7 +7332,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 33.02) (xy 342.9 33.02)
+			(xy 254 33.02) (xy 279.4 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7342,7 +7342,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 46.99) (xy 266.7 53.34)
+			(xy 228.6 46.99) (xy 228.6 53.34)
 		)
 		(stroke
 			(width 0)
@@ -7372,7 +7372,7 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 46.99) (xy 342.9 54.61)
+			(xy 279.4 46.99) (xy 279.4 54.61)
 		)
 		(stroke
 			(width 0)
@@ -7382,7 +7382,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 93.98) (xy 266.7 93.98)
+			(xy 203.2 93.98) (xy 228.6 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7392,7 +7392,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 73.66) (xy 190.5 73.66)
+			(xy 152.4 73.66) (xy 177.8 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7402,7 +7402,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 39.37) (xy 304.8 33.02)
+			(xy 254 39.37) (xy 254 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7412,7 +7412,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 33.02) (xy 304.8 33.02)
+			(xy 228.6 33.02) (xy 254 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7492,7 +7492,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 53.34) (xy 190.5 53.34)
+			(xy 152.4 53.34) (xy 177.8 53.34)
 		)
 		(stroke
 			(width 0)
@@ -7522,7 +7522,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 73.66) (xy 266.7 73.66)
+			(xy 203.2 73.66) (xy 228.6 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7562,7 +7562,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 181.61) (xy 254 190.5)
+			(xy 152.4 168.91) (xy 152.4 171.45)
 		)
 		(stroke
 			(width 0)
@@ -7612,7 +7612,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 93.98) (xy 190.5 93.98)
+			(xy 152.4 93.98) (xy 177.8 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7642,7 +7642,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 87.63) (xy 228.6 93.98)
+			(xy 203.2 87.63) (xy 203.2 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7652,7 +7652,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 53.34) (xy 304.8 53.34)
+			(xy 228.6 53.34) (xy 254 53.34)
 		)
 		(stroke
 			(width 0)
@@ -7672,7 +7672,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 87.63) (xy 190.5 93.98)
+			(xy 177.8 87.63) (xy 177.8 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7682,7 +7682,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 93.98) (xy 228.6 93.98)
+			(xy 177.8 93.98) (xy 203.2 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7702,7 +7702,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 154.94) (xy 279.4 154.94)
+			(xy 152.4 154.94) (xy 165.1 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7722,7 +7722,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 80.01) (xy 190.5 73.66)
+			(xy 177.8 80.01) (xy 177.8 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7752,7 +7752,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 154.94) (xy 254 173.99)
+			(xy 152.4 154.94) (xy 152.4 161.29)
 		)
 		(stroke
 			(width 0)
@@ -7772,7 +7772,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 87.63) (xy 266.7 93.98)
+			(xy 228.6 87.63) (xy 228.6 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7812,7 +7812,7 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 39.37) (xy 342.9 33.02)
+			(xy 279.4 39.37) (xy 279.4 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7822,7 +7822,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 154.94) (xy 189.23 154.94)
+			(xy 111.76 154.94) (xy 128.27 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7852,7 +7852,7 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 154.94) (xy 279.4 144.78)
+			(xy 165.1 154.94) (xy 165.1 149.86)
 		)
 		(stroke
 			(width 0)
@@ -7862,7 +7862,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 33.02) (xy 228.6 33.02)
+			(xy 177.8 33.02) (xy 203.2 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7872,7 +7872,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 39.37) (xy 190.5 33.02)
+			(xy 177.8 39.37) (xy 177.8 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7892,7 +7892,7 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 87.63) (xy 342.9 95.25)
+			(xy 279.4 87.63) (xy 279.4 95.25)
 		)
 		(stroke
 			(width 0)
@@ -7972,7 +7972,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 46.99) (xy 304.8 53.34)
+			(xy 254 46.99) (xy 254 53.34)
 		)
 		(stroke
 			(width 0)
@@ -7982,7 +7982,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 53.34) (xy 266.7 53.34)
+			(xy 203.2 53.34) (xy 228.6 53.34)
 		)
 		(stroke
 			(width 0)
@@ -7992,7 +7992,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 33.02) (xy 190.5 33.02)
+			(xy 152.4 33.02) (xy 177.8 33.02)
 		)
 		(stroke
 			(width 0)
@@ -8032,7 +8032,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 80.01) (xy 228.6 73.66)
+			(xy 203.2 80.01) (xy 203.2 73.66)
 		)
 		(stroke
 			(width 0)
@@ -8042,7 +8042,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 39.37) (xy 266.7 33.02)
+			(xy 228.6 39.37) (xy 228.6 33.02)
 		)
 		(stroke
 			(width 0)
@@ -8062,7 +8062,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 53.34) (xy 342.9 53.34)
+			(xy 254 53.34) (xy 279.4 53.34)
 		)
 		(stroke
 			(width 0)
@@ -8092,7 +8092,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 154.94) (xy 254 154.94)
+			(xy 135.89 154.94) (xy 152.4 154.94)
 		)
 		(stroke
 			(width 0)
@@ -8112,7 +8112,7 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 80.01) (xy 342.9 73.66)
+			(xy 279.4 80.01) (xy 279.4 73.66)
 		)
 		(stroke
 			(width 0)
@@ -8132,7 +8132,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 39.37) (xy 228.6 33.02)
+			(xy 203.2 39.37) (xy 203.2 33.02)
 		)
 		(stroke
 			(width 0)
@@ -8151,7 +8151,7 @@
 		(uuid "ff66593b-a31d-4868-9200-b9eca8f9c201")
 	)
 	(label "MCU_VCORE"
-		(at 287.02 154.94 0)
+		(at 172.72 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8201,7 +8201,7 @@
 	)
 	(symbol
 		(lib_id "Device:L")
-		(at 193.04 154.94 90)
+		(at 132.08 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8211,7 +8211,7 @@
 		(dnp no)
 		(uuid "2113cf1b-2c5a-4c76-91d5-db81030eacab")
 		(property "Reference" "L1"
-			(at 193.04 149.86 90)
+			(at 132.08 149.86 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8221,7 +8221,7 @@
 			)
 		)
 		(property "Value" "2.2uH"
-			(at 193.04 160.02 90)
+			(at 132.08 160.02 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8231,7 +8231,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 154.94 0)
+			(at 132.08 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8242,7 +8242,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=SPM5020T-2R2M-LR"
-			(at 193.04 154.94 0)
+			(at 132.08 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8253,7 +8253,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 154.94 0)
+			(at 132.08 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8263,7 +8263,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 193.04 154.94 0)
+			(at 132.08 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8274,7 +8274,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "SPM5020T-2R2M-LR"
-			(at 193.04 154.94 0)
+			(at 132.08 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8285,7 +8285,7 @@
 			)
 		)
 		(property "Selection_Basis" "Renesas R01AN7883EU0110 Table 3; 2.2uH +/-20%, DCR max 40.7mOhm, rated current 4.6A typical (40C rise), 7A typical (30% inductance loss)."
-			(at 193.04 154.94 0)
+			(at 132.08 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8296,7 +8296,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-174497-1-ND"
-			(at 193.04 154.94 90)
+			(at 132.08 154.94 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8307,7 +8307,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk/SPM5020T-2R2M-LR/5962361"
-			(at 193.04 154.94 90)
+			(at 132.08 154.94 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8318,7 +8318,7 @@
 			)
 		)
 		(property "Procurement_Status" "Candidate - reference recommended; validation pending"
-			(at 193.04 154.94 90)
+			(at 132.08 154.94 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8329,7 +8329,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-05 indexed: stock 1149; USD CT 1:1.35 / 10:1.111 / 100:0.9134; Active; 15wk lead; recheck before order"
-			(at 193.04 154.94 90)
+			(at 132.08 154.94 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8340,7 +8340,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 193.04 154.94 90)
+			(at 132.08 154.94 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9435,7 +9435,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 342.9 43.18 0)
+		(at 279.4 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9445,7 +9445,7 @@
 		(dnp no)
 		(uuid "34782c7e-cc02-4f32-a77f-d533ae1ce031")
 		(property "Reference" "C14"
-			(at 346.71 41.91 0)
+			(at 283.21 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9456,7 +9456,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 346.71 44.45 0)
+			(at 283.21 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9467,7 +9467,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9478,7 +9478,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9489,7 +9489,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9499,7 +9499,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9510,7 +9510,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9521,7 +9521,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9532,7 +9532,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9543,7 +9543,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9554,7 +9554,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9565,7 +9565,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9576,7 +9576,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 342.9 43.18 0)
+			(at 279.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9603,7 +9603,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 190.5 43.18 0)
+		(at 177.8 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9613,7 +9613,7 @@
 		(dnp no)
 		(uuid "3d0f1a8b-4dbd-4186-a28a-d75ad2996060")
 		(property "Reference" "C4"
-			(at 194.31 41.91 0)
+			(at 181.61 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9624,7 +9624,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 194.31 44.45 0)
+			(at 181.61 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9635,7 +9635,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9646,7 +9646,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9657,7 +9657,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9667,7 +9667,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9678,7 +9678,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9689,7 +9689,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9700,7 +9700,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9711,7 +9711,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9722,7 +9722,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9733,7 +9733,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9744,7 +9744,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 190.5 43.18 0)
+			(at 177.8 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9947,7 +9947,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 228.6 83.82 0)
+		(at 203.2 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9957,6 +9957,408 @@
 		(dnp no)
 		(uuid "4f54d9b4-ad86-471a-89f8-4c7d265ba208")
 		(property "Reference" "C8"
+			(at 207.01 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220n"
+			(at 207.01 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "445-7408-1-ND"
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser_URL" ""
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "TDK"
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
+			(at 203.2 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eeffb2c2-82cd-4911-a119-8da6b3c8f070")
+		)
+		(pin "2"
+			(uuid "dde680af-4ac3-4e31-99b6-2c45986cd5c8")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/959e090e-e670-4625-b284-7df7298868e8"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 152.4 165.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "52703f9c-0968-40fe-9fdc-d15c4de11700")
+		(property "Reference" "C9"
+			(at 156.21 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47u"
+			(at 156.21 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" ""
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_URL" ""
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement_Status" "HOLD - exact 47uF MPN not approved; resolve reference-part lifecycle and effective capacitance"
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sourcing_Snapshot" "2026-09-27 DigiKey page: candidate GRM32ER71A476KE15K Active, 1595 unreserved, USD0.98 qty1 / 0.43690 qty100, 17wk. Earlier GRM32ER70J476KE20L lifecycle conflict retained in design/core_bulk_c9.md; not purchase approval."
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser_URL" ""
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Selection_Basis" "Candidate: Murata GRM32ER71A476KE15K, 47uF +/-10%, 10V X7R 1210. Murata GRM32ER71A476KE15-04CA (2025-01-10). HOLD pending DC-bias/aging and RA8P1 core-loop qualification; see design/core_bulk_c9.md."
+			(at 152.4 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "28744915-cc45-4c8a-851f-9ddd90f07360")
+		)
+		(pin "2"
+			(uuid "a76da52f-95e6-4340-bc3c-d188fe2c0af0")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/959e090e-e670-4625-b284-7df7298868e8"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 43.18 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "577b7866-17c5-48eb-9bc9-96b3d2624100")
+		(property "Reference" "#PWR02"
+			(at 43.18 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3_MCU"
+			(at 43.18 136.144 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 43.18 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 43.18 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f04e1d0a-0128-429d-9b75-5e5d07c21f07")
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/959e090e-e670-4625-b284-7df7298868e8"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 228.6 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "694c3e20-89ad-4e6c-ba03-a79ee2d2f00e")
+		(property "Reference" "C11"
 			(at 232.41 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10099,408 +10501,6 @@
 			)
 		)
 		(pin "1"
-			(uuid "eeffb2c2-82cd-4911-a119-8da6b3c8f070")
-		)
-		(pin "2"
-			(uuid "dde680af-4ac3-4e31-99b6-2c45986cd5c8")
-		)
-		(instances
-			(project "ereader_rev1"
-				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/959e090e-e670-4625-b284-7df7298868e8"
-					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 254 177.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "52703f9c-0968-40fe-9fdc-d15c4de11700")
-		(property "Reference" "C9"
-			(at 257.81 176.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47u"
-			(at 257.81 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 254 177.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigiKey_Part_Number" ""
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigiKey_URL" ""
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Procurement_Status" "HOLD - exact 47uF MPN not approved; resolve reference-part lifecycle and effective capacitance"
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sourcing_Snapshot" "2026-09-27 DigiKey page: candidate GRM32ER71A476KE15K Active, 1595 unreserved, USD0.98 qty1 / 0.43690 qty100, 17wk. Earlier GRM32ER70J476KE20L lifecycle conflict retained in design/core_bulk_c9.md; not purchase approval."
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser_URL" ""
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Selection_Basis" "Candidate: Murata GRM32ER71A476KE15K, 47uF +/-10%, 10V X7R 1210. Murata GRM32ER71A476KE15-04CA (2025-01-10). HOLD pending DC-bias/aging and RA8P1 core-loop qualification; see design/core_bulk_c9.md."
-			(at 254 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "28744915-cc45-4c8a-851f-9ddd90f07360")
-		)
-		(pin "2"
-			(uuid "a76da52f-95e6-4340-bc3c-d188fe2c0af0")
-		)
-		(instances
-			(project "ereader_rev1"
-				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/959e090e-e670-4625-b284-7df7298868e8"
-					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 43.18 139.7 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "577b7866-17c5-48eb-9bc9-96b3d2624100")
-		(property "Reference" "#PWR02"
-			(at 43.18 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3_MCU"
-			(at 43.18 136.144 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 43.18 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 43.18 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f04e1d0a-0128-429d-9b75-5e5d07c21f07")
-		)
-		(instances
-			(project "ereader_rev1"
-				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/959e090e-e670-4625-b284-7df7298868e8"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 266.7 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "694c3e20-89ad-4e6c-ba03-a79ee2d2f00e")
-		(property "Reference" "C11"
-			(at 270.51 82.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "220n"
-			(at 270.51 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 266.7 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser_URL" ""
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "TDK"
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 266.7 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
 			(uuid "c5e2f9ec-58bd-430c-b3a1-336bbf7f19ac")
 		)
 		(pin "2"
@@ -10517,7 +10517,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 342.9 83.82 0)
+		(at 279.4 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10527,7 +10527,7 @@
 		(dnp no)
 		(uuid "6cd5c985-77d6-40a2-b1c9-2862bcc4a3d9")
 		(property "Reference" "C15"
-			(at 346.71 82.55 0)
+			(at 283.21 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10538,7 +10538,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 346.71 85.09 0)
+			(at 283.21 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10549,7 +10549,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10560,7 +10560,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10571,7 +10571,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10581,7 +10581,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10592,7 +10592,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10603,7 +10603,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10614,7 +10614,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10625,7 +10625,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10636,7 +10636,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10647,7 +10647,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10658,7 +10658,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 342.9 83.82 0)
+			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10685,7 +10685,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 304.8 83.82 0)
+		(at 254 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10695,7 +10695,7 @@
 		(dnp no)
 		(uuid "70dc49d5-e2e1-4a20-9a97-7dac924dd47e")
 		(property "Reference" "C13"
-			(at 308.61 82.55 0)
+			(at 257.81 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10706,7 +10706,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 308.61 85.09 0)
+			(at 257.81 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10717,7 +10717,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10728,7 +10728,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10739,7 +10739,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10749,7 +10749,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10760,7 +10760,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10771,7 +10771,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10782,7 +10782,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10793,7 +10793,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10804,7 +10804,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10815,7 +10815,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10826,7 +10826,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 304.8 83.82 0)
+			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10853,7 +10853,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 228.6 43.18 0)
+		(at 203.2 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10863,7 +10863,7 @@
 		(dnp no)
 		(uuid "829c52dc-1e43-4d7a-920c-c3df7354156f")
 		(property "Reference" "C7"
-			(at 232.41 41.91 0)
+			(at 207.01 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10874,7 +10874,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 232.41 44.45 0)
+			(at 207.01 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10885,7 +10885,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10896,7 +10896,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10907,7 +10907,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10917,7 +10917,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10928,7 +10928,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10939,7 +10939,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10950,7 +10950,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10961,7 +10961,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10972,7 +10972,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10983,7 +10983,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10994,7 +10994,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 228.6 43.18 0)
+			(at 203.2 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11021,7 +11021,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 254 190.5 0)
+		(at 152.4 171.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11031,7 +11031,7 @@
 		(dnp no)
 		(uuid "84489bbe-fbf3-4b2d-bed7-5b06e01696e6")
 		(property "Reference" "#PWR06"
-			(at 254 196.85 0)
+			(at 152.4 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11042,7 +11042,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 254 194.31 0)
+			(at 152.4 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11052,7 +11052,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 190.5 0)
+			(at 152.4 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11063,7 +11063,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 190.5 0)
+			(at 152.4 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11074,7 +11074,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 254 190.5 0)
+			(at 152.4 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11085,7 +11085,7 @@
 			)
 		)
 		(property "ki_keywords" "global power"
-			(at 254 190.5 0)
+			(at 152.4 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11109,7 +11109,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 342.9 95.25 0)
+		(at 279.4 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11119,7 +11119,7 @@
 		(dnp no)
 		(uuid "89dfa58c-d35a-428b-8086-c88548d4dda3")
 		(property "Reference" "#PWR08"
-			(at 342.9 101.6 0)
+			(at 279.4 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11130,7 +11130,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 342.9 99.06 0)
+			(at 279.4 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11140,7 +11140,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 342.9 95.25 0)
+			(at 279.4 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11151,7 +11151,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 342.9 95.25 0)
+			(at 279.4 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11162,7 +11162,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 342.9 95.25 0)
+			(at 279.4 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11173,7 +11173,7 @@
 			)
 		)
 		(property "ki_keywords" "global power"
-			(at 342.9 95.25 0)
+			(at 279.4 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11197,7 +11197,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 304.8 43.18 0)
+		(at 254 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11207,7 +11207,7 @@
 		(dnp no)
 		(uuid "8a5c377e-f50e-4cd8-b376-831f0b2c9889")
 		(property "Reference" "C12"
-			(at 308.61 41.91 0)
+			(at 257.81 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11218,7 +11218,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 308.61 44.45 0)
+			(at 257.81 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11229,7 +11229,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11240,7 +11240,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11251,7 +11251,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11261,7 +11261,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11272,7 +11272,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11283,7 +11283,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11294,7 +11294,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11305,7 +11305,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11316,7 +11316,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11327,7 +11327,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11338,7 +11338,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 304.8 43.18 0)
+			(at 254 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11621,7 +11621,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 190.5 83.82 0)
+		(at 177.8 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11631,7 +11631,7 @@
 		(dnp no)
 		(uuid "8fbe82b7-f23f-4ccd-af64-6055e8ad3ab8")
 		(property "Reference" "C5"
-			(at 194.31 82.55 0)
+			(at 181.61 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11642,7 +11642,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 194.31 85.09 0)
+			(at 181.61 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11653,7 +11653,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11664,7 +11664,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11675,7 +11675,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11685,7 +11685,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11696,7 +11696,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11707,7 +11707,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11718,7 +11718,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11729,7 +11729,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11740,7 +11740,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11751,7 +11751,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11762,7 +11762,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 190.5 83.82 0)
+			(at 177.8 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12125,7 +12125,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 342.9 54.61 0)
+		(at 279.4 54.61 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12135,7 +12135,7 @@
 		(dnp no)
 		(uuid "a3e196e6-6175-4bec-a9e4-322f48259051")
 		(property "Reference" "#PWR07"
-			(at 342.9 60.96 0)
+			(at 279.4 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12146,7 +12146,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 342.9 58.42 0)
+			(at 279.4 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12156,7 +12156,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 342.9 54.61 0)
+			(at 279.4 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12167,7 +12167,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 342.9 54.61 0)
+			(at 279.4 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12178,7 +12178,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 342.9 54.61 0)
+			(at 279.4 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12189,7 +12189,7 @@
 			)
 		)
 		(property "ki_keywords" "global power"
-			(at 342.9 54.61 0)
+			(at 279.4 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13449,7 +13449,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 266.7 43.18 0)
+		(at 228.6 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13459,7 +13459,7 @@
 		(dnp no)
 		(uuid "d96e1b98-8895-4efd-a672-ff81548d9282")
 		(property "Reference" "C10"
-			(at 270.51 41.91 0)
+			(at 232.41 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13470,7 +13470,7 @@
 			)
 		)
 		(property "Value" "220n"
-			(at 270.51 44.45 0)
+			(at 232.41 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13481,7 +13481,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13492,7 +13492,7 @@
 			)
 		)
 		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H224K080AB"
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13503,7 +13503,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13513,7 +13513,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "445-7408-1-ND"
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13524,7 +13524,7 @@
 			)
 		)
 		(property "DigiKey_URL" "https://www.digikey.com/en/products/detail/tdk-corporation/C1608X7R1H224K080AB/2732843"
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13535,7 +13535,7 @@
 			)
 		)
 		(property "Procurement_Status" "Selected for prototype VCL bypass; PWR-005. PCB/PDN qualification deferred."
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13546,7 +13546,7 @@
 			)
 		)
 		(property "Sourcing_Snapshot" "2026-09-08 DigiKey: 82010 in stock; USD0.17/0.098/0.06030 at qty1/10/100; 24wk; unreserved. TDK Production."
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13557,7 +13557,7 @@
 			)
 		)
 		(property "Mouser_URL" ""
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13568,7 +13568,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13579,7 +13579,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C1608X7R1H224K080AB"
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13590,7 +13590,7 @@
 			)
 		)
 		(property "Selection_Basis" "PWR-005: 220nF at each VCL/VSS pair per Renesas QDG Rev1.10 section1.2; TDK 50V X7R +/-10% production part. Nominal bias curve only; PDN qualification remains open."
-			(at 266.7 43.18 0)
+			(at 228.6 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13705,7 +13705,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 279.4 144.78 0)
+		(at 165.1 149.86 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13715,7 +13715,7 @@
 		(dnp no)
 		(uuid "fd665a8d-27dc-4d87-b25d-997fa5a3d7b9")
 		(property "Reference" "#FLG01"
-			(at 279.4 142.875 0)
+			(at 165.1 147.955 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13726,7 +13726,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 279.4 140.97 0)
+			(at 165.1 146.05 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13736,7 +13736,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 279.4 144.78 0)
+			(at 165.1 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13747,7 +13747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 279.4 144.78 0)
+			(at 165.1 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13758,7 +13758,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 279.4 144.78 0)
+			(at 165.1 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13769,7 +13769,7 @@
 			)
 		)
 		(property "ki_keywords" "flag power"
-			(at 279.4 144.78 0)
+			(at 165.1 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
