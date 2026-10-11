@@ -2,7 +2,7 @@
 
 Checks the saved KiCad XML netlist for the exact AUDIO_AUX_REQ, AUDIO_AUX_PG,
 permission and clamp partitions, then repeats the conditional DC screens
-recorded in design/audio_auxiliary_5v.md. Passing does not qualify startup,
+recorded in tracker-record:redacted Passing does not qualify startup,
 collapse, transient, hot-leakage or headphone-protection behavior.
 """
 

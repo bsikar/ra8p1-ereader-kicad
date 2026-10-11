@@ -1,6 +1,6 @@
 """LIS2DW12 integration screening; no CAD writes or acceptance claim.
 
-Sources and conditional allocations: design/sensor_alternative.md.
+Sources and conditional allocations: tracker-record:redacted
 """
 
 from math import log

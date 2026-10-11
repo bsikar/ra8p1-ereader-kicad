@@ -1,6 +1,6 @@
 """OPT4001 integration audit and conditional bus screen; no CAD writes.
 
-TI SBOS993A Rev A; allocations and limitations in design/ambient_light.md.
+TI SBOS993A Rev A; allocations and limitations in tracker-record:redacted
 """
 
 import argparse

@@ -1,6 +1,6 @@
 """LIS2DTW12 conditional interface screen; no CAD or qualification claim.
 
-ST DS12825 Rev4 Tables 4/7; allocations in design/sensor_alternative.md.
+ST DS12825 Rev4 Tables 4/7; allocations in tracker-record:redacted
 Startup, off-time, configured bus timing and installed leakage remain open.
 """
 

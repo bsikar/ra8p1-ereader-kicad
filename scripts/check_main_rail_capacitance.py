@@ -2,7 +2,7 @@
 
 Usage: python scripts/check_main_rail_capacitance.py <exported-netlist.xml>
 Export with kicad-cli sch export netlist --format kicadxml. No CAD writes.
-See design/main_rail_capacitance.md for scope and unresolved paths.
+See tracker-record:redacted for scope and unresolved paths.
 """
 
 import argparse

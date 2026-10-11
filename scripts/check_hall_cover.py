@@ -1,6 +1,6 @@
 """Audit Hall cover integration and conditional margins; never writes CAD.
 
-Authority and unresolved conditions: design/hall_cover.md, HALL-001.
+Authority and unresolved conditions: tracker-record:redacted HALL-001.
 """
 
 import argparse

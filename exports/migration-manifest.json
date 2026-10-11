@@ -1,0 +1,3874 @@
+{
+  "version": 1,
+  "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+  "migration_date": "2026-10-11",
+  "records": [
+    {
+      "attachment_verified": true,
+      "sha256": "7900d17de9faa994c1ecd938fc68ae7a72e631a52308fca1f9fb7feb7559631b",
+      "content_sha256": "678520f61ff9d89c85251fa5b5e8b6cc2d5a7829909d25c12bd548f273737797",
+      "path": ".agents/AGENTS.md",
+      "original_removed": false,
+      "bytes": 568,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-38",
+      "attachment": {
+        "id": "539-17",
+        "name": "AGENTS.md"
+      },
+      "readback": {
+        "bytes": 568,
+        "sha256": "7900d17de9faa994c1ecd938fc68ae7a72e631a52308fca1f9fb7feb7559631b",
+        "checked_utc": "2026-10-11T16:49:35.6267431Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-17",
+      "disposition": "retained_entry_point_or_legal_rules",
+      "content_verified_utc": "2026-10-11T16:53:58.5197757Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "6bc1b2058cc2a63169d88f09a0eb323d53d9b493c4345357876ab6317efc1bc7",
+      "content_sha256": "df5673e3d8f86d59504a45bb9cbcd53d97b764a7fe9a9a521fa95ef59559719b",
+      "path": "LIBRARY_STANDARDS.md",
+      "original_removed": false,
+      "bytes": 22028,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-39",
+      "attachment": {
+        "id": "539-18",
+        "name": "LIBRARY_STANDARDS.md"
+      },
+      "readback": {
+        "bytes": 22028,
+        "sha256": "6bc1b2058cc2a63169d88f09a0eb323d53d9b493c4345357876ab6317efc1bc7",
+        "checked_utc": "2026-10-11T16:49:36.007209Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-18",
+      "disposition": "retained_entry_point_or_legal_rules",
+      "content_verified_utc": "2026-10-11T16:53:58.6968779Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "b990666a52b27fad73f49c0855caf97db57a5e5ebc5e3ae1c3ea8b899bfe8fa7",
+      "content_sha256": "6b3e489adebe59ebbbab807eb76dc3c95fae18f7f5e746324f7533b3b4812115",
+      "path": "PARTS-CHECKLIST.md",
+      "original_removed": true,
+      "bytes": 10512,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-40",
+      "attachment": {
+        "id": "539-19",
+        "name": "PARTS-CHECKLIST.md"
+      },
+      "readback": {
+        "bytes": 10512,
+        "sha256": "b990666a52b27fad73f49c0855caf97db57a5e5ebc5e3ae1c3ea8b899bfe8fa7",
+        "checked_utc": "2026-10-11T16:49:36.3012172Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-19",
+      "disposition": "verified_full_source_removed_entry_stub_retained",
+      "content_verified_utc": "2026-10-11T16:53:58.8750707Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "b89d946db26e541ce1f36536ea50ff07bf13ed27dda2cab77609083e20ce4523",
+      "content_sha256": "ac367f99162845b674ca34d46364e4a48ed7056bba8e0af94933db0d15af6859",
+      "path": "README.md",
+      "original_removed": false,
+      "bytes": 4262,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-41",
+      "attachment": {
+        "id": "539-20",
+        "name": "README.md"
+      },
+      "readback": {
+        "bytes": 4262,
+        "sha256": "b89d946db26e541ce1f36536ea50ff07bf13ed27dda2cab77609083e20ce4523",
+        "checked_utc": "2026-10-11T16:49:36.6277098Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-20",
+      "disposition": "retained_entry_point_with_repaired_links",
+      "content_verified_utc": "2026-10-11T16:53:59.0234532Z",
+      "relative_links_repaired": true,
+      "repo_sha256": "3d9291b717a13bbcf35c14590d8a7fd1ed65a4782f3d57a32141d1f50dfbdca6"
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "72c2355a48b1d159e7ae910e3fbc4d5479315b9a57dcd7999965b796f6b0992e",
+      "content_sha256": "99cc1a6bd83f7e28d35de9747d90580f1caedea8f9467ce2f788f72eb8c683ad",
+      "path": "design/ambient_light.md",
+      "original_removed": true,
+      "bytes": 11472,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-42",
+      "attachment": {
+        "id": "539-21",
+        "name": "ambient_light.md"
+      },
+      "readback": {
+        "bytes": 11472,
+        "sha256": "72c2355a48b1d159e7ae910e3fbc4d5479315b9a57dcd7999965b796f6b0992e",
+        "checked_utc": "2026-10-11T16:49:36.9134147Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-21",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:53:59.2011043Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "701f999257698fd5310638166766ac880bc841009ce9462d1cd2d0d86a339638",
+      "content_sha256": "56e7ec7e1ebf8f4fe8c1a8a760399e87c0715305d1a9919bcb88ad5ac8449f0c",
+      "path": "design/audio_amplifier_study.md",
+      "original_removed": true,
+      "bytes": 25402,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-43",
+      "attachment": {
+        "id": "539-22",
+        "name": "audio_amplifier_study.md"
+      },
+      "readback": {
+        "bytes": 25402,
+        "sha256": "701f999257698fd5310638166766ac880bc841009ce9462d1cd2d0d86a339638",
+        "checked_utc": "2026-10-11T16:49:37.2891846Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-22",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:53:59.3974832Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "310b139f5cd9e098ecfa28742918892c5f7ff37973a44a3d24a83b4f2f867901",
+      "content_sha256": "9870f5693b4bc8429f7c7b0d6db547c436342f19d221bc1f532c01606169130f",
+      "path": "design/audio_architecture_candidates.md",
+      "original_removed": true,
+      "bytes": 30705,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-44",
+      "attachment": {
+        "id": "539-23",
+        "name": "audio_architecture_candidates.md"
+      },
+      "readback": {
+        "bytes": 30705,
+        "sha256": "310b139f5cd9e098ecfa28742918892c5f7ff37973a44a3d24a83b4f2f867901",
+        "checked_utc": "2026-10-11T16:49:37.6049737Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-23",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:53:59.6191942Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "30bb4f4a23d79045a1bfedc0d28db1a8b02fef8597979d9b89b8116655293c26",
+      "content_sha256": "8f5031b7e8fca6bcb3cdeacf6451eb5c281886d3db23f105f22459ecea34f92b",
+      "path": "design/audio_architecture_selection.md",
+      "original_removed": true,
+      "bytes": 21524,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-45",
+      "attachment": {
+        "id": "539-24",
+        "name": "audio_architecture_selection.md"
+      },
+      "readback": {
+        "bytes": 21524,
+        "sha256": "30bb4f4a23d79045a1bfedc0d28db1a8b02fef8597979d9b89b8116655293c26",
+        "checked_utc": "2026-10-11T16:49:37.884215Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-24",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:53:59.8214486Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "9c22a705f92494734359490344b528201dca15e73c560c2f3fdaa6a9eaa0b44a",
+      "content_sha256": "dac15f3ba33deaa4c470b163f32755af71599c88e216ea878328226128ff9a7f",
+      "path": "design/audio_auxiliary_5v.md",
+      "original_removed": true,
+      "bytes": 56752,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-46",
+      "attachment": {
+        "id": "539-25",
+        "name": "audio_auxiliary_5v.md"
+      },
+      "readback": {
+        "bytes": 56752,
+        "sha256": "9c22a705f92494734359490344b528201dca15e73c560c2f3fdaa6a9eaa0b44a",
+        "checked_utc": "2026-10-11T16:49:38.3051018Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-25",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:00.1791498Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "d5f5a073195ae568ebc681c109062243e7dc887fe6d60450f4cbb9de662dc5a1",
+      "content_sha256": "213bbc49bbc6be6b802556443230e44308384ba9d43a5893fe4e15e761d8ccdb",
+      "path": "design/audio_buffer_qualification.md",
+      "original_removed": true,
+      "bytes": 26154,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-47",
+      "attachment": {
+        "id": "539-26",
+        "name": "audio_buffer_qualification.md"
+      },
+      "readback": {
+        "bytes": 26154,
+        "sha256": "d5f5a073195ae568ebc681c109062243e7dc887fe6d60450f4cbb9de662dc5a1",
+        "checked_utc": "2026-10-11T16:49:38.5904457Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-26",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:00.3747595Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "2c4ae894a9cb543458093c503618391bb2e9763e0f6926aa4bc3d2157ef57f0a",
+      "content_sha256": "d1ad392310468d8b8a84a572f510d1146ff7e47d981d5363b3b23c9582c0b536",
+      "path": "design/audio_composite_rails.md",
+      "original_removed": true,
+      "bytes": 3487,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-48",
+      "attachment": {
+        "id": "539-27",
+        "name": "audio_composite_rails.md"
+      },
+      "readback": {
+        "bytes": 3487,
+        "sha256": "2c4ae894a9cb543458093c503618391bb2e9763e0f6926aa4bc3d2157ef57f0a",
+        "checked_utc": "2026-10-11T16:49:38.8022066Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-27",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:00.5616111Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "ad3a133c55c389d48af8e2760f9458dc4abd1d38aef3a9c3ae584832d52deeef",
+      "content_sha256": "bc44231860dbf40c6c4a38debad1607c87d015e2bfa31dafefbebba68d6b8a6a",
+      "path": "design/audio_composite_transient.md",
+      "original_removed": true,
+      "bytes": 5000,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-49",
+      "attachment": {
+        "id": "539-28",
+        "name": "audio_composite_transient.md"
+      },
+      "readback": {
+        "bytes": 5000,
+        "sha256": "ad3a133c55c389d48af8e2760f9458dc4abd1d38aef3a9c3ae584832d52deeef",
+        "checked_utc": "2026-10-11T16:49:39.1304207Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-28",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:00.7055773Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "d7daf2b4bfec8010a6fa1a922f123777a1a25b14d9f7b7812600cd6061d45dae",
+      "content_sha256": "b678c69f0b89644cdfeabecc8c53cde7cbe8296fbc78e7865c22c2649dddb6a2",
+      "path": "design/audio_external_review_2026-10-05.md",
+      "original_removed": true,
+      "bytes": 18294,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-50",
+      "attachment": {
+        "id": "539-29",
+        "name": "audio_external_review_2026-10-05.md"
+      },
+      "readback": {
+        "bytes": 18294,
+        "sha256": "d7daf2b4bfec8010a6fa1a922f123777a1a25b14d9f7b7812600cd6061d45dae",
+        "checked_utc": "2026-10-11T16:49:39.6249791Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-29",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:00.8799275Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "ea8801db969687ff38c9c7c667a18623670193c3ab6a451e75830188a67f4ee1",
+      "content_sha256": "c1e0321b103a7adab198c50a06240f5af04ff625a231fe6072975df71cc0e3a4",
+      "path": "design/audio_full_implementation_notes.md",
+      "original_removed": true,
+      "bytes": 2096,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-51",
+      "attachment": {
+        "id": "539-30",
+        "name": "audio_full_implementation_notes.md"
+      },
+      "readback": {
+        "bytes": 2096,
+        "sha256": "ea8801db969687ff38c9c7c667a18623670193c3ab6a451e75830188a67f4ee1",
+        "checked_utc": "2026-10-11T16:49:39.8417508Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-30",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:01.0333214Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "dccacd64c723555aec46e0a23d165742a99b116532608cdc8765610b755eb74b",
+      "content_sha256": "dfe108096156fbedc47608e28e9dfc6d24ddd4f1c9e67bc93795ed4c9a1be859",
+      "path": "design/audio_platform_study.md",
+      "original_removed": true,
+      "bytes": 25427,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-52",
+      "attachment": {
+        "id": "539-31",
+        "name": "audio_platform_study.md"
+      },
+      "readback": {
+        "bytes": 25427,
+        "sha256": "dccacd64c723555aec46e0a23d165742a99b116532608cdc8765610b755eb74b",
+        "checked_utc": "2026-10-11T16:49:40.1998255Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-31",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:01.2161989Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "648e7e6e982bee70c1a65d9acc9ccffa51f557035977e15b86316eede90d7d66",
+      "content_sha256": "f4dbea23a4d176d91639cf99db3bc81c21dabc375780c331426d5d5f58c03bca",
+      "path": "design/audio_power_study.md",
+      "original_removed": true,
+      "bytes": 25017,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-53",
+      "attachment": {
+        "id": "539-32",
+        "name": "audio_power_study.md"
+      },
+      "readback": {
+        "bytes": 25017,
+        "sha256": "648e7e6e982bee70c1a65d9acc9ccffa51f557035977e15b86316eede90d7d66",
+        "checked_utc": "2026-10-11T16:49:40.4855072Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-32",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:01.4077337Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "04fbceb1e558c82970558bf33943d0656b5dca363e7d74aefd3dbaf3f0ffe975",
+      "content_sha256": "fbfac4e4b6fd09825b9ff793073606b8d37186b812e6d6ef4d572501563b239d",
+      "path": "design/audio_quiet_decoupling.md",
+      "original_removed": true,
+      "bytes": 5820,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-54",
+      "attachment": {
+        "id": "539-33",
+        "name": "audio_quiet_decoupling.md"
+      },
+      "readback": {
+        "bytes": 5820,
+        "sha256": "04fbceb1e558c82970558bf33943d0656b5dca363e7d74aefd3dbaf3f0ffe975",
+        "checked_utc": "2026-10-11T16:49:40.7982745Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-33",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:01.7153361Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "99899de55c767970dd17c1d4a5ef57eb6bb6ce1a1919fa4528096c087ec4fe94",
+      "content_sha256": "c62611f3c9844ea72a3db31cd57136b999e801577714382eb16b34d724f5bc15",
+      "path": "design/audio_relay_drive.md",
+      "original_removed": true,
+      "bytes": 16777,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-55",
+      "attachment": {
+        "id": "539-34",
+        "name": "audio_relay_drive.md"
+      },
+      "readback": {
+        "bytes": 16777,
+        "sha256": "99899de55c767970dd17c1d4a5ef57eb6bb6ce1a1919fa4528096c087ec4fe94",
+        "checked_utc": "2026-10-11T16:49:41.0722962Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-34",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:01.8782577Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "e4da05acabeecf5a508a2404a1d480090445e784c0390f7f9ca40887d7e42c30",
+      "content_sha256": "e40bf11a1c6f1475ed0b923c2b9f8dbbe7de6d0b5b9f73b0630261b92f5ae797",
+      "path": "design/audio_review.md",
+      "original_removed": true,
+      "bytes": 5747,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-56",
+      "attachment": {
+        "id": "539-35",
+        "name": "audio_review.md"
+      },
+      "readback": {
+        "bytes": 5747,
+        "sha256": "e4da05acabeecf5a508a2404a1d480090445e784c0390f7f9ca40887d7e42c30",
+        "checked_utc": "2026-10-11T16:49:41.3085665Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-35",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:02.0248854Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "12395906573251a6c7c034f66fb3503f85490737ac3aacf2932a7670e84c2a0e",
+      "content_sha256": "3f254675a36abd85d65fe085a940e23f91a3a6be487e5210812df118ad1244db",
+      "path": "design/audio_stage1_requirements.md",
+      "original_removed": true,
+      "bytes": 30320,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-57",
+      "attachment": {
+        "id": "539-36",
+        "name": "audio_stage1_requirements.md"
+      },
+      "readback": {
+        "bytes": 30320,
+        "sha256": "12395906573251a6c7c034f66fb3503f85490737ac3aacf2932a7670e84c2a0e",
+        "checked_utc": "2026-10-11T16:49:41.7498059Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-36",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:02.2044133Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "218ff58aac369cc6a6b869f727957fa7276291a5249a0f0859212e3878b38a84",
+      "content_sha256": "96a74376f40edc25065941581179cddd1048e6cee28411fb07297e17afb6ebd6",
+      "path": "design/audio_subsystem.md",
+      "original_removed": true,
+      "bytes": 36706,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-58",
+      "attachment": {
+        "id": "539-37",
+        "name": "audio_subsystem.md"
+      },
+      "readback": {
+        "bytes": 36706,
+        "sha256": "218ff58aac369cc6a6b869f727957fa7276291a5249a0f0859212e3878b38a84",
+        "checked_utc": "2026-10-11T16:49:42.0667884Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-37",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:02.6071574Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "caf97ce4f469312e63bf030351de85657e4596b2856dfd7b5e6e15ffaf33b862",
+      "content_sha256": "681a6cabbb6f67b23ca3e9147387ba528c6e9ff34946c34cfedb2b48048b9e65",
+      "path": "design/audio_work_plan.md",
+      "original_removed": true,
+      "bytes": 28244,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-59",
+      "attachment": {
+        "id": "539-38",
+        "name": "audio_work_plan.md"
+      },
+      "readback": {
+        "bytes": 28244,
+        "sha256": "caf97ce4f469312e63bf030351de85657e4596b2856dfd7b5e6e15ffaf33b862",
+        "checked_utc": "2026-10-11T16:49:42.3849473Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-38",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:02.8079908Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "701be7f2e4bd1f61530585548b3fd5bf7e0b5d6c78b8080c403663413aaa7d41",
+      "content_sha256": "6803469cc996d1df92b4afb286f58cd3cfebd3c38d57ada9925a960f1e597a12",
+      "path": "design/boot_and_debug.md",
+      "original_removed": true,
+      "bytes": 18037,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-60",
+      "attachment": {
+        "id": "539-39",
+        "name": "boot_and_debug.md"
+      },
+      "readback": {
+        "bytes": 18037,
+        "sha256": "701be7f2e4bd1f61530585548b3fd5bf7e0b5d6c78b8080c403663413aaa7d41",
+        "checked_utc": "2026-10-11T16:49:42.65227Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-39",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:03.0110685Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "830d74f6928d81227eafd2f62ac7e3bf7fb626cdbf3ce7b7988844873f4d17e4",
+      "content_sha256": "656701dc6661be4c684cf6d8d73a68ebfecb7b7cb8df9709fc35b621de358a39",
+      "path": "design/camera_storage_interfaces.md",
+      "original_removed": true,
+      "bytes": 171726,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-61",
+      "attachment": {
+        "id": "539-40",
+        "name": "camera_storage_interfaces.md"
+      },
+      "readback": {
+        "bytes": 171726,
+        "sha256": "830d74f6928d81227eafd2f62ac7e3bf7fb626cdbf3ce7b7988844873f4d17e4",
+        "checked_utc": "2026-10-11T16:49:43.1207704Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-40",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:03.6236027Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "b677f1f203614cf66fea1b46032bb1b4ea4b1818be9b252a42b5870425415993",
+      "content_sha256": "9dbc408882b85223316e2de0529e5c5998b8e87a498be73bebdd7f7826ff7b7e",
+      "path": "design/camera_timing_budget.md",
+      "original_removed": true,
+      "bytes": 16080,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-62",
+      "attachment": {
+        "id": "539-41",
+        "name": "camera_timing_budget.md"
+      },
+      "readback": {
+        "bytes": 16080,
+        "sha256": "b677f1f203614cf66fea1b46032bb1b4ea4b1818be9b252a42b5870425415993",
+        "checked_utc": "2026-10-11T16:49:43.3567062Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-41",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:03.986404Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "f451352ea9ec4593396c72bdec50cc6ca357711495f4ffba54c81386056783c1",
+      "content_sha256": "4ad9c0dc18ec4f2aaee209cccddb28f1d44faa5f5055d5fda5fa66e7a0f6f356",
+      "path": "design/charger_pd_bq25798.md",
+      "original_removed": true,
+      "bytes": 10787,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-63",
+      "attachment": {
+        "id": "539-42",
+        "name": "charger_pd_bq25798.md"
+      },
+      "readback": {
+        "bytes": 10787,
+        "sha256": "f451352ea9ec4593396c72bdec50cc6ca357711495f4ffba54c81386056783c1",
+        "checked_utc": "2026-10-11T16:49:43.7655626Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-42",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:04.1913488Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "263fb24d4fc77a3e3c44a6786ec058b7c0812bd607951719ed3519f8612e7c5d",
+      "content_sha256": "8acbf720aee89002b2cc5cb2d50e1b86d41f7a4cd7021e60d8ba8133d3e44bdf",
+      "path": "design/clock_calculations.md",
+      "original_removed": true,
+      "bytes": 13967,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-64",
+      "attachment": {
+        "id": "539-43",
+        "name": "clock_calculations.md"
+      },
+      "readback": {
+        "bytes": 13967,
+        "sha256": "263fb24d4fc77a3e3c44a6786ec058b7c0812bd607951719ed3519f8612e7c5d",
+        "checked_utc": "2026-10-11T16:49:44.1580479Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-43",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:04.3903831Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "9c2143218c89c5163f06742c9b9b901614e6a83f604220ef27ce6b35cca6e3ed",
+      "content_sha256": "f75900b31333facf454024afc559d0993c119c94fc28f8268db33148a459d9bf",
+      "path": "design/component_audit_2026-10-05.md",
+      "original_removed": true,
+      "bytes": 111795,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-65",
+      "attachment": {
+        "id": "539-44",
+        "name": "component_audit_2026-10-05.md"
+      },
+      "readback": {
+        "bytes": 111795,
+        "sha256": "9c2143218c89c5163f06742c9b9b901614e6a83f604220ef27ce6b35cca6e3ed",
+        "checked_utc": "2026-10-11T16:49:44.4888518Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-44",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:04.8172501Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "d34e40bf29fe309f699a1a42ce13aa1c27f4665f9d91bc2217865e77c3b95772",
+      "content_sha256": "3ec93a681806260dc86d7d8101a1b0d4e894a63e9df2afb2cf6642077455d640",
+      "path": "design/core_bulk_c9.md",
+      "original_removed": true,
+      "bytes": 4180,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-66",
+      "attachment": {
+        "id": "539-45",
+        "name": "core_bulk_c9.md"
+      },
+      "readback": {
+        "bytes": 4180,
+        "sha256": "d34e40bf29fe309f699a1a42ce13aa1c27f4665f9d91bc2217865e77c3b95772",
+        "checked_utc": "2026-10-11T16:49:44.7098079Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-45",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:04.9357409Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "f623bd96a945a12f34b9de0ce1161ee99f2fd9caac5390fc342395d2d9fa7b3a",
+      "content_sha256": "b1f91904eb3b3b5ea6b3375b64badca6eb473f024f788bb95f6bfab8f352f6b2",
+      "path": "design/erc_review_2026-09-27.md",
+      "original_removed": true,
+      "bytes": 5369,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-67",
+      "attachment": {
+        "id": "539-46",
+        "name": "erc_review_2026-09-27.md"
+      },
+      "readback": {
+        "bytes": 5369,
+        "sha256": "f623bd96a945a12f34b9de0ce1161ee99f2fd9caac5390fc342395d2d9fa7b3a",
+        "checked_utc": "2026-10-11T16:49:44.9569021Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-46",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:05.0709391Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "b2e926f1af6625634dd4700fedecacb5b86395bd298e16d688bd947725e42abb",
+      "content_sha256": "573241fda13f9fed706452bc9aa4e445a701e1b9da38c336d571491fa604ff4f",
+      "path": "design/ereader_requirements.md",
+      "original_removed": true,
+      "bytes": 22045,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-68",
+      "attachment": {
+        "id": "539-47",
+        "name": "ereader_requirements.md"
+      },
+      "readback": {
+        "bytes": 22045,
+        "sha256": "b2e926f1af6625634dd4700fedecacb5b86395bd298e16d688bd947725e42abb",
+        "checked_utc": "2026-10-11T16:49:45.2353298Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-47",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:05.2648562Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "f48665e6041332b1cbd6435f4975fc87025fa3ffb16945268a68e873e7f51c69",
+      "content_sha256": "f3bedfe0a2ec2d5fc37ba8478a388318e2adc06385bc4e4954817e72d1844d4f",
+      "path": "design/hall_cover.md",
+      "original_removed": true,
+      "bytes": 7156,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-69",
+      "attachment": {
+        "id": "539-48",
+        "name": "hall_cover.md"
+      },
+      "readback": {
+        "bytes": 7156,
+        "sha256": "f48665e6041332b1cbd6435f4975fc87025fa3ffb16945268a68e873e7f51c69",
+        "checked_utc": "2026-10-11T16:49:45.4743668Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-48",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:05.5794306Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "c81b6e48361a632ee56fcf510fac6d7ba9466a54162fe6a7148124b89af74391",
+      "content_sha256": "325cad477e4b481c770f02e5979051efba90651133f55981877e30ea153db223",
+      "path": "design/main_rail_brownout_tps63806.md",
+      "original_removed": true,
+      "bytes": 22229,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-70",
+      "attachment": {
+        "id": "539-49",
+        "name": "main_rail_brownout_tps63806.md"
+      },
+      "readback": {
+        "bytes": 22229,
+        "sha256": "c81b6e48361a632ee56fcf510fac6d7ba9466a54162fe6a7148124b89af74391",
+        "checked_utc": "2026-10-11T16:49:45.8186128Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-49",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:05.7853668Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "098bfb9fc63b71b13a5b5b696ef6d66dad78f3ae085f2afcdc0252b4b01d3ed3",
+      "content_sha256": "521759385ee52b85d41d6a662e195ef59a843349805cfbafbdb759c931ee4f79",
+      "path": "design/main_rail_capacitance.md",
+      "original_removed": true,
+      "bytes": 9948,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-71",
+      "attachment": {
+        "id": "539-50",
+        "name": "main_rail_capacitance.md"
+      },
+      "readback": {
+        "bytes": 9948,
+        "sha256": "098bfb9fc63b71b13a5b5b696ef6d66dad78f3ae085f2afcdc0252b4b01d3ed3",
+        "checked_utc": "2026-10-11T16:49:46.1898411Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-50",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:06.088256Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "62843f77e33f65f136d1160eccf1b1ac6ebdc0bb14d9067ef66aac4f69cb91e0",
+      "content_sha256": "8a0dc2bbabfc30685e2a2606eb02ff0973d65c513cce36eb777669cdb93d24ab",
+      "path": "design/main_regulator_ltc3119.md",
+      "original_removed": true,
+      "bytes": 40834,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-72",
+      "attachment": {
+        "id": "539-51",
+        "name": "main_regulator_ltc3119.md"
+      },
+      "readback": {
+        "bytes": 40834,
+        "sha256": "62843f77e33f65f136d1160eccf1b1ac6ebdc0bb14d9067ef66aac4f69cb91e0",
+        "checked_utc": "2026-10-11T16:49:46.5284674Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-51",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:06.3077176Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "dc296ba0ff191745b0654c917ecb57af745002c035ef24ac8844e4e036bb54e6",
+      "content_sha256": "ead752ee203b14b8d921bf79b39744843fd8888187b86873833eb3e32b209991",
+      "path": "design/main_regulator_tps63806.md",
+      "original_removed": true,
+      "bytes": 34607,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-73",
+      "attachment": {
+        "id": "539-52",
+        "name": "main_regulator_tps63806.md"
+      },
+      "readback": {
+        "bytes": 34607,
+        "sha256": "dc296ba0ff191745b0654c917ecb57af745002c035ef24ac8844e4e036bb54e6",
+        "checked_utc": "2026-10-11T16:49:46.8048506Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-52",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:06.492577Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "136a2db5d79bc4882f319625a8ae8f04574b7b3016dc990e05c6fa87f4ecdad5",
+      "content_sha256": "d73d5d41c64d70887dd57201df9f8949114b2a261ec09cf3d98263facec1c47b",
+      "path": "design/mcu_connection_audit.md",
+      "original_removed": true,
+      "bytes": 17666,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-74",
+      "attachment": {
+        "id": "539-53",
+        "name": "mcu_connection_audit.md"
+      },
+      "readback": {
+        "bytes": 17666,
+        "sha256": "136a2db5d79bc4882f319625a8ae8f04574b7b3016dc990e05c6fa87f4ecdad5",
+        "checked_utc": "2026-10-11T16:49:47.0735029Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-53",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:06.8174375Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "8da6f6584f18fc3c0a3d6fc610efdb90853900c3aa8aeda659f9b0a86d21b4cf",
+      "content_sha256": "21a4d373eb73b91dae0082ae9f9b2899a0b60722a58b33291ddc714e7a2eae46",
+      "path": "design/microsd_power_interface.md",
+      "original_removed": true,
+      "bytes": 29167,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-75",
+      "attachment": {
+        "id": "539-54",
+        "name": "microsd_power_interface.md"
+      },
+      "readback": {
+        "bytes": 29167,
+        "sha256": "8da6f6584f18fc3c0a3d6fc610efdb90853900c3aa8aeda659f9b0a86d21b4cf",
+        "checked_utc": "2026-10-11T16:49:47.344767Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-54",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:07.0051743Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "8b7323f7c68fa51450419b662497396b8239c27b9f7ef289dbcfe462a9af541e",
+      "content_sha256": "9ee0c25d4210a72733392c4a1f6dfec207617bd340d9eec4e51ef5079d9511ca",
+      "path": "design/mipi_ldo_selection.md",
+      "original_removed": true,
+      "bytes": 8653,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-76",
+      "attachment": {
+        "id": "539-55",
+        "name": "mipi_ldo_selection.md"
+      },
+      "readback": {
+        "bytes": 8653,
+        "sha256": "8b7323f7c68fa51450419b662497396b8239c27b9f7ef289dbcfe462a9af541e",
+        "checked_utc": "2026-10-11T16:49:47.6151813Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-55",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:07.1705214Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "975fdc65bd1479f218427402866c8837ac1d34cc983aa6af1be1b9f29f75c1f7",
+      "content_sha256": "00f62eff58ced65b26507c72024a87876bb6cb73baf91e1f4622e8288c5e8b4c",
+      "path": "design/power_decoupling.md",
+      "original_removed": true,
+      "bytes": 41106,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-77",
+      "attachment": {
+        "id": "539-56",
+        "name": "power_decoupling.md"
+      },
+      "readback": {
+        "bytes": 41106,
+        "sha256": "975fdc65bd1479f218427402866c8837ac1d34cc983aa6af1be1b9f29f75c1f7",
+        "checked_utc": "2026-10-11T16:49:48.0155015Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-56",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:07.517753Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "fba560d7dcd5fc4ea8420412eeaf8ef70bfc3a1272c25048cef8fd693a8de840",
+      "content_sha256": "bc86f9a6ed1e4130ed68fec192e959e45a3fdf454a9875b118e2704db01dc2d9",
+      "path": "design/radio_interface.md",
+      "original_removed": true,
+      "bytes": 107673,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-78",
+      "attachment": {
+        "id": "539-57",
+        "name": "radio_interface.md"
+      },
+      "readback": {
+        "bytes": 107673,
+        "sha256": "fba560d7dcd5fc4ea8420412eeaf8ef70bfc3a1272c25048cef8fd693a8de840",
+        "checked_utc": "2026-10-11T16:49:48.4272086Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-57",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:07.9384274Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "aefd9c2acfb01984514360dcf08430bd436516cb0981267f95d311ffeb5d8354",
+      "content_sha256": "24e3edd19d52ed751a7498a6719c9128bb61e0a2f64a18a4f62d2bbaa06889fa",
+      "path": "design/radio_sdio_migration.md",
+      "original_removed": true,
+      "bytes": 18587,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-79",
+      "attachment": {
+        "id": "539-58",
+        "name": "radio_sdio_migration.md"
+      },
+      "readback": {
+        "bytes": 18587,
+        "sha256": "aefd9c2acfb01984514360dcf08430bd436516cb0981267f95d311ffeb5d8354",
+        "checked_utc": "2026-10-11T16:49:48.7267908Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-58",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:08.1094188Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "e5a2d714960705aa5aad26301e2ec0a5a0af751f5ffaf796c1d04dc325e3a943",
+      "content_sha256": "af01144530bddffc1669334cf5754d7c188ba4acab4bb51fba2b96549c82d796",
+      "path": "design/reset_coordination_tps3890.md",
+      "original_removed": true,
+      "bytes": 24976,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-80",
+      "attachment": {
+        "id": "539-59",
+        "name": "reset_coordination_tps3890.md"
+      },
+      "readback": {
+        "bytes": 24976,
+        "sha256": "e5a2d714960705aa5aad26301e2ec0a5a0af751f5ffaf796c1d04dc325e3a943",
+        "checked_utc": "2026-10-11T16:49:48.9794972Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-59",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:08.2799093Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "e8684976df98ed554d460512409e54b5a5a58e6f8ec8520f60319efd0a1e3ddb",
+      "content_sha256": "63dde2bdc95a2986479574400844c62980b6576ad8d68730c3fff21af06cbc57",
+      "path": "design/sensor_alternative.md",
+      "original_removed": true,
+      "bytes": 41720,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-81",
+      "attachment": {
+        "id": "539-60",
+        "name": "sensor_alternative.md"
+      },
+      "readback": {
+        "bytes": 41720,
+        "sha256": "e8684976df98ed554d460512409e54b5a5a58e6f8ec8520f60319efd0a1e3ddb",
+        "checked_utc": "2026-10-11T16:49:49.2787266Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-60",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:08.6401657Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "873ae8d47023f4d44b0d5e5346370ea0fc98a8e4a0061125ab85907814354851",
+      "content_sha256": "86e1e1cf00f1cdf1a87a7c152e4f2f646a55a610918008c874aba8949547b398",
+      "path": "design/sensors.md",
+      "original_removed": true,
+      "bytes": 25639,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-82",
+      "attachment": {
+        "id": "539-61",
+        "name": "sensors.md"
+      },
+      "readback": {
+        "bytes": 25639,
+        "sha256": "873ae8d47023f4d44b0d5e5346370ea0fc98a8e4a0061125ab85907814354851",
+        "checked_utc": "2026-10-11T16:49:49.6921383Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-61",
+      "disposition": "verified_source_removed",
+      "content_verified_utc": "2026-10-11T16:54:08.8167828Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "d5ad099d510d8c0b9a62c47abce76b97bb14f177decac78efdb49d680297f502",
+      "content_sha256": "151a6759a631d4e8f7efba092e8781c87b98e9eec51e305aa6a21c3794459a5a",
+      "path": "design/service_interface.md",
+      "original_removed": true,
+      "bytes": 47838,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-83",
+      "attachment": {
+        "id": "539-62",
+        "name": "service_interface.md"
+      },
+      "readback": {
+        "bytes": 47838,
+        "sha256": "d5ad099d510d8c0b9a62c47abce76b97bb14f177decac78efdb49d680297f502",
+        "checked_utc": "2026-10-11T16:49:50.1211276Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-62",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:09.0248004Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "b37dd756c6ad4baa2097eebfb3fb7f274071055f53e0927625d7b0833ac4ad91",
+      "content_sha256": "ccfa2b15e10dee2a1ccb82b76e473efab18bd8ba0a6269f9e3f125f2b63947f4",
+      "path": "design/single_button_power.md",
+      "original_removed": true,
+      "bytes": 50577,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-84",
+      "attachment": {
+        "id": "539-63",
+        "name": "single_button_power.md"
+      },
+      "readback": {
+        "bytes": 50577,
+        "sha256": "b37dd756c6ad4baa2097eebfb3fb7f274071055f53e0927625d7b0833ac4ad91",
+        "checked_utc": "2026-10-11T16:49:50.5606614Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-63",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:09.3634636Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "f30db6d4827d9da0160ff278978a346c33abdc322e8441e26d6c90d28ab35318",
+      "content_sha256": "fae79a51772d9dfb877a9102aa662b2513bf967fba59252b58f6a13f6cdc19cf",
+      "path": "design/system_power_design.md",
+      "original_removed": true,
+      "bytes": 108671,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-85",
+      "attachment": {
+        "id": "539-64",
+        "name": "system_power_design.md"
+      },
+      "readback": {
+        "bytes": 108671,
+        "sha256": "f30db6d4827d9da0160ff278978a346c33abdc322e8441e26d6c90d28ab35318",
+        "checked_utc": "2026-10-11T16:49:50.9390828Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-64",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:09.9011516Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "08c80deaa23ac200ced2382579c298ddc7efd2edffb309dd40a8652b9da5ddaf",
+      "content_sha256": "9e6b6d2488e11b278534709e989b1de1c2f0adb8c3aff8528d63ea1a1a089f09",
+      "path": "design/usb_interface.md",
+      "original_removed": true,
+      "bytes": 27845,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-86",
+      "attachment": {
+        "id": "539-65",
+        "name": "usb_interface.md"
+      },
+      "readback": {
+        "bytes": 27845,
+        "sha256": "08c80deaa23ac200ced2382579c298ddc7efd2edffb309dd40a8652b9da5ddaf",
+        "checked_utc": "2026-10-11T16:49:51.1748315Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-65",
+      "disposition": "verified_full_source_removed_redirect_retained",
+      "content_verified_utc": "2026-10-11T16:54:10.3020083Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "c3016ceee2a5b458b5cdf3f6cc6ef1a00eecd7260ecba46ed6cb53f9712f673f",
+      "content_sha256": "d0a17274376f4e087b68b73f516b045717de3f0e8abc544052994f77f086c054",
+      "path": "libs/symbols/KICAD_LIBRARY_LICENSE.md",
+      "original_removed": false,
+      "bytes": 2128,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-87",
+      "attachment": {
+        "id": "539-66",
+        "name": "KICAD_LIBRARY_LICENSE.md"
+      },
+      "readback": {
+        "bytes": 2128,
+        "sha256": "c3016ceee2a5b458b5cdf3f6cc6ef1a00eecd7260ecba46ed6cb53f9712f673f",
+        "checked_utc": "2026-10-11T16:49:51.5354354Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-66",
+      "disposition": "retained_entry_point_or_legal_rules",
+      "content_verified_utc": "2026-10-11T16:54:10.4584833Z",
+      "relative_links_repaired": true
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "de3b7a7c3d78ad0d2c34ee22a46b8c72a09a41247b39c4f51d3a3e05a85ced74",
+      "content_sha256": "ec3c1cf021ce7a9d6ae45be41801d5dfb4772febd5a632922c10b34a98bf86b0",
+      "path": "resources/datasheets/E-Ink_ED060KHE_Display_Simplified_Specification.pdf",
+      "original_removed": false,
+      "bytes": 541076,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-88",
+      "attachment": {
+        "id": "539-67",
+        "name": "E-Ink_ED060KHE_Display_Simplified_Specification.pdf"
+      },
+      "readback": {
+        "bytes": 541076,
+        "sha256": "de3b7a7c3d78ad0d2c34ee22a46b8c72a09a41247b39c4f51d3a3e05a85ced74",
+        "checked_utc": "2026-10-11T16:49:51.9918652Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-67",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "b4a44998f81633a811feb0fa6da6b917f4a9546d0ca1cac2bc7cd3c76fb1a498",
+      "content_sha256": "ccbf207f06d71d945c4bd4118f2941fea587d518c7cae30aa5cd6e367a39a21b",
+      "path": "resources/datasheets/Renesas_RA8D2_MCU_Datasheet.pdf",
+      "original_removed": false,
+      "bytes": 5570319,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-89",
+      "attachment": {
+        "id": "539-68",
+        "name": "Renesas_RA8D2_MCU_Datasheet.pdf"
+      },
+      "readback": {
+        "bytes": 5570319,
+        "sha256": "b4a44998f81633a811feb0fa6da6b917f4a9546d0ca1cac2bc7cd3c76fb1a498",
+        "checked_utc": "2026-10-11T16:49:52.5919201Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-68",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "6475b9b0309ce8b039beebeff8bd8ab7656b2a45a7b34fb4aeaaad16d294f300",
+      "content_sha256": "36d3f2c38cef6aab02efe58e60033d8e4fd8ac8edd630a90fd016c7b6d481523",
+      "path": "resources/datasheets/Samsung_CL32B226MOJNNNE_dc_bias_2026-09-08.csv",
+      "original_removed": false,
+      "bytes": 4202,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-90",
+      "attachment": {
+        "id": "539-69",
+        "name": "Samsung_CL32B226MOJNNNE_dc_bias_2026-09-08.csv"
+      },
+      "readback": {
+        "bytes": 4202,
+        "sha256": "6475b9b0309ce8b039beebeff8bd8ab7656b2a45a7b34fb4aeaaad16d294f300",
+        "checked_utc": "2026-10-11T16:49:52.9680047Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-69",
+      "disposition": "retained_executable_csv"
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "393d7884a3da03e44ea7f3f38402e1fcec9c6f3b646b9582e3ab065c6de60793",
+      "content_sha256": "d2b24b9e9783ecc2f35422d637a708b8654e966007fc5b1aa12786a5f48dc8c4",
+      "path": "resources/datasheets/TDK_C1608X7R1H103K080AA_dc_bias_2026-09-05.csv",
+      "original_removed": false,
+      "bytes": 529,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-91",
+      "attachment": {
+        "id": "539-70",
+        "name": "TDK_C1608X7R1H103K080AA_dc_bias_2026-09-05.csv"
+      },
+      "readback": {
+        "bytes": 529,
+        "sha256": "393d7884a3da03e44ea7f3f38402e1fcec9c6f3b646b9582e3ab065c6de60793",
+        "checked_utc": "2026-10-11T16:49:53.1906372Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-70",
+      "disposition": "retained_executable_csv"
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "bc69e9ba43e002be8e1a7b492fae48036a10e7770530aab7c25b34c476aedfc9",
+      "content_sha256": "82a87ddc92c7e6d0b8a5bd22df4eb830d2cc3c44012979dadc7b7e9eeec0613b",
+      "path": "resources/datasheets/TDK_C1608X7R1H104K080AA_dc_bias_2026-09-05.csv",
+      "original_removed": false,
+      "bytes": 529,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-92",
+      "attachment": {
+        "id": "539-71",
+        "name": "TDK_C1608X7R1H104K080AA_dc_bias_2026-09-05.csv"
+      },
+      "readback": {
+        "bytes": 529,
+        "sha256": "bc69e9ba43e002be8e1a7b492fae48036a10e7770530aab7c25b34c476aedfc9",
+        "checked_utc": "2026-10-11T16:49:53.5217527Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-71",
+      "disposition": "retained_executable_csv"
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "c80dbdf5a4d24868479009a17896140c4808faadcedf24aa4887971c1c3b120b",
+      "content_sha256": "b367401aaaa79dd00fc769e84e353088a38071a12fb8ab1c0ac95d253c049a9a",
+      "path": "resources/datasheets/TDK_C1608X7R1H224K080AB_dc_bias_2026-09-08.csv",
+      "original_removed": false,
+      "bytes": 529,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-93",
+      "attachment": {
+        "id": "539-72",
+        "name": "TDK_C1608X7R1H224K080AB_dc_bias_2026-09-08.csv"
+      },
+      "readback": {
+        "bytes": 529,
+        "sha256": "c80dbdf5a4d24868479009a17896140c4808faadcedf24aa4887971c1c3b120b",
+        "checked_utc": "2026-10-11T16:49:53.7391983Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-72",
+      "disposition": "retained_executable_csv"
+    },
+    {
+      "attachment_verified": true,
+      "sha256": "941aa8f0a7ad8cd5f14ff154f60231c7b174f3aeb19834acaef570154f288c4d",
+      "content_sha256": "29b716b601bdee9076a28163e245ed2651fcc01259b111e908e00d41b6bf0d1f",
+      "path": "resources/datasheets/TDK_C3216X7R1V106K160AC_dc_bias_2026-09-05.csv",
+      "original_removed": false,
+      "bytes": 477,
+      "article_url": "tracker-record:redacted",
+      "content_verified": true,
+      "article_id": "183-94",
+      "attachment": {
+        "id": "539-73",
+        "name": "TDK_C3216X7R1V106K160AC_dc_bias_2026-09-05.csv"
+      },
+      "readback": {
+        "bytes": 477,
+        "sha256": "941aa8f0a7ad8cd5f14ff154f60231c7b174f3aeb19834acaef570154f288c4d",
+        "checked_utc": "2026-10-11T16:49:54.0813509Z"
+      },
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "article_key": "RA8HW-A-73",
+      "disposition": "retained_executable_csv"
+    },
+    {
+      "sha256": "abd237fe10238e9d56a5a31f574da94213042774d3780894c34b70fbd6d5c15f",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "Renesas_EK-RA8D2_Board_3D_PDF.pdf.part-001-of-006",
+          "bytes": 8388608,
+          "id": "539-74",
+          "sha256": "77b0af33441a86ffd832d38e4fa316ce50ab579e3f093a135e73594ebbc02008",
+          "checked_utc": "2026-10-11T16:50:41.3205191Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_3D_PDF.pdf.part-002-of-006",
+          "bytes": 8388608,
+          "id": "539-75",
+          "sha256": "f8093d8726f76c122b51520015db1297496f10c8de4124b9182a40845d3e8110",
+          "checked_utc": "2026-10-11T16:50:41.9366446Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_3D_PDF.pdf.part-003-of-006",
+          "bytes": 8388608,
+          "id": "539-76",
+          "sha256": "bb05e751fa732c0e67f0f3d62698e71aea7b625eb0f3304a5e59a62e8b5881c0",
+          "checked_utc": "2026-10-11T16:50:42.6067963Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_3D_PDF.pdf.part-004-of-006",
+          "bytes": 8388608,
+          "id": "539-77",
+          "sha256": "7d548463b6699189e63ab1723ff14ce85cbcc34e319af1314a109b06331dc3ae",
+          "checked_utc": "2026-10-11T16:50:43.2677868Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_3D_PDF.pdf.part-005-of-006",
+          "bytes": 8388608,
+          "id": "539-78",
+          "sha256": "4dbf55ddbb51f4823ca9e3f83ec977ddb45539e718a0f3fe61a84ee6ce652b3b",
+          "checked_utc": "2026-10-11T16:50:43.8816954Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_3D_PDF.pdf.part-006-of-006",
+          "bytes": 1566894,
+          "id": "539-79",
+          "sha256": "313df8f7a69068c4e00912ac7dc26f5460238e194534623e58c6d60e1295c93b",
+          "checked_utc": "2026-10-11T16:50:44.2629954Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 43509934,
+        "checked_utc": "2026-10-11T16:50:44.3540509Z",
+        "sha256": "abd237fe10238e9d56a5a31f574da94213042774d3780894c34b70fbd6d5c15f"
+      },
+      "article_id": "183-95",
+      "content_verified": true,
+      "article_key": "RA8HW-A-74",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 43509934,
+      "content_sha256": "6c052458ea3a3bd8b45b3aca5707d735e0e4cdb4a0085b73a5700a24393a7f91",
+      "path": "resources/manuals/Renesas_EK-RA8D2_Board_3D_PDF.pdf",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "da5d83125c8961a7ed27ffec99cd67be44e8fde34399efc5dc4187783e80dcff",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 97455,
+        "checked_utc": "2026-10-11T16:50:44.8058177Z",
+        "sha256": "da5d83125c8961a7ed27ffec99cd67be44e8fde34399efc5dc4187783e80dcff"
+      },
+      "article_id": "183-96",
+      "content_verified": true,
+      "article_key": "RA8HW-A-75",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Renesas_EK-RA8D2_Board_BOM.xlsx",
+        "id": "539-80"
+      },
+      "attachment_verified": true,
+      "bytes": 97455,
+      "content_sha256": "fa3d5e5c2e232a0f057f01b1004ad2a06b04e26cabdfd98a28fff665512031de",
+      "path": "resources/manuals/Renesas_EK-RA8D2_Board_BOM.xlsx",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "ec40a9d4748eec801fda59cdd764308a417ce0c16d0cd46e09c42f3aa8371179",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 558452,
+        "checked_utc": "2026-10-11T16:50:45.2540812Z",
+        "sha256": "ec40a9d4748eec801fda59cdd764308a417ce0c16d0cd46e09c42f3aa8371179"
+      },
+      "article_id": "183-97",
+      "content_verified": true,
+      "article_key": "RA8HW-A-76",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Renesas_EK-RA8D2_Board_Mechanical_Drawings.pdf",
+        "id": "539-81"
+      },
+      "attachment_verified": true,
+      "bytes": 558452,
+      "content_sha256": "c58a96a582550589f70b518d3c22ce0362a6eb5c2c05bcbb22ef0630ae9c138e",
+      "path": "resources/manuals/Renesas_EK-RA8D2_Board_Mechanical_Drawings.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "0ff034cbea3ba00162dde7f3da65c3e8fc57e07a5de37017d13a6dbf71a34463",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "Renesas_EK-RA8D2_Board_Schematics.pdf.part-001-of-002",
+          "bytes": 8388608,
+          "id": "539-82",
+          "sha256": "c4827fa20cab45f8266739023c97edfd89662e5cc8d6e27ab7edb886f0c843d9",
+          "checked_utc": "2026-10-11T16:50:46.119061Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Schematics.pdf.part-002-of-002",
+          "bytes": 1759355,
+          "id": "539-83",
+          "sha256": "13d63a3d7f9c28a031ee6bbb648727542285ac86935f46cfff2bf9ced1b2a52e",
+          "checked_utc": "2026-10-11T16:50:46.5449088Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 10147963,
+        "checked_utc": "2026-10-11T16:50:46.6138812Z",
+        "sha256": "0ff034cbea3ba00162dde7f3da65c3e8fc57e07a5de37017d13a6dbf71a34463"
+      },
+      "article_id": "183-98",
+      "content_verified": true,
+      "article_key": "RA8HW-A-77",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 10147963,
+      "content_sha256": "5cd6254bc7a58ec7670a844d4e00fe501f03116d4be98d71dae98c2557e70e22",
+      "path": "resources/manuals/Renesas_EK-RA8D2_Board_Schematics.pdf",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "728b7adb07e8bd04ea77e88edc0561908e9a89e21edc3b551519ed5ea4c4579e",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 7635875,
+        "checked_utc": "2026-10-11T16:50:47.6778257Z",
+        "sha256": "728b7adb07e8bd04ea77e88edc0561908e9a89e21edc3b551519ed5ea4c4579e"
+      },
+      "article_id": "183-99",
+      "content_verified": true,
+      "article_key": "RA8HW-A-78",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Renesas_EK-RA8D2_Evaluation_Kit_User_Manual.pdf",
+        "id": "539-84"
+      },
+      "attachment_verified": true,
+      "bytes": 7635875,
+      "content_sha256": "5e8961cff910ddb18052e790e158189af5f82dddbaab5edf24a6fc98c507ccaf",
+      "path": "resources/manuals/Renesas_EK-RA8D2_Evaluation_Kit_User_Manual.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "10ea7817f0f0371181579b97abae4fad899a51b7d32dfa909638d46df14e8571",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 4106012,
+        "checked_utc": "2026-10-11T16:50:48.1621152Z",
+        "sha256": "10ea7817f0f0371181579b97abae4fad899a51b7d32dfa909638d46df14e8571"
+      },
+      "article_id": "183-100",
+      "content_verified": true,
+      "article_key": "RA8HW-A-79",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Renesas_EK-RA8D2_Quick_Start_Guide.pdf",
+        "id": "539-85"
+      },
+      "attachment_verified": true,
+      "bytes": 4106012,
+      "content_sha256": "789d7b1eabe225089fdda389ef84cdd036f8a30ff2c3f9847e731d14bc501ed6",
+      "path": "resources/manuals/Renesas_EK-RA8D2_Quick_Start_Guide.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "83f5264bc67f6457f7bf9172bbeee5e703c7a2260506ad1d156536ff63785d11",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "Renesas_RA8D2_MCU_Hardware_User_Manual.pdf.part-001-of-006",
+          "bytes": 8388608,
+          "id": "539-86",
+          "sha256": "29e8b562cef6e335e5e305089000742ed6b1a2c60f48e08c08cf17452b7cbd72",
+          "checked_utc": "2026-10-11T16:50:48.8117267Z"
+        },
+        {
+          "name": "Renesas_RA8D2_MCU_Hardware_User_Manual.pdf.part-002-of-006",
+          "bytes": 8388608,
+          "id": "539-87",
+          "sha256": "6fa2624109560bc08d3b4091b228f33ca9bd9a3b18b076e6cae97e56af5647e5",
+          "checked_utc": "2026-10-11T16:50:49.4894363Z"
+        },
+        {
+          "name": "Renesas_RA8D2_MCU_Hardware_User_Manual.pdf.part-003-of-006",
+          "bytes": 8388608,
+          "id": "539-88",
+          "sha256": "b4883e65a47f0d1290500efa5282cfba63bb39c662cd385cc06b8221054c667e",
+          "checked_utc": "2026-10-11T16:50:50.3584367Z"
+        },
+        {
+          "name": "Renesas_RA8D2_MCU_Hardware_User_Manual.pdf.part-004-of-006",
+          "bytes": 8388608,
+          "id": "539-89",
+          "sha256": "b96a246f5e6e3b58da391f65a295cd1d7f0af5ab11f20fa21321bcf8f48b1813",
+          "checked_utc": "2026-10-11T16:50:50.920884Z"
+        },
+        {
+          "name": "Renesas_RA8D2_MCU_Hardware_User_Manual.pdf.part-005-of-006",
+          "bytes": 8388608,
+          "id": "539-90",
+          "sha256": "50211f803c2a3505811bd73ee979ea14c1af141a1466b3ad4cfd71219f7b172f",
+          "checked_utc": "2026-10-11T16:50:51.4574494Z"
+        },
+        {
+          "name": "Renesas_RA8D2_MCU_Hardware_User_Manual.pdf.part-006-of-006",
+          "bytes": 7190408,
+          "id": "539-91",
+          "sha256": "57c9e488375277a37a584f7df7d7f8d33646f2545ea3909f774d4cfc9a87ddfe",
+          "checked_utc": "2026-10-11T16:50:52.1415258Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 49133448,
+        "checked_utc": "2026-10-11T16:50:52.307711Z",
+        "sha256": "83f5264bc67f6457f7bf9172bbeee5e703c7a2260506ad1d156536ff63785d11"
+      },
+      "article_id": "183-101",
+      "content_verified": true,
+      "article_key": "RA8HW-A-80",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 49133448,
+      "content_sha256": "3317c42430414e62d02ee4510e9584b2a3b71e00f80a667ee60094617c86aee8",
+      "path": "resources/manuals/Renesas_RA8D2_MCU_Hardware_User_Manual.pdf",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "5f70076d6a117232410b48552921b353899df224a6f417397e840b6eda405873",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 483111,
+        "checked_utc": "2026-10-11T16:50:52.6834857Z",
+        "sha256": "5f70076d6a117232410b48552921b353899df224a6f417397e840b6eda405873"
+      },
+      "article_id": "183-102",
+      "content_verified": true,
+      "article_key": "RA8HW-A-81",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Renesas_RA8D2_MIPI_LCD_Board_User_Manual.pdf",
+        "id": "539-92"
+      },
+      "attachment_verified": true,
+      "bytes": 483111,
+      "content_sha256": "c02c58e99a4f9ed508c6c0eff14f4a10449d620c85ff8f9468ae37fa36588f12",
+      "path": "resources/manuals/Renesas_RA8D2_MIPI_LCD_Board_User_Manual.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "19838641345de0146591d7cd12d8bd6ba5376a3e68b889fde6faeac21ccc03c1",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 661985,
+        "checked_utc": "2026-10-11T16:50:52.9449759Z",
+        "sha256": "19838641345de0146591d7cd12d8bd6ba5376a3e68b889fde6faeac21ccc03c1"
+      },
+      "article_id": "183-103",
+      "content_verified": true,
+      "article_key": "RA8HW-A-82",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Renesas_RA8D2_Parallel_LCD_Board_User_Manual.pdf",
+        "id": "539-93"
+      },
+      "attachment_verified": true,
+      "bytes": 661985,
+      "content_sha256": "a4ca4bd4c45917da172deb9dbc3db9ad9c132687cfe2de32295112f1443456da",
+      "path": "resources/manuals/Renesas_RA8D2_Parallel_LCD_Board_User_Manual.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "b3fe7457d1e3ab8957738418d0738ec758e311c6c709c5a46d5fc93f5411c265",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-001-of-013",
+          "bytes": 8388608,
+          "id": "539-94",
+          "sha256": "e810d9546e4beed5a67639c2f60428a7cf19958d0cb2a40d9751292075be69cd",
+          "checked_utc": "2026-10-11T16:50:53.5153135Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-002-of-013",
+          "bytes": 8388608,
+          "id": "539-95",
+          "sha256": "876d1cb4c5460c2b72d3db04d578b32a8f0e3a551ace091be3ddb817b869b990",
+          "checked_utc": "2026-10-11T16:50:54.1441866Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-003-of-013",
+          "bytes": 8388608,
+          "id": "539-96",
+          "sha256": "a332102b62473e9265f90cf3ba91d63b2ecabcc5ea8deeec4c7e56ff1c159a95",
+          "checked_utc": "2026-10-11T16:50:54.7059003Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-004-of-013",
+          "bytes": 8388608,
+          "id": "539-97",
+          "sha256": "f6a4f98014c2c4b8fc792fa383e27afd2868ad55d75252a45816603eaff1ba86",
+          "checked_utc": "2026-10-11T16:50:55.2188981Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-005-of-013",
+          "bytes": 8388608,
+          "id": "539-98",
+          "sha256": "f0a8356b1b0adf155a59b9c4585d6a56188eb14b8c22fac229b6aaf89164cc96",
+          "checked_utc": "2026-10-11T16:50:55.754645Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-006-of-013",
+          "bytes": 8388608,
+          "id": "539-99",
+          "sha256": "7924293a4ae1e068366a5c7a20f853764c802af6b0871c9ef0d9b2440302f34a",
+          "checked_utc": "2026-10-11T16:50:56.3699128Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-007-of-013",
+          "bytes": 8388608,
+          "id": "539-100",
+          "sha256": "f92a039385ce11ec062e5297803d2c613dbc37cd0812239eca08093a7a128ee5",
+          "checked_utc": "2026-10-11T16:50:57.0124436Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-008-of-013",
+          "bytes": 8388608,
+          "id": "539-101",
+          "sha256": "5931aba94a63ff8247f719ad63877bf199764d1d74fa7d3f4146f2bbb2ea3d77",
+          "checked_utc": "2026-10-11T16:50:57.5818012Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-009-of-013",
+          "bytes": 8388608,
+          "id": "539-102",
+          "sha256": "859ff67d568a20077b8610c3ca0deadd6683de0ac85866038d3ce88d8eea90ab",
+          "checked_utc": "2026-10-11T16:50:58.0980274Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-010-of-013",
+          "bytes": 8388608,
+          "id": "539-103",
+          "sha256": "1c7b31adaf3519dd572a4d9c8657f1d239d20d4be17dca68c9ff82bd72c83360",
+          "checked_utc": "2026-10-11T16:50:58.627677Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-011-of-013",
+          "bytes": 8388608,
+          "id": "539-104",
+          "sha256": "cabe38ad94a9aa3af24d3f7f9166a47809d032843aeac0ac3c32235a23f2141c",
+          "checked_utc": "2026-10-11T16:50:59.1329819Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-012-of-013",
+          "bytes": 8388608,
+          "id": "539-105",
+          "sha256": "618a74b965e7a5229e23785e435566f6639ae712077bd25da3ace08d94960f48",
+          "checked_utc": "2026-10-11T16:50:59.6490774Z"
+        },
+        {
+          "name": "Renesas_EK-RA8D2_Board_Design_Package.zip.part-013-of-013",
+          "bytes": 7422344,
+          "id": "539-106",
+          "sha256": "80e0d8200a6a538cb04f5204ca69bcb454bb573b7c1c0f3b9d364332b9f5157c",
+          "checked_utc": "2026-10-11T16:51:00.1570358Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 108085640,
+        "checked_utc": "2026-10-11T16:51:00.3802219Z",
+        "sha256": "b3fe7457d1e3ab8957738418d0738ec758e311c6c709c5a46d5fc93f5411c265"
+      },
+      "article_id": "183-104",
+      "content_verified": true,
+      "article_key": "RA8HW-A-83",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 108085640,
+      "content_sha256": "4756d59172bad470b091a9533de618f9dd2fdad909f5b7b3241584486b9f5bec",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package.zip",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "043d8b64775008d929af5b7c02363faec43f937a896e9ad35dcec28317a13038",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 161792,
+        "checked_utc": "2026-10-11T16:51:00.7601818Z",
+        "sha256": "043d8b64775008d929af5b7c02363faec43f937a896e9ad35dcec28317a13038"
+      },
+      "article_id": "183-105",
+      "content_verified": true,
+      "article_key": "RA8HW-A-84",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Arduino Shield Connection.SchDoc",
+        "id": "539-107"
+      },
+      "attachment_verified": true,
+      "bytes": 161792,
+      "content_sha256": "4f97dc2293deef515457a6865ca8e73984f46a146d02ac6f05105a53b773000e",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Arduino Shield Connection.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "ba39f2ffe798d3392eaf9ee0ee9fd2b1dde2725bd960712711d953cf618498c4",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 273920,
+        "checked_utc": "2026-10-11T16:51:01.022343Z",
+        "sha256": "ba39f2ffe798d3392eaf9ee0ee9fd2b1dde2725bd960712711d953cf618498c4"
+      },
+      "article_id": "183-106",
+      "content_verified": true,
+      "article_key": "RA8HW-A-85",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Audio Devices.SchDoc",
+        "id": "539-108"
+      },
+      "attachment_verified": true,
+      "bytes": 273920,
+      "content_sha256": "c30a382af79e0f35b1d73c4c5571f1b003c9ce1859c749f158751c5e55416cc8",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Audio Devices.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "198f59ecb8e662a02bdeba5f086bed8e95214a40e407ed5736784f7eccb97373",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 186880,
+        "checked_utc": "2026-10-11T16:51:01.2675013Z",
+        "sha256": "198f59ecb8e662a02bdeba5f086bed8e95214a40e407ed5736784f7eccb97373"
+      },
+      "article_id": "183-107",
+      "content_verified": true,
+      "article_key": "RA8HW-A-86",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "CEU Camera.SchDoc",
+        "id": "539-109"
+      },
+      "attachment_verified": true,
+      "bytes": 186880,
+      "content_sha256": "caf5be90ff4a13a7cf04b6456efae666ac04226960a9058e7ffb238cb6ee0490",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/CEU Camera.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "133b355367b94cc1ea1d372b01e036f6fb4ffcb7a9b7e9fcd2874d50d1a03774",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 416256,
+        "checked_utc": "2026-10-11T16:51:01.5219357Z",
+        "sha256": "133b355367b94cc1ea1d372b01e036f6fb4ffcb7a9b7e9fcd2874d50d1a03774"
+      },
+      "article_id": "183-108",
+      "content_verified": true,
+      "article_key": "RA8HW-A-87",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Gigabit Ethernet.SchDoc",
+        "id": "539-110"
+      },
+      "attachment_verified": true,
+      "bytes": 416256,
+      "content_sha256": "be963a1b94ad9e236ecb5681b530d95b4b7a0aaac3ea8cd56181ebbd01f2c46f",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Gigabit Ethernet.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "4767416eea8afa86a526d7ff4c26953c56949e311c306dd9164af6d280b5adf1",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 437760,
+        "checked_utc": "2026-10-11T16:51:01.9669515Z",
+        "sha256": "4767416eea8afa86a526d7ff4c26953c56949e311c306dd9164af6d280b5adf1"
+      },
+      "article_id": "183-109",
+      "content_verified": true,
+      "article_key": "RA8HW-A-88",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "HMI Features.SchDoc",
+        "id": "539-111"
+      },
+      "attachment_verified": true,
+      "bytes": 437760,
+      "content_sha256": "0952c3908e61fcfb3edc19e52f0a4bc91d056cb4e4ee716390c8c30c04571150",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/HMI Features.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "bcd5794c0ac61eac71b7e1f81bbbd31155d087a9ebfe0a9246e98dc5da77c008",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 473088,
+        "checked_utc": "2026-10-11T16:51:02.2440585Z",
+        "sha256": "bcd5794c0ac61eac71b7e1f81bbbd31155d087a9ebfe0a9246e98dc5da77c008"
+      },
+      "article_id": "183-110",
+      "content_verified": true,
+      "article_key": "RA8HW-A-89",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "J-Link On Board with RA4M2.SchDoc",
+        "id": "539-112"
+      },
+      "attachment_verified": true,
+      "bytes": 473088,
+      "content_sha256": "b1073a286e627cb447888b547aa9a18bbf1bf06e279e9268ab5bbd963e2abbb5",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/J-Link On Board with RA4M2.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "e89cc88cf1f1f52b2002e6722aeec9365b887ca4bacb141fadf984abffed0a3e",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 188928,
+        "checked_utc": "2026-10-11T16:51:02.644565Z",
+        "sha256": "e89cc88cf1f1f52b2002e6722aeec9365b887ca4bacb141fadf984abffed0a3e"
+      },
+      "article_id": "183-111",
+      "content_verified": true,
+      "article_key": "RA8HW-A-90",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "MIPI Interface and Parallel Display Interface.SchDoc",
+        "id": "539-113"
+      },
+      "attachment_verified": true,
+      "bytes": 188928,
+      "content_sha256": "529febdedc7b8a6a56d5bda9e65bba1048b6bc00f4afc6ec6f44cfaadb7c0436",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/MIPI Interface and Parallel Display Interface.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "08a7b39762f3169b7bb1c0b854432373b0ab16228dbda017f724c5ff0b871e0d",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 471552,
+        "checked_utc": "2026-10-11T16:51:02.9269227Z",
+        "sha256": "08a7b39762f3169b7bb1c0b854432373b0ab16228dbda017f724c5ff0b871e0d"
+      },
+      "article_id": "183-112",
+      "content_verified": true,
+      "article_key": "RA8HW-A-91",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Octal SPI Flash.SchDoc",
+        "id": "539-114"
+      },
+      "attachment_verified": true,
+      "bytes": 471552,
+      "content_sha256": "b8a139f948b68962676fe708f2643f25a786f0802ed3023ad77f0809c58f4a0e",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Octal SPI Flash.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "5fb2a844f8e31ec26af904e0dd6524c7d899d0dc63eb6bb9cf4dd5cf2d80dd7c",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1220817,
+        "checked_utc": "2026-10-11T16:51:03.1871072Z",
+        "sha256": "5fb2a844f8e31ec26af904e0dd6524c7d899d0dc63eb6bb9cf4dd5cf2d80dd7c"
+      },
+      "article_id": "183-113",
+      "content_verified": true,
+      "article_key": "RA8HW-A-92",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "PCB_3D_View.PCBDwf",
+        "id": "539-115"
+      },
+      "attachment_verified": true,
+      "bytes": 1220817,
+      "content_sha256": "76aa5faf6be0638eb9a4748b5bedb9389ba664be5eed1c9431d71933756bcd88",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/PCB_3D_View.PCBDwf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "d41591710fd47489fa7a6713c2869699e1d89972311337013274587e4556d891",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "PCB_All_Layer.PCBDwf.part-001-of-004",
+          "bytes": 8388608,
+          "id": "539-116",
+          "sha256": "4978c76fde412e73e469e85d8d24846c68fb1f52e54936477a25b44e11330571",
+          "checked_utc": "2026-10-11T16:51:04.0695972Z"
+        },
+        {
+          "name": "PCB_All_Layer.PCBDwf.part-002-of-004",
+          "bytes": 8388608,
+          "id": "539-117",
+          "sha256": "e74002ecce42b448ab9f687d37ee7a20af5c2912bec2a4136898ad943b6adcf7",
+          "checked_utc": "2026-10-11T16:51:04.9389412Z"
+        },
+        {
+          "name": "PCB_All_Layer.PCBDwf.part-003-of-004",
+          "bytes": 8388608,
+          "id": "539-118",
+          "sha256": "8509970a2b30e09d64ac2278e0e26bd510641db1de92ad6c802c61685ccb0158",
+          "checked_utc": "2026-10-11T16:51:05.856153Z"
+        },
+        {
+          "name": "PCB_All_Layer.PCBDwf.part-004-of-004",
+          "bytes": 2907257,
+          "id": "539-119",
+          "sha256": "24f934c0501159b4bd00d23cfdc47107d083ed29d8465c1fa562f4542ae46e3f",
+          "checked_utc": "2026-10-11T16:51:06.3991371Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 28073081,
+        "checked_utc": "2026-10-11T16:51:06.5323126Z",
+        "sha256": "d41591710fd47489fa7a6713c2869699e1d89972311337013274587e4556d891"
+      },
+      "article_id": "183-114",
+      "content_verified": true,
+      "article_key": "RA8HW-A-93",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 28073081,
+      "content_sha256": "b18bbf0fa83b02e228516b16a3145e4670fde1a88534bfd0ddf7044bc9c646d8",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/PCB_All_Layer.PCBDwf",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "7befc11f238cba59c0ad537f7d08b2c7fcbea0312443fc64cc97353544af07c7",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 4564249,
+        "checked_utc": "2026-10-11T16:51:07.1722103Z",
+        "sha256": "7befc11f238cba59c0ad537f7d08b2c7fcbea0312443fc64cc97353544af07c7"
+      },
+      "article_id": "183-115",
+      "content_verified": true,
+      "article_key": "RA8HW-A-94",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "PCB_Assembly.PCBDwf",
+        "id": "539-120"
+      },
+      "attachment_verified": true,
+      "bytes": 4564249,
+      "content_sha256": "dce8219d145b5d6cbe7294082d6341bf7a383b5bafb28f2b1f869c349af6c7bf",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/PCB_Assembly.PCBDwf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "b5edc86d927a4c7695a22fe88fb3901d83617957bbfcabdbb62812b2bb14969c",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 5261188,
+        "checked_utc": "2026-10-11T16:51:07.6273818Z",
+        "sha256": "b5edc86d927a4c7695a22fe88fb3901d83617957bbfcabdbb62812b2bb14969c"
+      },
+      "article_id": "183-116",
+      "content_verified": true,
+      "article_key": "RA8HW-A-95",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "PCB_Fab_Dwg.PCBDwf",
+        "id": "539-121"
+      },
+      "attachment_verified": true,
+      "bytes": 5261188,
+      "content_sha256": "a7509daf7eab01e36fac12f3750217c9cd8e754176270af6162eb9cb339cd5eb",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/PCB_Fab_Dwg.PCBDwf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "ee7dfb403d7603897d700187f12aaa2e3fb4e95476fb391681a2285dbdb84ff9",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 4479585,
+        "checked_utc": "2026-10-11T16:51:08.0660231Z",
+        "sha256": "ee7dfb403d7603897d700187f12aaa2e3fb4e95476fb391681a2285dbdb84ff9"
+      },
+      "article_id": "183-117",
+      "content_verified": true,
+      "article_key": "RA8HW-A-96",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "PCB_Mech_Dwg.PCBDwf",
+        "id": "539-122"
+      },
+      "attachment_verified": true,
+      "bytes": 4479585,
+      "content_sha256": "4c00d36b8b4ccd10a0e44d729b3dfa67a321c89f529b2d5e87b421b93127ead8",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/PCB_Mech_Dwg.PCBDwf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "4d331fa07caf0569e275062b52cb83568597d28a1ee7d6b34a8b1902b0bb6667",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 49478,
+        "checked_utc": "2026-10-11T16:51:08.289237Z",
+        "sha256": "4d331fa07caf0569e275062b52cb83568597d28a1ee7d6b34a8b1902b0bb6667"
+      },
+      "article_id": "183-118",
+      "content_verified": true,
+      "article_key": "RA8HW-A-97",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "PCB_Tech_Spec.xlsx",
+        "id": "539-123"
+      },
+      "attachment_verified": true,
+      "bytes": 49478,
+      "content_sha256": "6a2bc51f706d69aa92eec30585cea09dbb45a59ea27e06908438e1685dfa898f",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/PCB_Tech_Spec.xlsx",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "95a4ab38cb335ca6e14f3dd634ea29899c1afd8fd57873ddfba5798cc0fa8a15",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 309760,
+        "checked_utc": "2026-10-11T16:51:08.6924182Z",
+        "sha256": "95a4ab38cb335ca6e14f3dd634ea29899c1afd8fd57873ddfba5798cc0fa8a15"
+      },
+      "article_id": "183-119",
+      "content_verified": true,
+      "article_key": "RA8HW-A-98",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Pin Headers.SchDoc",
+        "id": "539-124"
+      },
+      "attachment_verified": true,
+      "bytes": 309760,
+      "content_sha256": "fa85e7146d056d9c5eaed638bfc1ea4b4f2e8ccca9f622e3a9f8ead0357dd280",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Pin Headers.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "f754c9704d144126c8b8e6f2775941e2b2fdfd4f4cf079037fad8829c2af2f52",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 574464,
+        "checked_utc": "2026-10-11T16:51:08.959083Z",
+        "sha256": "f754c9704d144126c8b8e6f2775941e2b2fdfd4f4cf079037fad8829c2af2f52"
+      },
+      "article_id": "183-120",
+      "content_verified": true,
+      "article_key": "RA8HW-A-99",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Pmod, Grove and Qwiic Connections.SchDoc",
+        "id": "539-125"
+      },
+      "attachment_verified": true,
+      "bytes": 574464,
+      "content_sha256": "8bfb41ddb988d82d354bb98268213ea02299971d84981182e32682267fb109f0",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Pmod, Grove and Qwiic Connections.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "1b423467defff617609a02c7290770e925d1da49b3eebfda2b64ee67178f95a2",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 260096,
+        "checked_utc": "2026-10-11T16:51:09.2394134Z",
+        "sha256": "1b423467defff617609a02c7290770e925d1da49b3eebfda2b64ee67178f95a2"
+      },
+      "article_id": "183-121",
+      "content_verified": true,
+      "article_key": "RA8HW-A-100",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Power Supply.SchDoc",
+        "id": "539-126"
+      },
+      "attachment_verified": true,
+      "bytes": 260096,
+      "content_sha256": "66dc2b62bbda09567ea458fabad62fe2cc353239690857146d535bc11cf5b9ae",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Power Supply.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "06b6e179a78a7f0d1cdea04a9ecf8b14ed2a4c92b58dd729722f3614a333e67f",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1077248,
+        "checked_utc": "2026-10-11T16:51:09.5083676Z",
+        "sha256": "06b6e179a78a7f0d1cdea04a9ecf8b14ed2a4c92b58dd729722f3614a333e67f"
+      },
+      "article_id": "183-122",
+      "content_verified": true,
+      "article_key": "RA8HW-A-101",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "RA8D2 MCU - Ports.SchDoc",
+        "id": "539-127"
+      },
+      "attachment_verified": true,
+      "bytes": 1077248,
+      "content_sha256": "d5d5614646ed4fd4c24907921ba6eb99c49a5644f12403f0a9e2fc3bf30dc37f",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/RA8D2 MCU - Ports.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "76f8fced2109cc65a22327ff98e8d061a88101e508c6735842feb68bfeaf5e16",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 884736,
+        "checked_utc": "2026-10-11T16:51:09.8743192Z",
+        "sha256": "76f8fced2109cc65a22327ff98e8d061a88101e508c6735842feb68bfeaf5e16"
+      },
+      "article_id": "183-123",
+      "content_verified": true,
+      "article_key": "RA8HW-A-102",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "RA8D2 MCU - Power.SchDoc",
+        "id": "539-128"
+      },
+      "attachment_verified": true,
+      "bytes": 884736,
+      "content_sha256": "547773583293b5c22c764dc2b8d84c4ea31d703a8a6df8c8cb9dcae73d88f3ce",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/RA8D2 MCU - Power.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "a13de0ae91af6886c12eedb96c2425de5045c8885ea30297681d90c064931dd7",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 803840,
+        "checked_utc": "2026-10-11T16:51:10.153896Z",
+        "sha256": "a13de0ae91af6886c12eedb96c2425de5045c8885ea30297681d90c064931dd7"
+      },
+      "article_id": "183-124",
+      "content_verified": true,
+      "article_key": "RA8HW-A-103",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "SDRAM.SchDoc",
+        "id": "539-129"
+      },
+      "attachment_verified": true,
+      "bytes": 803840,
+      "content_sha256": "cacf70bd1d08e3ced0a648357ec15e637ef59d2bda05740a57323744dd33abb1",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/SDRAM.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "a54d3dd55e53618d3c0a9a2446c1e02c2e2b8de01840d4d3ad50d2dfbbc7fe68",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 164352,
+        "checked_utc": "2026-10-11T16:51:10.3782941Z",
+        "sha256": "a54d3dd55e53618d3c0a9a2446c1e02c2e2b8de01840d4d3ad50d2dfbbc7fe68"
+      },
+      "article_id": "183-125",
+      "content_verified": true,
+      "article_key": "RA8HW-A-104",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Title Page.SchDoc",
+        "id": "539-130"
+      },
+      "attachment_verified": true,
+      "bytes": 164352,
+      "content_sha256": "1460d40e53f1ca3808b83ea1620f09b9cf8725b4262fb1af7b419f47e40f3eec",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/Title Page.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "0aaa52282340002f69b9f015cee0107f9cce1672cffe4512cf68effe30a238af",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 465920,
+        "checked_utc": "2026-10-11T16:51:10.7262392Z",
+        "sha256": "0aaa52282340002f69b9f015cee0107f9cce1672cffe4512cf68effe30a238af"
+      },
+      "article_id": "183-126",
+      "content_verified": true,
+      "article_key": "RA8HW-A-105",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "USB Full Speed.SchDoc",
+        "id": "539-131"
+      },
+      "attachment_verified": true,
+      "bytes": 465920,
+      "content_sha256": "d222c80cbd77097ade9694e6b0bd3a28e4caf42fd75a1c58dc9026c0b49e07a5",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/USB Full Speed.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "358959a018516e42ed50d4b0a97dd9758c72902d443ea1e0aada8dd68b107d5e",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 355328,
+        "checked_utc": "2026-10-11T16:51:10.9703169Z",
+        "sha256": "358959a018516e42ed50d4b0a97dd9758c72902d443ea1e0aada8dd68b107d5e"
+      },
+      "article_id": "183-127",
+      "content_verified": true,
+      "article_key": "RA8HW-A-106",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "USB High Speed.SchDoc",
+        "id": "539-132"
+      },
+      "attachment_verified": true,
+      "bytes": 355328,
+      "content_sha256": "ff86fa18fce40ac13e0d2209d7b9b9e5ecf29138e3df8cd8b5c33ba02c963270",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/USB High Speed.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "c0ebc74b1efcd659b69b6a28fcf541be162494766e7bbf1a8ebdc2e8377c162f",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 7471616,
+        "checked_utc": "2026-10-11T16:51:11.4035996Z",
+        "sha256": "c0ebc74b1efcd659b69b6a28fcf541be162494766e7bbf1a8ebdc2e8377c162f"
+      },
+      "article_id": "183-128",
+      "content_verified": true,
+      "article_key": "RA8HW-A-107",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "ek-ra8d2_mp - Customer.IntLib",
+        "id": "539-133"
+      },
+      "attachment_verified": true,
+      "bytes": 7471616,
+      "content_sha256": "37053d5207b18d27f366d0b31d79ee185da556e40de791b3091a3c2b6b01550e",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/ek-ra8d2_mp - Customer.IntLib",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "3b5e52da481888d75fe8cd5cbe8dab665778e4cbc9f9d8dc0c6fcbdab698c02e",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 109916,
+        "checked_utc": "2026-10-11T16:51:11.6788252Z",
+        "sha256": "3b5e52da481888d75fe8cd5cbe8dab665778e4cbc9f9d8dc0c6fcbdab698c02e"
+      },
+      "article_id": "183-129",
+      "content_verified": true,
+      "article_key": "RA8HW-A-108",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "ek-ra8d2_mp - Customer.PrjPcb",
+        "id": "539-134"
+      },
+      "attachment_verified": true,
+      "bytes": 109916,
+      "content_sha256": "623b7784e8d6e3aa4d36c491955d57758fd3e8869d3976374a188b242cabfb5c",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/ek-ra8d2_mp - Customer.PrjPcb",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "7d256966cbbfa800d9076b1f49edc8c27a77ce5e359537c29ccbd37af96e914a",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 59904,
+        "checked_utc": "2026-10-11T16:51:12.0030233Z",
+        "sha256": "7d256966cbbfa800d9076b1f49edc8c27a77ce5e359537c29ccbd37af96e914a"
+      },
+      "article_id": "183-130",
+      "content_verified": true,
+      "article_key": "RA8HW-A-109",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "ek-ra8d2_mp - Customer.PrjPcbVariants",
+        "id": "539-135"
+      },
+      "attachment_verified": true,
+      "bytes": 59904,
+      "content_sha256": "c6aae34898693fdca99fefe10bd620c5438aa12e728e80217791d0724bf02b4f",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/ek-ra8d2_mp - Customer.PrjPcbVariants",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "a96cf41c99507cc78e958af9b72f19fd5da7c2961744b07989b5c186cf3543f2",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 142673,
+        "checked_utc": "2026-10-11T16:51:12.2377935Z",
+        "sha256": "a96cf41c99507cc78e958af9b72f19fd5da7c2961744b07989b5c186cf3543f2"
+      },
+      "article_id": "183-131",
+      "content_verified": true,
+      "article_key": "RA8HW-A-110",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "ek_ra8d2.BomDoc",
+        "id": "539-136"
+      },
+      "attachment_verified": true,
+      "bytes": 142673,
+      "content_sha256": "b42059720c24246940ababb71ba8221c36944cbeac132e10dafa24b840104d81",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/ek_ra8d2.BomDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "071db556f1d0af0c1ef97623592781c3e1bd1df6f5b62d16c503c74e918ec1bc",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "ek_ra8d2.PcbDoc.part-001-of-006",
+          "bytes": 8388608,
+          "id": "539-137",
+          "sha256": "8aa09163e2c0909086c4fb72a54d524c5fb24dd80227998f45b271204f83f409",
+          "checked_utc": "2026-10-11T16:51:12.9423923Z"
+        },
+        {
+          "name": "ek_ra8d2.PcbDoc.part-002-of-006",
+          "bytes": 8388608,
+          "id": "539-138",
+          "sha256": "d7698bdcfa8265923e37cc9277cb8b03f6c3c3520ad882f462df4ca8403f18bb",
+          "checked_utc": "2026-10-11T16:51:13.5060017Z"
+        },
+        {
+          "name": "ek_ra8d2.PcbDoc.part-003-of-006",
+          "bytes": 8388608,
+          "id": "539-139",
+          "sha256": "c2d0abb1e2d0b3f9f552ab9f5e87e5b1806efb1a8f9fc24bfd008bf1de8fc92f",
+          "checked_utc": "2026-10-11T16:51:14.3776403Z"
+        },
+        {
+          "name": "ek_ra8d2.PcbDoc.part-004-of-006",
+          "bytes": 8388608,
+          "id": "539-140",
+          "sha256": "f3958cbf939c03406f78ee10dbd6a17a21f40922365b68aec0527a158a77a081",
+          "checked_utc": "2026-10-11T16:51:14.938674Z"
+        },
+        {
+          "name": "ek_ra8d2.PcbDoc.part-005-of-006",
+          "bytes": 8388608,
+          "id": "539-141",
+          "sha256": "2203d87ce2d058ac34bfa052cde53144ff0e8bbafe19bcf4257d16b8b907cc1d",
+          "checked_utc": "2026-10-11T16:51:15.4654717Z"
+        },
+        {
+          "name": "ek_ra8d2.PcbDoc.part-006-of-006",
+          "bytes": 6243328,
+          "id": "539-142",
+          "sha256": "1feb445721a52ec166734d13e3b167ec4487f9385576dcddf4ceb1ec3a9a3610",
+          "checked_utc": "2026-10-11T16:51:15.9927541Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 48186368,
+        "checked_utc": "2026-10-11T16:51:16.3806279Z",
+        "sha256": "071db556f1d0af0c1ef97623592781c3e1bd1df6f5b62d16c503c74e918ec1bc"
+      },
+      "article_id": "183-132",
+      "content_verified": true,
+      "article_key": "RA8HW-A-111",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 48186368,
+      "content_sha256": "e87f85aa9ab5bca10a8fc37cd4040c93ee015f8f6244918d4338ada5f8aa7a6f",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/ek_ra8d2.PcbDoc",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "c569453363baa7a9a71d4415da458fb63b290caa2b2e962da1f86f73e9111c41",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 89088,
+        "checked_utc": "2026-10-11T16:51:16.7759329Z",
+        "sha256": "c569453363baa7a9a71d4415da458fb63b290caa2b2e962da1f86f73e9111c41"
+      },
+      "article_id": "183-133",
+      "content_verified": true,
+      "article_key": "RA8HW-A-112",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "mikroBUS Connection.SchDoc",
+        "id": "539-143"
+      },
+      "attachment_verified": true,
+      "bytes": 89088,
+      "content_sha256": "12600d8257f7fe920ca4e7401b5c255553afe11ccb2c6dcc1158f0fe499284b7",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Design Files - Altium/d019762_43_v0303_ek-ra8d2_altium_customer_mp/mikroBUS Connection.SchDoc",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "73bfe55b8bca54d76e58a0428407fe5d32d1db5679383da4891b99384b9fd50d",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 368,
+        "checked_utc": "2026-10-11T16:51:17.0030496Z",
+        "sha256": "73bfe55b8bca54d76e58a0428407fe5d32d1db5679383da4891b99384b9fd50d"
+      },
+      "article_id": "183-134",
+      "content_verified": true,
+      "article_key": "RA8HW-A-113",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-NonPlated.TXT",
+        "id": "539-144"
+      },
+      "attachment_verified": true,
+      "bytes": 368,
+      "content_sha256": "7a00ce53011e4a854aeb9421a7e14e4a13fb41136456bef70acbd4ccfaa29f39",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-NonPlated.TXT",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "3fd53492153322bba65f6a73cbadc844fe43f0a519bfe8bdadb6ca478398f1fd",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 2233,
+        "checked_utc": "2026-10-11T16:51:17.3737927Z",
+        "sha256": "3fd53492153322bba65f6a73cbadc844fe43f0a519bfe8bdadb6ca478398f1fd"
+      },
+      "article_id": "183-135",
+      "content_verified": true,
+      "article_key": "RA8HW-A-114",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX10",
+        "id": "539-145"
+      },
+      "attachment_verified": true,
+      "bytes": 2233,
+      "content_sha256": "39ccde1791d4dbe602eeb264294aec980a25e26a859d397640d5af84c56912ff",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX10",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "8f541eec6ac7c94bad3b3cf6653bebe0b45bb745b479020bf60dce866c8fc246",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 2987,
+        "checked_utc": "2026-10-11T16:51:17.5872638Z",
+        "sha256": "8f541eec6ac7c94bad3b3cf6653bebe0b45bb745b479020bf60dce866c8fc246"
+      },
+      "article_id": "183-136",
+      "content_verified": true,
+      "article_key": "RA8HW-A-115",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX3",
+        "id": "539-146"
+      },
+      "attachment_verified": true,
+      "bytes": 2987,
+      "content_sha256": "d6b8c9282cc54cfc09079fde74a049d1b91ed7a2e4cc3e453a8dd35b839c2c6c",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX3",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "775bdfa7799f129471144f475c14dce1d55e030467b16d3bff3fb0089db9e75e",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 7626,
+        "checked_utc": "2026-10-11T16:51:17.9621084Z",
+        "sha256": "775bdfa7799f129471144f475c14dce1d55e030467b16d3bff3fb0089db9e75e"
+      },
+      "article_id": "183-137",
+      "content_verified": true,
+      "article_key": "RA8HW-A-116",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX6",
+        "id": "539-147"
+      },
+      "attachment_verified": true,
+      "bytes": 7626,
+      "content_sha256": "9f260797a48a630b6476acf4e65d002e37d09e4ec4609a105825d8e0d8c8e1ff",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX6",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "a7d3f291b0ff8bf5ad59d16a25ebc8751198cefb4d7bf100a6bd15ce9e2881b7",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 6460,
+        "checked_utc": "2026-10-11T16:51:18.1761538Z",
+        "sha256": "a7d3f291b0ff8bf5ad59d16a25ebc8751198cefb4d7bf100a6bd15ce9e2881b7"
+      },
+      "article_id": "183-138",
+      "content_verified": true,
+      "article_key": "RA8HW-A-117",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX7",
+        "id": "539-148"
+      },
+      "attachment_verified": true,
+      "bytes": 6460,
+      "content_sha256": "a6d8c92ada5ac4f74870dcbb3f9379cf521a5cd31608f4b423f31671d210a20b",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX7",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "7e3dbd8051ed73b8373b57f4f6b22b7ee42f3a1c0a94c5565ea9580e5bbcfd56",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1630,
+        "checked_utc": "2026-10-11T16:51:18.3980663Z",
+        "sha256": "7e3dbd8051ed73b8373b57f4f6b22b7ee42f3a1c0a94c5565ea9580e5bbcfd56"
+      },
+      "article_id": "183-139",
+      "content_verified": true,
+      "article_key": "RA8HW-A-118",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX9",
+        "id": "539-149"
+      },
+      "attachment_verified": true,
+      "bytes": 1630,
+      "content_sha256": "98a7203d6eaacdad58eff52be0502804f873e8be2b5121fd9c04f53793895d69",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TX9",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "5651d1d725d5e42a05c98de7b46cb4f2e3c03bdba602d1cb90e09dbd7deb1793",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 19335,
+        "checked_utc": "2026-10-11T16:51:18.7421213Z",
+        "sha256": "5651d1d725d5e42a05c98de7b46cb4f2e3c03bdba602d1cb90e09dbd7deb1793"
+      },
+      "article_id": "183-140",
+      "content_verified": true,
+      "article_key": "RA8HW-A-119",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TXT",
+        "id": "539-150"
+      },
+      "attachment_verified": true,
+      "bytes": 19335,
+      "content_sha256": "4a3163c2cd5d785e9e7d3bda0705c6d4c48c1bc23f98dd8825dd57ca0f09e378",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-RoundHoles-Plated.TXT",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "e763006cce080688da7cebb5a6456068b6e6b295bf6d6b55a0921288b252e8e2",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 238,
+        "checked_utc": "2026-10-11T16:51:18.9830712Z",
+        "sha256": "e763006cce080688da7cebb5a6456068b6e6b295bf6d6b55a0921288b252e8e2"
+      },
+      "article_id": "183-141",
+      "content_verified": true,
+      "article_key": "RA8HW-A-120",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-SlotHoles-NonPlated.TXT",
+        "id": "539-151"
+      },
+      "attachment_verified": true,
+      "bytes": 238,
+      "content_sha256": "73239cc65e59617ca2369fd4ea66d8f7d207ba90c0e27dac29591743ad1388f3",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-SlotHoles-NonPlated.TXT",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "c47d5165dd2560b0d0c97ecb2207d96e260426d534a498d379ccb7c896b77d64",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 596,
+        "checked_utc": "2026-10-11T16:51:19.2235794Z",
+        "sha256": "c47d5165dd2560b0d0c97ecb2207d96e260426d534a498d379ccb7c896b77d64"
+      },
+      "article_id": "183-142",
+      "content_verified": true,
+      "article_key": "RA8HW-A-121",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp-SlotHoles-Plated.TXT",
+        "id": "539-152"
+      },
+      "attachment_verified": true,
+      "bytes": 596,
+      "content_sha256": "80fb75e1ad0eda937301cd1a0269d1e1e3496e18305fd4f7ece44bbe2e2df68a",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp-SlotHoles-Plated.TXT",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "669fab47ae878ee28e6a3f424bfbe4832da9d98cd24147517e5941213db6461e",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 7082,
+        "checked_utc": "2026-10-11T16:51:19.4412405Z",
+        "sha256": "669fab47ae878ee28e6a3f424bfbe4832da9d98cd24147517e5941213db6461e"
+      },
+      "article_id": "183-143",
+      "content_verified": true,
+      "article_key": "RA8HW-A-122",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.DRR",
+        "id": "539-153"
+      },
+      "attachment_verified": true,
+      "bytes": 7082,
+      "content_sha256": "8f2567f1e4e88e36ba5c5a803563d88c606d9a2828c24361c29bd648a533ca7a",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp.DRR",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "bd65829e5c6a7b8b1d1b0a346542e2b82e09f3f94f0ac1dcad967b117e33f07a",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1313,
+        "checked_utc": "2026-10-11T16:51:19.8013472Z",
+        "sha256": "bd65829e5c6a7b8b1d1b0a346542e2b82e09f3f94f0ac1dcad967b117e33f07a"
+      },
+      "article_id": "183-144",
+      "content_verified": true,
+      "article_key": "RA8HW-A-123",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.LDP",
+        "id": "539-154"
+      },
+      "attachment_verified": true,
+      "bytes": 1313,
+      "content_sha256": "cbce781e203127a8dbc1a4b56ef3cd910fa3b8f8174b9bdca545a42d76a44ab4",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/NC Drill/d019762_06_s01_v0301_ek-ra8d2_mp.LDP",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "ce0d395e72b467c9c2add1e82de328362e355deb6ff8b3c2aa8358cd5f695eda",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 57895,
+        "checked_utc": "2026-10-11T16:51:20.0583494Z",
+        "sha256": "ce0d395e72b467c9c2add1e82de328362e355deb6ff8b3c2aa8358cd5f695eda"
+      },
+      "article_id": "183-145",
+      "content_verified": true,
+      "article_key": "RA8HW-A-124",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_07_s01_v0301_ek-ra8d2_pcb-tech_spec_mp.pdf",
+        "id": "539-155"
+      },
+      "attachment_verified": true,
+      "bytes": 57895,
+      "content_sha256": "bf20ac9650dc0431a79cabc2e399101bdcb67ac59fb6082e4dfc8b74b9805699",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/d019762_07_s01_v0301_ek-ra8d2_pcb-tech_spec_mp.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "dbb6af205bd5739ea60710320b704e26227634e38dbd62a42fa3ca2b804c5c26",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 502556,
+        "checked_utc": "2026-10-11T16:51:20.5395656Z",
+        "sha256": "dbb6af205bd5739ea60710320b704e26227634e38dbd62a42fa3ca2b804c5c26"
+      },
+      "article_id": "183-146",
+      "content_verified": true,
+      "article_key": "RA8HW-A-125",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_07_s02_v0301_ek-ra8d2_fab_dwg_mp.pdf",
+        "id": "539-156"
+      },
+      "attachment_verified": true,
+      "bytes": 502556,
+      "content_sha256": "ca845c85eb40e5125280d9b825ad08a99ea6d923730ba71824e244b3e5a465ff",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/d019762_07_s02_v0301_ek-ra8d2_fab_dwg_mp.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "5fa96f1c423b63ee3f06766cda7381a417f3ec56bf9a6b24c9810f756f2e5852",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 7569447,
+        "checked_utc": "2026-10-11T16:51:21.1511423Z",
+        "sha256": "5fa96f1c423b63ee3f06766cda7381a417f3ec56bf9a6b24c9810f756f2e5852"
+      },
+      "article_id": "183-147",
+      "content_verified": true,
+      "article_key": "RA8HW-A-126",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_07_s07_v0301_ek-ra8d2_pcb_all_layer_mp.pdf",
+        "id": "539-157"
+      },
+      "attachment_verified": true,
+      "bytes": 7569447,
+      "content_sha256": "2306d349a40c71d44bbe444a4b385c38fe4a9ec45341e7c00c14d41f8c6a60f3",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/d019762_07_s07_v0301_ek-ra8d2_pcb_all_layer_mp.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "8bc519f24aa795541a0cc3ce3df77e67efeb624782aab81b483ca85b8c0f1a96",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 36802,
+        "checked_utc": "2026-10-11T16:51:21.3968533Z",
+        "sha256": "8bc519f24aa795541a0cc3ce3df77e67efeb624782aab81b483ca85b8c0f1a96"
+      },
+      "article_id": "183-148",
+      "content_verified": true,
+      "article_key": "RA8HW-A-127",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_35_s21_v0301_ek-ra8d2_pnp_internal_mp.txt",
+        "id": "539-158"
+      },
+      "attachment_verified": true,
+      "bytes": 36802,
+      "content_sha256": "b0d840939ab889c78bc9d28f9ad9fac7fbb7d86553ab22de6b264b3f6b71f481",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/d019762_35_s21_v0301_ek-ra8d2_pnp_internal_mp.txt",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "dfc1295e0112337b346d9eb72c9926a89a3c37ee8d1f157af2178e45141c42f2",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 2105973,
+        "checked_utc": "2026-10-11T16:51:21.8523536Z",
+        "sha256": "dfc1295e0112337b346d9eb72c9926a89a3c37ee8d1f157af2178e45141c42f2"
+      },
+      "article_id": "183-149",
+      "content_verified": true,
+      "article_key": "RA8HW-A-128",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.G1",
+        "id": "539-159"
+      },
+      "attachment_verified": true,
+      "bytes": 2105973,
+      "content_sha256": "d7ca9a65cf2b42ce12c05af493590bded25f3977a8b46dc9b9d563833c6c4ce1",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.G1",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "4b8495fed4d721fc999563f327f89b31f9625592dde93ac83498fdef82d4de79",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1572547,
+        "checked_utc": "2026-10-11T16:51:22.1899859Z",
+        "sha256": "4b8495fed4d721fc999563f327f89b31f9625592dde93ac83498fdef82d4de79"
+      },
+      "article_id": "183-150",
+      "content_verified": true,
+      "article_key": "RA8HW-A-129",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.G2",
+        "id": "539-160"
+      },
+      "attachment_verified": true,
+      "bytes": 1572547,
+      "content_sha256": "6df2fe989d130af95b8d018d424f4a6c1a4eafeab266dbe35d521209cbb8e522",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.G2",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "0d76ba6032d598aa0f1812e9616447dd36be73f65021eb36b9d3d7050d755056",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1505472,
+        "checked_utc": "2026-10-11T16:51:22.51671Z",
+        "sha256": "0d76ba6032d598aa0f1812e9616447dd36be73f65021eb36b9d3d7050d755056"
+      },
+      "article_id": "183-151",
+      "content_verified": true,
+      "article_key": "RA8HW-A-130",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.G3",
+        "id": "539-161"
+      },
+      "attachment_verified": true,
+      "bytes": 1505472,
+      "content_sha256": "ca53990354d9f476a4830686998c37eee831bb84750136d604506ee748818f20",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.G3",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "4b61e9a424299c6c244a1e5f7433e401db0fb1f4d2268d73c605272655febd13",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1236049,
+        "checked_utc": "2026-10-11T16:51:22.9546161Z",
+        "sha256": "4b61e9a424299c6c244a1e5f7433e401db0fb1f4d2268d73c605272655febd13"
+      },
+      "article_id": "183-152",
+      "content_verified": true,
+      "article_key": "RA8HW-A-131",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.G4",
+        "id": "539-162"
+      },
+      "attachment_verified": true,
+      "bytes": 1236049,
+      "content_sha256": "5649af852e7524c3f56b3be60127e732b21aae39169a85676c3ff3eb331fbead",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.G4",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "7c722b31ed94863f5034d57b34091d40b0c1045c57fca43e490702635fccfa85",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1625329,
+        "checked_utc": "2026-10-11T16:51:23.2507624Z",
+        "sha256": "7c722b31ed94863f5034d57b34091d40b0c1045c57fca43e490702635fccfa85"
+      },
+      "article_id": "183-153",
+      "content_verified": true,
+      "article_key": "RA8HW-A-132",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.G5",
+        "id": "539-163"
+      },
+      "attachment_verified": true,
+      "bytes": 1625329,
+      "content_sha256": "adeb0072fa6f441098dba15d71be09526e45aded26cb286846c44293f5d92acc",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.G5",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "7ac3b002b20dca36162d4e4db2da44d567ce993d59bb509ff3b01ae393f0f301",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1471706,
+        "checked_utc": "2026-10-11T16:51:23.5516381Z",
+        "sha256": "7ac3b002b20dca36162d4e4db2da44d567ce993d59bb509ff3b01ae393f0f301"
+      },
+      "article_id": "183-154",
+      "content_verified": true,
+      "article_key": "RA8HW-A-133",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.G6",
+        "id": "539-164"
+      },
+      "attachment_verified": true,
+      "bytes": 1471706,
+      "content_sha256": "7e9188b1324b5970b5294a2799e053a78946fcdf75d1b82999ecdbe6361cb9b0",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.G6",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "75678668e94c43248a3fc8bcd973d632fd88eb50fa31d4bd4af5033aa49bf419",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1390721,
+        "checked_utc": "2026-10-11T16:51:23.9806994Z",
+        "sha256": "75678668e94c43248a3fc8bcd973d632fd88eb50fa31d4bd4af5033aa49bf419"
+      },
+      "article_id": "183-155",
+      "content_verified": true,
+      "article_key": "RA8HW-A-134",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.GBL",
+        "id": "539-165"
+      },
+      "attachment_verified": true,
+      "bytes": 1390721,
+      "content_sha256": "2d2510c80ccad240ad2daaa55b82db44cdbd2fe91d07fea0245e9d4b2f7abffa",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.GBL",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "73d0d1c66c21911f682a18097ebe52bcbc2ae4fad7b2db0f55ae5673e8d5ce7f",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 3081120,
+        "checked_utc": "2026-10-11T16:51:24.4028325Z",
+        "sha256": "73d0d1c66c21911f682a18097ebe52bcbc2ae4fad7b2db0f55ae5673e8d5ce7f"
+      },
+      "article_id": "183-156",
+      "content_verified": true,
+      "article_key": "RA8HW-A-135",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.GBO",
+        "id": "539-166"
+      },
+      "attachment_verified": true,
+      "bytes": 3081120,
+      "content_sha256": "9d02e2d0d5dd51c5c3e3960f398ad7ec7e1c7e17006f6602a669051904cb1f7e",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.GBO",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "446957e581540a691ab4d7f682db239f39e2d6367048e933bba22700e4637a9c",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 23572,
+        "checked_utc": "2026-10-11T16:51:24.7748805Z",
+        "sha256": "446957e581540a691ab4d7f682db239f39e2d6367048e933bba22700e4637a9c"
+      },
+      "article_id": "183-157",
+      "content_verified": true,
+      "article_key": "RA8HW-A-136",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.GBS",
+        "id": "539-167"
+      },
+      "attachment_verified": true,
+      "bytes": 23572,
+      "content_sha256": "a8eedcd1178639d07e620130672a3fee61e28f142e653bb60748363e958f29d6",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.GBS",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "5daf65e4ac71812297bdcc6a5adeb1dc27c857fd59a510a9cf2e67ae146dedc4",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 583,
+        "checked_utc": "2026-10-11T16:51:25.0072126Z",
+        "sha256": "5daf65e4ac71812297bdcc6a5adeb1dc27c857fd59a510a9cf2e67ae146dedc4"
+      },
+      "article_id": "183-158",
+      "content_verified": true,
+      "article_key": "RA8HW-A-137",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.GM",
+        "id": "539-168"
+      },
+      "attachment_verified": true,
+      "bytes": 583,
+      "content_sha256": "2037ecb0b350547c748b56d071f9a9d5931a2e5a386510606c5cb5047b5a5580",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.GM",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "c2f77d3cf74443765c4f7ab55dfd0796b254b46cedecd5a9fd91e381a42780d0",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 1947397,
+        "checked_utc": "2026-10-11T16:51:25.318422Z",
+        "sha256": "c2f77d3cf74443765c4f7ab55dfd0796b254b46cedecd5a9fd91e381a42780d0"
+      },
+      "article_id": "183-159",
+      "content_verified": true,
+      "article_key": "RA8HW-A-138",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.GTL",
+        "id": "539-169"
+      },
+      "attachment_verified": true,
+      "bytes": 1947397,
+      "content_sha256": "36af9cec168a5faa64181d8970d209eab7f2da4efeb21072f1c5757eb5ede3da",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.GTL",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "119262e23927337aff224677e157ce631b7c0c7c77fd2aba7ebfbe0e275c691d",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 5015594,
+        "checked_utc": "2026-10-11T16:51:26.0787489Z",
+        "sha256": "119262e23927337aff224677e157ce631b7c0c7c77fd2aba7ebfbe0e275c691d"
+      },
+      "article_id": "183-160",
+      "content_verified": true,
+      "article_key": "RA8HW-A-139",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.GTO",
+        "id": "539-170"
+      },
+      "attachment_verified": true,
+      "bytes": 5015594,
+      "content_sha256": "c096d2c2390f4f494578a701c86d059d9511ebc2d63ce0bf31e47622fd112b61",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.GTO",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "f202205a018d07f1dacd478bc212d29409d80117f54c2cae793a8dfe9ca60647",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 56259,
+        "checked_utc": "2026-10-11T16:51:26.4191602Z",
+        "sha256": "f202205a018d07f1dacd478bc212d29409d80117f54c2cae793a8dfe9ca60647"
+      },
+      "article_id": "183-161",
+      "content_verified": true,
+      "article_key": "RA8HW-A-140",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s01_v0301_ek-ra8d2_mp.GTS",
+        "id": "539-171"
+      },
+      "attachment_verified": true,
+      "bytes": 56259,
+      "content_sha256": "d2153e7a97dfae91b7b2d588f65723bb482db593cce1da442a593c18f47ba340",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s01_v0301_ek-ra8d2_mp.GTS",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 0,
+        "checked_utc": "2026-10-11T16:51:26.7530899Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "article_id": "183-162",
+      "content_verified": true,
+      "article_key": "RA8HW-A-141",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp-macro.APR_LIB",
+        "id": "539-172"
+      },
+      "attachment_verified": true,
+      "bytes": 0,
+      "content_sha256": "e253201d78ab75a8eb6f7c3d671b784dac46665bf37ae172a3a3da9fdccf2504",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp-macro.APR_LIB",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "8bbf3b2540b89a283b07eaf96f55bcb1418d36e5270a5d7a2696f2aaf3cf71c3",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 762,
+        "checked_utc": "2026-10-11T16:51:27.0011658Z",
+        "sha256": "8bbf3b2540b89a283b07eaf96f55bcb1418d36e5270a5d7a2696f2aaf3cf71c3"
+      },
+      "article_id": "183-163",
+      "content_verified": true,
+      "article_key": "RA8HW-A-142",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.EXTREP",
+        "id": "539-173"
+      },
+      "attachment_verified": true,
+      "bytes": 762,
+      "content_sha256": "0dbad2d8b7fcaf0e06e4a7240803f64b79df0a90e6237d4ec4860226e08ba67f",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.EXTREP",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "b544df95c9a6dcead782135550a5455ba48e772929eb85f167313e0971ba6e1f",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 9178,
+        "checked_utc": "2026-10-11T16:51:27.2181976Z",
+        "sha256": "b544df95c9a6dcead782135550a5455ba48e772929eb85f167313e0971ba6e1f"
+      },
+      "article_id": "183-164",
+      "content_verified": true,
+      "article_key": "RA8HW-A-143",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.GBP",
+        "id": "539-174"
+      },
+      "attachment_verified": true,
+      "bytes": 9178,
+      "content_sha256": "bd8bad5e6f66f857e9c52ddffca8a5ce5743ca9dca77d95b90e0052b2abfc1d8",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.GBP",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "a2aed0106a87b8b71b6253864dace14641a44ffef3dcc73585813def8d840dfc",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 581,
+        "checked_utc": "2026-10-11T16:51:27.4432264Z",
+        "sha256": "a2aed0106a87b8b71b6253864dace14641a44ffef3dcc73585813def8d840dfc"
+      },
+      "article_id": "183-165",
+      "content_verified": true,
+      "article_key": "RA8HW-A-144",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.GM",
+        "id": "539-175"
+      },
+      "attachment_verified": true,
+      "bytes": 581,
+      "content_sha256": "b6d071b9ea98ea4708145420460a7eb23195a7ac23a2d1ee3548169154d7d8e0",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.GM",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "5f0a89a157676fbef987795529310472395af80bb98ada778b2d3da30805a3a2",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 46684,
+        "checked_utc": "2026-10-11T16:51:27.7897433Z",
+        "sha256": "5f0a89a157676fbef987795529310472395af80bb98ada778b2d3da30805a3a2"
+      },
+      "article_id": "183-166",
+      "content_verified": true,
+      "article_key": "RA8HW-A-145",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.GTP",
+        "id": "539-176"
+      },
+      "attachment_verified": true,
+      "bytes": 46684,
+      "content_sha256": "92ad76f9800983c03fe090fb6b318e65f83e30b33f1982f4d0291bc10d647586",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.GTP",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "528d8a0ed415e86b5b957d06f05f9f19692ff126c2f99b48df9f94d644fed667",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 990,
+        "checked_utc": "2026-10-11T16:51:28.1886183Z",
+        "sha256": "528d8a0ed415e86b5b957d06f05f9f19692ff126c2f99b48df9f94d644fed667"
+      },
+      "article_id": "183-167",
+      "content_verified": true,
+      "article_key": "RA8HW-A-146",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.REP",
+        "id": "539-177"
+      },
+      "attachment_verified": true,
+      "bytes": 990,
+      "content_sha256": "0e57aecb520ec45169f4732e625ec1d39f95afea25bc3fcd2162cc5849d68ba5",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.REP",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "fd139d622bdc9612fbfd1c4013b467af20b18debe983985e4180320e08c64af4",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 2025,
+        "checked_utc": "2026-10-11T16:51:28.4986805Z",
+        "sha256": "fd139d622bdc9612fbfd1c4013b467af20b18debe983985e4180320e08c64af4"
+      },
+      "article_id": "183-168",
+      "content_verified": true,
+      "article_key": "RA8HW-A-147",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.apr",
+        "id": "539-178"
+      },
+      "attachment_verified": true,
+      "bytes": 2025,
+      "content_sha256": "c54372f4b190af9233263d5cdc3ff727272823a7cf94e3f27b1c89477fa94710",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/Manufacturing Files/gerber/d019762_06_s22_v0301_ek-ra8d2_paste_internal_mp.apr",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "abd237fe10238e9d56a5a31f574da94213042774d3780894c34b70fbd6d5c15f",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "ek-ra8d2-v1-3d.pdf.part-001-of-006",
+          "bytes": 8388608,
+          "id": "539-179",
+          "sha256": "77b0af33441a86ffd832d38e4fa316ce50ab579e3f093a135e73594ebbc02008",
+          "checked_utc": "2026-10-11T16:51:29.1585185Z"
+        },
+        {
+          "name": "ek-ra8d2-v1-3d.pdf.part-002-of-006",
+          "bytes": 8388608,
+          "id": "539-180",
+          "sha256": "f8093d8726f76c122b51520015db1297496f10c8de4124b9182a40845d3e8110",
+          "checked_utc": "2026-10-11T16:51:29.6910825Z"
+        },
+        {
+          "name": "ek-ra8d2-v1-3d.pdf.part-003-of-006",
+          "bytes": 8388608,
+          "id": "539-181",
+          "sha256": "bb05e751fa732c0e67f0f3d62698e71aea7b625eb0f3304a5e59a62e8b5881c0",
+          "checked_utc": "2026-10-11T16:51:30.6379746Z"
+        },
+        {
+          "name": "ek-ra8d2-v1-3d.pdf.part-004-of-006",
+          "bytes": 8388608,
+          "id": "539-182",
+          "sha256": "7d548463b6699189e63ab1723ff14ce85cbcc34e319af1314a109b06331dc3ae",
+          "checked_utc": "2026-10-11T16:51:31.47488Z"
+        },
+        {
+          "name": "ek-ra8d2-v1-3d.pdf.part-005-of-006",
+          "bytes": 8388608,
+          "id": "539-183",
+          "sha256": "4dbf55ddbb51f4823ca9e3f83ec977ddb45539e718a0f3fe61a84ee6ce652b3b",
+          "checked_utc": "2026-10-11T16:51:32.1614744Z"
+        },
+        {
+          "name": "ek-ra8d2-v1-3d.pdf.part-006-of-006",
+          "bytes": 1566894,
+          "id": "539-184",
+          "sha256": "313df8f7a69068c4e00912ac7dc26f5460238e194534623e58c6d60e1295c93b",
+          "checked_utc": "2026-10-11T16:51:32.5444408Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 43509934,
+        "checked_utc": "2026-10-11T16:51:32.6565192Z",
+        "sha256": "abd237fe10238e9d56a5a31f574da94213042774d3780894c34b70fbd6d5c15f"
+      },
+      "article_id": "183-169",
+      "content_verified": true,
+      "article_key": "RA8HW-A-148",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 43509934,
+      "content_sha256": "e2d8a5dcfc1630a49721bd4eacecf146cb5fb97450cdbfa0d9761b00b3430630",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/ek-ra8d2-v1-3d.pdf",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "da5d83125c8961a7ed27ffec99cd67be44e8fde34399efc5dc4187783e80dcff",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 97455,
+        "checked_utc": "2026-10-11T16:51:33.0521543Z",
+        "sha256": "da5d83125c8961a7ed27ffec99cd67be44e8fde34399efc5dc4187783e80dcff"
+      },
+      "article_id": "183-170",
+      "content_verified": true,
+      "article_key": "RA8HW-A-149",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "ek-ra8d2-v1-BOM.xlsx",
+        "id": "539-185"
+      },
+      "attachment_verified": true,
+      "bytes": 97455,
+      "content_sha256": "0ed5980970c2c1a41edb0334579fd095891e1df0a68f8b10f7b46a8c4d65ae2b",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/ek-ra8d2-v1-BOM.xlsx",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "ec40a9d4748eec801fda59cdd764308a417ce0c16d0cd46e09c42f3aa8371179",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 558452,
+        "checked_utc": "2026-10-11T16:51:33.3170764Z",
+        "sha256": "ec40a9d4748eec801fda59cdd764308a417ce0c16d0cd46e09c42f3aa8371179"
+      },
+      "article_id": "183-171",
+      "content_verified": true,
+      "article_key": "RA8HW-A-150",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "ek-ra8d2-v1-mechdwg.pdf",
+        "id": "539-186"
+      },
+      "attachment_verified": true,
+      "bytes": 558452,
+      "content_sha256": "d99235923d1b30bee227cc6edcab28bfa2c7ba109009a287d99f1de39dfc0ecf",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/ek-ra8d2-v1-mechdwg.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "0ff034cbea3ba00162dde7f3da65c3e8fc57e07a5de37017d13a6dbf71a34463",
+      "single_file_attachment": false,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "attachment_parts": [
+        {
+          "name": "ek-ra8d2-v1-schematic.pdf.part-001-of-002",
+          "bytes": 8388608,
+          "id": "539-187",
+          "sha256": "c4827fa20cab45f8266739023c97edfd89662e5cc8d6e27ab7edb886f0c843d9",
+          "checked_utc": "2026-10-11T16:51:33.8052254Z"
+        },
+        {
+          "name": "ek-ra8d2-v1-schematic.pdf.part-002-of-002",
+          "bytes": 1759355,
+          "id": "539-188",
+          "sha256": "13d63a3d7f9c28a031ee6bbb648727542285ac86935f46cfff2bf9ced1b2a52e",
+          "checked_utc": "2026-10-11T16:51:34.3901526Z"
+        }
+      ],
+      "original_removed": false,
+      "readback": {
+        "bytes": 10147963,
+        "checked_utc": "2026-10-11T16:51:34.4409918Z",
+        "sha256": "0ff034cbea3ba00162dde7f3da65c3e8fc57e07a5de37017d13a6dbf71a34463"
+      },
+      "article_id": "183-172",
+      "content_verified": true,
+      "article_key": "RA8HW-A-151",
+      "article_url": "tracker-record:redacted",
+      "attachment_verified": true,
+      "bytes": 10147963,
+      "content_sha256": "a20236f007cf60b3a6c069fc38f238069eaf6b4cc5aee4cb85b0c141d58144fa",
+      "path": "resources/reference_designs/Renesas_EK-RA8D2_Board_Design_Package/ek-ra8d2-v1-schematic.pdf",
+      "disposition": "retained_server_size_limit_single_file_blocked"
+    },
+    {
+      "sha256": "f884d2aa3db4e46bb67c2e9df29515a33c486f6131aa8c60a7ba5d71cfad0942",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 5487194,
+        "checked_utc": "2026-10-11T16:51:35.105958Z",
+        "sha256": "f884d2aa3db4e46bb67c2e9df29515a33c486f6131aa8c60a7ba5d71cfad0942"
+      },
+      "article_id": "183-173",
+      "content_verified": true,
+      "article_key": "RA8HW-A-152",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "Renesas_RA8x2_MCU_Quick_Design_Guide.pdf",
+        "id": "539-189"
+      },
+      "attachment_verified": true,
+      "bytes": 5487194,
+      "content_sha256": "8fd3c2dcb09204ea8f730aca14472de96ffb3042a833ff7b9ef1e4eda3885107",
+      "path": "resources/reference_designs/Renesas_RA8x2_MCU_Quick_Design_Guide.pdf",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "sha256": "bc3e0b9aafccbd7e5a1f4ff9e1c81f787fe9e74d300954cc7d84792ed27d456b",
+      "single_file_attachment": true,
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "original_removed": true,
+      "readback": {
+        "bytes": 55078,
+        "checked_utc": "2026-10-11T16:51:35.3512632Z",
+        "sha256": "bc3e0b9aafccbd7e5a1f4ff9e1c81f787fe9e74d300954cc7d84792ed27d456b"
+      },
+      "article_id": "183-174",
+      "content_verified": true,
+      "article_key": "RA8HW-A-153",
+      "article_url": "tracker-record:redacted",
+      "attachment": {
+        "name": "E-Ink_Reader_UI_Mockup.zip",
+        "id": "539-190"
+      },
+      "attachment_verified": true,
+      "bytes": 55078,
+      "content_sha256": "94bd6b686fe84d70d4a6be640b62961c94073e2c295c842338b5367e8cb83a7c",
+      "path": "resources/reference_ui/E-Ink_Reader_UI_Mockup.zip",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "fb4646bff2a6508e20f90eccc39a2f987f0c080425334a2b690d944b7716c969",
+      "article_key": "RA8HW-A-154",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 40839,
+      "single_file_attachment": true,
+      "sha256": "4618f885e1de1e7719a9304702474f2a028528ef882e28a8dc4eab3dbb8ee41d",
+      "attachment": {
+        "container_sha256": "f3a76d44a14cc202f0f77df9906a58aec1870e744553dc9dea657055023c1b95",
+        "name": "00 - Foundation.html.source.zip",
+        "id": "539-193"
+      },
+      "source_container": "zip",
+      "readback": {
+        "bytes": 40839,
+        "sha256": "4618f885e1de1e7719a9304702474f2a028528ef882e28a8dc4eab3dbb8ee41d",
+        "checked_utc": "2026-10-11T16:53:21.3657772Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/00 - Foundation.html",
+      "article_id": "183-175",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "1235d8a4935e7aa17052a9af64d205dce476eb08c962ddd38941617bc0f8b4d8",
+      "article_key": "RA8HW-A-155",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 26547,
+      "single_file_attachment": true,
+      "sha256": "919ac75dddea0a0dc63b157b64013df9fa943ab26b68efdfe60ca19b47c87d34",
+      "attachment": {
+        "container_sha256": "39c72d86dffc0e3861dde9364f4c4440941866927ba51cf8e66c777ff92c7d6a",
+        "name": "01 - Library Home.html.source.zip",
+        "id": "539-194"
+      },
+      "source_container": "zip",
+      "readback": {
+        "bytes": 26547,
+        "sha256": "919ac75dddea0a0dc63b157b64013df9fa943ab26b68efdfe60ca19b47c87d34",
+        "checked_utc": "2026-10-11T16:53:21.842084Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/01 - Library Home.html",
+      "article_id": "183-176",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "166794b9797db5d948b89e204b29c9ee36b4bbfe63a90dc85a3a625381a97b4b",
+      "article_key": "RA8HW-A-156",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 23302,
+      "single_file_attachment": true,
+      "sha256": "869b7c155bfdf69bb4a392d4514239a0ecabbfc3ff027f36ee7b692a91e04900",
+      "attachment": {
+        "container_sha256": "120dfc2e6584f1c3895d97a11885e4adab677818a0c2089efa2fd07ac6652237",
+        "name": "02 - Reading View.html.source.zip",
+        "id": "539-195"
+      },
+      "source_container": "zip",
+      "readback": {
+        "bytes": 23302,
+        "sha256": "869b7c155bfdf69bb4a392d4514239a0ecabbfc3ff027f36ee7b692a91e04900",
+        "checked_utc": "2026-10-11T16:53:22.4423078Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/02 - Reading View.html",
+      "article_id": "183-177",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "4c150fb53af484c52e4bc0e2845f487f63bca63eb08582e00284b80999477008",
+      "article_key": "RA8HW-A-157",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 17574,
+      "single_file_attachment": true,
+      "sha256": "cd1af2f82c964d2ebb73dca29fa81217f571b59ac38c55dd3da4c83edd654054",
+      "attachment": {
+        "container_sha256": "cdfb4b89a8c4fd4d07d4441bb75436940a150e9459ba29397c8e3ea303187a6f",
+        "name": "03 - Text Settings.html.source.zip",
+        "id": "539-196"
+      },
+      "source_container": "zip",
+      "readback": {
+        "bytes": 17574,
+        "sha256": "cd1af2f82c964d2ebb73dca29fa81217f571b59ac38c55dd3da4c83edd654054",
+        "checked_utc": "2026-10-11T16:53:22.9676748Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/03 - Text Settings.html",
+      "article_id": "183-178",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "b752896e08c295d43c66a1bc6777ed65c3beb36ce189caa517449c473a87d755",
+      "article_key": "RA8HW-A-158",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 15411,
+      "single_file_attachment": true,
+      "sha256": "388500387438efdc80e104bd8612b9ee4b0cfb0930fd8bd916ea20920603c9d3",
+      "attachment": {
+        "container_sha256": "9a048f58f19e469acf33459bf1588c72c153527be14726698f2c70a0591af284",
+        "name": "04 - Table of Contents.html.source.zip",
+        "id": "539-197"
+      },
+      "source_container": "zip",
+      "readback": {
+        "bytes": 15411,
+        "sha256": "388500387438efdc80e104bd8612b9ee4b0cfb0930fd8bd916ea20920603c9d3",
+        "checked_utc": "2026-10-11T16:53:23.4245734Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/04 - Table of Contents.html",
+      "article_id": "183-179",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "a5a062e98d565133bea8b67067ea3a0f247aed96a7f425f556e64ea6b6c7566c",
+      "article_key": "RA8HW-A-159",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 22429,
+      "single_file_attachment": true,
+      "sha256": "c7376328e0dc1b2a268191facebccd48ab71b3f327cd5fb990831a59bbf78f04",
+      "attachment": {
+        "container_sha256": "7649b049b06b34de897fac9717d4456c26a638b0e247a00e8a3e6d0adface850",
+        "name": "05 - Settings.html.source.zip",
+        "id": "539-198"
+      },
+      "source_container": "zip",
+      "readback": {
+        "bytes": 22429,
+        "sha256": "c7376328e0dc1b2a268191facebccd48ab71b3f327cd5fb990831a59bbf78f04",
+        "checked_utc": "2026-10-11T16:53:24.3292648Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/05 - Settings.html",
+      "article_id": "183-180",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "08b2ebeaf4930f1d38545f3ac5217cdc23f975d2204e892a79ad8688e43a34c3",
+      "article_key": "RA8HW-A-160",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 11720,
+      "single_file_attachment": true,
+      "sha256": "0d5d83a37cbfc81b28fb81fa74814ac441f39e3cd1ac2f5b6745ef7577396b5a",
+      "attachment": {
+        "container_sha256": "eccbf0464f3ca72f9b122b95678f7340279ad3de15170f80f074883ba7025232",
+        "name": "06 - Sleep.html.source.zip",
+        "id": "539-199"
+      },
+      "source_container": "zip",
+      "readback": {
+        "bytes": 11720,
+        "sha256": "0d5d83a37cbfc81b28fb81fa74814ac441f39e3cd1ac2f5b6745ef7577396b5a",
+        "checked_utc": "2026-10-11T16:53:25.044095Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/06 - Sleep.html",
+      "article_id": "183-181",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "ea12c28d3ded5ff04772bde6289cfe94d2a9b0f184aa7f9c2bdcfa8082e3bee3",
+      "article_key": "RA8HW-A-161",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 4950,
+      "single_file_attachment": true,
+      "sha256": "8e61b43daa1c9685c6aa5980f65a9929492714a583b18f0b83007c1cd6d861ca",
+      "attachment": {
+        "name": "tokens.css",
+        "id": "539-200"
+      },
+      "readback": {
+        "bytes": 4950,
+        "sha256": "8e61b43daa1c9685c6aa5980f65a9929492714a583b18f0b83007c1cd6d861ca",
+        "checked_utc": "2026-10-11T16:53:25.5577162Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/tokens.css",
+      "article_id": "183-182",
+      "disposition": "verified_source_removed"
+    },
+    {
+      "attachment_verified": true,
+      "content_sha256": "84d75aabbb6d3a21663daceb401271bf7368a96c9f4ca6fe73f7051bf846c674",
+      "article_key": "RA8HW-A-162",
+      "source_commit": "b392c20ce3b2af4562bf330c6bbb18a4d128125d",
+      "content_verified": true,
+      "bytes": 24657,
+      "single_file_attachment": true,
+      "sha256": "6591467622edc7b2425def3fcf6447556fa698a1d10090583ebb9e782da064b5",
+      "attachment": {
+        "name": "tweaks-panel.jsx",
+        "id": "539-201"
+      },
+      "readback": {
+        "bytes": 24657,
+        "sha256": "6591467622edc7b2425def3fcf6447556fa698a1d10090583ebb9e782da064b5",
+        "checked_utc": "2026-10-11T16:53:26.2325729Z"
+      },
+      "article_url": "tracker-record:redacted",
+      "original_removed": true,
+      "path": "resources/reference_ui/ereader/tweaks-panel.jsx",
+      "article_id": "183-183",
+      "disposition": "verified_source_removed"
+    }
+  ],
+  "retention_policy": {
+    "legal_and_entry_points": "Preserve .agents/AGENTS.md, LIBRARY_STANDARDS.md and symbol-library legal notice unchanged. README remains a concise project entry point.",
+    "frozen_reference_stubs": "Retain concise redirects where immutable CAD, library or rules documents refer to a design Markdown path. Full source content exists only in verified KB articles and original source attachments.",
+    "executable_data": "Retain all five DC-bias CSVs and other calculation JSON/CSV/circuit inputs.",
+    "large_attachments": "10 MiB configured multipart request cap. Files >=8 MiB published as verified ordered binary parts; retain originals until single-file attachment availability is resolved."
+  }
+}

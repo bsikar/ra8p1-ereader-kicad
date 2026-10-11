@@ -1,7 +1,7 @@
 """Read-only CMS-013 installed inventory and alternative arithmetic screen.
 
 Usage: python scripts/check_mipi_ldo_selection.py <fresh-kicadxml-export>
-Sources, conditions and exclusions: design/mipi_ldo_selection.md.
+Sources, conditions and exclusions: tracker-record:redacted
 No native CAD writes. Passing arithmetic does not clear integration HOLD.
 """
 

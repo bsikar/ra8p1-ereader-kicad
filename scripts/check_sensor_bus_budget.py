@@ -1,6 +1,6 @@
 """Read-only SENS-003 candidate calculations; not schematic acceptance.
 
-Inputs and outstanding conditions are recorded in design/sensors.md.
+Inputs and outstanding conditions are recorded in tracker-record:redacted
 Run with Python 3; no external packages or CAD writes.
 """
 
