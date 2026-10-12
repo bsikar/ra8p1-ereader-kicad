@@ -4271,4 +4271,35 @@
 (wire (pts (xy 62.23 289.56) (xy 54.61 289.56)) (stroke (width 0) (type default)) (uuid "54e9cacc-4d4b-4294-a740-acb8de2fe8a1"))
 (label "NAND_MISO" (at 54.61 289.56 180) (effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b132d22d-9a6d-486b-bff9-7ab384410697"))
 (sheet (at 62.23 269.24) (size 101.6 22.86) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "cf7ff1ef-feb1-4ac4-86ed-82d82067f3f2") (property "Sheetname" "256 MiB SLC NAND" (at 62.23 267.97 0) (effects (font (size 1.27 1.27)) (justify left bottom)))(property "Sheetfile" "nand_flash.kicad_sch" (at 62.23 293.37 0) (effects (font (size 1.27 1.27)) (justify left top)))(pin "NAND_SCK" input (at 62.23 274.32 180) (uuid "cfa4f986-aa5a-4a56-b3d7-3ed0df1ffd2a") (effects (font (size 1.27 1.27)) (justify left)))(pin "NAND_CS_N" input (at 62.23 279.4 180) (uuid "3a5baf4a-dd80-4fce-9b2e-8e72173dae84") (effects (font (size 1.27 1.27)) (justify left)))(pin "NAND_MOSI" input (at 62.23 284.48 180) (uuid "b84e2d6a-ecb9-418b-9830-ab6ee0d4e2a9") (effects (font (size 1.27 1.27)) (justify left)))(pin "NAND_MISO" output (at 62.23 289.56 180) (uuid "9856229a-720a-4c58-8af9-c47b206c7f40") (effects (font (size 1.27 1.27)) (justify left)))(instances (project "ereader_rev1" (path "/0586cc51-9c57-495b-a0c9-c29ba0d48166" (page "16")))))
+(sheet
+	(at 436.88 35.56)
+	(size 127 25.4)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(stroke (width 0.254) (type solid))
+	(fill (color 0 0 0 0))
+	(uuid "1ba32cf9-2b2f-5c13-b8bf-62fcaeabb388")
+	(property "Sheetname" "AUX DRAFT / DO NOT ENABLE"
+		(at 500.38 31.75 0)
+		(effects
+			(font (size 1.27 1.27))
+		)
+	)
+	(property "Sheetfile" "audio_aux_draft.kicad_sch"
+		(at 500.38 64.77 0)
+		(effects
+			(font (size 1.27 1.27))
+		)
+	)
+	(instances
+		(project "ereader_rev1"
+			(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166" (page "17"))
+		)
+		(project "audio_aux_draft"
+			(path "/4f02ca0f-19d6-5fbe-81f7-64747594a0bc" (page "1"))
+		)
+	)
+)
 )
