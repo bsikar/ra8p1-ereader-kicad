@@ -1,0 +1,977 @@
+(kicad_sch
+	(version 20260306)
+	(generator eeschema)
+	(generator_version "10.0")
+	(uuid "4f02ca0f-19d6-5fbe-81f7-64747594a0bc")
+	(paper "A2")
+	(title_block
+		(title "Isolated AUX draft / source-local envelope")
+		(comment 1 "DRAFT / 17 UNFULFILLED PROVIDERS / DO NOT ENABLE")
+	)
+	(lib_symbols)
+	(text "DRAFT / AUXILIARY LOCAL ENVELOPE ONLY / 17 UNFULFILLED PROVIDERS / DO NOT ENABLE"
+		(exclude_from_sim no)
+		(at 15.24 12.7 0)
+		(effects
+			(font (size 1.8 1.8))
+			(justify left top)
+		)
+		(uuid "fef087d8-4ba8-53de-a279-64ef64fbffa2")
+	)
+	(text "Review island only. No root pins, global nets, ground alias, provider drivers or manufacture release.\nAUX5V and branch 5V inputs are distinct source partitions; supply-routing/hold provider is absent."
+		(exclude_from_sim no)
+		(at 15.24 20.32 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "850c3348-969a-54ce-b967-8bc6d60b965f")
+	)
+	(sheet
+		(at 71.12 55.88)
+		(size 101.6 40.64)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke (width 0.254) (type solid))
+		(fill (color 0 0 0 0))
+		(uuid "ddb6cf99-24e4-5391-9422-039fc353c3ec")
+		(property "Sheetname" "AUX DRAFT AUX5"
+			(at 121.92 52.07 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Sheetfile" "audio_aux_draft_aux5.kicad_sch"
+			(at 121.92 100.33 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(pin "AD_RETURN" passive
+			(at 71.12 60.96 180)
+			(uuid "68ccfb84-ecab-5b9b-8d25-9c9d6c74e734")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_AUX_SOURCE" passive
+			(at 71.12 66.04 180)
+			(uuid "8a813a4c-0896-5610-81a3-a856d9aedd51")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_AUX5_ENABLE" passive
+			(at 71.12 71.12 180)
+			(uuid "c492f41c-c1b7-5282-9451-044e9cae5dbd")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_AUX5V" passive
+			(at 71.12 76.2 180)
+			(uuid "af74db50-992b-5557-945e-9f19aa23e93e")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/1ba32cf9-2b2f-5c13-b8bf-62fcaeabb388" (page "18"))
+			)
+			(project "audio_aux_draft"
+				(path "/4f02ca0f-19d6-5fbe-81f7-64747594a0bc" (page "2"))
+			)
+		)
+	)
+	(wire
+		(pts (xy 71.12 60.96) (xy 55.88 60.96))
+		(stroke (width 0) (type default))
+		(uuid "2d54633d-106b-5de7-af10-9d73fb9b956f")
+	)
+	(label "AD_RETURN"
+		(at 55.88 60.96 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "71ae09aa-fe7d-53b5-8df4-cf3fb5a6996a")
+	)
+	(sheet
+		(at 71.12 160.02)
+		(size 101.6 129.54)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke (width 0.254) (type solid))
+		(fill (color 0 0 0 0))
+		(uuid "594c684a-8177-5eae-813c-b46ab03a23a9")
+		(property "Sheetname" "AUX DRAFT IV"
+			(at 121.92 156.21 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Sheetfile" "audio_aux_draft_iv.kicad_sch"
+			(at 121.92 293.37 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(pin "AD_RETURN" passive
+			(at 71.12 165.1 180)
+			(uuid "a4f50fcb-c1d0-5f47-a8d4-58b27121b17e")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_IV_5V_INPUT" passive
+			(at 71.12 170.18 180)
+			(uuid "c5cb9c43-2dd8-5114-bd2f-302093764bfe")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_IV_GEN_ENABLE" passive
+			(at 71.12 175.26 180)
+			(uuid "edb648a5-dc2c-575c-8eb7-7d53dd8ec72a")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_IV_LDO_ENABLE" passive
+			(at 71.12 180.34 180)
+			(uuid "9770493e-4a3e-5815-a89f-781578f83f14")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_IV_P" passive
+			(at 71.12 185.42 180)
+			(uuid "e9d5a9c9-1e7a-534b-908c-3f6ff28c46b2")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_IV_N" passive
+			(at 71.12 190.5 180)
+			(uuid "63093354-0a21-51cb-b8b9-e8ffa0f45346")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_P_OUT_LED_A" passive
+			(at 71.12 195.58 180)
+			(uuid "db5225f2-22ed-578f-a152-a8a4894df0aa")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_P_OUT_LED_K" passive
+			(at 71.12 200.66 180)
+			(uuid "d835ce27-c5cc-55e4-9c67-4f618bcc4d36")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_P_NR_LED_A" passive
+			(at 71.12 205.74 180)
+			(uuid "193faad9-ac30-50da-be94-55e988582fc9")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_P_NR_LED_K" passive
+			(at 71.12 210.82 180)
+			(uuid "aea7e9bf-2ad2-5141-b054-434b1a928950")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_N_OUT_LED_A" passive
+			(at 71.12 215.9 180)
+			(uuid "305abe3a-fb9c-5599-a482-9cb07204f31c")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_N_OUT_LED_K" passive
+			(at 71.12 220.98 180)
+			(uuid "79ced3f6-9755-5229-9117-0a7eff218a6e")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_N_NR_LED_A" passive
+			(at 71.12 226.06 180)
+			(uuid "5847bfe1-328f-51ad-a53a-1b1119281c8a")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_N_NR_LED_K" passive
+			(at 71.12 231.14 180)
+			(uuid "c0f121cc-e100-5cf7-a91d-eb32132bf2d5")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_P_PRE_LED_A" passive
+			(at 71.12 236.22 180)
+			(uuid "6064648f-846f-53f4-ab01-4b9f26a46909")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_P_PRE_LED_K" passive
+			(at 71.12 241.3 180)
+			(uuid "334188f9-7695-52ce-a35b-b1b11aa31fee")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_N_PRE_LED_A" passive
+			(at 71.12 246.38 180)
+			(uuid "fdccb4a8-09ac-5463-bbd1-e74fa391fecd")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_N_PRE_LED_K" passive
+			(at 71.12 251.46 180)
+			(uuid "0d0878aa-9150-5318-8742-43e453b8c8dd")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_VREF_LED_A" passive
+			(at 71.12 256.54 180)
+			(uuid "852cc866-d094-57ee-9c63-c0bc21a32cdf")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_VREF_LED_K" passive
+			(at 71.12 261.62 180)
+			(uuid "9edc27ba-9135-5394-b4ba-995a14cd6532")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_CP_LED_A" passive
+			(at 71.12 266.7 180)
+			(uuid "7bfea74f-5517-54ce-8c09-e3257329ec53")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_CP_LED_K" passive
+			(at 71.12 271.78 180)
+			(uuid "3ea7a4d5-0bd8-5f46-88ea-9b4bd3e75cdb")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_CN_LED_A" passive
+			(at 71.12 276.86 180)
+			(uuid "1d05996b-e89d-514c-bb1a-f1b25b1ce6d9")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_IV_CN_LED_K" passive
+			(at 71.12 281.94 180)
+			(uuid "ccb9020f-c5de-5ca8-9a95-9d5b8a953732")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/1ba32cf9-2b2f-5c13-b8bf-62fcaeabb388" (page "19"))
+			)
+			(project "audio_aux_draft"
+				(path "/4f02ca0f-19d6-5fbe-81f7-64747594a0bc" (page "3"))
+			)
+		)
+	)
+	(wire
+		(pts (xy 71.12 165.1) (xy 55.88 165.1))
+		(stroke (width 0) (type default))
+		(uuid "ebedd11c-9309-5968-8fd7-3c4601735501")
+	)
+	(label "AD_RETURN"
+		(at 55.88 165.1 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "1fce48e4-9ea1-5295-921c-4a1fe4feda63")
+	)
+	(sheet
+		(at 256.54 160.02)
+		(size 101.6 129.54)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke (width 0.254) (type solid))
+		(fill (color 0 0 0 0))
+		(uuid "851bf59f-604a-55bc-a413-b937f3ef1ee1")
+		(property "Sheetname" "AUX DRAFT QUIET"
+			(at 307.34 156.21 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Sheetfile" "audio_aux_draft_quiet.kicad_sch"
+			(at 307.34 293.37 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(pin "AD_RETURN" passive
+			(at 256.54 165.1 180)
+			(uuid "90079eda-46b5-53ab-94fe-c1d1affaa34f")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_QUIET_5V_INPUT" passive
+			(at 256.54 170.18 180)
+			(uuid "881b6a3b-8cf4-503a-a089-b7b25ce8aebe")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_QUIET_GEN_ENABLE" passive
+			(at 256.54 175.26 180)
+			(uuid "88a98a23-c10d-5575-9afe-bc40dd33459e")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_QUIET_LDO_ENABLE" passive
+			(at 256.54 180.34 180)
+			(uuid "fc11f8df-056f-5e2a-a0e4-525f9b07ed25")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_QUIET_P" passive
+			(at 256.54 185.42 180)
+			(uuid "7930fe87-5ee4-5094-948c-b1a75f179c15")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_QUIET_N" passive
+			(at 256.54 190.5 180)
+			(uuid "3d5659af-eba7-577b-aa18-044142d1d3e5")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_P_OUT_LED_A" passive
+			(at 256.54 195.58 180)
+			(uuid "15b516ba-9fa0-5c1b-8a6b-9482b521f8eb")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_P_OUT_LED_K" passive
+			(at 256.54 200.66 180)
+			(uuid "d4e9302e-913a-5efd-a279-cb2f1ec300bb")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_P_NR_LED_A" passive
+			(at 256.54 205.74 180)
+			(uuid "76fcbe10-b30e-5be6-8cdc-4bf9d1c43d9c")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_P_NR_LED_K" passive
+			(at 256.54 210.82 180)
+			(uuid "d8196108-e42e-5cf8-b367-13f1b6dfdd33")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_N_OUT_LED_A" passive
+			(at 256.54 215.9 180)
+			(uuid "6db90a05-34ad-59e6-abde-b332f4735f61")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_N_OUT_LED_K" passive
+			(at 256.54 220.98 180)
+			(uuid "0f5ef284-ea45-52b8-bf4a-71db12d76041")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_N_NR_LED_A" passive
+			(at 256.54 226.06 180)
+			(uuid "fb3b638b-6267-5883-8450-06b47bfb7bc3")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_N_NR_LED_K" passive
+			(at 256.54 231.14 180)
+			(uuid "7267233f-3472-5899-837f-16218819c899")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_P_PRE_LED_A" passive
+			(at 256.54 236.22 180)
+			(uuid "35c98f37-662e-5557-bc4d-1d73347574e9")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_P_PRE_LED_K" passive
+			(at 256.54 241.3 180)
+			(uuid "16960862-d4fa-5840-8c05-88fcf10ab8a0")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_N_PRE_LED_A" passive
+			(at 256.54 246.38 180)
+			(uuid "ed1b1a90-da40-541d-9d7a-a61ba503e5dc")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_N_PRE_LED_K" passive
+			(at 256.54 251.46 180)
+			(uuid "9e186390-30ac-5673-9618-e14b78c0a059")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_VREF_LED_A" passive
+			(at 256.54 256.54 180)
+			(uuid "bf36c1b9-88a8-56be-b505-de930dd4cfbd")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_VREF_LED_K" passive
+			(at 256.54 261.62 180)
+			(uuid "dcd84f51-0f87-5b54-8e80-50367242fb9a")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_CP_LED_A" passive
+			(at 256.54 266.7 180)
+			(uuid "59d4ae2c-60e1-54a4-9e00-671dd3897d2d")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_CP_LED_K" passive
+			(at 256.54 271.78 180)
+			(uuid "45c19b1a-2b0a-52a9-8e21-93e2340e60b2")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_CN_LED_A" passive
+			(at 256.54 276.86 180)
+			(uuid "04bd7c5e-4a0d-5e5f-bebf-7f98668560fa")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_QUIET_CN_LED_K" passive
+			(at 256.54 281.94 180)
+			(uuid "89aea747-c2ec-5bf3-a959-460e95a6aebd")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/1ba32cf9-2b2f-5c13-b8bf-62fcaeabb388" (page "20"))
+			)
+			(project "audio_aux_draft"
+				(path "/4f02ca0f-19d6-5fbe-81f7-64747594a0bc" (page "4"))
+			)
+		)
+	)
+	(wire
+		(pts (xy 256.54 165.1) (xy 241.3 165.1))
+		(stroke (width 0) (type default))
+		(uuid "dfe2ea4f-0438-5e64-9d3a-8f887114e562")
+	)
+	(label "AD_RETURN"
+		(at 241.3 165.1 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "533b8d4c-5a34-59b8-b0b7-35b35b1bfd2c")
+	)
+	(sheet
+		(at 441.96 160.02)
+		(size 101.6 129.54)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke (width 0.254) (type solid))
+		(fill (color 0 0 0 0))
+		(uuid "79602a68-5329-552b-baa6-2e590b7d79b7")
+		(property "Sheetname" "AUX DRAFT LINE"
+			(at 492.76 156.21 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Sheetfile" "audio_aux_draft_line.kicad_sch"
+			(at 492.76 293.37 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(pin "AD_RETURN" passive
+			(at 441.96 165.1 180)
+			(uuid "01235e4a-f1dc-5af2-92df-0280345f2964")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_LINE_5V_INPUT" passive
+			(at 441.96 170.18 180)
+			(uuid "5b1f1962-38e7-5ffb-94d3-ad3b118d0791")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_LINE_GEN_ENABLE" passive
+			(at 441.96 175.26 180)
+			(uuid "bfb20df0-a19c-534d-b3c1-ace6e0d7ef34")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_LINE_LDO_ENABLE" passive
+			(at 441.96 180.34 180)
+			(uuid "1390e622-048b-5a0e-8885-d2f15edab476")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_LINE_P" passive
+			(at 441.96 185.42 180)
+			(uuid "35e7b9c2-911c-574e-ad6f-cc7a64c3f364")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_LINE_N" passive
+			(at 441.96 190.5 180)
+			(uuid "92c9e9a0-83a8-5a72-9ac0-bf25e3bc5de9")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_P_OUT_LED_A" passive
+			(at 441.96 195.58 180)
+			(uuid "8c5de311-53ac-5062-84bc-2f9e6e54bf27")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_P_OUT_LED_K" passive
+			(at 441.96 200.66 180)
+			(uuid "6793bf04-7307-5f85-b355-1f08b8877b5b")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_P_NR_LED_A" passive
+			(at 441.96 205.74 180)
+			(uuid "7df0a344-cae0-57bc-98a4-a15a7d75da25")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_P_NR_LED_K" passive
+			(at 441.96 210.82 180)
+			(uuid "5249a719-5e7e-5de9-8e9f-0d8cb605fa12")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_N_OUT_LED_A" passive
+			(at 441.96 215.9 180)
+			(uuid "2b0fcfdc-3fe2-58d9-815f-8557d166d711")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_N_OUT_LED_K" passive
+			(at 441.96 220.98 180)
+			(uuid "95670549-2caa-51a4-847f-b912b1bfc923")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_N_NR_LED_A" passive
+			(at 441.96 226.06 180)
+			(uuid "78fccc84-baaa-57be-b4a3-5f7323c9ad67")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_N_NR_LED_K" passive
+			(at 441.96 231.14 180)
+			(uuid "e041fd44-3669-557d-a873-2d7a8f733739")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_P_PRE_LED_A" passive
+			(at 441.96 236.22 180)
+			(uuid "36684aac-243a-5551-85e4-e475e8e78333")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_P_PRE_LED_K" passive
+			(at 441.96 241.3 180)
+			(uuid "c00f0139-46ea-578f-8dc4-75336d020af7")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_N_PRE_LED_A" passive
+			(at 441.96 246.38 180)
+			(uuid "e6fd5a6d-9403-5b5b-98f9-42067dbf5807")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_N_PRE_LED_K" passive
+			(at 441.96 251.46 180)
+			(uuid "2c6a41a5-aef4-527a-b982-9d8888af93b1")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_VREF_LED_A" passive
+			(at 441.96 256.54 180)
+			(uuid "c2d6b810-7faf-58ff-884d-4471056d896a")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_VREF_LED_K" passive
+			(at 441.96 261.62 180)
+			(uuid "e6142be6-9c61-56af-86e9-7e94994a762a")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_CP_LED_A" passive
+			(at 441.96 266.7 180)
+			(uuid "0c71b7f1-88c0-5566-b438-8d51c7b23313")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_CP_LED_K" passive
+			(at 441.96 271.78 180)
+			(uuid "87945f8a-d835-5a06-820d-5b9b0349324a")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_CN_LED_A" passive
+			(at 441.96 276.86 180)
+			(uuid "f0664166-55cb-5b47-aea3-ae70930b1b1f")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(pin "AD_K_LINE_CN_LED_K" passive
+			(at 441.96 281.94 180)
+			(uuid "72d833de-c487-5f9b-8220-bd4511e0ae6c")
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(instances
+			(project "ereader_rev1"
+				(path "/0586cc51-9c57-495b-a0c9-c29ba0d48166/1ba32cf9-2b2f-5c13-b8bf-62fcaeabb388" (page "21"))
+			)
+			(project "audio_aux_draft"
+				(path "/4f02ca0f-19d6-5fbe-81f7-64747594a0bc" (page "5"))
+			)
+		)
+	)
+	(wire
+		(pts (xy 441.96 165.1) (xy 426.72 165.1))
+		(stroke (width 0) (type default))
+		(uuid "79ec1cf9-0b61-553c-955d-0d923c1f07ed")
+	)
+	(label "AD_RETURN"
+		(at 426.72 165.1 180)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "736a34ac-99a8-533b-ba52-b149cfadb8ac")
+	)
+	(text "01: AUX_INPUT / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 305 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "72a1fea9-7dda-5c77-8130-3fd40055464f")
+	)
+	(text "02: HOLD_DISCHARGE_PHASE / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 311.35 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "cf8bb4b1-11af-5cee-9517-75a42085aea4")
+	)
+	(text "03: GENERATORS_ENABLE / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 317.7 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "39fc13fe-e7af-5c8b-b1fd-dac851a0d969")
+	)
+	(text "04: LDO_ENABLE / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 324.05 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "cab6da2e-bde4-5e88-9b35-0bab2e186c94")
+	)
+	(text "05: PHOTOMOS_LED / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 330.4 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "34b8e00b-f9e1-5314-94ab-76ab958e682a")
+	)
+	(text "06: SIGNAL_CONSUMED_CURRENT / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 336.75 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "c1520016-5d93-5d20-ac3e-10c278f5b13b")
+	)
+	(text "07: DAC_DIGITAL_LOAD / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 343.1 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "28bafacf-5b0a-53f2-be26-419527ac7379")
+	)
+	(text "08: FB_BIAS / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 349.45 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "ea732f7f-bb24-50f9-8859-e9c9909138a5")
+	)
+	(text "09: VREF_LOADED / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 15.24 355.8 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "f7a4d5bd-15a8-5b39-9d57-faf4acba3e9b")
+	)
+	(text "10: LOW_VOLTAGE_SSR_LEAKAGE / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 305 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "67b34258-fbff-5cc4-bfe9-dfd1080c182e")
+	)
+	(text "11: PASSIVE_REALIZATION / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 311.35 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "2919bae1-c13d-5205-b024-929ec6aab502")
+	)
+	(text "12: POWER_LOSS_AFFINE / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 317.7 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "29c60c87-f73e-53fd-85fb-eb3bc64efb16")
+	)
+	(text "13: QUIET_PHYSICAL_CUT / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 324.05 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "787d3c1d-6fc1-52a8-a394-94503ee9d117")
+	)
+	(text "14: DISCHARGED_PIN_LIMITS / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 330.4 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "daabfc49-4d7a-5953-ab77-48cf87adb4ce")
+	)
+	(text "15: TOTAL_CONSUMER_CAPACITANCE / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 336.75 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "9793bd52-c3d6-5638-b97e-66334e506464")
+	)
+	(text "16: COIL_LOAD / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 343.1 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "557b2949-22c8-5cda-961f-7e8cfbc183eb")
+	)
+	(text "17: SPEAKER_CONSUMPTION / UNFULFILLED"
+		(exclude_from_sim no)
+		(at 297.24 349.45 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "a1f19738-1302-5397-a566-72d8badf45d7")
+	)
+	(text "259 components / 289 source pin rows plus every passive endpoint. Full audio/digital/display/reset AND remains false.\nDesktop budget 10.598354W <=11W; quiet 7.958557W <=8.2W are conditional source calculations, not powered-circuit acceptance.\nAll modes, PCM768k / DSD512 / DoP256, stereo speakers, A01..A20 and physical requirements remain open under their owners."
+		(exclude_from_sim no)
+		(at 15.24 369.57 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
+		)
+		(uuid "6d617858-f066-58c4-81b3-dd68e3f47b14")
+	)
+	(embedded_fonts no)
+)

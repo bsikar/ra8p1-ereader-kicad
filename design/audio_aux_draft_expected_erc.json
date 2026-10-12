@@ -1,0 +1,2276 @@
+{
+  "prepared_before_root_attachment": true,
+  "input_sha256": "d04ea029f4bf621e8543fba3a508f5e96f3d9ff522a7be064ae35c6872cc939d",
+  "standalone_report_sha256": "aaabfbf6cabaef9f9adbbea9e829700d40655794a0096b7e77b8e9e2e5ac7f74",
+  "standalone_xml_sha256": "506df8c424fd3e6464d2240971b44954f793e9665c42f46541c57a9989ab9bd3",
+  "counts": {
+    "pin_not_connected:error": 28,
+    "isolated_pin_label:warning": 162,
+    "power_pin_not_driven:error": 15
+  },
+  "tuples": [
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "009bbda2-3888-5225-82f7-03cc51fe87d2",
+          "Hierarchical Label 'AD_K_LINE_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "00ddd075-8857-58fe-8688-b1a1ee733b09",
+          "Label 'AD_K_IV_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "04e9fedd-00f0-5197-a150-b204989c4900",
+          "Label 'AD_K_QUIET_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "052e2c9e-cdbc-5d78-a622-c6682aa7a4b6",
+          "Label 'AD_K_IV_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "06f0f52c-d69b-5613-9be3-31dbed9c9f82",
+          "Label 'AD_K_QUIET_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "0764266f-8ecc-5082-86dc-a910dd3f1079",
+          "Label 'AD_K_QUIET_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "0a6e1d52-83e7-555d-b8d8-f4f7006fdd85",
+          "Label 'AD_K_LINE_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "0f28d99b-cd03-5dc1-b4ec-4bcd527117da",
+          "Label 'AD_K_IV_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "0fde4445-00cd-5852-9529-3dacfb0f6b76",
+          "Label 'AD_K_LINE_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "12a129ae-4add-56a4-a307-160fdf53422b",
+          "Label 'AD_K_IV_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "12dd0234-a098-556a-8e63-d022e156d63b",
+          "Label 'AD_K_QUIET_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "12deb303-d285-5b55-943a-a3040327500a",
+          "Hierarchical Label 'AD_K_IV_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "15099aae-d145-5319-81ef-a3124c2fd480",
+          "Label 'AD_K_QUIET_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "1522dcf5-b3ed-5a48-bad2-865545964859",
+          "Label 'AD_K_IV_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "15634360-a0e4-5ef3-95ba-6645cdce69cb",
+          "Label 'AD_K_IV_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "158cc703-8719-52ee-baf0-d0a0f6900443",
+          "Hierarchical Label 'AD_K_LINE_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "174d8179-f359-5fb8-91a4-3a25bd9350e2",
+          "Hierarchical Label 'AD_K_IV_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "18077561-6344-54ae-8cd3-9b9f9c09591c",
+          "Label 'AD_K_QUIET_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "19354596-58b7-56be-a448-21e49b91b98a",
+          "Hierarchical Label 'AD_K_IV_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "198749a6-4cb9-50ee-b3e7-8f23a42dbcfc",
+          "Hierarchical Label 'AD_K_LINE_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "1ba45807-e4f6-5df3-a48e-9db1c7606178",
+          "Hierarchical Label 'AD_K_IV_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "1e584ea4-1dbd-5c59-a3bb-2cc87e1fd8d6",
+          "Hierarchical Label 'AD_K_LINE_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "1e8915e3-f234-5b62-b636-470559d28507",
+          "Label 'AD_K_QUIET_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "1ea54341-d2b8-5f7d-a6f2-6de646c9a52b",
+          "Label 'AD_K_QUIET_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "1f410e03-ba7c-5b56-9fae-9355c367285c",
+          "Hierarchical Label 'AD_K_QUIET_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2345eee2-f683-51de-a4a2-3c381e7613d1",
+          "Hierarchical Label 'AD_K_IV_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "25cacbe7-b483-55bc-8c40-7be7a8c16ec7",
+          "Label 'AD_K_LINE_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "26329cfe-26f7-5002-8ffc-d068a3ebe6c7",
+          "Label 'AD_K_IV_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "268194a6-fc92-5cdd-b208-65d5096d9227",
+          "Hierarchical Label 'AD_K_IV_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "280667d7-d837-55a3-9958-ac77563bf871",
+          "Label 'AD_K_LINE_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "289305aa-9cdf-5d99-bf7c-f40ca2dac384",
+          "Hierarchical Label 'AD_K_QUIET_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2a3df126-aeca-5748-83c0-6ba10992de53",
+          "Label 'AD_K_LINE_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2bbc6ec5-fee7-5b4a-97f4-5cb74194aa58",
+          "Label 'AD_K_QUIET_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2c51d459-8b64-5388-a660-dbdca762e903",
+          "Label 'AD_K_LINE_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2cf36cb4-5fea-50b6-a10f-03916abfa6e7",
+          "Hierarchical Label 'AD_K_QUIET_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2e053896-315f-59ea-a9df-933642447e27",
+          "Label 'AD_K_IV_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2e399644-146c-5350-9fc7-1405a50456d6",
+          "Hierarchical Label 'AD_K_IV_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2faf06eb-9725-57ce-a022-1081e4696611",
+          "Label 'AD_K_LINE_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "2fb7c148-13f9-5f4b-8967-ea52c31d6a18",
+          "Hierarchical Label 'AD_K_IV_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "30364122-5328-5c2d-ac71-c714fd1a37ce",
+          "Label 'AD_K_LINE_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "3385221c-62f9-5b25-ac5e-855babf3aa2d",
+          "Label 'AD_K_IV_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "34d72353-0c27-5403-b5d7-4dff32670d94",
+          "Label 'AD_K_QUIET_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "36073c06-fc63-5b6e-b56c-4ee229f8cc4e",
+          "Label 'AD_K_IV_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "36dea319-c110-594e-a0ad-29443c44ac25",
+          "Hierarchical Label 'AD_K_QUIET_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "3b4a73fa-edc0-5cf0-ab38-97f3850bd2b0",
+          "Label 'AD_K_IV_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "3bd41873-6040-5c40-9633-bd8de17ef835",
+          "Label 'AD_K_LINE_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "3bd6332c-e837-5b60-8839-ac9811dc5922",
+          "Hierarchical Label 'AD_K_IV_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "3e04b28a-2ccc-5d96-9e88-c1c0117e6b2a",
+          "Hierarchical Label 'AD_K_LINE_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "3fb63362-70d5-57fe-b479-3b942f5591d9",
+          "Label 'AD_K_QUIET_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "3fbbdf6a-5ce1-5502-81a4-acedd241f175",
+          "Hierarchical Label 'AD_K_LINE_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "4011731f-bd3c-5f02-9b99-27b7f60154df",
+          "Label 'AD_K_IV_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "40119738-6f33-5b21-abfc-206b769d9481",
+          "Label 'AD_K_LINE_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "42e62cf0-9f0b-50a2-a4ed-dbcfb2ef0672",
+          "Label 'AD_K_LINE_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "45d38977-beeb-5355-a100-6be75ef8b08f",
+          "Label 'AD_K_IV_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "4aadfc27-105c-584d-8d8f-043b887a3ca5",
+          "Label 'AD_K_IV_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "4b100b68-4b5c-5f6b-94ad-87c582c061ca",
+          "Hierarchical Label 'AD_K_LINE_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "4c1111f1-41a6-5c2e-9050-311149eb0abe",
+          "Label 'AD_K_IV_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "514b1017-6718-50b1-9ee9-9fec56139e9c",
+          "Label 'AD_K_QUIET_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "525f7f85-54de-58d4-b074-544ef9963fd2",
+          "Label 'AD_K_LINE_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "5329f007-467b-5735-95ad-eeb349dcc4b2",
+          "Label 'AD_K_QUIET_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "559ea216-dfdf-50f4-8138-76b8af261019",
+          "Label 'AD_K_LINE_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "569ddf36-7837-50b1-b62f-843808889b7b",
+          "Label 'AD_K_IV_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "57186995-2c44-589a-82a9-3aeb12e55d78",
+          "Hierarchical Label 'AD_K_IV_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "58108feb-b2f0-55d6-a73f-0f1fe7bb5828",
+          "Label 'AD_K_LINE_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "5cf9d773-bdeb-5953-bbe3-1300de15314b",
+          "Hierarchical Label 'AD_K_QUIET_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "5ebc26b8-bc22-5cb2-b743-aa02ee489f03",
+          "Label 'AD_K_QUIET_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "6485f9f5-6c37-5e03-ae53-045758d1bb4f",
+          "Hierarchical Label 'AD_K_QUIET_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "66e93b9c-7bee-5757-b383-a5e62a102af9",
+          "Hierarchical Label 'AD_K_IV_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "67e91988-6f4b-59f8-b53d-f60958640c9d",
+          "Label 'AD_K_QUIET_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "690e63ce-7324-5190-974b-df90559b38cd",
+          "Label 'AD_K_QUIET_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "6a67f811-18a9-5298-aac0-8dc8ef63e8a2",
+          "Hierarchical Label 'AD_K_QUIET_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "6be1ceff-6da8-5f7b-9f10-2c2558d4d016",
+          "Label 'AD_K_QUIET_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "6c097f18-5693-5c98-a3bf-8569b844584b",
+          "Label 'AD_K_LINE_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "6dc873ba-5a8d-58b4-90bd-7c51cd6b3763",
+          "Label 'AD_K_QUIET_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "6e22aa11-4bbb-580c-a61b-9dad9f584d8e",
+          "Hierarchical Label 'AD_K_QUIET_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "6f60cac4-fde6-5a5d-9a0c-750576619a38",
+          "Label 'AD_K_QUIET_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "76184c57-ce08-5e9f-a55f-4be55d378b3a",
+          "Hierarchical Label 'AD_K_QUIET_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "78a38871-30c7-5439-9073-dbd41857669e",
+          "Label 'AD_K_IV_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "78e4c091-adc5-5ae2-a9fa-a592e8ea846d",
+          "Label 'AD_K_LINE_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "7b71915b-051c-5aec-8be7-666302186069",
+          "Label 'AD_K_IV_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "7dd94ee6-1533-553f-ad73-b7787643a32f",
+          "Hierarchical Label 'AD_K_QUIET_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "7e514dda-145f-541f-a92e-fdfe12c8b4a0",
+          "Label 'AD_K_LINE_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "808d14db-d040-501d-8454-9cdaf57e1a20",
+          "Label 'AD_K_IV_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "812d3bf1-c26c-53b0-82db-9f9da3f175cd",
+          "Hierarchical Label 'AD_K_LINE_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "8850c6fe-ab28-5f1b-9de2-e7c49dbb05d3",
+          "Label 'AD_K_LINE_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "8a296402-a141-5352-bed6-b2093315beb6",
+          "Label 'AD_K_QUIET_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "8cb6259e-f0d1-56b5-9750-a0bfd39e31e8",
+          "Hierarchical Label 'AD_K_LINE_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "8f0cd2e9-57a6-591e-bd4f-579760cda545",
+          "Label 'AD_K_LINE_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "9502faea-702c-561c-8edd-46b82155dd58",
+          "Label 'AD_K_QUIET_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "961c87b7-9673-51d0-88d6-3c04dd4e0ebc",
+          "Label 'AD_K_QUIET_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "965a00bf-e8fd-520c-b53b-450ae361b333",
+          "Label 'AD_K_LINE_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "96765207-f3b2-5169-ae98-a7e2385f6ddd",
+          "Hierarchical Label 'AD_K_IV_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "9693abd6-15df-5b5d-ba54-830a36bfe2fd",
+          "Hierarchical Label 'AD_K_LINE_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "96a70c2d-081a-5fcd-b0e9-da709bdc53ad",
+          "Hierarchical Label 'AD_K_QUIET_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "975a2127-405d-54b0-9349-d7d2f3a40365",
+          "Label 'AD_K_LINE_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "982695cc-426d-5e23-8770-2d2517c49692",
+          "Label 'AD_K_QUIET_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "9b8dfea3-b3d9-54ec-8207-979e97881d0d",
+          "Hierarchical Label 'AD_K_LINE_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "9dacd53c-5049-5a28-9c85-b1593314283d",
+          "Label 'AD_K_LINE_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "9eca0bdc-a260-5498-82f0-a8333f54f8dd",
+          "Label 'AD_K_LINE_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a04d2063-cf6f-56f3-902f-264afb81981c",
+          "Hierarchical Label 'AD_K_QUIET_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a066edcb-c90b-5aa5-920f-083c8742c8ac",
+          "Label 'AD_K_IV_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a08ed23c-66ea-5d50-b00c-8f38ae057617",
+          "Label 'AD_K_QUIET_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a09c8d43-e891-5556-a06f-ea1fa7512b67",
+          "Hierarchical Label 'AD_K_QUIET_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a16c76d4-3a4f-5ee3-bcf4-89b2032eea1a",
+          "Label 'AD_K_QUIET_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a7697311-3fb9-5f6d-ab1f-e331c3de8685",
+          "Hierarchical Label 'AD_K_QUIET_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a950bb46-8a6f-5af1-a3f6-a1da245eb001",
+          "Label 'AD_K_LINE_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "a9da0b7c-a575-51f3-81d2-1adeabdeaeca",
+          "Label 'AD_K_IV_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "aa7a8073-1bdd-5ccb-a1da-b18e9f46486c",
+          "Label 'AD_K_LINE_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "ab11bb26-7c13-5362-aceb-35c775c13211",
+          "Label 'AD_K_IV_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "affb76e4-0e1e-571c-8c1c-f8e60c35b0bd",
+          "Label 'AD_K_QUIET_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "b212d424-285b-548a-a708-a49f21431567",
+          "Label 'AD_K_IV_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "b404697a-90ea-594d-8444-5e3af9f7dbc3",
+          "Label 'AD_K_IV_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "b425d825-8ebc-5173-ad10-a96aa220cb99",
+          "Label 'AD_K_IV_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "b6cb739a-9def-5204-99c7-f9de99253e6d",
+          "Label 'AD_K_LINE_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "b6ec0f17-a471-5d04-ba16-aac2aeebb86e",
+          "Hierarchical Label 'AD_K_LINE_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "ba139b62-9117-5d1b-b047-298fd47c263f",
+          "Hierarchical Label 'AD_K_QUIET_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "be0d6c84-bb32-54ed-8a96-062275cdee95",
+          "Label 'AD_K_IV_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "be609ccd-a82c-52c1-8860-c89df4369b5c",
+          "Hierarchical Label 'AD_K_LINE_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "bf178083-a093-50ee-8d26-1baf6f06c1fe",
+          "Label 'AD_K_IV_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c032f7f8-33af-5587-b91e-20ffa6508b9a",
+          "Label 'AD_K_LINE_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c0336447-d161-511e-8db9-42566deb2195",
+          "Label 'AD_K_IV_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c120f52a-3231-55e7-8373-653a793982df",
+          "Label 'AD_K_QUIET_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c33fe8e2-e25c-500f-9c28-7a3828ad7038",
+          "Label 'AD_K_LINE_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c47a79e2-b50a-5c4a-a7eb-b53848482f20",
+          "Label 'AD_K_QUIET_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c61ac7b8-fa70-5d03-9da8-3243ae558ff3",
+          "Hierarchical Label 'AD_K_LINE_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c70a5952-7568-563e-b35b-0707ded5f9ed",
+          "Hierarchical Label 'AD_K_IV_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c7b721e6-202a-524b-ad96-ce15be22f93d",
+          "Hierarchical Label 'AD_K_QUIET_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c7ddae87-166b-5f6f-a7e7-d5eaad9e3b99",
+          "Label 'AD_K_IV_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "c86d6fc4-a857-5051-9634-5da305136cc9",
+          "Label 'AD_K_QUIET_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "caaa98f5-2677-588e-ad5e-b592085bfd68",
+          "Hierarchical Label 'AD_K_IV_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "cae627a0-a93e-50bb-b1d7-bd1960f7ef20",
+          "Label 'AD_K_LINE_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "caeaf88b-5a61-52f2-a29c-c520efc08bcb",
+          "Label 'AD_K_QUIET_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "d1d3844f-9e7d-56d7-9d5e-0cc23bc43ef8",
+          "Label 'AD_K_LINE_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "d3e5d09c-078c-552f-84cc-1a0ab7ce0900",
+          "Label 'AD_K_IV_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "d8da88ec-7267-55a1-acb1-d67b033e542d",
+          "Label 'AD_K_LINE_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "d962bed2-eb50-5002-99d3-45b4a270ebbc",
+          "Label 'AD_K_QUIET_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "d99937c7-72c8-5aa5-b7b5-e2d759d9e7b8",
+          "Hierarchical Label 'AD_K_LINE_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "d9e2b006-5d6d-5fdd-9cf2-813b078d13d7",
+          "Label 'AD_K_IV_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "dad83aa5-5bce-5e27-9cba-0ad8790ef3da",
+          "Hierarchical Label 'AD_K_IV_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "db20a588-4470-536f-945c-07b226b33b69",
+          "Label 'AD_K_IV_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "dc7c852b-4f90-54b0-b1be-55909914046f",
+          "Label 'AD_K_IV_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "dd26f949-08d8-53b4-b3f1-dbaad614a215",
+          "Label 'AD_K_IV_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "ddb9df80-b5a7-5585-9c24-33e20cd85c4b",
+          "Label 'AD_K_QUIET_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "dde3dea5-5f31-56d1-aadb-c14230217601",
+          "Label 'AD_K_LINE_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e39f8448-74f1-521f-917d-6de2576c85bf",
+          "Hierarchical Label 'AD_K_LINE_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e56ab543-c499-5ac1-93d2-154394168c28",
+          "Hierarchical Label 'AD_K_LINE_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e616b3e6-19ad-5b94-9b0b-78cd211b6a2a",
+          "Hierarchical Label 'AD_K_QUIET_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e665dc0c-4db4-53bd-8e18-639178e327c0",
+          "Hierarchical Label 'AD_K_QUIET_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e69f41af-bd30-51d7-88c6-f38f98320232",
+          "Hierarchical Label 'AD_K_IV_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e891cc9e-fe4f-507e-837b-0220a4cb2d18",
+          "Label 'AD_K_LINE_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e936d154-346e-5aa4-973d-fffefca87e3a",
+          "Label 'AD_K_QUIET_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "e9c2f8ec-3efb-5cf0-87cc-2524e625627f",
+          "Label 'AD_K_QUIET_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "eac47c8a-6b62-5bd0-bce5-6c591fa79749",
+          "Label 'AD_K_LINE_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "efa8292b-f075-55dc-a69c-6e4758552c15",
+          "Hierarchical Label 'AD_K_IV_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "efc4a562-334e-5633-8847-243eda1cab59",
+          "Label 'AD_K_LINE_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "f17229fb-4957-5730-bbe5-90ad48aa09e8",
+          "Label 'AD_K_QUIET_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "f50e2155-205d-5a31-ac02-97e3e304e71c",
+          "Label 'AD_K_IV_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "f9116d54-e5a3-5705-a726-72ddb98f314d",
+          "Hierarchical Label 'AD_K_LINE_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "f9d5223b-09f0-5061-afff-7275dafa99ef",
+          "Label 'AD_K_QUIET_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "fa15439d-79e6-5787-bfaf-af2ddd40d571",
+          "Hierarchical Label 'AD_K_IV_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "fd2f167f-9b2d-5005-badf-c7f57343923f",
+          "Label 'AD_K_IV_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "isolated_pin_label",
+      "warning",
+      [
+        [
+          "fef98a51-d8fd-5ef1-9288-74a1b3b51be4",
+          "Label 'AD_K_LINE_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "0d0878aa-9150-5318-8742-43e453b8c8dd",
+          "Hierarchical Sheet Pin 'AD_K_IV_N_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "193faad9-ac30-50da-be94-55e988582fc9",
+          "Hierarchical Sheet Pin 'AD_K_IV_P_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "1d05996b-e89d-514c-bb1a-f1b25b1ce6d9",
+          "Hierarchical Sheet Pin 'AD_K_IV_CN_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "305abe3a-fb9c-5599-a482-9cb07204f31c",
+          "Hierarchical Sheet Pin 'AD_K_IV_N_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "334188f9-7695-52ce-a35b-b1b11aa31fee",
+          "Hierarchical Sheet Pin 'AD_K_IV_P_PRE_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "3ea7a4d5-0bd8-5f46-88ea-9b4bd3e75cdb",
+          "Hierarchical Sheet Pin 'AD_K_IV_CP_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "5847bfe1-328f-51ad-a53a-1b1119281c8a",
+          "Hierarchical Sheet Pin 'AD_K_IV_N_NR_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "6064648f-846f-53f4-ab01-4b9f26a46909",
+          "Hierarchical Sheet Pin 'AD_K_IV_P_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "63093354-0a21-51cb-b8b9-e8ffa0f45346",
+          "Hierarchical Sheet Pin 'AD_IV_N'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "79ced3f6-9755-5229-9117-0a7eff218a6e",
+          "Hierarchical Sheet Pin 'AD_K_IV_N_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "7bfea74f-5517-54ce-8c09-e3257329ec53",
+          "Hierarchical Sheet Pin 'AD_K_IV_CP_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "852cc866-d094-57ee-9c63-c0bc21a32cdf",
+          "Hierarchical Sheet Pin 'AD_K_IV_VREF_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "8a813a4c-0896-5610-81a3-a856d9aedd51",
+          "Hierarchical Sheet Pin 'AD_AUX_SOURCE'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "9770493e-4a3e-5815-a89f-781578f83f14",
+          "Hierarchical Sheet Pin 'AD_IV_LDO_ENABLE'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "9edc27ba-9135-5394-b4ba-995a14cd6532",
+          "Hierarchical Sheet Pin 'AD_K_IV_VREF_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "aea7e9bf-2ad2-5141-b054-434b1a928950",
+          "Hierarchical Sheet Pin 'AD_K_IV_P_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "af74db50-992b-5557-945e-9f19aa23e93e",
+          "Hierarchical Sheet Pin 'AD_AUX5V'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "c0f121cc-e100-5cf7-a91d-eb32132bf2d5",
+          "Hierarchical Sheet Pin 'AD_K_IV_N_NR_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "c492f41c-c1b7-5282-9451-044e9cae5dbd",
+          "Hierarchical Sheet Pin 'AD_AUX5_ENABLE'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "c5cb9c43-2dd8-5114-bd2f-302093764bfe",
+          "Hierarchical Sheet Pin 'AD_IV_5V_INPUT'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "ccb9020f-c5de-5ca8-9a95-9d5b8a953732",
+          "Hierarchical Sheet Pin 'AD_K_IV_CN_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "d835ce27-c5cc-55e4-9c67-4f618bcc4d36",
+          "Hierarchical Sheet Pin 'AD_K_IV_P_OUT_LED_K'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "db5225f2-22ed-578f-a152-a8a4894df0aa",
+          "Hierarchical Sheet Pin 'AD_K_IV_P_OUT_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "e9d5a9c9-1e7a-534b-908c-3f6ff28c46b2",
+          "Hierarchical Sheet Pin 'AD_IV_P'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "edb648a5-dc2c-575c-8eb7-7d53dd8ec72a",
+          "Hierarchical Sheet Pin 'AD_IV_GEN_ENABLE'"
+        ]
+      ]
+    ],
+    [
+      "/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "fdccb4a8-09ac-5463-bbd1-e74fa391fecd",
+          "Hierarchical Sheet Pin 'AD_K_IV_N_PRE_LED_A'"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT AUX5/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "468da1fe-3cd0-5afd-b5e5-16e3cae53c98",
+          "Symbol UAD1 Pin 11 [SS/TRK, Passive, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT AUX5/",
+      "pin_not_connected",
+      "error",
+      [
+        [
+          "67e0dc38-a240-523a-98de-b01cd59e87e2",
+          "Symbol UAD1 Pin 10 [RT, Passive, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT AUX5/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "797088ab-f7e6-5e44-932f-afca2034b4a2",
+          "Symbol UAD1 Pin 9 [BIAS, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT AUX5/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "c7802a04-92b0-5c78-8032-5e1399a44f7c",
+          "Symbol UAD1 Pin 20 [PVIN, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT AUX5/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "e315905b-f5fe-5e64-af03-6141c34e695a",
+          "Symbol UAD1 Pin 13 [AGND, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT IV/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "69027f9e-02b3-527c-936d-60a711efdb6d",
+          "Symbol UAD2 Pin 4 [VIN, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT IV/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "85b8170c-2926-524f-a848-1e3f6adfed6c",
+          "Symbol UAD2 Pin 5 [INN, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT IV/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "b4e2ad8e-3381-543f-9d30-d7c33d8e5aec",
+          "Symbol UAD2 Pin 23 [VPOS, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT IV/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "d2794d50-df06-5cf5-9bcd-cd56f90f386f",
+          "Symbol UAD2 Pin 15 [VNEG, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT LINE/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "3c341d5c-5da6-5bb6-b100-3c2b9fc05f1b",
+          "Symbol UAD5 Pin 15 [VNEG, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT LINE/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "44c9afca-7498-5429-9586-f8650f6bef34",
+          "Symbol UAD5 Pin 4 [VIN, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT LINE/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "99d5111d-751a-5a8f-a5c4-c87bb9dcc4b6",
+          "Symbol UAD5 Pin 5 [INN, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT LINE/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "b4fa1591-94a6-5ae4-9afd-5da63ab62f7d",
+          "Symbol UAD5 Pin 23 [VPOS, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT QUIET/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "4e8740ba-70f1-5fff-ad0b-1e347e9931f3",
+          "Symbol UAD8 Pin 5 [INN, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT QUIET/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "cbbdca0a-cdfb-57d2-99bd-2562b51a6eeb",
+          "Symbol UAD8 Pin 4 [VIN, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT QUIET/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "ec955ab0-4d6a-52e8-9d31-0bd5e1f4ee07",
+          "Symbol UAD8 Pin 15 [VNEG, Power input, Line]"
+        ]
+      ]
+    ],
+    [
+      "/AUX DRAFT QUIET/",
+      "power_pin_not_driven",
+      "error",
+      [
+        [
+          "ff6e0f4f-cba1-557f-9251-92f7f6aa412e",
+          "Symbol UAD8 Pin 23 [VPOS, Power input, Line]"
+        ]
+      ]
+    ]
+  ],
+  "reason": "54 externally undriven LED nets x3 labels;26 native representative open parent ports;RT10/SS11 source OPEN;15 representative undriven supply/return partitions",
+  "native_files_sha256": {
+    "ereader/audio_aux_draft.kicad_sch": "875f81dcf89589509480510da18fc643c58b3a52aa6d2f9d738235fa463db4a1",
+    "ereader/audio_aux_draft_aux5.kicad_sch": "679ea14e8fc052d12ea919c56d9b6b84758c22fe23b5ae425381252cbc95d93b",
+    "ereader/audio_aux_draft_iv.kicad_sch": "cd8c41b98bfd908076ce86f7b88151c47148dc3991a10c2233a09150f6fc1a80",
+    "ereader/audio_aux_draft_line.kicad_sch": "dc93479e2a5acc71d0c338fd3b2c0d1153a81c1de896b2c521c8a0e751ba55b2",
+    "ereader/audio_aux_draft_quiet.kicad_sch": "e4817e8b5d405b7f55745e37e3e9e2792aab92342257e01bf8f157106be02597"
+  }
+}

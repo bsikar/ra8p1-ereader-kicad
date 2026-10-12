@@ -13,4 +13,5 @@
 	(lib (name "Connector") (type "KiCad") (uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_sym") (options "") (descr "Standard KiCad 10 symbols"))
 	(lib (name "Switch") (type "KiCad") (uri "${KICAD10_SYMBOL_DIR}/Switch.kicad_sym") (options "") (descr "Standard KiCad 10 symbols"))
 	(lib (name "Audio_Devices") (type "KiCad") (uri "${KIPRJMOD}/../libs/symbols/Audio_Devices.kicad_sym") (options "") (descr ""))
+	(lib (name "Aux_Draft") (type "KiCad") (uri "${KIPRJMOD}/../libs/symbols/Aux_Draft.kicad_sym") (options "") (descr "Isolated unpowered AUX draft electrical symbols"))
 )
